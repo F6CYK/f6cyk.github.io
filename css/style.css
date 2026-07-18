@@ -37,10 +37,15 @@ body {
 
 header {
 
-    background: #003366;
+    background: #003366 url("../images/bandeau/bandeau.png") center center / cover no-repeat;
     color: white;
 
-    padding: 2rem 1rem;
+    min-height: 150px;
+    padding: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     text-align: center;
 
