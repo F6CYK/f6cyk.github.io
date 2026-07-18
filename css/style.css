@@ -1,1 +1,153 @@
+/* ==========================================================
+   F6CYK - Feuille de style
+   ========================================================== */
 
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    font-family:Segoe UI,Roboto,Arial,sans-serif;
+
+    background:#eceff1;
+
+    color:#222;
+
+    line-height:1.7;
+
+}
+
+/* ---------------------------------------------------------- */
+
+header{
+
+    background:#12395b;
+
+    color:white;
+
+    padding:40px;
+
+}
+
+header h1{
+
+    font-size:3rem;
+
+    margin-bottom:10px;
+
+}
+
+.sous-titre{
+
+    font-size:1.2rem;
+
+    opacity:.9;
+
+}
+
+/* ---------------------------------------------------------- */
+
+nav{
+
+    background:#1b4d75;
+
+}
+
+nav ul{
+
+    max-width:1200px;
+
+    margin:auto;
+
+    display:flex;
+
+    list-style:none;
+
+}
+
+nav li{
+
+    flex:1;
+
+}
+
+nav a{
+
+    display:block;
+
+    text-align:center;
+
+    color:white;
+
+    text-decoration:none;
+
+    padding:15px;
+
+}
+
+nav a:hover{
+
+    background:#2b6998;
+
+}
+
+/* ---------------------------------------------------------- */
+
+main{
+
+    max-width:1200px;
+
+    margin:40px auto;
+
+    background:white;
+
+    padding:40px;
+
+    border-radius:8px;
+
+    box-shadow:0 3px 10px rgba(0,0,0,.08);
+
+}
+
+/* ---------------------------------------------------------- */
+
+section{
+
+    margin-bottom:50px;
+
+}
+
+h2{
+
+    color:#12395b;
+
+    margin-bottom:20px;
+
+}
+
+ul{
+
+    margin-left:30px;
+
+}
+
+p{
+
+    margin-bottom:15px;
+
+}
+
+/* ---------------------------------------------------------- */
+
+footer{
+
+    text-align:center;
+
+    padding:25px;
+
+    color:#666;
+
+}
