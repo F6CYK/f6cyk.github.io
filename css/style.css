@@ -1,4 +1,10 @@
 /* ==========================================================
+   F6CYK
+   Feuille de style principale
+   ========================================================== */
+
+
+/* ==========================================================
    Réinitialisation
    ========================================================== */
 
@@ -8,129 +14,405 @@
     box-sizing: border-box;
 }
 
+
 /* ==========================================================
-   Corps de page
+   Document
    ========================================================== */
 
 body {
-    font-family: system-ui, "Segoe UI", Arial, Helvetica, sans-serif;
-    background: #f7f8fa;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+
     color: #222;
-    line-height: 1.65;
+    background: #f4f4f4;
+
 }
+
 
 /* ==========================================================
    En-tête
    ========================================================== */
 
 header {
-    background: #1f4568;
-    color: #fff;
-    border-bottom: 1px solid #16344f;
-}
 
-.entete {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 10px 20px 8px;
+    background: #003366;
+    color: white;
+
+    padding: 2rem 1rem;
+
+    text-align: center;
+
 }
 
 .entete h1 {
-    margin: 0;
-    font-size: 1.9rem;
-    font-weight: 700;
-    line-height: 1.1;
+
+    font-size: 2.2rem;
+
 }
 
 .sous-titre {
-    margin-top: 2px;
-    font-size: 0.95rem;
-    line-height: 1.2;
-    color: #e6edf5;
+
+    margin-top: .5rem;
+
+    font-style: italic;
+
 }
+
 
 /* ==========================================================
    Navigation
    ========================================================== */
 
 nav {
-    background: #2b5c89;
+
+    background: #e6e6e6;
+
+    border-bottom: 1px solid #c0c0c0;
+
 }
 
 nav ul {
-    max-width: 1000px;
-    margin: 0 auto;
+
     list-style: none;
+
     display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
 }
 
 nav li {
+
     margin: 0;
+
 }
 
 nav a {
+
     display: block;
-    padding: 8px 16px;
-    color: #fff;
+
+    padding: .9rem 1.2rem;
+
+    color: #003366;
+
     text-decoration: none;
-    font-size: 0.92rem;
-    transition: background-color 0.15s ease;
+
 }
 
-nav a:hover,
-nav a.actif {
-    background: #183754;
+nav a:hover {
+
+    background: #d5d5d5;
+
 }
+
 
 /* ==========================================================
-   Contenu
+   Contenu principal
    ========================================================== */
 
 main {
-    max-width: 1000px;
-    margin: 24px auto;
-    padding: 0 20px;
+
+    max-width: 960px;
+
+    margin: 2rem auto;
+
+    background: white;
+
+    padding: 2rem;
+
+    box-shadow: 0 0 8px rgba(0,0,0,.08);
+
 }
 
-section {
-    max-width: 720px;
+
+/* ==========================================================
+   Titres
+   ========================================================== */
+
+h1,
+h2,
+h3,
+h4 {
+
+    color: #003366;
+
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+
 }
 
-h2 {
-    font-size: 1.7rem;
-    font-weight: 600;
-    color: #222;
-    margin-bottom: 18px;
-    padding-bottom: 6px;
-    border-bottom: 1px solid #c7cdd3;
+h1 {
+
+    margin-top: 0;
+
 }
+
+
+/* ==========================================================
+   Paragraphes
+   ========================================================== */
 
 p {
-    margin-bottom: 16px;
+
+    margin-bottom: 1rem;
+
 }
+
 
 /* ==========================================================
    Liens
    ========================================================== */
 
 a {
-    color: #1f4568;
+
+    color: #0055aa;
+
 }
 
 a:hover {
+
     text-decoration: underline;
+
 }
+
+
+/* ==========================================================
+   Séparateur
+   ========================================================== */
+
+hr {
+
+    margin: 2rem 0;
+
+    border: none;
+
+    border-top: 1px solid #d6d6d6;
+
+}
+
+
+/* ==========================================================
+   Listes
+   ========================================================== */
+
+ul,
+ol {
+
+    margin-left: 2rem;
+
+    margin-bottom: 1rem;
+
+}
+
+li {
+
+    margin-bottom: .4rem;
+
+}
+
+
+/* ==========================================================
+   Citation
+   ========================================================== */
+
+blockquote {
+
+    margin: 1.5rem 0;
+
+    padding: 1rem 1.5rem;
+
+    border-left: 5px solid #003366;
+
+    background: #f7f7f7;
+
+    font-style: italic;
+
+}
+
+
+/* ==========================================================
+   Tableaux
+   ========================================================== */
+
+table {
+
+    width: 100%;
+
+    border-collapse: collapse;
+
+    margin: 2rem 0;
+
+}
+
+caption {
+
+    margin-bottom: .7rem;
+
+    font-weight: bold;
+
+    text-align: left;
+
+}
+
+th,
+td {
+
+    border: 1px solid #bdbdbd;
+
+    padding: .7rem;
+
+    text-align: left;
+
+}
+
+th {
+
+    background: #e8eef5;
+
+}
+
+tbody tr:nth-child(even) {
+
+    background: #f7f7f7;
+
+}
+
+
+/* ==========================================================
+   Figures
+   ========================================================== */
+
+figure {
+
+    margin: 2rem auto;
+
+    text-align: center;
+
+}
+
+figure a {
+
+    display: inline-block;
+
+}
+
+figure img {
+
+    display: block;
+
+    width: 400px;
+
+    max-width: 100%;
+
+    height: auto;
+
+    margin: 0 auto;
+
+    border: 1px solid #888;
+
+    transition: opacity .2s ease;
+
+}
+
+figure a:hover img {
+
+    opacity: .85;
+
+    cursor: zoom-in;
+
+}
+
+figcaption {
+
+    margin-top: .8rem;
+
+    font-size: .9rem;
+
+    color: #666;
+
+    font-style: italic;
+
+}
+
+
+/* ==========================================================
+   Code
+   ========================================================== */
+
+code {
+
+    font-family: Consolas, "Courier New", monospace;
+
+}
+
+pre {
+
+    margin: 1.5rem 0;
+
+    padding: 1rem;
+
+    background: #f7f7f7;
+
+    border: 1px solid #d0d0d0;
+
+    overflow-x: auto;
+
+}
+
+pre code {
+
+    background: transparent;
+
+}
+
 
 /* ==========================================================
    Pied de page
    ========================================================== */
 
 footer {
-    max-width: 1000px;
-    margin: 40px auto 20px;
-    padding: 12px 20px;
-    border-top: 1px solid #d3d8dd;
+
+    margin-top: 3rem;
+
+    padding: 2rem;
+
     text-align: center;
-    font-size: 0.90rem;
-    color: #666;
+
+    background: #003366;
+
+    color: white;
+
+}
+
+
+/* ==========================================================
+   Responsive
+   ========================================================== */
+
+@media (max-width: 700px) {
+
+    nav ul {
+
+        flex-direction: column;
+
+    }
+
+    nav a {
+
+        text-align: center;
+
+    }
+
+    main {
+
+        margin: 1rem;
+
+        padding: 1.5rem;
+
+    }
+
 }
