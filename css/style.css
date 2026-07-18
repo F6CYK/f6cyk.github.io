@@ -36,11 +36,19 @@ body {
    ========================================================== */
 
 header {
-    background-image: url("../images/bandeau/bandeau.png");
-    background-repeat: no-repeat;
-    background-position: top center;
-    background-size: contain;
-    height: 170px;
+
+    background: #003366 url("../images/bandeau/bandeau.png") center center / cover no-repeat;
+    color: white;
+
+    min-height: 150px;
+    padding: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
 }
 
 .entete h1 {
