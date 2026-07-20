@@ -15,7 +15,7 @@ article section{
 .accueil-introduction{
     display:flex;
     align-items:flex-start;
-    gap:1.2rem;
+    gap:2rem;      /* 1.2rem auparavant */
 }
 
 .accueil-texte{
