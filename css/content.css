@@ -59,6 +59,65 @@ article section{
 }
 
 /* ==========================================================
+   Page "Trafic"
+   ========================================================== */
+
+.trafic-introduction{
+    display:flex;
+    align-items:flex-start;
+    gap:2rem;
+    margin-bottom:2rem;
+}
+
+.trafic-texte{
+    flex:1;
+}
+
+.trafic-texte p{
+    margin-bottom:1rem;
+}
+
+.trafic-photo{
+    flex:0 0 360px;
+    margin:0;
+}
+
+.trafic-photo img{
+    display:block;
+    width:100%;
+    height:auto;
+    border:1px solid #cfcfcf;
+    box-shadow:0 2px 8px rgba(0,0,0,.15);
+}
+
+.trafic-photo figcaption{
+    margin-top:.6rem;
+    text-align:center;
+    font-size:.9rem;
+    color:#666;
+    font-style:italic;
+}
+
+@media (max-width:800px){
+
+    .trafic-introduction{
+        flex-direction:column;
+    }
+
+    .trafic-photo{
+        flex:none;
+        width:100%;
+    }
+
+    .trafic-photo img{
+        max-width:550px;
+        margin:0 auto;
+    }
+
+}
+
+
+/* ==========================================================
    Page "Ma station"
    ========================================================== */
 
