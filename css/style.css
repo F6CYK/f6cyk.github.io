@@ -18,8 +18,9 @@ border-bottom:1px solid #d8d8d8;
 }
 
 .bandeau{
-width:min(1200px,92%);
-text-align:center;
+    width:min(1200px,92%);
+    text-align:center;
+    margin-top:8px;
 }
 
 .bandeau h1{
