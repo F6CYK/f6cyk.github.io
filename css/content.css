@@ -143,3 +143,7 @@ article section{
 .bouton-retour:hover{
     background:#0f2f52;
 }
+
+.bouton-retour:active{
+    transform:translateY(1px);
+}
