@@ -1,5 +1,7 @@
+@charset "UTF-8";
+
 /* ==========================================================
-   Mise en page générale
+   En-tête
    ========================================================== */
 
 header{
@@ -81,7 +83,7 @@ nav a{
 }
 
 /* ==========================================================
-   Contenu principal
+   Conteneur principal
    ========================================================== */
 
 main{
@@ -89,10 +91,6 @@ main{
     margin:1rem auto 2rem;
     background:#fff;
     padding:1.5rem;
-}
-
-article section{
-    margin-bottom:2.5rem;
 }
 
 /* ==========================================================
@@ -115,4 +113,3 @@ footer a{
 footer a:hover{
     text-decoration:underline;
 }
-
