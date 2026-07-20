@@ -1,60 +1,70 @@
-*{margin:0;padding:0;box-sizing:border-box}
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
 body{
-font-family:Arial,Helvetica,sans-serif;
-font-size:16px;
-line-height:1.6;
-color:#222;
-background:#f4f4f4;
+    font-family:Arial,Helvetica,sans-serif;
+    font-size:16px;
+    line-height:1.6;
+    color:#222;
+    background:#f4f4f4;
 }
 
 header{
-padding:8px 0 10px;
-display:flex;
-justify-content:center;
-background:linear-gradient(#fafafa,#f2f2f2);
-border-bottom:1px solid #d8d8d8;
+    padding:8px 0 10px;
+    display:flex;
+    justify-content:center;
+    background:linear-gradient(#fafafa,#f2f2f2);
+    border-bottom:1px solid #d8d8d8;
 }
 
 .bandeau{
-width:min(1200px,92%);
-text-align:center;
+    width:min(1200px,92%);
+    text-align:center;
 }
 
 .bandeau h1{
-margin:0;
-font-size:3.6rem;
-font-weight:800;
-letter-spacing:.12em;
-color:#163b67;
-line-height:1;
+    margin:0;
+    font-size:3.6rem;
+    font-weight:800;
+    letter-spacing:.12em;
+    color:#163b67;
+    line-height:1;
 }
 
 .separateur{
-display:flex;
-align-items:center;
-gap:18px;
-margin:12px 0;
+    display:flex;
+    align-items:center;
+    gap:18px;
+    margin:12px 0;
 }
 
 .separateur span{
-flex:1;
-height:1px;
-background:#163b67;
+    flex:1;
+    height:1px;
+    background:#163b67;
 }
 
 .losange{
-width:10px;
-height:10px;
-background:#163b67;
-transform:rotate(45deg);
+    width:10px;
+    height:10px;
+    background:#163b67;
+    transform:rotate(45deg);
+}
+
+.presentation{
+    margin:8px 0 4px;
+    font-size:.95rem;
+    color:#666;
 }
 
 .slogan{
-margin:0;
-font-size:1.1rem;
-letter-spacing:.06em;
-color:#163b67;
+    margin:0;
+    font-size:1.1rem;
+    letter-spacing:.06em;
+    color:#163b67;
 }
 
 nav{
@@ -63,17 +73,17 @@ nav{
 }
 
 nav ul{
-list-style:none;
-display:flex;
-justify-content:center;
-flex-wrap:wrap;
+    list-style:none;
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
 }
 
 nav a{
-display:block;
-padding:0.2rem 1.2rem;
-text-decoration:none;
-color:#003366;
+    display:block;
+    padding:.2rem 1.2rem;
+    text-decoration:none;
+    color:#003366;
 }
 
 main{
@@ -83,25 +93,69 @@ main{
     padding:1.5rem;
 }
 
-
-footer{
-margin-top:3rem;
-padding:2rem;
-text-align:center;
-background:#003366;
-color:#fff;
+article section{
+    margin-bottom:2.5rem;
 }
 
+h2{
+    margin-bottom:1rem;
+    color:#163b67;
+}
+
+/* ==========================================================
+   Page d'accueil
+   ========================================================== */
+
+.accueil-introduction{
+    display:flex;
+    align-items:flex-start;
+    gap:2rem;
+}
+
+.accueil-texte{
+    flex:1;
+}
+
+.accueil-texte p{
+    margin-bottom:1rem;
+}
+
+.accueil-photo{
+    flex:0 0 340px;
+    margin:0;
+}
+
+.accueil-photo img{
+    display:block;
+    width:100%;
+    height:auto;
+    border:1px solid #cfcfcf;
+    box-shadow:0 2px 8px rgba(0,0,0,.15);
+}
+
+/* Adaptation petits écrans */
+
+@media (max-width:800px){
+
+    .accueil-introduction{
+        flex-direction:column;
+    }
+
+    .accueil-photo{
+        flex:none;
+        width:100%;
+    }
+
+    .accueil-photo img{
+        max-width:550px;
+        margin:0 auto;
+    }
+
+}
 
 /* ==========================================================
    Page "En travaux"
    ========================================================== */
-
-.presentation{
-    margin:8px 0 4px;
-    font-size:0.95rem;
-    color:#666;
-}
 
 .illustration-construction{
     margin:2rem auto;
@@ -139,19 +193,19 @@ color:#fff;
     transform:translateY(1px);
 }
 
-footer {
-    margin-top: 3rem;
-    padding: 2rem;
-    text-align: center;
-    background: #003366;
-    color: #fff;
+footer{
+    margin-top:3rem;
+    padding:2rem;
+    text-align:center;
+    background:#003366;
+    color:#fff;
 }
 
-footer a {
-    color: #fff;
-    text-decoration: none;
+footer a{
+    color:#fff;
+    text-decoration:none;
 }
 
-footer a:hover {
-    text-decoration: underline;
+footer a:hover{
+    text-decoration:underline;
 }
