@@ -116,24 +116,3 @@ footer a:hover{
     text-decoration:underline;
 }
 
-/* ==========================================================
-   Responsive
-   ========================================================== */
-
-@media (max-width:800px){
-
-    .accueil-introduction{
-        flex-direction:column;
-    }
-
-    .accueil-photo{
-        flex:none;
-        width:100%;
-    }
-
-    .accueil-photo img{
-        max-width:550px;
-        margin:0 auto;
-    }
-
-}
