@@ -52,7 +52,7 @@ transform:rotate(45deg);
 }
 
 .slogan{
-margin:0;
+margin:0 0 8px 0;
 font-size:1.1rem;
 letter-spacing:.06em;
 color:#163b67;
