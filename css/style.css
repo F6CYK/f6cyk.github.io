@@ -41,3 +41,51 @@ nav ul{list-style:none;display:flex;justify-content:center;flex-wrap:wrap}
 nav a{display:block;padding:.9rem 1.2rem;text-decoration:none;color:#003366}
 main{max-width:960px;margin:2rem auto;background:#fff;padding:2rem}
 footer{margin-top:3rem;padding:2rem;text-align:center;background:#003366;color:#fff}
+
+
+
+/* ==========================================================
+   Page "En travaux"
+   ========================================================== */
+
+.presentation{
+    margin:8px 0 4px;
+    font-size:0.95rem;
+    color:#666;
+}
+
+.illustration-construction{
+    margin:2rem auto;
+    text-align:center;
+}
+
+.illustration-construction img{
+    display:block;
+    width:100%;
+    max-width:700px;
+    height:auto;
+    margin:0 auto;
+}
+
+.retour{
+    margin-top:2rem;
+    text-align:center;
+}
+
+.bouton-retour{
+    display:inline-block;
+    padding:.75rem 1.6rem;
+    background:#163b67;
+    color:#fff;
+    text-decoration:none;
+    border-radius:4px;
+    transition:background-color .2s ease;
+}
+
+.bouton-retour:hover{
+    background:#0f2f52;
+}
+
+.bouton-retour:active{
+    transform:translateY(1px);
+}
