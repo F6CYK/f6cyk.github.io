@@ -79,11 +79,11 @@ Lien interne :
 
 Lien vers une page :
 
-[Station]({{ "/station/" | relative_url }})
+[Station]({{ "/ma_station.html" | relative_url }})
 
 Lien vers Contact :
 
-[Contact]({{ "/contact/" | relative_url }})
+[Contact]({{ "/contact.html" | relative_url }})
 
 ---
 
@@ -185,7 +185,7 @@ Le filtre Jekyll `relative_url` permet de générer des liens internes robustes.
 
 ```liquid
 <img
-  src="{{ "/assets/images/test/logo.png" | relative_url }}"
+  src="{{ '/assets/images/test/logo.png' | relative_url }}"
   alt="Logo">
 ```
 
@@ -303,8 +303,6 @@ Cliquer sur l'image pour l'afficher en taille réelle.
 | Recto | Verso |
 |-------|-------|
 | ![QSL]({{ "/assets/images/test/qsl.png" | relative_url }}) | ![QSL]({{ "/assets/images/test/qsl.png" | relative_url }}) |
-
----
 
 ### Schéma
 
@@ -500,8 +498,6 @@ France
 | Jeudi | 20 h – 23 h |
 | Samedi | 14 h – 18 h |
 
----
-
 ## Exemple de fiche technique
 
 | Caractéristique | Valeur |
@@ -564,8 +560,8 @@ Retour :
 ## Ressources
 
 - [Accueil]({{ "/" | relative_url }})
-- [Station]({{ "/station/" | relative_url }})
-- [Contact]({{ "/contact/" | relative_url }})
+- [Station]({{ "/ma_station.html" | relative_url }})
+- [Contact]({{ "/contact.html" | relative_url }})
 
 ---
 
