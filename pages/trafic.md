@@ -31,7 +31,7 @@ Cette rubrique rassemble des notes techniques, des retours d'expérience et quel
 <figure class="trafic-photo">
 
 <img
-    src="images/trafic/trafic_portable-1.jpg"
+    src="assets/images/trafic/trafic_portable-1.jpg"
     alt="Trafic portable de la station F6CYK">
 
 <figcaption>
