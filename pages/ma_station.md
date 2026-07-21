@@ -22,8 +22,6 @@ Vue générale de la station F6CYK à Étretat (2014-2023).
 
 <div class="station-grid">
 
-<div class="station-column">
-
 <div class="station-card">
 <h3>HF</h3>
 <ul>
@@ -35,11 +33,29 @@ Vue générale de la station F6CYK à Étretat (2014-2023).
 </div>
 
 <div class="station-card">
+<h3>Numérique</h3>
+<ul>
+    <li>DVMEGA Cast</li>
+    <li>Inrico TM7 Plus</li>
+    <li>Spotnik Hotspot</li>
+    <li>MMDVM + Raspberry Pi Zero</li>
+</ul>
+</div>
+
+<div class="station-card">
 <h3>VHF / UHF</h3>
 <ul>
     <li>Belcom LS-202</li>
     <li>Icom IC-202</li>
     <li>Leixen LX-898</li>
+</ul>
+</div>
+
+<div class="station-card">
+<h3>Antennes</h3>
+<ul>
+    <li>Miracle Antenna (homebrew)</li>
+    <li>MagLoop</li>
 </ul>
 </div>
 
@@ -54,28 +70,6 @@ Vue générale de la station F6CYK à Étretat (2014-2023).
 </ul>
 </div>
 
-</div>
-
-<div class="station-column">
-
-<div class="station-card">
-<h3>Numérique</h3>
-<ul>
-    <li>DVMEGA Cast</li>
-    <li>Inrico TM7 Plus</li>
-    <li>Spotnik Hotspot</li>
-    <li>MMDVM + Raspberry Pi Zero</li>
-</ul>
-</div>
-
-<div class="station-card">
-<h3>Antennes</h3>
-<ul>
-    <li>Miracle Antenna (homebrew)</li>
-    <li>MagLoop</li>
-</ul>
-</div>
-
 <div class="station-card">
 <h3>Mesures</h3>
 <ul>
@@ -85,8 +79,6 @@ Vue générale de la station F6CYK à Étretat (2014-2023).
     <li>Oscilloscope</li>
     <li>Multimètre</li>
 </ul>
-</div>
-
 </div>
 
 </div>
