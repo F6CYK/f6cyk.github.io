@@ -116,6 +116,10 @@ footer{
     color:#fff;
 }
 
+footer p{
+    margin:0;
+}
+
 footer a{
     color:#fff;
     text-decoration:none;
