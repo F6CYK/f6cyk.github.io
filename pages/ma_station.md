@@ -10,7 +10,9 @@ Aujourd'hui, ma station reste volontairement simple. J'apprécie autant le maté
 
 <figure class="station-photo">
 
-![Vue générale de la station radioamateur F6CYK](/assets/images/station/station_f6cyk-2.jpg)
+<img
+    src="assets/images/station/station_f6cyk-2.jpg"
+    alt="Station F6CYK">
 
 <figcaption>
 Vue générale de la station F6CYK à Étretat (2014-2023).
