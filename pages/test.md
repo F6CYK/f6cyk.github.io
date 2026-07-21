@@ -306,29 +306,29 @@ Cliquer sur l'image pour l'afficher en taille réelle.
 
 ### Schéma
 
-![Schéma]({{ "/assets/images/test/schema.png" | relative_url }})
+![Schéma]({{ '/assets/images/test/schema.png' | relative_url }})
 
 ---
 
 ### Images pointant vers une autre ressource
 
-[![Schéma]({{ "/assets/images/test/schema.png" | relative_url }})]({{ "/documents/pdf/schema_test.pdf" | relative_url }})
+[![Schéma]({{ '/assets/images/test/schema.png' | relative_url }})]({{ '/documents/pdf/schema_test.pdf' | relative_url }})
 
 ---
 
 ### Logo dans un lien interne
 
-[![Logo]({{ "/assets/images/test/logo.png" | relative_url }})]({{ "/" | relative_url }})
+[![Logo]({{ '/assets/images/test/logo.png' | relative_url }})]({{ '/' | relative_url }})
 
 ---
 
 ### Image dans une liste
 
-- ![Logo]({{ "/assets/images/test/logo.png" | relative_url }}) Logo du site
+- ![Logo]({{ '/assets/images/test/logo.png' | relative_url }}) Logo du site
 
-- ![Transceiver]({{ "/assets/images/test/transceiver.png" | relative_url }}) Transceiver
+- ![Transceiver]({{ '/assets/images/test/transceiver.png' | relative_url }}) Transceiver
 
-- ![Antenne]({{ "/assets/images/test/antenne.png" | relative_url }}) Antenne
+- ![Antenne]({{ '/assets/images/test/antenne.png' | relative_url }}) Antenne
 
 ---
 
@@ -337,7 +337,7 @@ Cliquer sur l'image pour l'afficher en taille réelle.
 <figure>
 
 <img
-src="{{ "/assets/images/test/panorama.png" | relative_url }}"
+src="{{ '/assets/images/test/panorama.png' | relative_url }}"
 alt="Panorama">
 
 <figcaption>
@@ -354,10 +354,10 @@ Panorama de la station.
 
 <figure>
 
-<a href="{{ "/assets/images/test/panorama.png" | relative_url }}">
+<a href="{{ '/assets/images/test/panorama.png' | relative_url }}">
 
 <img
-src="{{ "/assets/images/test/panorama.png" | relative_url }}"
+src="{{ '/assets/images/test/panorama.png' | relative_url }}"
 alt="Panorama">
 
 </a>
@@ -428,7 +428,7 @@ Il peut contenir :
 
 <summary>Afficher le schéma</summary>
 
-![Schéma]({{ "/assets/images/test/schema.png" | relative_url }})
+![Schéma]({{ '/assets/images/test/schema.png' | relative_url }})
 
 </details>
 
@@ -440,8 +440,8 @@ Il peut contenir :
 
 <summary>Documentation</summary>
 
-- [Notice PDF]({{ "/documents/pdf/notice_test.pdf" | relative_url }})
-- [Schéma PDF]({{ "/documents/pdf/schema_test.pdf" | relative_url }})
+- [Notice PDF]({{ '/documents/pdf/notice_test.pdf' | relative_url }})
+- [Schéma PDF]({{ '/documents/pdf/schema_test.pdf' | relative_url }})
 
 </details>
 
@@ -535,7 +535,7 @@ Ce bloc permet de vérifier les styles CSS spécifiques du site.
 
 <div class="note">
 
-![Logo]({{ "/assets/images/test/logo.png" | relative_url }})
+![Logo]({{ '/assets/images/test/logo.png' | relative_url }})
 
 </div>
 
@@ -559,9 +559,9 @@ Retour :
 
 ## Ressources
 
-- [Accueil]({{ "/" | relative_url }})
-- [Station]({{ "/ma_station.html" | relative_url }})
-- [Contact]({{ "/contact.html" | relative_url }})
+- [Accueil]({{ '/' | relative_url }})
+- [Station]({{ '/ma_station.html' | relative_url }})
+- [Contact]({{ '/contact.html' | relative_url }})
 
 ---
 
