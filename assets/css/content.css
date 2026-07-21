@@ -116,7 +116,6 @@ article section{
 
 }
 
-
 /* ==========================================================
    Page "Ma station"
    ========================================================== */
@@ -126,20 +125,18 @@ article section{
 }
 
 .station-grid{
-    display:flex;
+    display:grid;
+    grid-template-columns:repeat(2,minmax(300px,1fr));
     gap:2rem;
-    align-items:flex-start;
-}
-
-.station-column{
-    flex:1;
+    margin-top:2rem;
 }
 
 .station-card{
-    margin-bottom:2rem;
+    margin:0;
 }
 
 .station-card h3{
+    margin-top:0;
     margin-bottom:.6rem;
     padding-bottom:.25rem;
     color:#163b67;
@@ -157,15 +154,11 @@ article section{
 @media (max-width:800px){
 
     .station-grid{
-        flex-direction:column;
-        gap:0;
-    }
-
-    .station-column{
-        width:100%;
+        grid-template-columns:1fr;
     }
 
 }
+
 
 /* ==========================================================
    Page "En travaux"
