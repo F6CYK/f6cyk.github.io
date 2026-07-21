@@ -4,25 +4,35 @@ title: Trafic
 permalink: /trafic.html
 ---
 
-## Le trafic radioamateur
+<h2>Le trafic radioamateur</h2>
 
 <div class="trafic-introduction">
 
 <div class="trafic-texte">
 
-Le trafic constitue la finalité de toute station radioamateur. Construire une antenne, restaurer un ancien émetteur, mettre au point un montage ou optimiser une installation n'ont de véritable intérêt que s'ils permettent ensuite de communiquer avec d'autres stations, d'expérimenter de nouvelles techniques et d'approfondir ses connaissances.
+<p>
+Le trafic constitue la finalité de toute station radioamateur. Construire une antenne, restaurer un ancien émetteur, mettre au point un montage ou optimiser une installation n'ont de véritable intérêt que s'ils permettent ensuite de communiquer avec d'autres stations, d'expérimenter de nouvelles techniques et d'approfondir leurs connaissances.
+</p>
 
+<p>
 Le trafic est aussi une école permanente. Chaque contact est l'occasion d'observer les conditions de propagation, d'évaluer les performances d'une antenne, de comparer différents équipements ou de découvrir de nouvelles façons de pratiquer la radio. Les bandes radioamateurs offrent ainsi un vaste terrain d'expérimentation où la théorie se confronte en permanence à la réalité.
+</p>
 
+<p>
 Au fil des années, mes centres d'intérêt se sont progressivement orientés vers plusieurs formes de trafic : la télégraphie, le QRP, les modes numériques, le trafic portable ainsi que l'étude de la propagation. Chacune de ces activités possède ses particularités, ses contraintes et son intérêt propre, tout en contribuant à une meilleure compréhension de la radio.
+</p>
 
+<p>
 Cette rubrique rassemble des notes techniques, des retours d'expérience et quelques réflexions personnelles issues de la pratique quotidienne. Elle n'a pas vocation à présenter des vérités définitives, mais plutôt à partager des observations, des essais et des expériences qui pourront, je l'espère, être utiles ou susciter de nouvelles idées chez d'autres radioamateurs.
+</p>
 
 </div>
 
 <figure class="trafic-photo">
 
-![Trafic portable de la station F6CYK](images/trafic/trafic_portable-1.jpg)
+<img
+    src="images/trafic/trafic_portable-1.jpg"
+    alt="Trafic portable de la station F6CYK">
 
 <figcaption>
 Trafic portable avec une station légère.
@@ -32,7 +42,7 @@ Trafic portable avec une station légère.
 
 </div>
 
-## Les rubriques
+<h2>Les rubriques</h2>
 
 <div class="station-grid">
 
@@ -40,31 +50,40 @@ Trafic portable avec une station légère.
 
 <div class="station-card">
 
-### Présentation
+<h3>Présentation</h3>
 
-Une vue d'ensemble de ma pratique du trafic radioamateur, de mes centres d'intérêt et de mes objectifs.
+<p>
+Une vue d'ensemble de ma pratique du trafic radioamateur,
+de mes centres d'intérêt et de mes objectifs.
+</p>
 
-[Lire la suite…](en_travaux.html)
-
-</div>
-
-<div class="station-card">
-
-### Propagation
-
-Comprendre les phénomènes de propagation HF, interpréter les prévisions et suivre l'activité solaire.
-
-[Lire la suite…](en_travaux.html)
+<p><a href="en_travaux.html">Lire la suite…</a></p>
 
 </div>
 
 <div class="station-card">
 
-### Télégraphie (CW)
+<h3>Propagation</h3>
 
-Manipulateurs, entraînement, pratique quotidienne, matériel et ressources autour du Morse.
+<p>
+Comprendre les phénomènes de propagation HF,
+interpréter les prévisions et suivre l'activité solaire.
+</p>
 
-[Lire la suite…](en_travaux.html)
+<p><a href="en_travaux.html">Lire la suite…</a></p>
+
+</div>
+
+<div class="station-card">
+
+<h3>Télégraphie (CW)</h3>
+
+<p>
+Manipulateurs, entraînement, pratique quotidienne,
+matériel et ressources autour du Morse.
+</p>
+
+<p><a href="en_travaux.html">Lire la suite…</a></p>
 
 </div>
 
@@ -74,41 +93,52 @@ Manipulateurs, entraînement, pratique quotidienne, matériel et ressources auto
 
 <div class="station-card">
 
-### Modes numériques
+<h3>Modes numériques</h3>
 
+<p>
 FT8, DMR, APRS, M17, hotspots et expérimentations numériques.
+</p>
 
-[Lire la suite…](en_travaux.html)
-
-</div>
-
-<div class="station-card">
-
-### QRP
-
-Le plaisir du trafic avec quelques watts seulement, en station fixe comme en portable.
-
-[Lire la suite…](en_travaux.html)
+<p><a href="en_travaux.html">Lire la suite…</a></p>
 
 </div>
 
 <div class="station-card">
 
-### Trafic portable
+<h3>QRP</h3>
 
-Stations légères, vacances, activation de sites, essais d'antennes et expérimentations sur le terrain.
+<p>
+Le plaisir du trafic avec quelques watts seulement,
+en station fixe comme en portable.
+</p>
 
-[Lire la suite…](en_travaux.html)
+<p><a href="en_travaux.html">Lire la suite…</a></p>
 
 </div>
 
 <div class="station-card">
 
-### Journal de trafic
+<h3>Trafic portable</h3>
 
-Observations, essais, comptes rendus de trafic et notes prises au fil des activités.
+<p>
+Stations légères, vacances, activation de sites,
+essais d'antennes et expérimentations sur le terrain.
+</p>
 
-[Lire la suite…](en_travaux.html)
+<p><a href="en_travaux.html">Lire la suite…</a></p>
+
+</div>
+
+<div class="station-card">
+
+<h3>Journal de trafic</h3>
+
+<p>
+Observations, essais, comptes rendus de trafic
+et notes prises au fil des activités.
+</p>
+
+<p><a href="en_travaux.html">Lire la suite…</a></p>
 
 </div>
 
