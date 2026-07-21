@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Trafic
+permalink: /trafic.html
 ---
 
 ## Le trafic radioamateur
