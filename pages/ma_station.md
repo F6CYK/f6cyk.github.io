@@ -26,36 +26,44 @@ Vue générale de la station F6CYK à Étretat (2014-2023).
 
 <div class="station-card">
 
-### HF
+<div class="station-card">
 
-- Yaesu FT-857
-- Yaesu FT-817ND
-- Xiegu G90
-- Elecraft KH1
+<h3>HF</h3>
+
+<ul>
+    <li>Yaesu FT-857</li>
+    <li>Yaesu FT-817ND</li>
+    <li>Xiegu G90</li>
+    <li>Elecraft KH1</li>
+</ul>
 
 </div>
 
 <div class="station-card">
 
-### VHF / UHF
+<div class="station-card">
 
-- Belcom LS-202
-- Icom IC-202
-- Leixen LX-898
+<h3>VHF / UHF</h3>
+
+<ul>
+    <li>Belcom LS-202</li>
+    <li>Icom IC-202</li>
+    <li>Leixen LX-898</li>
+</ul>
 
 </div>
 
 <div class="station-card">
 
-### Portatifs
+<h3>Portatifs</h3>
 
-- Baofeng UV-3R
-- Wouxun KG-UV8D
-- Radioddity GD-77
-- Radioddity GD73
-- Quansheng UV-K5
-
-</div>
+<ul>
+    <li>Baofeng UV-3R</li>
+    <li>Wouxun KG-UV8D</li>
+    <li>Radioddity GD-77</li>
+    <li>Radioddity GD73</li>
+    <li>Quansheng UV-K5</li>
+</ul>
 
 </div>
 
@@ -63,33 +71,39 @@ Vue générale de la station F6CYK à Étretat (2014-2023).
 
 <div class="station-card">
 
-### Numérique
+<h3>Numérique</h3>
 
-- DVMEGA Cast
-- Inrico TM7 Plus
-- Spotnik Hotspot
-- MMDVM + Raspberry Pi Zero
-
-</div>
-
-<div class="station-card">
-
-### Antennes
-
-- Miracle Antenna (homebrew)
-- MagLoop
+<ul>
+    <li>DVMEGA Cast</li>
+    <li>Inrico TM7 Plus</li>
+    <li>Spotnik Hotspot</li>
+    <li>MMDVM + Raspberry Pi Zero</li>
+</ul>
 
 </div>
 
 <div class="station-card">
 
-### Mesures
+<h3>Antennes</h3>
 
-- MFJ-269 Antenna Analyzer
-- Heathkit HD-1250 Dip Meter
-- NanoVNA
-- Oscilloscope
-- Multimètre
+<ul>
+    <li>Miracle Antenna (homebrew)</li>
+    <li>MagLoop</li>
+</ul>
+
+</div>
+
+<div class="station-card">
+
+<h3>Mesures</h3>
+
+<ul>
+    <li>MFJ-269 Antenna Analyzer</li>
+    <li>Heathkit HD-1250 Dip Meter</li>
+    <li>NanoVNA</li>
+    <li>Oscilloscope</li>
+    <li>Multimètre</li>
+</ul>
 
 </div>
 
