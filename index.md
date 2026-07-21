@@ -16,16 +16,12 @@ Ce site rassemble la description de la station, du matériel utilisé, des anten
 
 </div>
 
-<figure class="accueil-photo">
-<img
-    src="assets/images/station/station_f6cyk-1.jpg"
-    alt="Station F6CYK">
-
-<figcaption>
-Station F6CYK.
-</figcaption>
-
-</figure>
+{% include figure.html
+   src="/assets/images/station/station_f6cyk-1.jpg"
+   alt="Station F6CYK"
+   caption="Station F6CYK."
+   class="accueil-photo"
+%}
 
 </div>
 
