@@ -1,334 +1,593 @@
 ---
 layout: default
-title: Page de validation HTML / CSS
-permalink: /test.html
+title: "Page de test"
+permalink: /test/
 ---
 
-# Page de validation HTML / CSS
+# Page de test
 
-Cette page sert de banc d'essai permanent pour tous les composants HTML, Markdown et CSS du site.
+Cette page rassemble les principaux éléments utilisés dans le site.
 
----
+Son objectif est de vérifier :
 
-## Sommaire
-
-- Typographie
-- Listes
-- Liste de définitions
-- Citations
-- Tableaux
-- Caractéristiques techniques
-- Téléchargements
-- Images
-- Remarque
-- Avertissement
-- Abréviations
-- Contact
-- Galerie
-- Code
-- Texte préformaté
-- Mesures
-- Fiche technique
+- le rendu Markdown ;
+- les composants Jekyll ;
+- la feuille de style ;
+- l'affichage sur ordinateur, tablette et smartphone.
 
 ---
 
-# Typographie
+## Titres
 
-## Titre de niveau 2
+# Titre niveau 1
 
-### Titre de niveau 3
+## Titre niveau 2
 
-#### Titre de niveau 4
+### Titre niveau 3
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+#### Titre niveau 4
 
-Texte **gras**, *italique* et [lien interne](index.html).
+##### Titre niveau 5
 
----
-
-## Listes
-
-### Liste à puces
-
-- Premier élément
-- Deuxième élément
-- Troisième élément
-
-### Liste numérotée
-
-1. Préparer
-2. Construire
-3. Tester
-
-### Liste imbriquée
-
-- Antennes
-  - Dipôle
-  - Loop
-  - Verticale
-- Récepteurs
-- Accessoires
+###### Titre niveau 6
 
 ---
 
-## Liste de définitions
+## Paragraphes
 
-<dl>
+Ceci est un paragraphe simple.
 
-<dt>QSO</dt>
-<dd>Contact radio entre deux stations.</dd>
+Un second paragraphe permet de vérifier les espacements verticaux.
 
-<dt>QTH</dt>
-<dd>Position géographique d'une station.</dd>
-
-<dt>ROS</dt>
-<dd>Rapport d'ondes stationnaires.</dd>
-
-<dt>Balun</dt>
-<dd>Adaptateur symétrique / asymétrique.</dd>
-
-</dl>
+On peut utiliser du **texte en gras**, du *texte en italique*, du ***gras italique***, du `texte monospace`, ainsi que ~~du texte barré~~.
 
 ---
 
-## Citation
+## Citations
 
-<blockquote>
+> La radio est un loisir qui permet d'apprendre tout au long de sa vie.
 
-<p>La théorie guide l'expérimentation ; l'expérimentation valide la théorie.</p>
+Citation sur plusieurs lignes.
 
-</blockquote>
+> Premier paragraphe.
+>
+> Second paragraphe.
+
+---
+
+## Ligne horizontale
+
+---
+
+Texte après séparation.
+
+---
+
+## Liens
+
+Lien externe :
+
+https://www.arrl.org
+
+Lien Markdown :
+
+[Radioamateur.org](https://www.radioamateur.org)
+
+Lien interne :
+
+[Retour à l'accueil]({{ "/" | relative_url }})
+
+Lien vers une page :
+
+[Station]({{ "/station/" | relative_url }})
+
+Lien vers Contact :
+
+[Contact]({{ "/contact/" | relative_url }})
+
+---
+
+## Listes simples
+
+- Élément 1
+- Élément 2
+- Élément 3
+
+Liste numérotée :
+
+1. Premier
+2. Deuxième
+3. Troisième
+
+Liste imbriquée :
+
+- Matériel
+  - Transceiver
+  - Alimentation
+  - Antenne
+
+- Documentation
+  - Notices
+  - Schémas
+
+---
+
+## Cases à cocher
+
+- [x] Élément validé
+- [ ] Élément à faire
+- [ ] Élément futur
 
 ---
 
 ## Tableaux
 
-| Bande | Fréquence | Mode |
-|-------|----------:|------|
-| 80 m | 3,650 MHz | SSB |
-| 40 m | 7,090 MHz | CW |
-| 20 m |14,250 MHz | SSB |
-
----
-
-## Caractéristiques techniques
+### Tableau simple
 
 | Paramètre | Valeur |
 |-----------|--------|
-| Alimentation | 13,8 V |
+| Indicatif | F4ABC |
+| Locator | JN18XX |
 | Puissance | 100 W |
-| Impédance | 50 Ω |
+| Antenne | Dipôle 2 × 20 m |
+
+### Tableau avec alignement
+
+| Bande | Mode | Puissance |
+|------:|:----:|----------:|
+| 80 m | SSB | 100 W |
+| 40 m | CW | 50 W |
+| 20 m | FT8 | 30 W |
+| 2 m | FM | 25 W |
 
 ---
 
-## Téléchargements
+## Listes de définitions
 
-- [Notice d'utilisation]({{ "/documents/pdf/exemple.pdf" | relative_url }})
-- [Schéma électrique]({{ "/documents/pdf/schema.pdf" | relative_url }})
-- [Rapport de mesures]({{ "/documents/pdf/mesures.pdf" | relative_url }})
+Terme
+: Définition associée.
 
----
+ROS
+: Rapport d'ondes stationnaires.
 
-## Images
-
-### Image Markdown
-
-![Image de test]({{ "/assets/images/test/test.png" | relative_url }})
-
----
-
-### Image avec légende
-
-<figure>
-
-<img src="{{ '/assets/images/test/test.png' | relative_url }}"
-     alt="Image de démonstration">
-
-<figcaption>
-
-Figure 1 — Image avec légende.
-
-</figcaption>
-
-</figure>
-
----
-
-### Image cliquable
-
-<figure>
-
-<a href="{{ '/assets/images/test/test.png' | relative_url }}">
-
-<img src="{{ '/assets/images/test/test.png' | relative_url }}"
-     alt="Image agrandissable">
-
-</a>
-
-<figcaption>
-
-Figure 2 — Cliquer pour afficher l'image.
-
-</figcaption>
-
-</figure>
-
----
-
-### Deux images
-
-<div class="galerie">
-
-<figure>
-
-<img src="{{ '/assets/images/test/test.png' | relative_url }}"
-     alt="Vue 1">
-
-<figcaption>Vue 1</figcaption>
-
-</figure>
-
-<figure>
-
-<img src="{{ '/assets/images/test/test.png' | relative_url }}"
-     alt="Vue 2">
-
-<figcaption>Vue 2</figcaption>
-
-</figure>
-
-</div>
-
----
-
-### Trois images
-
-<div class="galerie">
-
-<figure>
-
-<img src="{{ '/assets/images/test/test.png' | relative_url }}"
-     alt="Avant">
-
-<figcaption>Avant</figcaption>
-
-</figure>
-
-<figure>
-
-<img src="{{ '/assets/images/test/test.png' | relative_url }}"
-     alt="Arrière">
-
-<figcaption>Arrière</figcaption>
-
-</figure>
-
-<figure>
-
-<img src="{{ '/assets/images/test/test.png' | relative_url }}"
-     alt="Intérieur">
-
-<figcaption>Intérieur</figcaption>
-
-</figure>
-
-</div>
-
----
-
-## Remarque
-
-<div class="remarque">
-
-Cette zone permet de tester le style des remarques.
-
-</div>
-
----
-
-## Avertissement
-
-<div class="attention">
-
-Cette zone permet de tester le style des avertissements.
-
-</div>
+Litz
+: Fil constitué de nombreux brins isolés destiné à réduire les pertes par effet de peau.
 
 ---
 
 ## Abréviations
 
-Le <abbr title="Rapport d'Ondes Stationnaires">ROS</abbr> doit être le plus faible possible.
+| Abréviation | Signification |
+|-------------|---------------|
+| CW | Continuous Wave |
+| SSB | Single Side Band |
+| FM | Frequency Modulation |
+| SWR | Standing Wave Ratio |
+| QRP | Faible puissance |
 
 ---
 
-## Contact
+## Raccourcis clavier
 
-<address>
+Utiliser <kbd>Ctrl</kbd> + <kbd>C</kbd> pour copier.
 
-Pierre-Antoine DUMARQUEZ<br>
-Indicatif : F6CYK<br>
-Courriel : <a href="mailto:f6cyk@proton.me">f6cyk@proton.me</a>
-
-</address>
+Utiliser <kbd>Ctrl</kbd> + <kbd>V</kbd> pour coller.
 
 ---
 
-## Galerie
+## Code en ligne
 
-<div class="galerie">
-
-<img src="{{ '/assets/images/test/test.png' | relative_url }}" alt="">
-<img src="{{ '/assets/images/test/test.png' | relative_url }}" alt="">
-<img src="{{ '/assets/images/test/test.png' | relative_url }}" alt="">
-<img src="{{ '/assets/images/test/test.png' | relative_url }}" alt="">
-
-</div>
+Le filtre Jekyll `relative_url` permet de générer des liens internes robustes.
 
 ---
 
-## Code
+## Bloc de code
 
-```cpp
-for (int i = 0; i < 10; i++)
-{
-    Serial.println(i);
-}
+```liquid
+<img
+  src="{{ "/assets/images/test/logo.png" | relative_url }}"
+  alt="Logo">
 ```
+
+Bloc shell :
+
+```bash
+git add .
+git commit -m "Mise à jour"
+git push
+```
+
+Bloc texte :
+
+```text
+CQ CQ CQ de F4ABC
+```
+
+---
+
+## Téléchargement de documents
+
+Notice d'utilisation :
+
+- [Notice PDF]({{ "/documents/pdf/notice_test.pdf" | relative_url }})
+
+Schéma :
+
+- [Schéma PDF]({{ "/documents/pdf/schema_test.pdf" | relative_url }})
+
+Document Markdown :
+
+- [Exemple]({{ "/documents/notices/exemple.md" | relative_url }})
+
+---
+
+## Liens vers des ancres
+
+Retour au début :
+
+[Haut de page](#page-de-test)
+
+Accès à la section Images :
+
+[Images](#images)
+
+---
+
+## Caractères spéciaux
+
+© 2026
+
+→ ← ↑ ↓
+
+± × ÷
+
+Ω µ °
+
+¼ ½ ¾
+
+✓ ✗
 
 ---
 
 ## Texte préformaté
 
-<pre>
-
-Ligne 1
+    Ligne 1
     Ligne 2
-        Ligne 3
-
-</pre>
+    Ligne 3
 
 ---
 
-## Mesures
+## Notes
 
-| Mesure | Valeur |
-|--------:|-------:|
-| Tension | 13,82 V |
-| Courant | 1,24 A |
-| ROS | 1,05 |
+> **Remarque**
+>
+> Les téléchargements utilisent systématiquement le filtre
+> `relative_url`.
 
 ---
 
-## Fiche technique
+## Images
+
+Les illustrations ci-dessous utilisent exclusivement le filtre `relative_url`.
+
+### Image simple
+
+![Transceiver]({{ "/assets/images/test/transceiver.png" | relative_url }})
+
+---
+
+### Image avec texte alternatif
+
+![Vue générale de la station radio]({{ "/assets/images/test/panorama.png" | relative_url }})
+
+---
+
+### Image cliquable
+
+[![Logo]({{ "/assets/images/test/logo.png" | relative_url }})]({{ "/assets/images/test/logo.png" | relative_url }})
+
+Cliquer sur l'image pour l'afficher en taille réelle.
+
+---
+
+### Plusieurs images
+
+| Logo | Antenne |
+|------|----------|
+| ![Logo]({{ "/assets/images/test/logo.png" | relative_url }}) | ![Antenne]({{ "/assets/images/test/antenne.png" | relative_url }}) |
+
+---
+
+### Cartes QSL
+
+| Recto | Verso |
+|-------|-------|
+| ![QSL]({{ "/assets/images/test/qsl.png" | relative_url }}) | ![QSL]({{ "/assets/images/test/qsl.png" | relative_url }}) |
+
+---
+
+### Schéma
+
+![Schéma]({{ "/assets/images/test/schema.png" | relative_url }})
+
+---
+
+### Images pointant vers une autre ressource
+
+[![Schéma]({{ "/assets/images/test/schema.png" | relative_url }})]({{ "/documents/pdf/schema_test.pdf" | relative_url }})
+
+---
+
+### Logo dans un lien interne
+
+[![Logo]({{ "/assets/images/test/logo.png" | relative_url }})]({{ "/" | relative_url }})
+
+---
+
+### Image dans une liste
+
+- ![Logo]({{ "/assets/images/test/logo.png" | relative_url }}) Logo du site
+
+- ![Transceiver]({{ "/assets/images/test/transceiver.png" | relative_url }}) Transceiver
+
+- ![Antenne]({{ "/assets/images/test/antenne.png" | relative_url }}) Antenne
+
+---
+
+### Figure avec légende (HTML minimal)
+
+<figure>
+
+<img
+src="{{ "/assets/images/test/panorama.png" | relative_url }}"
+alt="Panorama">
+
+<figcaption>
+
+Panorama de la station.
+
+</figcaption>
+
+</figure>
+
+---
+
+### Figure cliquable
+
+<figure>
+
+<a href="{{ "/assets/images/test/panorama.png" | relative_url }}">
+
+<img
+src="{{ "/assets/images/test/panorama.png" | relative_url }}"
+alt="Panorama">
+
+</a>
+
+<figcaption>
+
+Cliquer sur l'image pour l'agrandir.
+
+</figcaption>
+
+</figure>
+
+---
+
+### Image flottante
+
+> Cette section est volontairement laissée vide.
+
+Les images flottantes seront testées au moyen des classes CSS du site plutôt qu'avec des attributs HTML de présentation.
+
+---
+
+### Images responsives
+
+Les images doivent :
+
+- conserver leurs proportions ;
+- ne jamais dépasser la largeur disponible ;
+- rester nettes sur mobile.
+
+Cette section sert uniquement à vérifier le comportement de la feuille de style.
+
+---
+
+### Vérifications
+
+- transparence du logo PNG ;
+- rendu du schéma ;
+- ouverture des images cliquables ;
+- affichage sur ordinateur ;
+- affichage sur tablette ;
+- affichage sur smartphone.
+
+---
+
+## Blocs repliables
+
+<details>
+
+<summary>Afficher le contenu</summary>
+
+Ce texte est masqué par défaut.
+
+Il peut contenir :
+
+- des listes ;
+- des liens ;
+- des images ;
+- du code.
+
+</details>
+
+---
+
+## Bloc repliable contenant une image
+
+<details>
+
+<summary>Afficher le schéma</summary>
+
+![Schéma]({{ "/assets/images/test/schema.png" | relative_url }})
+
+</details>
+
+---
+
+## Bloc repliable contenant un téléchargement
+
+<details>
+
+<summary>Documentation</summary>
+
+- [Notice PDF]({{ "/documents/pdf/notice_test.pdf" | relative_url }})
+- [Schéma PDF]({{ "/documents/pdf/schema_test.pdf" | relative_url }})
+
+</details>
+
+---
+
+## Avertissement
+
+> **Attention**
+>
+> Vérifier le ROS avant toute émission.
+
+---
+
+## Information
+
+> **Information**
+>
+> Cette page sert uniquement de validation des composants du site.
+
+---
+
+## Astuce
+
+> **Astuce**
+>
+> Utiliser systématiquement le filtre `relative_url` pour les ressources internes.
+
+---
+
+## Citation technique
+
+> « Le meilleur amplificateur est souvent une meilleure antenne. »
+
+---
+
+## Adresse
+
+Association Radio Club
+
+123 avenue des Ondes
+
+75000 Paris
+
+France
+
+---
+
+## Horaires
+
+| Jour | Ouverture |
+|------|------------|
+| Lundi | Fermé |
+| Mardi | 20 h – 23 h |
+| Jeudi | 20 h – 23 h |
+| Samedi | 14 h – 18 h |
+
+---
+
+## Exemple de fiche technique
+
+| Caractéristique | Valeur |
+|-----------------|--------|
+| Constructeur | Exemple |
+| Modèle | X100 |
+| Gammes | HF |
+| Modes | CW, SSB, AM, FM |
+| Alimentation | 13,8 V |
+| Puissance | 100 W |
+
+---
+
+## Coordonnées
 
 | Élément | Valeur |
-|----------|--------|
-| Équipement | Transceiver |
-| Marque | Exemple |
-| Modèle | XYZ-100 |
-| Gamme | HF |
-| Puissance | 100 W |
-| Alimentation | 13,8 V |
-| Connecteur | SO-239 |
-| Observations | Exemple de fiche technique destinée à valider la mise en page. |
+|---------|--------|
+| Indicatif | F4ABC |
+| Locator | JN18XX |
+| QTH | France |
+
+---
+
+## Bloc HTML personnalisé
+
+<div class="note">
+
+Ce bloc permet de vérifier les styles CSS spécifiques du site.
+
+</div>
+
+---
+
+## Image dans un bloc personnalisé
+
+<div class="note">
+
+![Logo]({{ "/assets/images/test/logo.png" | relative_url }})
+
+</div>
+
+---
+
+## Ancres
+
+### Première section
+
+Texte.
+
+### Deuxième section
+
+Texte.
+
+Retour :
+
+[↑ Haut de page](#page-de-test)
+
+---
+
+## Ressources
+
+- [Accueil]({{ "/" | relative_url }})
+- [Station]({{ "/station/" | relative_url }})
+- [Contact]({{ "/contact/" | relative_url }})
+
+---
+
+## Vérifications finales
+
+Cette page permet de contrôler :
+
+- les titres ;
+- les paragraphes ;
+- les listes ;
+- les tableaux ;
+- les citations ;
+- les blocs de code ;
+- les téléchargements ;
+- les images ;
+- les figures ;
+- les composants HTML minimaux ;
+- les blocs repliables ;
+- les liens internes ;
+- les liens externes ;
+- le comportement responsive.
+
+---
+
+*Fin de la page de test.*
