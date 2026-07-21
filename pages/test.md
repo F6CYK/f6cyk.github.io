@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Page de test"
-permalink: /pages/test/
+permalink: pages/test.html
 ---
 
 # Page de test
