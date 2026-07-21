@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: default
 title: F6CYK — Radioamateur, expérimentations et réalisations
 permalink: /
 ---
