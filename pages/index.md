@@ -18,7 +18,7 @@ Ce site rassemble la description de la station, du matériel utilisé, des anten
 
 <figure class="accueil-photo">
 
-![Station radioamateur F6CYK](assets/images/station/station_f6cyk-1.jpg)
+![Station radioamateur F6CYK](/assets/images/station/station_f6cyk-1.jpg)
 
 </figure>
 
