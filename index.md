@@ -1,7 +1,7 @@
 ---
 layout: default
 title: F6CYK — Radioamateur, expérimentations et réalisations
-permalink: /
+permalink: /index.html
 ---
 
 ## Bienvenue
@@ -10,21 +10,24 @@ permalink: /
 
 <div class="accueil-texte">
 
-Bienvenue sur le site de la station radioamateur **F6CYK**.
+Bienvenue sur le site de la station radioamateur F6CYK.
 
 Ce site rassemble la description de la station, du matériel utilisé, des antennes, des réalisations techniques ainsi qu'une documentation issue de plusieurs années d'expérimentations.
 
 </div>
 
-{% include figure.html
-   src="/assets/images/station/station_f6cyk-1.jpg"
-   alt="Station F6CYK"
-   caption="Station F6CYK."
-   class="accueil-photo"
-%}
+<figure class="accueil-photo">
+<img
+    src="assets/images/station/station_f6cyk-1.jpg"
+    alt="Station F6CYK">
+
+<figcaption>
+Station F6CYK.
+</figcaption>
+
+</figure>
 
 </div>
-
 
 ## Le contenu du site
 
