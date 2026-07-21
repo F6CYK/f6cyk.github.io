@@ -7,9 +7,8 @@ permalink: /en_travaux.html
 ## Site en travaux
 
 <figure class="illustration-construction">
-
-![Illustration de la section en cours de réalisation](/assets/images/test/site_en_travaux.png)
-
+    <img src="/assets/images/test/site_en_travaux.png"
+         alt="Illustration de la section en cours de réalisation">
 </figure>
 
 Cette rubrique est actuellement en cours de réalisation.
