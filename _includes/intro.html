@@ -1,0 +1,14 @@
+<div class="accueil-introduction">
+
+<div class="accueil-texte">
+{{ include.content | markdownify }}
+</div>
+
+{% include figure.html
+   src=include.src
+   alt=include.alt
+   caption=include.caption
+   class="accueil-photo"
+%}
+
+</div>
