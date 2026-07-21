@@ -11,7 +11,7 @@ Aujourd'hui, ma station reste volontairement simple. J'apprécie autant le maté
 <figure class="station-photo">
 
 <img
-    src="assets/images/station/station_f6cyk-2.jpg"
+    src="{{ '/assets/images/station/station_f6cyk-2.jpg' | relative_url }}"
     alt="Station F6CYK">
 
 <figcaption>
