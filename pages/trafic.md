@@ -57,7 +57,7 @@ Une vue d'ensemble de ma pratique du trafic radioamateur,
 de mes centres d'intérêt et de mes objectifs.
 </p>
 
-<p><a href="en_travaux.html">Lire la suite…</a></p>
+<p><a href="{{ '/en_travaux.html' | relative_url }}">Lire la suite…</a></p>
 
 </div>
 
@@ -70,7 +70,7 @@ Comprendre les phénomènes de propagation HF,
 interpréter les prévisions et suivre l'activité solaire.
 </p>
 
-<p><a href="en_travaux.html">Lire la suite…</a></p>
+<p><a href="{{ '/en_travaux.html' | relative_url }}">Lire la suite…</a></p>
 
 </div>
 
@@ -83,7 +83,7 @@ Manipulateurs, entraînement, pratique quotidienne,
 matériel et ressources autour du Morse.
 </p>
 
-<p><a href="en_travaux.html">Lire la suite…</a></p>
+<p><a href="{{ '/en_travaux.html' | relative_url }}">Lire la suite…</a></p>
 
 </div>
 
@@ -99,7 +99,7 @@ matériel et ressources autour du Morse.
 FT8, DMR, APRS, M17, hotspots et expérimentations numériques.
 </p>
 
-<p><a href="en_travaux.html">Lire la suite…</a></p>
+<p><a href="{{ '/en_travaux.html' | relative_url }}">Lire la suite…</a></p>
 
 </div>
 
@@ -112,7 +112,7 @@ Le plaisir du trafic avec quelques watts seulement,
 en station fixe comme en portable.
 </p>
 
-<p><a href="en_travaux.html">Lire la suite…</a></p>
+<p><a href="{{ '/en_travaux.html' | relative_url }}">Lire la suite…</a></p>
 
 </div>
 
@@ -125,7 +125,7 @@ Stations légères, vacances, activation de sites,
 essais d'antennes et expérimentations sur le terrain.
 </p>
 
-<p><a href="en_travaux.html">Lire la suite…</a></p>
+<p><a href="{{ '/en_travaux.html' | relative_url }}">Lire la suite…</a></p>
 
 </div>
 
@@ -138,7 +138,7 @@ Observations, essais, comptes rendus de trafic
 et notes prises au fil des activités.
 </p>
 
-<p><a href="en_travaux.html">Lire la suite…</a></p>
+<p><a href="{{ '/en_travaux.html' | relative_url }}">Lire la suite…</a></p>
 
 </div>
 
