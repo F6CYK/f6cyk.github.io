@@ -1,3 +1,12 @@
 title: F6CYK
 description: Site de la station radioamateur F6CYK
 lang: fr
+
+url: https://f6cyk.github.io
+baseurl: ""
+
+timezone: Europe/Paris
+
+author:
+  name: F6CYK
+  
