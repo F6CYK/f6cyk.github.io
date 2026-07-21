@@ -1,17 +1,52 @@
 <nav>
     <ul>
-        <li><a{% if page.url == '/' %} class="actif"{% endif %} href="{{ '/' | relative_url }}">Accueil</a></li>
+        <li>
+            <a{% if page.url == '/' %} class="actif"{% endif %}
+               href="{{ '/' | relative_url }}">
+                Accueil
+            </a>
+        </li>
 
-        <li><a{% if page.url contains '/pages/documentation/' %} class="actif"{% endif %} href="{{ '/pages/documentation/' | relative_url }}">Documentation</a></li>
+        <li>
+            <a{% if page.url contains '/pages/documentation/' %} class="actif"{% endif %}
+               href="{{ '/pages/documentation/' | relative_url }}">
+                Documentation
+            </a>
+        </li>
 
-        <li><a{% if page.url == '/ma_station.html' %} class="actif"{% endif %} href="{{ '/ma_station.html' | relative_url }}">Ma station</a></li>
+        <li>
+            <a{% if page.url == '/en_travaux.html' %} class="actif"{% endif %}
+               href="{{ '/en_travaux.html' | relative_url }}">
+                Ma station
+            </a>
+        </li>
 
-        <li><a{% if page.url == '/antennes.html' %} class="actif"{% endif %} href="{{ '/antennes.html' | relative_url }}">Antennes</a></li>
+        <li>
+            <a{% if page.url == '/en_travaux.html' %} class="actif"{% endif %}
+               href="{{ '/en_travaux.html' | relative_url }}">
+                Antennes
+            </a>
+        </li>
 
-        <li><a{% if page.url == '/realisations.html' %} class="actif"{% endif %} href="{{ '/realisations.html' | relative_url }}">Réalisations</a></li>
+        <li>
+            <a{% if page.url == '/en_travaux.html' %} class="actif"{% endif %}
+               href="{{ '/en_travaux.html' | relative_url }}">
+                Réalisations
+            </a>
+        </li>
 
-        <li><a{% if page.url == '/liens.html' %} class="actif"{% endif %} href="{{ '/liens.html' | relative_url }}">Liens</a></li>
+        <li>
+            <a{% if page.url == '/en_travaux.html' %} class="actif"{% endif %}
+               href="{{ '/en_travaux.html' | relative_url }}">
+                Trafic
+            </a>
+        </li>
 
-        <li><a{% if page.url == '/contact.html' %} class="actif"{% endif %} href="{{ '/contact.html' | relative_url }}">Contact</a></li>
+        <li>
+            <a{% if page.url == '/en_travaux.html' %} class="actif"{% endif %}
+               href="{{ '/en_travaux.html' | relative_url }}">
+                Contact
+            </a>
+        </li>
     </ul>
 </nav>
