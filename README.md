@@ -2,45 +2,66 @@
 
 Site personnel de la station radioamateur **F6CYK**.
 
-Ce dépôt contient l'ensemble des sources du site web publié avec **GitHub Pages**. Il présente la station, ses équipements, les activités radioamateurs, des réalisations techniques ainsi que diverses documentations.
+Ce dépôt contient l'ensemble des sources du site web publié avec **GitHub Pages**. Il est développé avec **Jekyll** et privilégie une rédaction en **Markdown**, complétée ponctuellement par du HTML lorsque celui-ci est plus adapté.
 
 ## Contenu du site
 
-Le site comprend notamment :
+Le site présente notamment :
 
-- présentation de la station ;
-- trafic radioamateur ;
-- équipements et accessoires ;
-- antennes ;
-- réalisations et expérimentations ;
-- documentation technique ;
-- photographies et illustrations.
+- la station radioamateur ;
+- les activités de trafic ;
+- les équipements et accessoires ;
+- les antennes ;
+- les réalisations et expérimentations ;
+- la documentation technique ;
+- les photographies et illustrations.
 
-## Organisation du projet
-
-Le site est construit avec **Jekyll** et privilégie une rédaction en **Markdown**, complétée ponctuellement par du HTML lorsque celui-ci est plus adapté.
-
-Structure principale du dépôt :
+## Organisation du dépôt
 
 ```text
 .
-├── _layouts/          Modèles de pages
-├── _includes/         Éléments réutilisables
+├── _config.yml                 Configuration Jekyll
+├── _data/                      Données du site
+├── _includes/                  Éléments communs (head, header, navigation, footer)
+├── _layouts/                   Modèles de pages
+├── _posts/                     Réservé aux publications Jekyll
 ├── assets/
-│   ├── css/           Feuilles de style
-│   ├── images/        Photographies et illustrations
-│   └── js/            Scripts éventuels
-├── *.md               Pages du site
-└── index.md           Page d'accueil
+│   ├── css/                    Feuilles de style
+│   ├── fonts/                  Polices
+│   ├── images/                 Illustrations et photographies
+│   └── js/                     Scripts éventuels
+├── documents/                  Documents téléchargeables
+│   ├── notices/
+│   ├── pdf/
+│   └── schemas/
+├── pages/                      Pages du site
+└── README.md
 ```
 
-Les feuilles de style sont organisées par rôle :
+## Organisation des feuilles de style
 
-- **base.css** : styles de base ;
-- **layout.css** : structure générale du site ;
-- **components.css** : composants réutilisables ;
-- **content.css** : styles spécifiques aux différentes pages ;
-- **print.css** : mise en page pour l'impression.
+Les styles sont répartis par fonction afin de faciliter leur maintenance :
+
+- **base.css** : styles fondamentaux du document ;
+- **layout.css** : structure générale du site (bandeau, navigation, contenu, pied de page, responsive) ;
+- **components.css** : composants réutilisables (cartes, boutons, tableaux, figures, encadrés, etc.) ;
+- **content.css** : styles propres aux différentes pages ;
+- **print.css** : présentation pour l'impression ;
+- **style.css** : feuille d'agrégation important les différentes feuilles de style.
+
+## Répertoires d'images
+
+Les illustrations sont classées par thème :
+
+- `antennes/`
+- `bandeau/`
+- `construction/`
+- `galerie/`
+- `materiel/`
+- `realisations/`
+- `station/`
+- `test/`
+- `trafic/`
 
 ## Technologies
 
@@ -50,7 +71,7 @@ Les feuilles de style sont organisées par rôle :
 - CSS3
 - GitHub Pages
 
-Le JavaScript n'est utilisé que lorsqu'il apporte une réelle valeur ajoutée.
+Le JavaScript n'est utilisé que lorsqu'il apporte une fonctionnalité réellement nécessaire.
 
 ## Publication
 
@@ -62,7 +83,7 @@ Adresse du site :
 
 ## Licence
 
-Sauf mention contraire, le contenu de ce dépôt est la propriété de son auteur.
+Sauf mention contraire, l'ensemble des textes, photographies, illustrations et documents présents dans ce dépôt demeure la propriété de leur auteur.
 
 ---
 
