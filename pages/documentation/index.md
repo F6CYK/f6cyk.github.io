@@ -12,14 +12,12 @@ Les documents originaux (notes d'application, fiches techniques, schémas, photo
 
 ## Circuits intégrés analogiques
 
-- [XR2206]({{ '/pages/documentation/xr2206.html' | relative_url }})  
-  Générateur de fonctions et applications.
-
-- NE555 *(à venir)*
-
-- LM386 *(à venir)*
-
-- MC1496 *(à venir)*
+| Composant | Description |
+|-----------|-------------|
+| [XR2206]({{ '/pages/documentation/xr2206.html' | relative_url }}) | Générateur de fonctions monolithique. |
+| NE555 | Temporisateur universel *(à venir)* |
+| LM386 | Amplificateur BF *(à venir)* |
+| MC1496 | Modulateur / démodulateur équilibré *(à venir)* |
 
 ## Circuits intégrés numériques
 
