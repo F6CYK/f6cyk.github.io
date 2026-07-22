@@ -1,4 +1,4 @@
-<div class="flipbook-wrapper">
+<div class="flipbook-wrapper" id="flipbook-{{ include.file | slugify }}">
 
 {% if include.title %}
 <div class="flipbook-header">
@@ -180,8 +180,8 @@
 
 document.addEventListener("DOMContentLoaded", async () => {
 
-    const wrapper =
-        document.querySelector(".flipbook-wrapper");
+    const wrapper = 
+        document.getElementById("flipbook-{{ include.file | slugify }}");
 
     const container =
         wrapper.querySelector(".flipbook-book");
