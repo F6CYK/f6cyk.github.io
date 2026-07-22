@@ -1,21 +1,75 @@
 <nav>
     <ul>
-        <li><a{% if page.url == '/index.html' or page.url == '/' %} class="actif"{% endif %} href="{{ '/index.html' | relative_url }}">Accueil</a></li>
 
-        <li><a{% if page.url == '/ma_station.html' %} class="actif"{% endif %} href="{{ '/ma_station.html' | relative_url }}">Station</a></li>
+        <!-- Accueil -->
+        <li>
+            <a{% if page.url == '/' or page.url == '/index.html' %} class="actif"{% endif %}
+               href="{{ '/' | relative_url }}">Accueil</a>
+        </li>
 
-        <li><a{% if page.url == '/en_travaux.html' %} class="actif"{% endif %} href="{{ '/en_travaux.html' | relative_url }}">Matériel</a></li>
+        <!-- Station -->
+        <li>
+            <a{% if page.url == '/ma_station.html' %} class="actif"{% endif %}
+               href="{{ '/ma_station.html' | relative_url }}">Station</a>
+        </li>
 
-        <li><a{% if page.url == '/en_travaux.html' %} class="actif"{% endif %} href="{{ '/en_travaux.html' | relative_url }}">Antennes</a></li>
+        <!-- Matériel -->
+        <li>
+            <a{% if page.url == '/materiel.html' %} class="actif"{% endif %}
+               href="{{ '/materiel.html' | relative_url }}">Matériel</a>
+        </li>
 
-        <li><a{% if page.url == '/en_travaux.html' %} class="actif"{% endif %} href="{{ '/en_travaux.html' | relative_url }}">Réalisations</a></li>
+        <!-- Antennes -->
+        <li>
+            <a{% if page.url == '/antennes.html' %} class="actif"{% endif %}
+               href="{{ '/antennes.html' | relative_url }}">Antennes</a>
+        </li>
 
-        <li><a{% if page.url == '/trafic.html' %} class="actif"{% endif %} href="{{ '/trafic.html' | relative_url }}">Trafic</a></li>
+        <!-- Réalisations -->
+        <li>
+            <a{% if page.url == '/realisations.html' %} class="actif"{% endif %}
+               href="{{ '/realisations.html' | relative_url }}">Réalisations</a>
+        </li>
 
-        <li><a{% if page.url contains '/pages/documentation/' %} class="actif"{% endif %} href="{{ '/pages/documentation/' | relative_url }}">Documentation</a></li>
+        <!-- Trafic -->
+        <li>
+            <a{% if page.url == '/trafic.html' %} class="actif"{% endif %}
+               href="{{ '/trafic.html' | relative_url }}">Trafic</a>
+        </li>
 
-        <li><a{% if page.url == '/en_travaux.html' %} class="actif"{% endif %} href="{{ '/en_travaux.html' | relative_url }}">Galerie</a></li>
+        <!-- Documentation (menu déroulant Jekyll dynamique) -->
+        <li class="menu-deroulant">
+            <a{% if page.url contains '/documents/' %} class="actif"{% endif %}>Documentation</a>
 
-        <li><a{% if page.url == '/contact.html' %} class="actif"{% endif %} href="{{ '/contact.html' | relative_url }}">Contact</a></li>
+            <ul class="sous-menu">
+                {% assign docs = site.static_files | where_exp: "f", "f.path contains '/documents/'" %}
+                {% assign categories = docs | map: "path" | uniq %}
+
+                {% for cat in categories %}
+                    {% assign parts = cat | split: '/' %}
+                    {% assign top = parts[2] %}
+                    {% if top %}
+                        <li>
+                            <a href="{{ '/documents/' | append: top | append: '/' | relative_url }}">
+                                {{ top | replace: '-', ' ' | capitalize }}
+                            </a>
+                        </li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+        </li>
+
+        <!-- Galerie -->
+        <li>
+            <a{% if page.url == '/galerie.html' %} class="actif"{% endif %}
+               href="{{ '/galerie.html' | relative_url }}">Galerie</a>
+        </li>
+
+        <!-- Contact -->
+        <li>
+            <a{% if page.url == '/contact.html' %} class="actif"{% endif %}
+               href="{{ '/contact.html' | relative_url }}">Contact</a>
+        </li>
+
     </ul>
 </nav>
