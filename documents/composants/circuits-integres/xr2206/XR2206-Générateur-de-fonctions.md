@@ -86,10 +86,11 @@ Application Note AN-14 – Page 4
 
 ---
 
-## Documentation technique
+<!-- Documentation technique : feuilleteur PDF -->
 
 {% include flipbook.html
    file="XR2206.pdf"
+   title="Documentation technique"
    scale=1.5
    width="700px"
 %}
