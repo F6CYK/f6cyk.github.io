@@ -44,20 +44,30 @@
         Documentation
     </a>
     <ul class="sous-menu">
-        {% assign dirs = site.static_files | where_exp: "f", "f.path contains '/documents/'" %}
-        {% assign categories = "" | split: "" %}
-        {% for item in dirs %}
-            {% assign parts = item.path | split: '/' %}
-            {% assign top = parts[2] %}
-            {% if top and categories contains top == false %}
-                {% assign categories = categories | push: top %}
-                <li>
-                    <a href="{{ '/documents/' | append: top | append: '/' | relative_url }}">
-                        {{ top | replace: '-', ' ' | capitalize }}
-                    </a>
-                </li>
-            {% endif %}
-        {% endfor %}
+        {% assign dirs = site.static_files
+    | where_exp: "f", "f.path contains '/documents/'"
+    | sort: "path" %}
+
+{% assign categories = "" | split: "" %}
+
+{% for item in dirs %}
+
+    {% assign parts = item.path | split: "/" %}
+    {% assign top = parts[2] %}
+
+    {% unless categories contains top %}
+
+        {% assign categories = categories | push: top %}
+
+        <li>
+            <a href="{{ '/documents/' | append: top | append: '/' | relative_url }}">
+                {{ top | replace: "-", " " | capitalize }}
+            </a>
+        </li>
+
+    {% endunless %}
+
+{% endfor %}
     </ul>
 </li>
 
