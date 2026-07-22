@@ -88,10 +88,33 @@ Application Note AN-14 – Page 4
 
 ## Documentation technique
 
-{% include pdf.html
-   file="XR2206.pdf"
-   title="Fiche technique EXAR XR2206 (PDF)"
-%}
+<canvas id="pdf-preview"></canvas>
+
+<script type="module">
+document.addEventListener("DOMContentLoaded", async () => {
+
+    const url = "{{ page.asset_path }}/XR2206.pdf";
+
+    const pdf = await window.pdfjsLib.getDocument(url).promise;
+
+    const page = await pdf.getPage(1);
+
+    const scale = 1.5;
+    const viewport = page.getViewport({ scale });
+
+    const canvas = document.getElementById("pdf-preview");
+    const context = canvas.getContext("2d");
+
+    canvas.width = viewport.width;
+    canvas.height = viewport.height;
+
+    await page.render({
+        canvasContext: context,
+        viewport: viewport
+    }).promise;
+
+});
+</script>
 
 ---
 
