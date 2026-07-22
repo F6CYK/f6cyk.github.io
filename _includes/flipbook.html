@@ -298,28 +298,30 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     }
 
-    const pageFlip =
-        new St.PageFlip(
+container.style.height = pageHeight + "px";
 
-            container,
+const pageFlip =
+    new St.PageFlip(
 
-            {
+        container,
 
-                width: pageWidth,
+        {
 
-                height: pageHeight,
+            width: pageWidth,
 
-                showCover: true,
+            height: pageHeight,
 
-                size: "stretch",
+            showCover: true,
 
-                maxShadowOpacity: 0.5
+            size: "stretch",
 
-            }
+            maxShadowOpacity: 0.5
 
-        );
+        }
 
-    pageFlip.loadFromHTML(pages);
+    );
+
+pageFlip.loadFromHTML(pages);
 
     btnFirst.addEventListener("click", () => {
 
