@@ -88,10 +88,9 @@ Application Note AN-14 – Page 4
 
 ## Documentation technique
 
-{% include pdf-card.html
+{% include pdf.html
    file="XR2206.pdf"
-   cover="XR2206.jpg"
-   title="Fiche technique EXAR XR2206"
+   title="Fiche technique EXAR XR2206 (PDF)"
 %}
 
 ---
@@ -135,10 +134,4 @@ Application Note AN-14 – Page 4
 - Documentation technique Exar.
 - Application Note AN-14.
 - Divers montages expérimentaux.
-
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-    console.log("StPageFlip :", window.St);
-    console.log("PageFlip :", window.St?.PageFlip);
-});
-</script>
+- 
