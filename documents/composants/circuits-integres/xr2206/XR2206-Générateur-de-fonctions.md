@@ -88,9 +88,10 @@ Application Note AN-14 – Page 4
 
 ## Documentation technique
 
-{% include pdf.html
+{% include pdf-card.html
    file="XR2206.pdf"
-   title="Fiche technique EXAR XR2206 (PDF)"
+   cover="XR2206.jpg"
+   title="Fiche technique EXAR XR2206"
 %}
 
 ---
