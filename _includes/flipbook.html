@@ -166,6 +166,7 @@
 <script type="module">
 
 document.addEventListener("DOMContentLoaded", async () => {
+    console.log("Initialisation d'un flipbook");
 
     const wrapper =
         document.querySelector(".flipbook-wrapper");
@@ -190,6 +191,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     const pdfUrl =
         "{{ page.asset_path }}/{{ include.file }}";
+    console.log(pdfUrl);
 
     const loadingTask =
         window.pdfjsLib.getDocument({
