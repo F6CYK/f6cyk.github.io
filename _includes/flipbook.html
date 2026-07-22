@@ -3,7 +3,7 @@
 <script type="module">
 document.addEventListener("DOMContentLoaded", async () => {
 
-    const url = "{{ page.asset_path }}/XR2206.pdf";
+    const url = "{{ page.asset_path }}/{{ include.file }}";
 
     const loadingTask = window.pdfjsLib.getDocument({ url });
     const pdf = await loadingTask.promise;
