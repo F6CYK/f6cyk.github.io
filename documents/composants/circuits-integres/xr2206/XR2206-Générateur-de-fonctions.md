@@ -1,6 +1,7 @@
 ---
-layout: page
+layout: default
 title: XR2206 – Générateur de fonctions
+permalink: /documentation/composants/circuits-integres/xr2206/
 ---
 
 # XR2206
