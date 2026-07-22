@@ -90,6 +90,7 @@ Application Note AN-14 – Page 4
 
 {% include flipbook.html
    file="XR2206.pdf"
+   scale=1.5
 %}
 ---
 
