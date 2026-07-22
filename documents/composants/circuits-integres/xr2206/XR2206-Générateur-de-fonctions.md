@@ -91,11 +91,17 @@ Application Note AN-14 – Page 4
 <canvas id="pdf-preview"></canvas>
 
 <script type="module">
-document.addEventListener("DOMContentLoaded", async () => {
+    document.addEventListener("DOMContentLoaded", async () => {
 
     const url = "{{ page.asset_path }}/XR2206.pdf";
 
-    const pdf = await window.pdfjsLib.getDocument(url).promise;
+    console.log("URL =", url);
+
+    const loadingTask = window.pdfjsLib.getDocument({
+        url: url
+    });
+
+    const pdf = await loadingTask.promise;
 
     const page = await pdf.getPage(1);
 
