@@ -28,6 +28,15 @@
 
     <script src="{{ '/assets/vendor/pageflip/page-flip.browser.js' | relative_url }}"></script>
 
+    <script type="module">
+        import * as pdfjsLib from "{{ '/assets/vendor/pdfjs/pdf.mjs' | relative_url }}";
+
+        pdfjsLib.GlobalWorkerOptions.workerSrc =
+            "{{ '/assets/vendor/pdfjs/pdf.worker.mjs' | relative_url }}";
+
+        window.pdfjsLib = pdfjsLib;
+    </script>
+
 </body>
 
 </html>
