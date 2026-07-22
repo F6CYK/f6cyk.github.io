@@ -243,3 +243,28 @@ nav ul li {
     margin: 0 1em;
 }
 
+/* Structure générique des menus déroulants */
+.menu-deroulant {
+    position: relative;
+}
+
+.menu-deroulant > a {
+    display: block;
+}
+
+/* Sous-menu générique */
+.menu-deroulant .sous-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 180px;
+    z-index: 1000;
+}
+
+/* Ouverture au survol ou au focus clavier */
+.menu-deroulant:hover .sous-menu,
+.menu-deroulant:focus-within .sous-menu {
+    display: block;
+}
+
