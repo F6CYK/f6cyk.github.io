@@ -167,9 +167,11 @@
 
 document.addEventListener("DOMContentLoaded", async () => {
 
-    const wrapper =
-        document.currentScript.previousElementSibling.previousElementSibling;
-        console.log(wrapper);
+    const script = document.currentScript;
+
+    console.log(script.previousElementSibling);
+    console.log(script.previousElementSibling.previousElementSibling);
+    
     const container =
         wrapper.querySelector(".flipbook-book");
 
