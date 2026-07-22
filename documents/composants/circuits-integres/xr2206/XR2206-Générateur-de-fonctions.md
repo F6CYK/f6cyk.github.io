@@ -95,6 +95,15 @@ Application Note AN-14 – Page 4
    width="700px"
 %}
 
+<!-- Notice du kit -->
+
+{% include flipbook.html
+   file="XR2206_DIY_Kit_Manual.pdf"
+   title="Notice du kit"
+   scale=1.5
+   width="700px"
+%}
+
 ---
 
 ## Schémas d'application
