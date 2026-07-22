@@ -16,6 +16,9 @@ document.addEventListener("DOMContentLoaded", async () => {
         "{{ include.id | default: 'pdf-book' }}"
     );
 
+console.log("id =", "{{ include.id | default: 'pdf-book' }}");
+console.log("container =", container);    
+
     let pageWidth = 0;
     let pageHeight = 0;
 
