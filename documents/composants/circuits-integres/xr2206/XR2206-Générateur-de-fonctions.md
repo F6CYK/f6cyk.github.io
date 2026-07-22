@@ -88,7 +88,9 @@ Application Note AN-14 – Page 4
 
 ## Documentation technique
 
-{% include flipbook.html %}
+{% include flipbook.html
+   file="XR2206.pdf"
+%}
 ---
 
 ## Schémas d'application
