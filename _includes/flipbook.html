@@ -53,124 +53,110 @@
 
 <style>
 
-.flipbook-wrapper{
+.flipbook-wrapper {
 
-    display:flex;
-    flex-direction:column;
+    display: flex;
+    flex-direction: column;
 
-    gap:12px;
+    gap: 12px;
 
-    width:100%;
+    width: 100%;
 
-    margin:2rem auto;
-
-}
-
-.flipbook-header{
-
-    display:flex;
-
-    justify-content:space-between;
-
-    align-items:center;
+    margin: 2rem auto 4rem auto;
 
 }
 
-.flipbook-header h2{
+.flipbook-header {
 
-    margin:0;
+    display: flex;
 
-}
-
-.flipbook-fullscreen{
-
-    cursor:pointer;
-
-    border:none;
-
-    background:transparent;
-
-    font-size:1.3rem;
-
-    line-height:1;
+    justify-content: space-between;
+    align-items: center;
 
 }
 
-.flipbook-book{
+.flipbook-header h2 {
 
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    width:100%;
-
-    min-height:300px;
+    margin: 0;
 
 }
 
-.flipbook-toolbar{
+.flipbook-fullscreen {
 
-    display:flex;
+    cursor: pointer;
 
-    justify-content:center;
+    border: none;
+    background: transparent;
 
-    align-items:center;
-
-    gap:.5rem;
-
-}
-
-.flipbook-toolbar button{
-
-    cursor:pointer;
-
-    min-width:2.4rem;
-
-    padding:.45rem .70rem;
+    font-size: 1.3rem;
+    line-height: 1;
 
 }
 
-.flipbook-wrapper:fullscreen{
+.flipbook-book {
 
-    display:flex;
+    display: flex;
 
-    flex-direction:column;
+    justify-content: center;
+    align-items: center;
 
-    width:100vw;
+    width: 100%;
 
-    height:100vh;
-
-    margin:0;
-
-    padding:1rem;
-
-    box-sizing:border-box;
-
-    background:#444;
+    min-height: 150px;
 
 }
 
-.flipbook-wrapper:fullscreen
-.flipbook-book{
+.flipbook-toolbar {
 
-    flex:1;
+    display: flex;
 
-    display:flex;
+    justify-content: center;
+    align-items: center;
 
-    justify-content:center;
-
-    align-items:center;
-
-    overflow:hidden;
+    gap: .5rem;
 
 }
 
-.flipbook-wrapper:fullscreen
-.flipbook-toolbar{
+.flipbook-toolbar button {
 
-    flex:0 0 auto;
+    cursor: pointer;
+
+    min-width: 2.4rem;
+
+    padding: .45rem .70rem;
+
+}
+
+.flipbook-wrapper:fullscreen {
+
+    display: flex;
+    flex-direction: column;
+
+    margin: 0;
+    padding: 1rem;
+
+    box-sizing: border-box;
+
+    background: #2b2b2b;
+
+}
+
+.flipbook-wrapper:fullscreen .flipbook-book {
+
+    flex: 1;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+
+}
+
+.flipbook-wrapper:fullscreen .flipbook-toolbar {
+
+    flex: 0 0 auto;
 
 }
 
