@@ -1,10 +1,47 @@
+<div class="flipbook-wrapper">
+
 {% if include.title %}
-<h2>{{ include.title }}</h2>
+<div class="flipbook-header">
+    <h2>{{ include.title }}</h2>
+
+    <button
+        id="fullscreen-btn"
+        type="button"
+        title="Plein écran">
+        ⛶
+    </button>
+</div>
 {% endif %}
 
 <div id="pdf-book"></div>
 
+</div>
+
+<style>
+.flipbook-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:10px;
+}
+
+#fullscreen-btn{
+    cursor:pointer;
+    border:none;
+    background:transparent;
+    font-size:1.3rem;
+    line-height:1;
+}
+
+.flipbook-wrapper:fullscreen{
+    background:#444;
+    padding:20px;
+    overflow:auto;
+}
+</style>
+
 <script type="module">
+
 document.addEventListener("DOMContentLoaded", async () => {
 
     const url = "{{ page.asset_path }}/{{ include.file }}";
@@ -13,6 +50,8 @@ document.addEventListener("DOMContentLoaded", async () => {
     const pdf = await loadingTask.promise;
 
     const container = document.getElementById("pdf-book");
+    const wrapper = document.querySelector(".flipbook-wrapper");
+    const fullscreenBtn = document.getElementById("fullscreen-btn");
 
     let pageWidth = 0;
     let pageHeight = 0;
@@ -55,18 +94,54 @@ document.addEventListener("DOMContentLoaded", async () => {
         }).promise;
     }
 
-   const pageFlip = new St.PageFlip(container, {
-    width: pageWidth,
-    height: pageHeight,
-    showCover: true,
-    size: "stretch",
-    maxShadowOpacity: 0.5
+    const pageFlip = new St.PageFlip(container, {
+        width: pageWidth,
+        height: pageHeight,
+        showCover: true,
+        size: "stretch",
+        maxShadowOpacity: 0.5
+    });
+
+    pageFlip.loadFromHTML(
+        container.querySelectorAll(".page")
+    );
+
+    if (fullscreenBtn) {
+
+        fullscreenBtn.addEventListener("click", async () => {
+
+            try {
+
+                if (!document.fullscreenElement) {
+
+                    await wrapper.requestFullscreen();
+
+                } else {
+
+                    await document.exitFullscreen();
+
+                }
+
+            } catch (err) {
+
+                console.error(err);
+
+            }
+
+        });
+
+    }
+
+    document.addEventListener("fullscreenchange", () => {
+
+        setTimeout(() => {
+
+            window.dispatchEvent(new Event("resize"));
+
+        }, 200);
+
+    });
+
 });
 
-pageFlip.loadFromHTML(
-    container.querySelectorAll(".page")
-);
-   
-
-});
 </script>
