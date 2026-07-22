@@ -88,7 +88,7 @@ Application Note AN-14 – Page 4
 
 ## Documentation technique
 
-<div id="pdf-pages"></div>
+<div id="pdf-book"></div>
 
 <script type="module">
 document.addEventListener("DOMContentLoaded", async () => {
@@ -98,13 +98,22 @@ document.addEventListener("DOMContentLoaded", async () => {
     const loadingTask = window.pdfjsLib.getDocument({ url });
     const pdf = await loadingTask.promise;
 
-    const container = document.getElementById("pdf-pages");
+    const container = document.getElementById("pdf-book");
 
-    for (let n = 1; n <= pdf.numPages; n++) {
+    for (let pageNumber = 1; pageNumber <= pdf.numPages; pageNumber++) {
 
-        const page = await pdf.getPage(n);
+        const page = await pdf.getPage(pageNumber);
 
         const viewport = page.getViewport({ scale: 1.5 });
+
+        const pageDiv = document.createElement("div");
+        pageDiv.className = "page";
+
+        pageDiv.style.background = "white";
+        pageDiv.style.padding = "10px";
+        pageDiv.style.margin = "20px auto";
+        pageDiv.style.boxShadow = "0 0 8px rgba(0,0,0,.25)";
+        pageDiv.style.width = viewport.width + "px";
 
         const canvas = document.createElement("canvas");
         const context = canvas.getContext("2d");
@@ -112,11 +121,8 @@ document.addEventListener("DOMContentLoaded", async () => {
         canvas.width = viewport.width;
         canvas.height = viewport.height;
 
-        canvas.style.display = "block";
-        canvas.style.margin = "20px auto";
-        canvas.style.boxShadow = "0 0 8px rgba(0,0,0,.25)";
-
-        container.appendChild(canvas);
+        pageDiv.appendChild(canvas);
+        container.appendChild(pageDiv);
 
         await page.render({
             canvasContext: context,
@@ -126,6 +132,8 @@ document.addEventListener("DOMContentLoaded", async () => {
 
 });
 </script>
+
+
 
 ---
 
