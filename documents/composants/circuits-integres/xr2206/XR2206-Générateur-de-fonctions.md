@@ -88,36 +88,41 @@ Application Note AN-14 – Page 4
 
 ## Documentation technique
 
-<canvas id="pdf-preview"></canvas>
+<div id="pdf-pages"></div>
 
 <script type="module">
-    document.addEventListener("DOMContentLoaded", async () => {
+document.addEventListener("DOMContentLoaded", async () => {
 
     const url = "{{ page.asset_path }}/XR2206.pdf";
 
-    console.log("URL =", url);
-
-    const loadingTask = window.pdfjsLib.getDocument({
-        url: url
-    });
-
+    const loadingTask = window.pdfjsLib.getDocument({ url });
     const pdf = await loadingTask.promise;
 
-    const page = await pdf.getPage(1);
+    const container = document.getElementById("pdf-pages");
 
-    const scale = 1.5;
-    const viewport = page.getViewport({ scale });
+    for (let n = 1; n <= pdf.numPages; n++) {
 
-    const canvas = document.getElementById("pdf-preview");
-    const context = canvas.getContext("2d");
+        const page = await pdf.getPage(n);
 
-    canvas.width = viewport.width;
-    canvas.height = viewport.height;
+        const viewport = page.getViewport({ scale: 1.5 });
 
-    await page.render({
-        canvasContext: context,
-        viewport: viewport
-    }).promise;
+        const canvas = document.createElement("canvas");
+        const context = canvas.getContext("2d");
+
+        canvas.width = viewport.width;
+        canvas.height = viewport.height;
+
+        canvas.style.display = "block";
+        canvas.style.margin = "20px auto";
+        canvas.style.boxShadow = "0 0 8px rgba(0,0,0,.25)";
+
+        container.appendChild(canvas);
+
+        await page.render({
+            canvasContext: context,
+            viewport: viewport
+        }).promise;
+    }
 
 });
 </script>
