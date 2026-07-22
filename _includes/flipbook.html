@@ -33,7 +33,8 @@ document.addEventListener("DOMContentLoaded", async () => {
         pageDiv.style.padding = "10px";
         pageDiv.style.margin = "20px auto";
         pageDiv.style.boxShadow = "0 0 8px rgba(0,0,0,.25)";
-        pageDiv.style.width = viewport.width + "px";
+        pageDiv.style.width =
+            "{{ include.width | default: '' }}" || (viewport.width + "px");
 
         const canvas = document.createElement("canvas");
         const context = canvas.getContext("2d");
