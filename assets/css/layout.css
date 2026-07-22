@@ -230,17 +230,8 @@ footer a:hover{
 
 }
 
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-}
-
 nav ul li {
     position: relative;
-    margin: 0 1em;
 }
 
 /* Structure générique des menus déroulants */
