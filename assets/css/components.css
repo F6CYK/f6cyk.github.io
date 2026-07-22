@@ -102,3 +102,30 @@ th{
     border-left:4px solid #b00020;
     background:#fff4f4;
 }
+
+.menu-deroulant .sous-menu {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    min-width: 180px;
+    z-index: 1000;
+}
+
+.menu-deroulant:hover .sous-menu,
+.menu-deroulant:focus-within .sous-menu {
+    display: block;
+}
+
+.sous-menu li a {
+    padding: 0.5em 1em;
+    color: #003366;
+    text-align: left;
+}
+
+.sous-menu li a:hover {
+    background-color: #e6e6e6;
+}
+
