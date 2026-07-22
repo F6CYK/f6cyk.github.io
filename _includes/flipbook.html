@@ -2,51 +2,18 @@
 
 {% if include.title %}
 <div class="flipbook-header">
-
     <h2>{{ include.title }}</h2>
-
-    <button
-        class="flipbook-fullscreen"
-        type="button"
-        title="Plein écran">
-        ⛶
-    </button>
-
+    <button class="flipbook-fullscreen" type="button" title="Plein écran">⛶</button>
 </div>
 {% endif %}
 
 <div class="flipbook-book"></div>
 
 <div class="flipbook-toolbar">
-
-    <button
-        class="flipbook-first"
-        type="button"
-        title="Première page">
-        |◀
-    </button>
-
-    <button
-        class="flipbook-prev"
-        type="button"
-        title="Page précédente">
-        ◀
-    </button>
-
-    <button
-        class="flipbook-next"
-        type="button"
-        title="Page suivante">
-        ▶
-    </button>
-
-    <button
-        class="flipbook-last"
-        type="button"
-        title="Dernière page">
-        ▶|
-    </button>
-
+    <button class="flipbook-first" type="button" title="Première page">|◀</button>
+    <button class="flipbook-prev" type="button" title="Page précédente">◀</button>
+    <button class="flipbook-next" type="button" title="Page suivante">▶</button>
+    <button class="flipbook-last" type="button" title="Dernière page">▶|</button>
 </div>
 
 </div>
@@ -54,111 +21,78 @@
 <style>
 
 .flipbook-wrapper {
-
     display: flex;
     flex-direction: column;
-
     gap: 12px;
-
     width: 100%;
-
     margin: 2rem auto 4rem auto;
-
 }
 
 .flipbook-header {
-
     display: flex;
-
     justify-content: space-between;
     align-items: center;
-
 }
 
 .flipbook-header h2 {
-
     margin: 0;
-
 }
 
 .flipbook-fullscreen {
-
     cursor: pointer;
-
     border: none;
     background: transparent;
-
     font-size: 1.3rem;
     line-height: 1;
-
 }
 
 .flipbook-book {
-
     display: flex;
-
     justify-content: center;
-
     align-items: flex-start;
-
     width: 100%;
-
     min-height: 150px;
-
 }
 
 .flipbook-toolbar {
-
     display: flex;
-
     justify-content: center;
     align-items: center;
-
     gap: .5rem;
-
 }
 
 .flipbook-toolbar button {
-
     cursor: pointer;
-
     min-width: 2.4rem;
-
     padding: .45rem .70rem;
-
 }
 
 .flipbook-wrapper:fullscreen {
-
     display: flex;
     flex-direction: column;
-
     margin: 0;
     padding: 1rem;
-
     box-sizing: border-box;
-
     background: #2b2b2b;
-
 }
 
 .flipbook-wrapper:fullscreen .flipbook-book {
-
     flex: 1;
-
     display: flex;
-
     justify-content: center;
     align-items: center;
-
     overflow: hidden;
-
 }
 
 .flipbook-wrapper:fullscreen .flipbook-toolbar {
-
     flex: 0 0 auto;
+}
 
+.page {
+    background: white;
+    padding: 10px;
+    margin: 20px auto;
+    box-shadow: 0 0 8px rgba(0,0,0,.25);
 }
 
 </style>
@@ -166,228 +100,96 @@
 <script type="module">
 
 document.addEventListener("DOMContentLoaded", async () => {
-    console.log("Initialisation d'un flipbook");
 
-    const wrapper =
-        document.querySelector(".flipbook-wrapper");
-    
-    const container =
-        wrapper.querySelector(".flipbook-book");
+    const wrapper = document.querySelector(".flipbook-wrapper");
+    const container = wrapper.querySelector(".flipbook-book");
 
-    const fullscreenButton =
-        wrapper.querySelector(".flipbook-fullscreen");
+    const pdfUrl = "{{ page.asset_path }}/{{ include.file }}";
 
-    const btnFirst =
-        wrapper.querySelector(".flipbook-first");
+    const scale = {{ include.scale | default: 1.5 }};
+    const forcedWidth = "{{ include.width | default: '' }}";
 
-    const btnPrev =
-        wrapper.querySelector(".flipbook-prev");
-
-    const btnNext =
-        wrapper.querySelector(".flipbook-next");
-
-    const btnLast =
-        wrapper.querySelector(".flipbook-last");
-
-    const pdfUrl =
-        "{{ page.asset_path }}/{{ include.file }}";
-    console.log(pdfUrl);
-
-    const loadingTask =
-        window.pdfjsLib.getDocument({
-            url: pdfUrl
-        });
-
-    const pdf =
-        await loadingTask.promise;
-
-    let pageWidth = 0;
-
-    let pageHeight = 0;
+    const pdf = await window.pdfjsLib.getDocument({ url: pdfUrl }).promise;
 
     const pages = [];
+    let referenceWidth = 0;
+    let referenceHeight = 0;
 
-    for (let pageNumber = 1;
-         pageNumber <= pdf.numPages;
-         pageNumber++) {
+    async function rendrePage(numero) {
 
-        const pdfPage =
-            await pdf.getPage(pageNumber);
+        const pdfPage = await pdf.getPage(numero);
+        const viewport = pdfPage.getViewport({ scale });
 
-        const scale =
-            {{ include.scale | default: 1.5 }};
-
-        const viewport =
-            pdfPage.getViewport({
-                scale
-            });
-
-        if (pageNumber === 1) {
-
-            pageWidth =
-                viewport.width + 20;
-
-            pageHeight =
-                viewport.height + 20;
-
+        if (numero === 1) {
+            referenceWidth = viewport.width + 20;
+            referenceHeight = viewport.height + 20;
         }
 
-        const page =
-            document.createElement("div");
-
+        const page = document.createElement("div");
         page.className = "page";
 
-        page.style.background = "white";
+        page.style.width = forcedWidth ? forcedWidth : viewport.width + "px";
 
-        page.style.padding = "10px";
+        const canevas = document.createElement("canvas");
+        canevas.width = viewport.width;
+        canevas.height = viewport.height;
 
-        page.style.margin = "20px auto";
-
-        page.style.boxShadow =
-            "0 0 8px rgba(0,0,0,.25)";
-
-        if ("{{ include.width | default: '' }}") {
-
-            page.style.width =
-                "{{ include.width }}";
-
-        }
-        else {
-
-            page.style.width =
-                viewport.width + "px";
-
-        }
-
-        const canvas =
-            document.createElement("canvas");
-
-        canvas.width =
-            viewport.width;
-
-        canvas.height =
-            viewport.height;
-
-        const context =
-            canvas.getContext("2d");
-
-        page.appendChild(canvas);
-
+        page.appendChild(canevas);
         pages.push(page);
 
-        container.appendChild(page);
+        const contexte = canevas.getContext("2d");
 
         await pdfPage.render({
-
-            canvasContext: context,
-
+            canvasContext: contexte,
             viewport: viewport
-
         }).promise;
-
     }
 
-const pageFlip =
-    new St.PageFlip(
-
-        container,
-
-        {
-
-            width: pageWidth,
-
-            height: pageHeight,
-
-            showCover: true,
-
-            size: "stretch",
-
-            maxShadowOpacity: 0.5
-
-        }
-
-    );
-
-pageFlip.loadFromHTML(pages);
-
-    btnFirst.addEventListener("click", () => {
-
-        pageFlip.turnToPage(0);
-
-    });
-
-    btnPrev.addEventListener("click", () => {
-
-        pageFlip.flipPrev();
-
-    });
-
-    btnNext.addEventListener("click", () => {
-
-        pageFlip.flipNext();
-
-    });
-
-    btnLast.addEventListener("click", () => {
-
-        pageFlip.turnToPage(
-            pageFlip.getPageCount() - 1
-        );
-
-    });
-
-    if (fullscreenButton) {
-
-        fullscreenButton.addEventListener(
-            "click",
-            async () => {
-
-                try {
-
-                    if (document.fullscreenElement) {
-
-                        await document.exitFullscreen();
-
-                    }
-                    else {
-
-                        await wrapper.requestFullscreen();
-
-                    }
-
-                }
-                catch (error) {
-
-                    console.error(error);
-
-                }
-
-            }
-        );
-
+    for (let n = 1; n <= pdf.numPages; n++) {
+        await rendrePage(n);
     }
 
-    document.addEventListener(
-        "fullscreenchange",
-        () => {
+    const pageFlip = new St.PageFlip(container, {
+        width: referenceWidth,
+        height: referenceHeight,
+        showCover: true,
+        size: "stretch",
+        maxShadowOpacity: 0.5
+    });
 
-            if (
-                document.fullscreenElement &&
-                document.fullscreenElement !== wrapper
-            ) {
-                return;
+    pageFlip.loadFromHTML(pages);
+
+    wrapper.querySelector(".flipbook-first").onclick = () => pageFlip.turnToPage(0);
+    wrapper.querySelector(".flipbook-prev").onclick = () => pageFlip.flipPrev();
+    wrapper.querySelector(".flipbook-next").onclick = () => pageFlip.flipNext();
+    wrapper.querySelector(".flipbook-last").onclick = () => pageFlip.turnToPage(pageFlip.getPageCount() - 1);
+
+    const boutonPleinEcran = wrapper.querySelector(".flipbook-fullscreen");
+
+    if (boutonPleinEcran) {
+        boutonPleinEcran.onclick = async () => {
+            try {
+                if (document.fullscreenElement) {
+                    await document.exitFullscreen();
+                } else {
+                    await wrapper.requestFullscreen();
+                }
+            } catch (e) {
+                console.error(e);
             }
+        };
+    }
 
-            requestAnimationFrame(() => {
-
-                pageFlip.update();
-
-                pageFlip.updateOrientation();
-
-            });
-
+    document.addEventListener("fullscreenchange", () => {
+        if (document.fullscreenElement && document.fullscreenElement !== wrapper) {
+            return;
         }
-    );
+        requestAnimationFrame(() => {
+            pageFlip.update();
+            pageFlip.updateOrientation();
+        });
+    });
 
 });
+
 </script>
