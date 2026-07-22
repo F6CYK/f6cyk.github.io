@@ -2,7 +2,7 @@
 <h2>{{ include.title }}</h2>
 {% endif %}
 
-<div id="{{ include.id | default: 'pdf-book' }}"></div>
+<div id="pdf-book"></div>
 
 <script type="module">
 document.addEventListener("DOMContentLoaded", async () => {
@@ -12,12 +12,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     const loadingTask = window.pdfjsLib.getDocument({ url });
     const pdf = await loadingTask.promise;
 
-    const container = document.getElementById(
-        "{{ include.id | default: 'pdf-book' }}"
-    );
-
-console.log("id =", "{{ include.id | default: 'pdf-book' }}");
-console.log("container =", container);    
+    const container = document.getElementById("pdf-book");
 
     let pageWidth = 0;
     let pageHeight = 0;
