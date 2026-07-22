@@ -13,29 +13,29 @@
                href="{{ '/ma_station.html' | relative_url }}">Station</a>
         </li>
 
-<!-- Matériel -->
-<li>
-    <a{% if page.url == '/en_travaux.html' %} class="actif"{% endif %}
-       href="{{ '/en_travaux.html' | relative_url }}">Matériel</a>
-</li>
+        <!-- Matériel -->
+        <li>
+            <a{% if page.url == '/en_travaux.html' %} class="actif"{% endif %}
+               href="{{ '/en_travaux.html' | relative_url }}">Matériel</a>
+        </li>
 
-<!-- Antennes -->
-<li>
-    <a{% if page.url == '/en_travaux.html' %} class="actif"{% endif %}
-       href="{{ '/en_travaux.html' | relative_url }}">Antennes</a>
-</li>
+        <!-- Antennes -->
+        <li>
+            <a{% if page.url == '/en_travaux.html' %} class="actif"{% endif %}
+               href="{{ '/en_travaux.html' | relative_url }}">Antennes</a>
+        </li>
 
-<!-- Réalisations -->
-<li>
-    <a{% if page.url == '/en_travaux.html' %} class="actif"{% endif %}
-       href="{{ '/en_travaux.html' | relative_url }}">Réalisations</a>
-</li>
+        <!-- Réalisations -->
+        <li>
+            <a{% if page.url == '/en_travaux.html' %} class="actif"{% endif %}
+               href="{{ '/en_travaux.html' | relative_url }}">Réalisations</a>
+        </li>
 
-<!-- Galerie -->
-<li>
-    <a{% if page.url == '/en_travaux.html' %} class="actif"{% endif %}
-       href="{{ '/en_travaux.html' | relative_url }}">Galerie</a>
-</li>
+        <!-- Galerie -->
+        <li>
+            <a{% if page.url == '/galerie.html' %} class="actif"{% endif %}
+               href="{{ '/galerie.html' | relative_url }}">Galerie</a>
+        </li>
 
         <!-- Trafic -->
         <li>
@@ -43,46 +43,34 @@
                href="{{ '/trafic.html' | relative_url }}">Trafic</a>
         </li>
 
-        
         <!-- Documentation (menu déroulant Jekyll dynamique) -->
         <li class="menu-deroulant">
-    <a href="#" tabindex="0"{% if page.url contains '/documents/' %} class="actif"{% endif %}>
-        Documentation
-    </a>
-    <ul class="sous-menu">
-        {% assign dirs = site.static_files
-    | where_exp: "f", "f.path contains '/documents/'"
-    | sort: "path" %}
-
-{% assign categories = "" | split: "" %}
-
-{% for item in dirs %}
-
-    {% assign parts = item.path | split: "/" %}
-    {% assign top = parts[2] %}
-
-    {% unless categories contains top %}
-
-        {% assign categories = categories | push: top %}
-
-        <li>
-            <a href="{{ '/documents/' | append: top | append: '/' | relative_url }}">
-                {{ top | replace: "-", " " | capitalize }}
+            <a href="#" tabindex="0"{% if page.url contains '/documents/' %} class="actif"{% endif %}>
+                Documentation
             </a>
-        </li>
 
-    {% endunless %}
+            <ul class="sous-menu">
+                {% assign dirs = site.static_files
+                    | where_exp: "f", "f.path contains '/documents/'"
+                    | sort: "path" %}
 
-{% endfor %}
-    </ul>
-</li>
+                {% assign categories = "" | split: "" %}
 
+                {% for item in dirs %}
+                    {% assign parts = item.path | split: "/" %}
+                    {% assign top = parts[2] %}
 
+                    {% unless categories contains top %}
+                        {% assign categories = categories | push: top %}
 
-        <!-- Galerie -->
-        <li>
-            <a{% if page.url == '/galerie.html' %} class="actif"{% endif %}
-               href="{{ '/galerie.html' | relative_url }}">Galerie</a>
+                        <li>
+                            <a href="{{ '/documents/' | append: top | append: '/' | relative_url }}">
+                                {{ top | replace: "-", " " | capitalize }}
+                            </a>
+                        </li>
+                    {% endunless %}
+                {% endfor %}
+            </ul>
         </li>
 
         <!-- Contact -->
