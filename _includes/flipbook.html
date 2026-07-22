@@ -141,6 +141,14 @@ document.addEventListener("DOMContentLoaded", async () => {
         container.querySelectorAll(".page")
     );
 
+    const btnNext = document.getElementById("btn-next");
+
+    btnNext.addEventListener("click", () => {
+
+    pageFlip.flipNext();
+
+    });
+
     if (fullscreenBtn) {
 
         fullscreenBtn.addEventListener("click", async () => {
