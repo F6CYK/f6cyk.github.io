@@ -160,13 +160,18 @@ document.addEventListener("DOMContentLoaded", async () => {
         container.appendChild(page);
     }
 
-    const pageFlip = new St.PageFlip(container, {
-        width: pageWidth,
-        height: pageHeight,
-        showCover: true,
-        size: "stretch",
-        maxShadowOpacity: 0.5
-    });
+const pageFlip =
+    new St.PageFlip(
+        container,
+        {
+            width: pageWidth,
+            height: pageHeight,
+            showCover: true,
+            size: "stretch",
+            maxShadowOpacity: 0.3,
+            cornerSize: 40
+        }
+    );
 
     pageFlip.loadFromHTML(pages);
 
