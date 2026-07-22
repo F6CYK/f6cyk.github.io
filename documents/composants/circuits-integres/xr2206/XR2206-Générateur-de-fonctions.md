@@ -25,17 +25,29 @@ Cliquez sur une image pour l'afficher en taille réelle.
 <tr>
 
 <td align="center">
-<a href="{{ page.asset_path }}/function-generator-using-xr2206-1.jpg" target="_blank">
-<img src="{{ page.asset_path }}/function-generator-using-xr2206-1.jpg" width="250" alt="Application Note AN-14 - Page 1">
-</a><br>
+
+{% include image.html
+   file="function-generator-using-xr2206-1.jpg"
+   width="250"
+   alt="Application Note AN-14 - Page 1"
+%}
+
+<br>
 Application Note AN-14 – Page 1
+
 </td>
 
 <td align="center">
-<a href="{{ page.asset_path }}/function-generator-using-xr2206-2.jpg" target="_blank">
-<img src="{{ page.asset_path }}/function-generator-using-xr2206-2.jpg" width="250" alt="Application Note AN-14 - Page 2">
-</a><br>
+
+{% include image.html
+   file="function-generator-using-xr2206-2.jpg"
+   width="250"
+   alt="Application Note AN-14 - Page 2"
+%}
+
+<br>
 Application Note AN-14 – Page 2
+
 </td>
 
 </tr>
@@ -43,17 +55,29 @@ Application Note AN-14 – Page 2
 <tr>
 
 <td align="center">
-<a href="{{ page.asset_path }}/function-generator-using-xr2206-3.jpg" target="_blank">
-<img src="{{ page.asset_path }}/function-generator-using-xr2206-3.jpg" width="250" alt="Application Note AN-14 - Page 3">
-</a><br>
+
+{% include image.html
+   file="function-generator-using-xr2206-3.jpg"
+   width="250"
+   alt="Application Note AN-14 - Page 3"
+%}
+
+<br>
 Application Note AN-14 – Page 3
+
 </td>
 
 <td align="center">
-<a href="{{ page.asset_path }}/function-generator-using-xr2206-4.jpg" target="_blank">
-<img src="{{ page.asset_path }}/function-generator-using-xr2206-4.jpg" width="250" alt="Application Note AN-14 - Page 4">
-</a><br>
+
+{% include image.html
+   file="function-generator-using-xr2206-4.jpg"
+   width="250"
+   alt="Application Note AN-14 - Page 4"
+%}
+
+<br>
 Application Note AN-14 – Page 4
+
 </td>
 
 </tr>
@@ -66,9 +90,11 @@ Application Note AN-14 – Page 4
 
 ### Générateur de fonctions
 
-<a href="{{ page.asset_path }}/function-generator-using-xr2206.jpg" target="_blank">
-<img src="{{ page.asset_path }}/function-generator-using-xr2206.jpg" width="600" alt="Générateur de fonctions utilisant le XR2206">
-</a>
+{% include image.html
+   file="function-generator-using-xr2206.jpg"
+   width="600"
+   alt="Générateur de fonctions utilisant le XR2206"
+%}
 
 *Schéma de principe d'un générateur de fonctions utilisant le XR2206.*
 
@@ -76,9 +102,11 @@ Application Note AN-14 – Page 4
 
 ### Émetteur AM
 
-<a href="{{ page.asset_path }}/emetteur_am_xr2206.png" target="_blank">
-<img src="{{ page.asset_path }}/emetteur_am_xr2206.png" width="700" alt="Émetteur AM utilisant le XR2206">
-</a>
+{% include image.html
+   file="emetteur_am_xr2206.png"
+   width="700"
+   alt="Émetteur AM utilisant le XR2206"
+%}
 
 *Exemple d'émetteur AM utilisant le XR2206.*
 
