@@ -135,3 +135,10 @@ Application Note AN-14 – Page 4
 - Documentation technique Exar.
 - Application Note AN-14.
 - Divers montages expérimentaux.
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    console.log("StPageFlip :", window.St);
+    console.log("PageFlip :", window.St?.PageFlip);
+});
+</script>
