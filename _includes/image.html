@@ -2,5 +2,5 @@
     <img
         src="{{ page.asset_path }}/{{ include.file }}"
         width="{{ include.width }}"
-        alt="{{ include.alt }}">
+        alt="{{ include.alt | default: include.file }}">
 </a>
