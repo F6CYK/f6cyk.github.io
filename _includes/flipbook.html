@@ -2,28 +2,50 @@
 
 {% if include.title %}
 <div class="flipbook-header">
+
     <h2>{{ include.title }}</h2>
 
     <button
-        id="fullscreen-btn"
+        class="flipbook-fullscreen"
         type="button"
         title="Plein écran">
         ⛶
     </button>
+
 </div>
 {% endif %}
 
-<div id="pdf-book"></div>
+<div class="flipbook-book"></div>
 
 <div class="flipbook-toolbar">
 
-    <button id="btn-first" type="button" title="Première page">|◀</button>
+    <button
+        class="flipbook-first"
+        type="button"
+        title="Première page">
+        |◀
+    </button>
 
-    <button id="btn-prev" type="button" title="Page précédente">◀</button>
+    <button
+        class="flipbook-prev"
+        type="button"
+        title="Page précédente">
+        ◀
+    </button>
 
-    <button id="btn-next" type="button" title="Page suivante">▶</button>
+    <button
+        class="flipbook-next"
+        type="button"
+        title="Page suivante">
+        ▶
+    </button>
 
-    <button id="btn-last" type="button" title="Dernière page">▶|</button>
+    <button
+        class="flipbook-last"
+        type="button"
+        title="Dernière page">
+        ▶|
+    </button>
 
 </div>
 
@@ -31,49 +53,125 @@
 
 <style>
 
-.flipbook-header{
+.flipbook-wrapper{
+
     display:flex;
+    flex-direction:column;
+
+    gap:12px;
+
+    width:100%;
+
+    margin:2rem auto;
+
+}
+
+.flipbook-header{
+
+    display:flex;
+
     justify-content:space-between;
+
     align-items:center;
-    margin-bottom:10px;
+
 }
 
-#fullscreen-btn{
-    cursor:pointer;
-    border:none;
-    background:transparent;
-    font-size:1.3rem;
-    line-height:1;
-}
-
-/* Mode plein écran */
-
-    .flipbook-wrapper:fullscreen{
-    display:grid;
-    grid-template-rows:auto 1fr auto;
-
-    width:100vw;
-    height:100vh;
+.flipbook-header h2{
 
     margin:0;
-    padding:0;
 
-    background:#444;
-    overflow:hidden;
 }
 
-.flipbook-wrapper:fullscreen #pdf-book{
+.flipbook-fullscreen{
+
+    cursor:pointer;
+
+    border:none;
+
+    background:transparent;
+
+    font-size:1.3rem;
+
+    line-height:1;
+
+}
+
+.flipbook-book{
+
     display:flex;
+
     justify-content:center;
+
     align-items:center;
 
     width:100%;
-    height:100%;
+
+    min-height:300px;
+
 }
 
 .flipbook-toolbar{
-    position:relative;
-    z-index:10000;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:.5rem;
+
+}
+
+.flipbook-toolbar button{
+
+    cursor:pointer;
+
+    min-width:2.4rem;
+
+    padding:.45rem .70rem;
+
+}
+
+.flipbook-wrapper:fullscreen{
+
+    display:flex;
+
+    flex-direction:column;
+
+    width:100vw;
+
+    height:100vh;
+
+    margin:0;
+
+    padding:1rem;
+
+    box-sizing:border-box;
+
+    background:#444;
+
+}
+
+.flipbook-wrapper:fullscreen
+.flipbook-book{
+
+    flex:1;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    overflow:hidden;
+
+}
+
+.flipbook-wrapper:fullscreen
+.flipbook-toolbar{
+
+    flex:0 0 auto;
+
 }
 
 </style>
@@ -82,125 +180,225 @@
 
 document.addEventListener("DOMContentLoaded", async () => {
 
-    const url = "{{ page.asset_path }}/{{ include.file }}";
+    const wrapper =
+        document.querySelector(".flipbook-wrapper");
 
-    const loadingTask = window.pdfjsLib.getDocument({ url });
-    const pdf = await loadingTask.promise;
+    const container =
+        wrapper.querySelector(".flipbook-book");
 
-    const container = document.getElementById("pdf-book");
-    const wrapper = document.querySelector(".flipbook-wrapper");
-    const fullscreenBtn = document.getElementById("fullscreen-btn");
+    const fullscreenButton =
+        wrapper.querySelector(".flipbook-fullscreen");
+
+    const btnFirst =
+        wrapper.querySelector(".flipbook-first");
+
+    const btnPrev =
+        wrapper.querySelector(".flipbook-prev");
+
+    const btnNext =
+        wrapper.querySelector(".flipbook-next");
+
+    const btnLast =
+        wrapper.querySelector(".flipbook-last");
+
+    const pdfUrl =
+        "{{ page.asset_path }}/{{ include.file }}";
+
+    const loadingTask =
+        window.pdfjsLib.getDocument({
+            url: pdfUrl
+        });
+
+    const pdf =
+        await loadingTask.promise;
 
     let pageWidth = 0;
+
     let pageHeight = 0;
 
-    for (let pageNumber = 1; pageNumber <= pdf.numPages; pageNumber++) {
+    const pages = [];
 
-        const page = await pdf.getPage(pageNumber);
+    for (let pageNumber = 1;
+         pageNumber <= pdf.numPages;
+         pageNumber++) {
 
-        const scale = {{ include.scale | default: 1.5 }};
+        const pdfPage =
+            await pdf.getPage(pageNumber);
 
-        const viewport = page.getViewport({ scale });
+        const scale =
+            {{ include.scale | default: 1.5 }};
+
+        const viewport =
+            pdfPage.getViewport({
+                scale
+            });
 
         if (pageNumber === 1) {
-            pageWidth = viewport.width + 20;
-            pageHeight = viewport.height + 20;
+
+            pageWidth =
+                viewport.width + 20;
+
+            pageHeight =
+                viewport.height + 20;
+
         }
 
-        const pageDiv = document.createElement("div");
-        pageDiv.className = "page";
+        const page =
+            document.createElement("div");
 
-        pageDiv.style.background = "white";
-        pageDiv.style.padding = "10px";
-        pageDiv.style.margin = "20px auto";
-        pageDiv.style.boxShadow = "0 0 8px rgba(0,0,0,.25)";
-        pageDiv.style.width =
-            "{{ include.width | default: '' }}" || (viewport.width + "px");
+        page.className = "page";
 
-        const canvas = document.createElement("canvas");
-        const context = canvas.getContext("2d");
+        page.style.background = "white";
 
-        canvas.width = viewport.width;
-        canvas.height = viewport.height;
+        page.style.padding = "10px";
 
-        pageDiv.appendChild(canvas);
-        container.appendChild(pageDiv);
+        page.style.margin = "20px auto";
 
-        await page.render({
+        page.style.boxShadow =
+            "0 0 8px rgba(0,0,0,.25)";
+
+        if ("{{ include.width | default: '' }}") {
+
+            page.style.width =
+                "{{ include.width }}";
+
+        }
+        else {
+
+            page.style.width =
+                viewport.width + "px";
+
+        }
+
+        const canvas =
+            document.createElement("canvas");
+
+        canvas.width =
+            viewport.width;
+
+        canvas.height =
+            viewport.height;
+
+        const context =
+            canvas.getContext("2d");
+
+        page.appendChild(canvas);
+
+        pages.push(page);
+
+        container.appendChild(page);
+
+        await pdfPage.render({
+
             canvasContext: context,
+
             viewport: viewport
+
         }).promise;
+
     }
 
-    const pageFlip = new St.PageFlip(container, {
-        width: pageWidth,
-        height: pageHeight,
-        showCover: true,
-        size: "stretch",
-        maxShadowOpacity: 0.5
-    });
+    const pageFlip =
+        new St.PageFlip(
 
-    pageFlip.loadFromHTML(
-        container.querySelectorAll(".page")
-    );
+            container,
 
-    const btnFirst = document.getElementById("btn-first");
-    const btnPrev  = document.getElementById("btn-prev");
-    const btnNext  = document.getElementById("btn-next");
-    const btnLast  = document.getElementById("btn-last");
+            {
 
-    btnFirst.addEventListener("click", () => {
-    pageFlip.turnToPage(0);
-    });
+                width: pageWidth,
 
-    btnPrev.addEventListener("click", () => {
-    pageFlip.flipPrev();
-    });
+                height: pageHeight,
 
-    btnNext.addEventListener("click", () => {
-    pageFlip.flipNext();
-    });
+                showCover: true,
 
-    btnLast.addEventListener("click", () => {
-    pageFlip.turnToPage(pageFlip.getPageCount() - 1);
-    });
+                size: "stretch",
 
-    if (fullscreenBtn) {
-
-        fullscreenBtn.addEventListener("click", async () => {
-
-            try {
-
-                if (!document.fullscreenElement) {
-
-                    await wrapper.requestFullscreen();
-
-                } else {
-
-                    await document.exitFullscreen();
-
-                }
-
-            } catch (err) {
-
-                console.error(err);
+                maxShadowOpacity: 0.5
 
             }
 
-        });
+        );
+
+    pageFlip.loadFromHTML(pages);
+
+    btnFirst.addEventListener("click", () => {
+
+        pageFlip.turnToPage(0);
+
+    });
+
+    btnPrev.addEventListener("click", () => {
+
+        pageFlip.flipPrev();
+
+    });
+
+    btnNext.addEventListener("click", () => {
+
+        pageFlip.flipNext();
+
+    });
+
+    btnLast.addEventListener("click", () => {
+
+        pageFlip.turnToPage(
+            pageFlip.getPageCount() - 1
+        );
+
+    });
+
+    if (fullscreenButton) {
+
+        fullscreenButton.addEventListener(
+            "click",
+            async () => {
+
+                try {
+
+                    if (document.fullscreenElement) {
+
+                        await document.exitFullscreen();
+
+                    }
+                    else {
+
+                        await wrapper.requestFullscreen();
+
+                    }
+
+                }
+                catch (error) {
+
+                    console.error(error);
+
+                }
+
+            }
+        );
 
     }
 
-document.addEventListener("fullscreenchange", () => {
+    document.addEventListener(
+        "fullscreenchange",
+        () => {
 
-    setTimeout(() => {
+            if (
+                document.fullscreenElement &&
+                document.fullscreenElement !== wrapper
+            ) {
+                return;
+            }
 
-        pageFlip.update();
+            requestAnimationFrame(() => {
 
-    }, 200);
+                pageFlip.update();
+
+                pageFlip.updateOrientation();
+
+            });
+
+        }
+    );
 
 });
-
-});
-
 </script>
