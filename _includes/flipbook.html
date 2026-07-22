@@ -84,17 +84,15 @@
 
 .flipbook-fullscreen{
 
-    position: fixed !important;
+    cursor:pointer;
 
-    top: 20px !important;
+    border:none;
 
-    right: 20px !important;
+    background:transparent;
 
-    z-index: 999999 !important;
+    font-size:1.3rem;
 
-    background: red !important;
-
-    color: white !important;
+    line-height:1;
 
 }
 
@@ -393,9 +391,9 @@ document.addEventListener("DOMContentLoaded", async () => {
 
             requestAnimationFrame(() => {
 
-                //pageFlip.update();
+                pageFlip.update();
 
-                //pageFlip.updateOrientation();
+                pageFlip.updateOrientation();
 
             });
 
