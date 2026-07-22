@@ -103,33 +103,23 @@ th{
     background:#fff4f4;
 }
 
-/* ==========================================================
-   menu déroulant
-   ========================================================== */
-
-.menu-deroulant .sous-menu {
-    display: none;
-    position: absolute;
-    left: 0;
-    top: 100%;
-    background-color: #fff;
+/* Apparence du sous-menu */
+.sous-menu {
+    background-color: #ffffff;
     border: 1px solid #ccc;
-    min-width: 180px;
-    z-index: 1000;
-}
-
-.menu-deroulant:hover .sous-menu,
-.menu-deroulant:focus-within .sous-menu {
-    display: block;
+    padding: 0;
+    list-style: none;
 }
 
 .sous-menu li a {
+    display: block;
     padding: 0.5em 1em;
     color: #003366;
-    text-align: left;
+    text-decoration: none;
 }
 
 .sous-menu li a:hover {
     background-color: #e6e6e6;
 }
+
 
