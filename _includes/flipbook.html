@@ -162,14 +162,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     pageFlip.turnToPage(pageFlip.getPageCount() - 1);
     });
 
-    btnFirst.addEventListener("click", () => {
-    pageFlip.turnToPage(0);
-    });
-
-    btnLast.addEventListener("click", () => {
-    pageFlip.turnToPage(pageFlip.getPageCount() - 1);
-    });
-
     if (fullscreenBtn) {
 
         fullscreenBtn.addEventListener("click", async () => {
@@ -196,15 +188,15 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     }
 
-    document.addEventListener("fullscreenchange", () => {
+document.addEventListener("fullscreenchange", () => {
 
-        setTimeout(() => {
+    setTimeout(() => {
 
-            window.dispatchEvent(new Event("resize"));
+        pageFlip.update();
 
-        }, 200);
+    }, 200);
 
-    });
+});
 
 });
 
