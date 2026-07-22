@@ -37,27 +37,27 @@
                href="{{ '/trafic.html' | relative_url }}">Trafic</a>
         </li>
 
+        
         <!-- Documentation (menu déroulant Jekyll dynamique) -->
         <li class="menu-deroulant">
-    <a{% if page.url contains '/documents/' %} class="actif"{% endif %}>Documentation</a>
-    <ul class="sous-menu">
-        {% assign dirs = site.static_files | where_exp: "f", "f.path contains '/documents/'" %}
-        {% assign categories = "" | split: "" %}
-        {% for item in dirs %}
-            {% assign parts = item.path | split: '/' %}
-            {% assign top = parts[2] %}
-            {% if top and categories contains top == false %}
-                {% assign categories = categories | push: top %}
-                <li>
-                    <a href="{{ '/documents/' | append: top | append: '/' | relative_url }}">
-                        {{ top | replace: '-', ' ' | capitalize }}
-                    </a>
-                </li>
-            {% endif %}
-        {% endfor %}
-    </ul>
-</li>
-
+            <a tabindex="0"{% if page.url contains '/documents/' %} class="actif"{% endif %}>Documentation</a>
+            <ul class="sous-menu">
+                {% assign dirs = site.static_files | where_exp: "f", "f.path contains '/documents/'" %}
+                {% assign categories = "" | split: "" %}
+                {% for item in dirs %}
+                    {% assign parts = item.path | split: '/' %}
+                    {% assign top = parts[2] %}
+                    {% if top and categories contains top == false %}
+                        {% assign categories = categories | push: top %}
+                        <li>
+                            <a href="{{ '/documents/' | append: top | append: '/' | relative_url }}">
+                                {{ top | replace: '-', ' ' | capitalize }}
+                            </a>
+                        </li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+        </li>
 
         <!-- Galerie -->
         <li>
