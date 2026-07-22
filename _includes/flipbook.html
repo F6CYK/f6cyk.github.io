@@ -48,11 +48,9 @@
 
 /* Mode plein écran */
 
-.flipbook-wrapper:fullscreen{
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
+    .flipbook-wrapper:fullscreen{
+    display:grid;
+    grid-template-rows:auto 1fr auto;
 
     width:100vw;
     height:100vh;
