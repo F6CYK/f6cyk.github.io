@@ -100,11 +100,19 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     const container = document.getElementById("pdf-book");
 
+    let pageWidth = 0;
+    let pageHeight = 0;
+
     for (let pageNumber = 1; pageNumber <= pdf.numPages; pageNumber++) {
 
         const page = await pdf.getPage(pageNumber);
 
         const viewport = page.getViewport({ scale: 1.5 });
+
+        if (pageNumber === 1) {
+            pageWidth = viewport.width + 20;
+            pageHeight = viewport.height + 20;
+        }
 
         const pageDiv = document.createElement("div");
         pageDiv.className = "page";
@@ -129,6 +137,19 @@ document.addEventListener("DOMContentLoaded", async () => {
             viewport: viewport
         }).promise;
     }
+
+   const pageFlip = new St.PageFlip(container, {
+    width: pageWidth,
+    height: pageHeight,
+    showCover: true,
+    size: "stretch",
+    maxShadowOpacity: 0.5
+});
+
+pageFlip.loadFromHTML(
+    container.querySelectorAll(".page")
+);
+   
 
 });
 </script>
