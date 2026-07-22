@@ -1,18 +1,25 @@
 <div class="flipbook-wrapper">
 
 {% if include.title %}
+
 <div class="flipbook-header">
 
+{% if include.title %}
     <h2>{{ include.title }}</h2>
+{% else %}
+    <span></span>
+{% endif %}
 
-    <button
-        class="flipbook-fullscreen"
-        type="button"
-        title="Plein écran">
-        ⛶
-    </button>
+<button
+    class="flipbook-fullscreen"
+    type="button"
+    title="Plein écran">
+    ⛶
+</button>
 
 </div>
+
+    
 {% endif %}
 
 <div class="flipbook-book"></div>
