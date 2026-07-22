@@ -17,7 +17,9 @@ document.addEventListener("DOMContentLoaded", async () => {
 
         const page = await pdf.getPage(pageNumber);
 
-        const viewport = page.getViewport({ scale: 1.5 });
+        const scale = {{ include.scale | default: 1.5 }};
+
+        const viewport = page.getViewport({ scale });
 
         if (pageNumber === 1) {
             pageWidth = viewport.width + 20;
