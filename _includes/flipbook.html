@@ -141,12 +141,33 @@ document.addEventListener("DOMContentLoaded", async () => {
         container.querySelectorAll(".page")
     );
 
-    const btnNext = document.getElementById("btn-next");
+    const btnFirst = document.getElementById("btn-first");
+    const btnPrev  = document.getElementById("btn-prev");
+    const btnNext  = document.getElementById("btn-next");
+    const btnLast  = document.getElementById("btn-last");
+
+    btnFirst.addEventListener("click", () => {
+    pageFlip.turnToPage(0);
+    });
+
+    btnPrev.addEventListener("click", () => {
+    pageFlip.flipPrev();
+    });
 
     btnNext.addEventListener("click", () => {
-
     pageFlip.flipNext();
+    });
 
+    btnLast.addEventListener("click", () => {
+    pageFlip.turnToPage(pageFlip.getPageCount() - 1);
+    });
+
+    btnFirst.addEventListener("click", () => {
+    pageFlip.turnToPage(0);
+    });
+
+    btnLast.addEventListener("click", () => {
+    pageFlip.turnToPage(pageFlip.getPageCount() - 1);
     });
 
     if (fullscreenBtn) {
