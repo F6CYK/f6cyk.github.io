@@ -1,24 +1,23 @@
-{% for pair in include.tree %}
-    {% assign key = pair[0] %}
-    {% assign value = pair[1] %}
+{% for noeud in include.noeuds %}
 
-    {% if value contains "/" %}
-        <!-- Fichier -->
-        <li>
-            <a href="{{ value | relative_url }}">
-                {{ key | replace: ".md", "" | replace: "-", " " | capitalize }}
-            </a>
-        </li>
+<li{% if noeud.enfants %} class="menu-deroulant"{% endif %}>
 
+    {% if noeud.url %}
+        <a href="{{ noeud.url | relative_url }}">
+            {{ noeud.titre }}
+        </a>
     {% else %}
-        <!-- Dossier -->
-        <li class="menu-deroulant">
-            <a href="#" tabindex="0">
-                {{ key | replace: "-", " " | capitalize }}
-            </a>
-            <ul class="sous-menu">
-                {% include recursive-menu.html tree=value %}
-            </ul>
-        </li>
+        <a href="#" tabindex="0">
+            {{ noeud.titre }}
+        </a>
     {% endif %}
+
+    {% if noeud.enfants %}
+        <ul class="sous-menu">
+            {% include recursive-menu.html noeuds=noeud.enfants %}
+        </ul>
+    {% endif %}
+
+</li>
+
 {% endfor %}
