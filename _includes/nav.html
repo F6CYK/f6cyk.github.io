@@ -49,15 +49,17 @@
         Documentation
     </a>
 
-<ul class="sous-menu">
-
-<li>
-    <a href="{{ article.url | relative_url }}">
-        {{ article.titre }}
-    </a>
+    <ul class="sous-menu">
+        {% for article in site.data.documentation %}
+        <li>
+            <a href="{{ article.url | relative_url }}">
+                {{ article.titre }}
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
 </li>
-   
-</ul>
+    
         <!-- Contact -->
         <li>
             <a{% if page.url == '/contact.html' %} class="actif"{% endif %}
