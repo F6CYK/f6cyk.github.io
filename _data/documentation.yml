@@ -1,2 +1,8 @@
-- titre: XR2206
-  url: /documentation/composants/circuits-integres/xr2206/
+- titre: Composants
+  enfants:
+
+    - titre: Circuits intégrés
+      enfants:
+
+        - titre: XR2206
+          url: /documentation/composants/circuits-integres/xr2206/
