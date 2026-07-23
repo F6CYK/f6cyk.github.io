@@ -122,4 +122,46 @@ th{
     background-color: #e6e6e6;
 }
 
+/* ==========================================================
+   Sous‑menu : apparence
+   ----------------------------------------------------------
+   Ce bloc définit uniquement le STYLE du sous‑menu.
+   Il ne contrôle PAS son ouverture/fermeture.
+   ========================================================== */
+
+.sous-menu {
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    padding: 0;
+    list-style: none;
+}
+
+.sous-menu li a {
+    display: block;
+    padding: 0.5em 1em;
+    color: #003366;
+    text-decoration: none;
+}
+
+.sous-menu li a:hover {
+    background-color: #e6e6e6;
+}
+
+/* ==========================================================
+   Sous‑menu : comportement
+   ----------------------------------------------------------
+   C’est ICI que tout se joue.
+   Sans ces règles, le sous‑menu ne peut JAMAIS s’afficher.
+   ----------------------------------------------------------
+   1) On cache le sous‑menu par défaut.
+   2) On l’affiche quand on survole le parent .menu-deroulant.
+   ========================================================== */
+
+.menu-deroulant .sous-menu {
+    display: none;          /* Sous‑menu invisible par défaut */
+}
+
+.menu-deroulant:hover > .sous-menu {
+    display: block;         /* Sous‑menu visible au survol */
+}
 
