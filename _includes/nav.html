@@ -49,16 +49,9 @@
         Documentation
     </a>
 
-    <ul class="sous-menu">
-        {% for article in site.data.documentation %}
-        <li>
-            <a href="{{ article.url | relative_url }}">
-                {{ article.titre }}
-            </a>
-        </li>
-        {% endfor %}
-    </ul>
-</li>
+<ul class="sous-menu">
+    {% include recursive-menu.html noeuds=site.data.documentation %}
+</ul>
     
         <!-- Contact -->
         <li>
