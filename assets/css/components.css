@@ -104,8 +104,12 @@ th{
 }
 
 /* ==========================================================
-   Menu déroulant : structure
+   Menu documentaire
    ========================================================== */
+
+/* ----------------------------------------------------------
+   Structure du composant
+   ---------------------------------------------------------- */
 
 .menu-deroulant {
     position: relative;      /* Le sous-menu se positionnera par rapport à ce parent */
@@ -116,9 +120,9 @@ th{
     padding: 0.5em 1em;
 }
 
-/* ==========================================================
-   Sous-menu : apparence + comportement
-   ========================================================== */
+/* ----------------------------------------------------------
+   Sous-menu : premier niveau
+   ---------------------------------------------------------- */
 
 .sous-menu {
     display: none;
@@ -145,6 +149,10 @@ th{
     z-index: 1000;
 }
 
+/* ----------------------------------------------------------
+   Eléments du sous-menu
+   ---------------------------------------------------------- */
+
 .sous-menu li {
     position: relative;
     width: 100%;
@@ -165,13 +173,17 @@ th{
     background: #eef4fb;
 }
 
-/* Ouverture du niveau courant */
+/* ----------------------------------------------------------
+   Ouverture du menu
+   ---------------------------------------------------------- */
 .menu-deroulant:hover > .sous-menu,
 .menu-deroulant:focus-within > .sous-menu {
     display: flex;
 }
 
-/* Positionnement des niveaux suivants */
+/* ----------------------------------------------------------
+   Sous-menus récursifs
+   ---------------------------------------------------------- */
 .sous-menu .sous-menu {
     top: -5px;
     left: calc(100% + 12px);
