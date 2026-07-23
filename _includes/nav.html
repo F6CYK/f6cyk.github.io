@@ -49,18 +49,13 @@
         Documentation
     </a>
 
-    <ul class="sous-menu">
-        {% assign docs = site.static_files | where_exp: "f", "f.path contains '/documents/'" %}
-
-        {% for file in docs %}
-            <li>
-                <a href="{{ file.path | relative_url }}">
-                    {{ file.basename | replace: "-", " " }}
-                </a>
-            </li>
-        {% endfor %}
-    </ul>
-</li>
+<ul class="sous-menu">
+    <li>
+        <a href="{{ '/documentation/composants/circuits-integres/xr2206/' | relative_url }}">
+            XR2206
+        </a>
+    </li>
+</ul>
 
         <!-- Contact -->
         <li>
