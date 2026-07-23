@@ -51,18 +51,13 @@
 
 <ul class="sous-menu">
 
-{% raw %}
-{% for article in site.data.documentation %}
 <li>
     <a href="{{ article.url | relative_url }}">
         {{ article.titre }}
     </a>
 </li>
-{% endfor %}
-{% endraw %}
-    
+   
 </ul>
-
         <!-- Contact -->
         <li>
             <a{% if page.url == '/contact.html' %} class="actif"{% endif %}
