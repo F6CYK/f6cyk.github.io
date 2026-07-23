@@ -1,144 +1,295 @@
 # Architecture du site F6CYK
 
 | Document | Architecture du site |
-|----------|-----------------------|
-| Version | 1.0 |
-| Statut | En vigueur |
-| Date | 22 juillet 2026 |
+|----------|----------------------|
+| Version | 2.0 |
+| Statut | Projet |
+| Auteur | F6CYK |
+| Diffusion | Interne |
 
 ---
 
 # 1. Objet
 
-Le présent document décrit l'architecture générale du site F6CYK.
+Le présent document décrit l'architecture générale du site **F6CYK**.
 
-Il précise l'organisation des répertoires et les principes retenus pour le classement des contenus et des ressources.
+Il définit les principes retenus pour organiser les contenus, les ressources et les différents éléments constitutifs du site.
 
-L'objectif est de garantir une structure simple, cohérente et pérenne.
+Il complète la **Charte éditoriale**, dont il applique les principes dans le domaine de l'organisation technique et documentaire. :contentReference[oaicite:0]{index=0}
+
+Ce document ne décrit ni les règles de rédaction des articles ni les conventions de nommage des fichiers. Ces aspects font l'objet de documents spécifiques.
+
+Son objectif est de fournir une architecture stable, cohérente et évolutive, capable d'accompagner le développement du site pendant de nombreuses années.
 
 ---
 
 # 2. Principes d'architecture
 
-L'architecture du site repose sur les principes suivants :
+L'architecture du site repose sur quelques principes simples qui guident l'ensemble des choix d'organisation.
 
-- simplicité de l'organisation ;
-- séparation des contenus selon leur nature ;
-- absence de redondance ;
-- facilité de maintenance ;
-- évolutivité.
+## 2.1 Simplicité
 
-Chaque répertoire possède un rôle unique et clairement défini.
+L'organisation doit rester immédiatement compréhensible.
 
----
+Chaque répertoire possède une fonction clairement identifiée et ne remplit qu'un seul rôle.
 
-# 3. Organisation générale
+Les structures complexes, les niveaux de répertoires inutiles et les organisations redondantes sont évités.
 
-Le projet est organisé autour des principaux répertoires suivants.
+## 2.2 Cohérence
 
-## _documentation/
+Une même règle d'organisation s'applique à l'ensemble du site.
 
-Documentation interne du projet.
+Les contenus similaires sont organisés selon des principes identiques afin de faciliter leur localisation, leur maintenance et leur évolution.
 
-Contient les documents de référence destinés au concepteur du site.
+## 2.3 Unicité
 
-Ce répertoire n'est pas publié.
+Chaque information possède un emplacement unique.
 
----
+Les duplications de contenus sont proscrites.
 
-## _posts/
+Lorsqu'une même information concerne plusieurs domaines, elle est reliée par des liens internes plutôt que reproduite dans plusieurs emplacements.
 
-Articles du site.
+## 2.4 Pérennité
 
-Chaque article appartient à une rubrique unique.
+L'architecture ne doit pas dépendre d'une technologie particulière ni d'une organisation temporaire.
 
----
+Elle doit pouvoir accompagner les évolutions du site sans nécessiter de restructurations importantes.
 
-## pages/
+## Évolutivité
 
-Pages permanentes du site.
+De nouveaux contenus doivent pouvoir être ajoutés sans remettre en cause l'organisation existante.
 
-Exemples :
-
-- Accueil
-- Station
-- Matériel
-- Antennes
-- Réalisations
-- Trafic
-- Documentation
-- Galerie
-- Contact
+L'architecture est conçue pour croître progressivement tout en conservant sa lisibilité.
 
 ---
 
-## documents/
+# 3. Deux niveaux d'organisation
 
-Bibliothèque documentaire destinée aux visiteurs.
+Conformément aux principes définis dans la Charte éditoriale, le site distingue deux niveaux complémentaires d'organisation.
 
-Ce répertoire contient notamment :
+## 3.1 L'organisation physique
 
-- ouvrages ;
-- revues ;
-- notices ;
-- datasheets ;
+L'organisation physique correspond à la disposition réelle des répertoires et des fichiers.
+
+Elle est destinée au rédacteur et aux opérations de maintenance.
+
+Son objectif est de faciliter :
+
+- la création des contenus ;
+- les sauvegardes ;
+- les évolutions ;
+- la maintenance ;
+- la gestion des ressources associées aux articles.
+
+## 3.2 L'organisation documentaire
+
+L'organisation documentaire correspond à la manière dont les contenus sont présentés au lecteur.
+
+Elle traduit la structure des connaissances et non celle des répertoires.
+
+La navigation, les menus, les index et les pages de regroupement sont construits à partir de cette organisation documentaire.
+
+Ainsi, la structure physique du projet peut évoluer sans modifier la logique de consultation proposée au lecteur.
+
+Les deux organisations demeurent cohérentes, mais elles répondent à des objectifs différents.
+
+# 4. Architecture générale
+
+Le projet est organisé en plusieurs ensembles de répertoires, chacun répondant à une fonction clairement identifiée.
+
+Cette séparation permet d'isoler les différents types de contenus tout en facilitant leur maintenance.
+
+Chaque répertoire possède un rôle unique et ne doit pas être utilisé pour d'autres finalités. :contentReference[oaicite:0]{index=0}
+
+---
+
+## 4.1 Documentation interne
+
+Le répertoire `_documentation/` regroupe l'ensemble des documents de conception du projet.
+
+Il constitue la mémoire technique du site.
+
+On y trouve notamment :
+
+- la charte éditoriale ;
+- les documents d'architecture ;
+- les conventions de rédaction ;
+- les règles d'organisation ;
+- les documents décrivant les choix techniques.
+
+Ce répertoire est exclusivement destiné au développement et à la maintenance.
+
+Il n'est jamais publié sur le site.
+
+---
+
+## 4.2 Contenus publiés
+
+Les contenus destinés aux visiteurs sont répartis selon leur nature.
+
+Ils comprennent notamment :
+
+- les articles ;
+- les pages permanentes ;
+- les ressources documentaires ;
+- les éléments multimédias.
+
+Chaque catégorie possède sa propre organisation.
+
+Les règles détaillées applicables aux articles sont définies dans le document consacré à leur organisation.
+
+---
+
+## 4.3 Ressources techniques
+
+Les ressources nécessaires au fonctionnement du site sont regroupées dans un ensemble de répertoires spécialisés.
+
+Elles comprennent notamment :
+
+- les feuilles de style ;
+- les scripts ;
+- les bibliothèques logicielles ;
+- les images de l'interface ;
+- les polices de caractères ;
+- les ressources utilisées par les composants du site.
+
+Ces ressources participent au fonctionnement de l'application mais ne constituent pas des contenus documentaires.
+
+Leur organisation répond principalement à des critères techniques.
+
+---
+
+# 5. L'article comme unité documentaire
+
+Le principe fondamental de l'architecture est que l'article constitue l'unité élémentaire d'organisation.
+
+Un article ne se limite pas à son fichier Markdown.
+
+Il comprend également toutes les ressources nécessaires à sa compréhension :
+
+- illustrations ;
+- photographies ;
 - schémas ;
-- archives.
+- plans ;
+- documents associés ;
+- fichiers audio ;
+- vidéos ;
+- animations ;
+- autres ressources spécifiques.
+
+Ces éléments forment un ensemble cohérent.
+
+Ils sont conservés dans le même répertoire afin de simplifier leur gestion et d'éviter toute dispersion.
+
+Cette organisation garantit que chaque sujet demeure autonome et facilement transportable.
+
+Les règles détaillées d'organisation des articles et de leurs ressources sont décrites dans le document correspondant.
 
 ---
 
-## assets/
+# 6. Absence de dépendances artificielles
 
-Ressources utilisées par le site.
+L'architecture privilégie l'autonomie des contenus.
 
-Il regroupe notamment :
+Un article ne doit pas dépendre de l'organisation interne d'un autre article pour fonctionner.
 
-- feuilles de style ;
-- scripts ;
-- images ;
-- ressources audio ;
-- vidéos.
+Les ressources communes sont limitées aux éléments techniques réellement partagés, tels que les feuilles de style, les scripts ou les composants génériques.
 
-L'organisation détaillée de ce répertoire est définie dans un document spécifique.
+Cette séparation réduit les risques lors des évolutions et facilite la maintenance du site dans la durée.
 
----
 
-# 4. Organisation des contenus
 
-Chaque contenu possède une place unique dans l'arborescence.
+# 7. Organisation des ressources
 
-Les informations ne doivent pas être dupliquées.
+Les ressources utilisées par le site appartiennent à deux catégories distinctes.
 
-Les liens internes permettent de relier les contenus appartenant à des rubriques différentes.
+Cette distinction contribue à maintenir une architecture claire et facilite la maintenance du projet.
 
 ---
 
-# 5. Organisation des ressources
+## 7.1 Ressources techniques
 
-Les ressources associées à un article sont considérées comme faisant partie intégrante de cet article.
+Les ressources techniques sont partagées par l'ensemble du site.
 
-Le principe retenu est le suivant :
+Elles assurent son fonctionnement ou contribuent à sa présentation.
 
-> **L'article constitue l'unité d'organisation des ressources.**
+Elles comprennent notamment :
 
-Les modalités d'organisation des images, fichiers audio, vidéos et autres médias sont décrites dans le document **03-gestion-des-images.md**.
+- les feuilles de style ;
+- les scripts JavaScript ;
+- les bibliothèques externes ;
+- les composants graphiques de l'interface ;
+- les icônes ;
+- les polices de caractères.
 
----
+Ces ressources sont indépendantes des contenus documentaires.
 
-# 6. Documentation interne
-
-La documentation interne constitue la mémoire du projet.
-
-Toute décision d'architecture doit être documentée afin d'assurer la continuité du développement et de faciliter la maintenance du site.
-
----
-
-# 7. Évolution
-
-L'architecture du site est conçue pour évoluer sans remettre en cause son organisation générale.
-
-Toute modification importante devra respecter les principes définis dans le présent document.
+Leur évolution ne doit pas modifier l'organisation des articles.
 
 ---
 
-*Fin du document.*
+## 7.2 Ressources documentaires
+
+Les ressources documentaires sont propres à un article donné.
+
+Elles font partie intégrante du contenu documentaire.
+
+Il peut s'agir notamment :
+
+- d'illustrations ;
+- de photographies ;
+- de schémas ;
+- de plans ;
+- de fichiers PDF ;
+- d'enregistrements sonores ;
+- de vidéos ;
+- de modèles ou fichiers associés.
+
+Ces ressources sont conservées avec l'article auquel elles appartiennent.
+
+Elles ne sont pas mutualisées entre plusieurs articles, sauf lorsqu'il s'agit d'une ressource véritablement commune dont la gestion centralisée présente un intérêt clairement identifié.
+
+---
+
+# 8. Navigation et architecture
+
+L'organisation physique du projet ne détermine pas directement la navigation proposée au lecteur.
+
+Les menus, les index, les pages de regroupement et les liens internes traduisent l'organisation documentaire définie dans la Charte éditoriale.
+
+Ils permettent au lecteur de parcourir les connaissances selon une logique thématique plutôt que selon la disposition réelle des fichiers.
+
+L'architecture du site doit donc permettre cette indépendance entre le stockage des contenus et leur présentation.
+
+Les choix de classement des fichiers ne doivent jamais dégrader la qualité de la navigation.
+
+---
+
+# 9. Évolution de l'architecture
+
+L'architecture est conçue pour accompagner le développement progressif du site.
+
+L'ajout d'un nouvel article, d'une nouvelle rubrique ou d'une nouvelle catégorie documentaire ne doit pas remettre en cause les principes d'organisation existants.
+
+Les évolutions doivent préserver :
+
+- la simplicité de l'organisation ;
+- la cohérence documentaire ;
+- l'absence de redondance ;
+- la facilité de maintenance ;
+- l'autonomie des contenus.
+
+Lorsqu'une évolution importante devient nécessaire, elle doit être documentée avant sa mise en œuvre afin d'en conserver les motivations et les conséquences.
+
+---
+
+# 10. Conclusion
+
+L'architecture du site F6CYK constitue le cadre d'organisation de l'ensemble des contenus et des ressources.
+
+Elle est fondée sur une séparation claire entre l'organisation physique des fichiers et l'organisation documentaire destinée au lecteur.
+
+Cette architecture privilégie la simplicité, la cohérence, l'autonomie des articles et la pérennité des informations.
+
+Elle fournit un cadre stable permettant au site de s'enrichir progressivement sans remettre en cause ses principes fondateurs.
+```
