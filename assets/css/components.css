@@ -175,8 +175,8 @@ th{
 .sous-menu .sous-menu {
     position: static;
     display: block;
-    margin: .25rem 0 .25rem 1rem;
-    padding-left: .75rem;
+    margin: .10rem 0 .10rem .60rem;
+    padding-left: .40rem;
     border-left: 1px solid #d8d8d8;
     box-shadow: none;
     border-top: 0;
