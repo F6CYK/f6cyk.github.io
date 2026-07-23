@@ -119,7 +119,71 @@ La définition détaillée des rubriques est décrite dans un document spécifiq
 
 ---
 
-# 7. Principes éditoriaux
+# 7. Architecture documentaire
+
+Le site est conçu selon deux points de vue complémentaires : celui du rédacteur et celui du lecteur.
+
+Ces deux approches répondent à des objectifs différents mais doivent rester cohérentes afin de garantir la qualité, la pérennité et l'évolutivité du site.
+
+## 7.1 Point de vue du rédacteur
+
+Le rédacteur construit progressivement le contenu du site au gré des réalisations, des expérimentations, des recherches documentaires ou des opportunités.
+
+Chaque article constitue une unité documentaire autonome.
+
+À ce titre, il dispose de son propre répertoire contenant :
+
+- le fichier Markdown de l'article ;
+- les illustrations ;
+- les schémas ;
+- les documents PDF ;
+- les ressources audio et vidéo éventuelles ;
+- plus généralement, toutes les ressources nécessaires à la compréhension du sujet traité.
+
+Cette organisation permet à chaque article de rester totalement indépendant des autres.
+
+Le rédacteur se concentre exclusivement sur la qualité du contenu. Il n'a pas à intervenir sur la structure générale de navigation du site.
+
+---
+
+## 7.2 Point de vue du lecteur
+
+Le lecteur accède aux informations au moyen d'une navigation documentaire organisée selon une hiérarchie de domaines de connaissances.
+
+Cette navigation constitue une aide à l'exploration du site.
+
+Elle conduit progressivement le visiteur vers l'information recherchée en parcourant les différents niveaux de classement.
+
+Par exemple, un visiteur recherchant des informations sur le circuit intégré **XR2206** suivra naturellement le parcours suivant :
+
+```text
+Documentation
+└── Composants
+    └── Circuits intégrés
+        └── XR2206
+```
+
+Chaque niveau de cette hiérarchie apporte une information de classement et participe à la compréhension de l'organisation générale du site.
+
+La navigation ne doit donc pas court-circuiter les niveaux intermédiaires significatifs.
+
+---
+
+## 7.3 Principe directeur
+
+L'organisation physique des fichiers et la navigation proposée au lecteur répondent à des objectifs différents.
+
+L'organisation physique facilite la rédaction, la maintenance et l'évolution des contenus.
+
+La navigation facilite leur consultation.
+
+Les deux doivent rester cohérentes sans être confondues.
+
+L'évolution du site consiste à enrichir progressivement son contenu sans remettre en cause cette organisation générale.
+
+---
+
+# 8. Principes éditoriaux
 
 Les contenus publiés doivent respecter les principes suivants :
 
@@ -136,7 +200,7 @@ Les illustrations, documents et médias sont utilisés pour compléter le conten
 
 ---
 
-# 8. Pérennité
+# 9. Pérennité
 
 Le site est conçu comme un patrimoine évolutif.
 
@@ -146,4 +210,3 @@ Toute évolution importante devra rester conforme aux principes définis dans ce
 
 ---
 
-*Fin du document.*
