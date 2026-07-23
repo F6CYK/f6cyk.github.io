@@ -1,0 +1,24 @@
+{% assign docs = site.static_files | where_exp: "f", "f.path contains '/documents/'" %}
+{% assign tree = {} %}
+
+{% for file in docs %}
+    {% assign parts = file.path | split: "/" %}
+    {% assign parts = parts | slice: 2, parts.size %}
+
+    {% assign cursor = tree %}
+
+    {% for part in parts %}
+        {% if forloop.last %}
+            {% assign cursor = cursor | merge: { part: file.path } %}
+        {% else %}
+            {% if cursor[part] %}
+                {% assign cursor = cursor[part] %}
+            {% else %}
+                {% assign cursor = cursor | merge: { part: {} } %}
+                {% assign cursor = cursor[part] %}
+            {% endif %}
+        {% endif %}
+    {% endfor %}
+{% endfor %}
+
+{% assign tree = tree | merge: { "Documentation": tree } %}
