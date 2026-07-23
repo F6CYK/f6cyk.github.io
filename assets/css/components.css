@@ -104,12 +104,8 @@ th{
 }
 
 /* ==========================================================
-   Menu documentaire
+   Menu déroulant : structure
    ========================================================== */
-
-/* ----------------------------------------------------------
-   Structure du composant
-   ---------------------------------------------------------- */
 
 .menu-deroulant {
     position: relative;      /* Le sous-menu se positionnera par rapport à ce parent */
@@ -120,16 +116,18 @@ th{
     padding: 0.5em 1em;
 }
 
-/* ----------------------------------------------------------
-   Sous-menu : premier niveau
-   ---------------------------------------------------------- */
+/* ==========================================================
+   Sous-menu : apparence + comportement
+   ========================================================== */
 
 .sous-menu {
-    display:none;
-    position:absolute;
-    top:100%;
-    left:0;
-    min-width:260px;
+    display: none;
+    position: absolute;
+
+    top: 100%;
+    left: 0;
+
+    min-width: 220px;
 
     margin: 0;
     padding: 4px 0;
@@ -140,16 +138,12 @@ th{
     border: 1px solid #c8c8c8;
     box-shadow: 0 3px 10px rgba(0,0,0,.15);
 
-    flex-direction:column;
-    align-items:stretch;
-    gap:0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
 
-    z-index:1000;
+    z-index: 1000;
 }
-
-/* ----------------------------------------------------------
-   Eléments du sous-menu
-   ---------------------------------------------------------- */
 
 .sous-menu li {
     position: relative;
@@ -171,28 +165,16 @@ th{
     background: #eef4fb;
 }
 
-/* ----------------------------------------------------------
-   Ouverture du menu
-   ---------------------------------------------------------- */
+/* Ouverture du niveau courant */
 .menu-deroulant:hover > .sous-menu,
 .menu-deroulant:focus-within > .sous-menu {
-    display: flex;
+    display: block;
 }
 
-/* ----------------------------------------------------------
-   Sous-menus récursifs
-   ---------------------------------------------------------- */
-.sous-menu .sous-menu{
-    position:static;
-    display:block;
-    margin:.25rem 0 .25rem 1rem;
-    padding-left:.75rem;
-    border-left:1px solid #d8d8d8;
-    box-shadow:none;
-    border-top:0;
-    border-right:0;
-    border-bottom:0;
-    background:transparent;
+/* Positionnement des niveaux suivants */
+.sous-menu .sous-menu {
+    top: -5px;
+    left: calc(100% + 12px);
 }
 
 
