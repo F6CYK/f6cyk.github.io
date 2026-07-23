@@ -146,42 +146,7 @@ img{
     height:auto;
 }
 
-figure{
-    margin:1.5rem 0;
-    text-align:center;
-}
 
-figure img{
-    display:block;
-    margin:auto;
-}
-
-figcaption{
-    margin-top:.5rem;
-    font-size:.9rem;
-    font-style:italic;
-    color:#666;
-}
-
-/* ==========================================================
-   Tableaux
-   ========================================================== */
-
-table{
-    margin:1.5rem 0;
-    border-collapse:collapse;
-}
-
-th,
-td{
-    padding:.5rem .75rem;
-    border:1px solid #d8d8d8;
-    text-align:left;
-}
-
-th{
-    background:#f2f2f2;
-}
 
 /* ==========================================================
    Pied de page
