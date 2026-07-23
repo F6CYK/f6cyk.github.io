@@ -1,11 +1,15 @@
 {% for key, value in include.tree %}
+
     {% if value contains "/" %}
+        <!-- Fichier -->
         <li>
             <a href="{{ value | relative_url }}">
                 {{ key | replace: ".md", "" | replace: "-", " " | capitalize }}
             </a>
         </li>
+
     {% else %}
+        <!-- Dossier -->
         <li class="menu-deroulant">
             <a href="#" tabindex="0">
                 {{ key | replace: "-", " " | capitalize }}
@@ -15,4 +19,5 @@
             </ul>
         </li>
     {% endif %}
+
 {% endfor %}
