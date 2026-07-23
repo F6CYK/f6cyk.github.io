@@ -1,4 +1,6 @@
-{% for key, value in include.tree %}
+{% for pair in include.tree %}
+    {% assign key = pair[0] %}
+    {% assign value = pair[1] %}
 
     {% if value contains "/" %}
         <!-- Fichier -->
@@ -19,5 +21,4 @@
             </ul>
         </li>
     {% endif %}
-
 {% endfor %}
