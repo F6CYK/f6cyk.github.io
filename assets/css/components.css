@@ -126,27 +126,10 @@ th{
 
 .sous-menu {
     display: none;
-    position: absolute;
-
-    top: 100%;
-    left: 0;
-
-    min-width: 220px;
-
-    margin: 0;
-    padding: 4px 0;
-
+    margin: .25rem 0 0 1rem;
+    padding: 0;
     list-style: none;
-
-    background: #ffffff;
-    border: 1px solid #c8c8c8;
-    box-shadow: 0 3px 10px rgba(0,0,0,.15);
-
-    flex-direction: column;
-    align-items: stretch;
-    gap: 0;
-
-    z-index: 1000;
+    border-left: 1px solid #d8d8d8;
 }
 
 /* ----------------------------------------------------------
@@ -154,8 +137,7 @@ th{
    ---------------------------------------------------------- */
 
 .sous-menu li {
-    position: relative;
-    width: 100%;
+    width:100%;
 }
 
 .sous-menu li a {
@@ -166,7 +148,8 @@ th{
 
     color: #003366;
     text-decoration: none;
-    white-space: nowrap;
+    white-space: normal;
+    padding-left:1rem;
 }
 
 .sous-menu li a:hover {
@@ -178,15 +161,14 @@ th{
    ---------------------------------------------------------- */
 .menu-deroulant:hover > .sous-menu,
 .menu-deroulant:focus-within > .sous-menu {
-    display: flex;
+    display: block;
 }
 
 /* ----------------------------------------------------------
    Sous-menus récursifs
    ---------------------------------------------------------- */
-.sous-menu .sous-menu {
-    top: -5px;
-    left: calc(100% + 12px);
+.sous-menu .sous-menu{
+    margin-left:1rem;
 }
 
 
