@@ -254,8 +254,8 @@ nav ul li {
 }
 
 /* Ouverture au survol ou au focus clavier */
-.menu-deroulant:hover .sous-menu,
-.menu-deroulant:focus-within .sous-menu {
+.menu-deroulant:hover > .sous-menu,
+.menu-deroulant:focus-within > .sous-menu {
     display: block;
 }
 
