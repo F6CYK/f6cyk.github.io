@@ -171,10 +171,17 @@ th{
     display: block;
 }
 
-/* Positionnement des niveaux suivants */
-.sous-menu .sous-menu {
-    top: -5px;
-    left: calc(100% + 12px);
+.sous-menu .sous-menu{
+    position:static;
+    display:block;
+    margin:.25rem 0 .25rem 1rem;
+    padding-left:.75rem;
+    border-left:1px solid #d8d8d8;
+    box-shadow:none;
+    border-top:0;
+    border-right:0;
+    border-bottom:0;
+    background:transparent;
 }
 
 
