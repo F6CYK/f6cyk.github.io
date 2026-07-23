@@ -121,15 +121,21 @@ th{
    ========================================================== */
 
 .sous-menu {
-    display: none;           /* Caché par défaut */
-    position: absolute;      /* Positionné sous le parent */
-    top: 100%;               /* Juste sous le lien Documentation */
+    display: none;
+    position: absolute;
+    top: 100%;
     left: 0;
-    z-index: 1000;           /* Devant le reste du contenu */
-    background-color: #ffffff;
-    border: 1px solid #ccc;
+
+    min-width: 220px;
+
+    margin: 0;
     padding: 0;
+
     list-style: none;
+    background: #ffffff;
+    border: 1px solid #ccc;
+
+    z-index: 1000;
 }
 
 .sous-menu li a {
