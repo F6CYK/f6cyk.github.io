@@ -147,3 +147,10 @@ th{
 .menu-deroulant:hover > .sous-menu {
     display: block;
 }
+
+/* Sous-menus des niveaux suivants */
+.sous-menu .sous-menu {
+    top: 0;
+    left: 100%;
+}
+
