@@ -50,11 +50,17 @@
     </a>
 
 <ul class="sous-menu">
-    <li>
-        <a href="{{ '/documentation/composants/circuits-integres/xr2206/' | relative_url }}">
-            XR2206
-        </a>
-    </li>
+
+{% raw %}
+{% for article in site.data.documentation %}
+<li>
+    <a href="{{ article.url | relative_url }}">
+        {{ article.titre }}
+    </a>
+</li>
+{% endfor %}
+{% endraw %}
+    
 </ul>
 
         <!-- Contact -->
