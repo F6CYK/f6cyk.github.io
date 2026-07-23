@@ -2,159 +2,295 @@
 
 | Document | Charte éditoriale |
 |----------|--------------------|
-| Version | 1.0 |
-| Statut | En vigueur |
-| Date | 22 juillet 2026 |
+| Version | 2.0 |
+| Statut | Projet |
+| Auteur | F6CYK |
+| Diffusion | Interne |
 
 ---
 
 # 1. Objet
 
-La présente charte définit la ligne éditoriale du site **F6CYK**.
+La présente charte définit les principes fondateurs du site **F6CYK**.
 
-Elle fixe les objectifs, les principes d'organisation et la vocation du site afin d'en garantir la cohérence dans le temps.
+Elle constitue le document de référence de l'ensemble du projet et décrit la philosophie, les objectifs, les règles éditoriales ainsi que les principes d'organisation documentaire qui doivent guider son développement.
 
-Elle constitue le document de référence de l'ensemble du projet.
+Cette charte ne décrit pas les aspects techniques de réalisation du site. Ceux-ci font l'objet de documents spécifiques. Elle définit les principes qui orientent l'ensemble des choix techniques, documentaires et éditoriaux.
 
-Ce document est destiné à l'auteur du site et n'a pas vocation à être publié.
+Elle s'adresse exclusivement à l'auteur du site.
+
+Son objectif est de garantir la cohérence de l'ensemble du projet, indépendamment des technologies employées, des outils de publication ou des évolutions futures de son architecture.
+
+Elle constitue le socle sur lequel reposent tous les autres documents de conception.
 
 ---
 
 # 2. Vocation du site
 
-Le site **F6CYK** est consacré au radioamateurisme.
+Le site **F6CYK** est consacré au radioamateurisme au sens le plus large.
 
-Il a pour vocation de partager des connaissances, de présenter des réalisations techniques, de mettre à disposition une documentation de référence et de préserver un patrimoine constitué au fil de plusieurs décennies de pratique.
+Il rassemble des connaissances, des réalisations, des expérimentations, des documents techniques, des archives et des témoignages afin de constituer un fonds documentaire cohérent destiné à être enrichi au fil du temps.
 
-Le site reflète les centres d'intérêt, les expériences et les travaux de son auteur.
+Le site n'a pas pour ambition de couvrir exhaustivement l'ensemble des domaines du radioamateurisme.
 
-Il ne cherche pas à être exhaustif mais à proposer un contenu fiable, documenté et durable.
+Il privilégie les sujets présentant un intérêt technique, historique, pédagogique ou documentaire, en relation avec les activités, les recherches et les centres d'intérêt de son auteur.
+
+Chaque contenu publié doit apporter une valeur documentaire réelle.
+
+Il doit permettre au lecteur :
+
+- de comprendre un principe ;
+- d'approfondir un sujet ;
+- de réaliser une expérimentation ;
+- de retrouver une information fiable ;
+- de conserver la mémoire d'une technique, d'un matériel ou d'une réalisation.
+
+Le site ne poursuit aucun objectif commercial.
+
+Il ne recherche pas la publication régulière d'articles ni l'actualité.
+
+Chaque publication est motivée par son intérêt documentaire et sa contribution à la qualité de l'ensemble.
 
 ---
 
-# 3. Philosophie
+# 3. Valeurs fondatrices
 
-L'organisation du site repose sur la règle des **3 C** qui résume la démarche radioamateur.
+Le développement du site repose sur trois valeurs qui caractérisent l'esprit du radioamateurisme.
 
-## Comprendre
+## 3.1 Comprendre
 
-Acquérir les connaissances scientifiques, techniques et historiques nécessaires à la pratique du radioamateurisme.
+Comprendre constitue le préalable indispensable à toute réalisation.
 
-Comprendre les matériels, les antennes, les technologies, les phénomènes radioélectriques et leur évolution.
+Le site privilégie l'explication des phénomènes, des principes de fonctionnement, des choix techniques et de leur contexte.
 
-## Construire
+L'objectif n'est pas uniquement de montrer qu'un montage fonctionne mais d'expliquer pourquoi il fonctionne.
 
-Concevoir, réaliser, expérimenter et améliorer.
+La compréhension est toujours privilégiée par rapport à la simple reproduction.
 
-Présenter aussi bien les réalisations personnelles que celles d'autres radioamateurs lorsqu'elles présentent un intérêt technique ou pédagogique.
+## 3.2 Construire
 
-## Communiquer
+Le radioamateur est également un expérimentateur.
 
-Mettre en œuvre les connaissances et les réalisations dans toutes les formes de communication radioamateur.
+Le site valorise les réalisations personnelles, les restaurations, les modifications, les essais, les mesures et les expérimentations.
 
-La communication comprend notamment :
+Les réussites comme les difficultés rencontrées peuvent être documentées lorsqu'elles présentent un intérêt pédagogique.
 
-- la radiotéléphonie ;
-- la radiotélégraphie ;
-- les modes numériques ;
-- la transmission de données ;
-- les communications assistées par Internet lorsqu'elles s'intègrent à la pratique radioamateur.
+La démarche expérimentale fait partie intégrante des connaissances transmises.
+
+## 3.3 Communiquer
+
+Les connaissances acquises trouvent naturellement leur prolongement dans la pratique.
+
+Le site traite des différentes formes de communication radioamateur, qu'elles soient analogiques, numériques ou hybrides.
+
+L'accent est mis sur les principes techniques, leur compréhension et leur mise en œuvre.
 
 ---
 
 # 4. Mission
 
-Au-delà de la pratique radioamateur, le site poursuit une mission de transmission.
+Le site poursuit une mission de transmission.
 
-Il contribue à préserver et partager :
+Il contribue à préserver des connaissances, des savoir-faire, des réalisations, des archives et des témoignages qui constituent une part du patrimoine radioamateur.
 
-- des connaissances ;
-- des savoir-faire ;
-- des documents ;
-- des archives ;
-- des témoignages ;
-- des souvenirs.
+Il cherche à rendre ces informations compréhensibles, accessibles et réutilisables.
 
-Cette mission constitue la raison d'être du site.
+Chaque nouvel article participe à l'enrichissement progressif d'un fonds documentaire organisé.
 
----
+La qualité documentaire prime systématiquement sur la quantité de contenu publiée.
 
 # 5. Patrimoines préservés
 
-Le site contribue à préserver plusieurs formes de patrimoine.
+Le site contribue à préserver plusieurs formes de patrimoine, chacune participant à la compréhension du radioamateurisme dans sa dimension technique, historique et humaine.
 
-## Patrimoine technique
+Ces patrimoines sont complémentaires. Ils forment un ensemble documentaire cohérent dont la valeur réside autant dans la qualité des informations que dans leurs relations.
 
-Matériels, antennes, réalisations, expérimentations et techniques radio.
+## 5.1 Patrimoine technique
 
-## Patrimoine historique
+Le patrimoine technique constitue le cœur du site.
 
-Histoire de la radio, des télécommunications et du radioamateurisme.
+Il comprend notamment :
 
-## Patrimoine documentaire
+- les matériels radioamateurs ;
+- les antennes ;
+- les alimentations ;
+- les instruments de mesure ;
+- les composants électroniques ;
+- les réalisations personnelles ;
+- les montages publiés ;
+- les restaurations ;
+- les modifications ;
+- les expérimentations ;
+- les logiciels liés à la pratique radioamateur.
 
-Ouvrages, revues, notices, schémas, documentations techniques, datasheets et archives.
+Chaque sujet est traité avec le niveau de détail nécessaire à sa compréhension.
 
-## Patrimoine humain
+L'objectif est de transmettre les connaissances techniques plutôt que de présenter uniquement un résultat.
 
-Radioamateurs, clubs, associations, rencontres, manifestations et vie radioamateur.
+## 5.2 Patrimoine documentaire
 
-## Patrimoine multimédia
+Le patrimoine documentaire rassemble les documents permettant d'étayer, de comprendre ou d'approfondir un sujet.
 
-Photographies, enregistrements sonores, vidéos et autres témoignages permettant de conserver la mémoire du radioamateurisme.
+Il peut notamment comprendre :
+
+- des notices techniques ;
+- des schémas ;
+- des plans ;
+- des datasheets ;
+- des catalogues ;
+- des revues spécialisées ;
+- des manuels ;
+- des documents administratifs ;
+- des archives.
+
+Ces documents ne constituent jamais une simple collection de fichiers.
+
+Ils sont intégrés dans une démarche documentaire et accompagnés des explications nécessaires à leur exploitation.
+
+## 5.3 Patrimoine historique
+
+Le radioamateurisme s'inscrit dans une histoire riche en innovations techniques et en évolutions réglementaires.
+
+Le site contribue à préserver cette mémoire en présentant :
+
+- les matériels emblématiques ;
+- les évolutions technologiques ;
+- les méthodes aujourd'hui disparues ;
+- les constructeurs ;
+- les événements ayant marqué le radioamateurisme.
+
+Les éléments historiques ont pour objectif d'éclairer les sujets techniques et de replacer les réalisations dans leur contexte.
+
+## 5.4 Patrimoine humain
+
+Le radioamateurisme est avant tout une activité humaine.
+
+Le site contribue à conserver la mémoire :
+
+- des radioamateurs ;
+- des clubs ;
+- des associations ;
+- des manifestations ;
+- des rencontres ;
+- des initiatives ayant contribué au développement de cette activité.
+
+Lorsque cela présente un intérêt documentaire, les réalisations sont replacées dans leur contexte humain.
+
+## 5.5 Patrimoine multimédia
+
+Les photographies, les enregistrements sonores, les vidéos, les cartes, les plans et les illustrations constituent des documents à part entière.
+
+Ils complètent le contenu rédactionnel sans jamais s'y substituer.
+
+Chaque média doit apporter une information utile et contribuer à la compréhension du sujet traité.
 
 ---
 
-# 6. Organisation éditoriale
+# 6. Principes éditoriaux
 
-Le contenu du site est organisé en rubriques complémentaires.
+Tous les contenus publiés sur le site respectent des principes communs destinés à garantir leur qualité et leur pérennité.
 
-Chaque rubrique possède un objectif clairement défini.
+## 6.1 Exactitude
 
-Une information ne doit appartenir qu'à une seule rubrique principale.
+Les informations publiées doivent être techniquement exactes.
 
-Les liens entre rubriques permettent d'éviter les duplications tout en facilitant la navigation.
+Lorsqu'une incertitude subsiste, elle est explicitement mentionnée.
 
-La définition détaillée des rubriques est décrite dans un document spécifique.
+Les hypothèses sont clairement distinguées des faits établis.
+
+## 6.2 Vérifiabilité
+
+Chaque fois que cela est possible, les informations reposent sur :
+
+- une expérimentation personnelle ;
+- une mesure ;
+- une documentation identifiée ;
+- une publication reconnue ;
+- une observation vérifiable.
+
+Les sources importantes sont citées afin de permettre au lecteur d'approfondir le sujet.
+
+## 6.3 Neutralité
+
+Les articles privilégient les faits, les explications et les démonstrations.
+
+Les préférences personnelles de l'auteur peuvent être exprimées lorsqu'elles sont clairement présentées comme telles.
+
+Elles ne doivent jamais être confondues avec des faits établis.
+
+## 6.4 Clarté
+
+Chaque article poursuit un objectif précis.
+
+Sa structure doit permettre au lecteur de comprendre progressivement le sujet traité.
+
+Les explications privilégient une progression logique, depuis les notions générales vers les aspects les plus spécialisés.
+
+Lorsque des connaissances préalables sont nécessaires, des liens sont établis vers les articles correspondants.
+
+## 6.5 Pérennité
+
+Les contenus sont rédigés dans une perspective de long terme.
+
+Les informations liées à l'actualité ou aux effets de mode sont évitées lorsqu'elles n'apportent pas de valeur documentaire durable.
+
+## 6.6 Évolutivité
+
+Un article n'est jamais considéré comme définitivement terminé.
+
+Il peut être enrichi, corrigé ou complété dès lors que ces modifications améliorent sa qualité documentaire.
+
+L'évolution du site résulte de l'amélioration continue des connaissances plutôt que d'une succession de publications indépendantes.
+
+# 7. Organisation documentaire
+
+Le site est conçu comme un fonds documentaire technique destiné à s'enrichir progressivement.
+
+Son organisation repose sur une distinction fondamentale entre la production des contenus et leur consultation.
+
+Cette distinction garantit simultanément la simplicité de maintenance, la cohérence documentaire et la qualité de la navigation.
 
 ---
 
-# 7. Architecture documentaire
+## 7.1 Le point de vue du rédacteur
 
-Le site est conçu selon deux points de vue complémentaires : celui du rédacteur et celui du lecteur.
+Le rédacteur construit le site progressivement.
 
-Ces deux approches répondent à des objectifs différents mais doivent rester cohérentes afin de garantir la qualité, la pérennité et l'évolutivité du site.
+Les nouveaux contenus sont créés au fil des réalisations, des expérimentations, des restaurations, des recherches documentaires ou des découvertes.
 
-## 7.1 Point de vue du rédacteur
-
-Le rédacteur construit progressivement le contenu du site au gré des réalisations, des expérimentations, des recherches documentaires ou des opportunités.
+L'ordre chronologique de création des articles n'a aucune importance.
 
 Chaque article constitue une unité documentaire autonome.
 
-À ce titre, il dispose de son propre répertoire contenant :
+Il rassemble, dans un même répertoire, l'ensemble des ressources nécessaires à la compréhension du sujet traité.
 
-- le fichier Markdown de l'article ;
-- les illustrations ;
-- les schémas ;
-- les documents PDF ;
-- les ressources audio et vidéo éventuelles ;
-- plus généralement, toutes les ressources nécessaires à la compréhension du sujet traité.
+Cette organisation permet :
 
-Cette organisation permet à chaque article de rester totalement indépendant des autres.
+- de conserver chaque sujet sous la forme d'un ensemble cohérent ;
+- de simplifier les sauvegardes ;
+- de faciliter les évolutions ;
+- de limiter les risques d'erreur lors des mises à jour ;
+- de préserver les liens entre le contenu et ses ressources.
 
-Le rédacteur se concentre exclusivement sur la qualité du contenu. Il n'a pas à intervenir sur la structure générale de navigation du site.
+Le rédacteur se consacre exclusivement à la production du contenu documentaire.
+
+Il ne doit pas avoir à modifier l'organisation générale du site lors de la création d'un nouvel article.
 
 ---
 
-## 7.2 Point de vue du lecteur
+## 7.2 Le point de vue du lecteur
 
-Le lecteur accède aux informations au moyen d'une navigation documentaire organisée selon une hiérarchie de domaines de connaissances.
+Le lecteur n'accède jamais directement à l'organisation physique des fichiers.
 
-Cette navigation constitue une aide à l'exploration du site.
+Il explore un ensemble organisé de connaissances.
 
-Elle conduit progressivement le visiteur vers l'information recherchée en parcourant les différents niveaux de classement.
+La navigation représente cette organisation intellectuelle.
 
-Par exemple, un visiteur recherchant des informations sur le circuit intégré **XR2206** suivra naturellement le parcours suivant :
+Elle conduit progressivement le lecteur depuis les domaines les plus généraux vers les sujets les plus spécialisés.
+
+Chaque niveau de cette hiérarchie possède une signification documentaire.
+
+Ainsi, un article consacré au circuit intégré **XR2206** s'inscrit naturellement dans le parcours suivant :
 
 ```text
 Documentation
@@ -163,50 +299,192 @@ Documentation
         └── XR2206
 ```
 
-Chaque niveau de cette hiérarchie apporte une information de classement et participe à la compréhension de l'organisation générale du site.
+Chaque niveau apporte une information de classement.
 
-La navigation ne doit donc pas court-circuiter les niveaux intermédiaires significatifs.
+La navigation ne doit jamais court-circuiter un niveau significatif de cette hiérarchie.
 
----
-
-## 7.3 Principe directeur
-
-L'organisation physique des fichiers et la navigation proposée au lecteur répondent à des objectifs différents.
-
-L'organisation physique facilite la rédaction, la maintenance et l'évolution des contenus.
-
-La navigation facilite leur consultation.
-
-Les deux doivent rester cohérentes sans être confondues.
-
-L'évolution du site consiste à enrichir progressivement son contenu sans remettre en cause cette organisation générale.
+Le lecteur doit toujours pouvoir comprendre où se situe le sujet qu'il consulte dans l'ensemble du fonds documentaire.
 
 ---
 
-# 8. Principes éditoriaux
+## 7.3 Deux organisations complémentaires
 
-Les contenus publiés doivent respecter les principes suivants :
+L'organisation physique des contenus et l'organisation documentaire répondent à des objectifs différents.
 
-- exactitude technique ;
-- rigueur documentaire ;
-- clarté de présentation ;
-- neutralité ;
-- pérennité des informations ;
-- respect des sources et des auteurs.
+L'organisation physique facilite :
 
-Les réalisations personnelles et les réalisations provenant d'autres radioamateurs sont clairement identifiées.
+- la rédaction ;
+- la maintenance ;
+- les sauvegardes ;
+- l'évolution technique du site.
 
-Les illustrations, documents et médias sont utilisés pour compléter le contenu rédactionnel et non pour le remplacer.
+L'organisation documentaire facilite :
+
+- la découverte des contenus ;
+- leur classement ;
+- leur compréhension ;
+- leur consultation.
+
+Ces deux organisations doivent rester cohérentes sans être confondues.
+
+Les choix techniques ne doivent jamais dégrader la qualité de l'organisation documentaire.
+
+De la même manière, l'organisation documentaire ne doit pas imposer des contraintes inutiles à la production des contenus.
 
 ---
 
-# 9. Pérennité
+## 7.4 Principe d'unicité
 
-Le site est conçu comme un patrimoine évolutif.
+Chaque sujet possède une place naturelle dans l'organisation documentaire.
 
-Les choix techniques, éditoriaux et documentaires doivent privilégier la simplicité, la stabilité et la facilité de maintenance.
+Un article ne doit exister qu'en un seul exemplaire.
 
-Toute évolution importante devra rester conforme aux principes définis dans cette charte.
+Lorsqu'un même sujet présente des liens avec plusieurs domaines, ceux-ci sont établis au moyen de liens internes plutôt que par la duplication des contenus.
+
+Ce principe garantit la cohérence documentaire et simplifie les opérations de maintenance.
 
 ---
+
+## Principe de croissance
+
+Le site est conçu pour évoluer de manière continue.
+
+Chaque nouvel article trouve naturellement sa place dans l'organisation documentaire existante.
+
+L'ajout d'un contenu ne doit jamais conduire à une remise en cause de l'architecture générale.
+
+L'organisation retenue doit être suffisamment stable pour accompagner plusieurs années de développement tout en restant suffisamment souple pour accueillir de nouveaux domaines de connaissance.
+
+Le développement du site résulte d'une croissance progressive et maîtrisée du fonds documentaire.
+
+Il ne procède pas par réorganisations successives.
+
+# 8. Principes directeurs
+
+La qualité du site repose autant sur la qualité de ses contenus que sur la permanence des principes qui en assurent la cohérence.
+
+Les décisions éditoriales, documentaires et techniques doivent toujours être prises dans une perspective de long terme.
+
+Les principes suivants constituent les règles permanentes du projet.
+
+---
+
+## 8.1 Primauté du contenu
+
+Le contenu constitue la raison d'être du site.
+
+Les choix techniques, graphiques ou organisationnels ne sont jamais une finalité.
+
+Ils sont retenus uniquement lorsqu'ils facilitent la production, la compréhension ou la consultation des contenus.
+
+Aucun choix technique ne doit compliquer inutilement la rédaction ou dégrader la qualité documentaire.
+
+---
+
+## 8.2 Cohérence
+
+Le site constitue un ensemble documentaire unique.
+
+Chaque nouvel article vient enrichir cet ensemble sans remettre en cause son organisation.
+
+Les liens entre les contenus doivent être explicites, logiques et compréhensibles.
+
+L'objectif n'est pas d'accumuler des pages mais de construire progressivement un fonds documentaire cohérent.
+
+---
+
+## 8.3 Simplicité
+
+La simplicité constitue un principe permanent.
+
+Elle s'applique :
+
+- à l'architecture documentaire ;
+- à l'organisation des contenus ;
+- à la navigation ;
+- à la rédaction ;
+- à la maintenance.
+
+Une solution plus complexe ne doit être retenue que lorsqu'elle apporte un bénéfice documentaire clairement identifié.
+
+---
+
+## 8.4 Pérennité
+
+Les contenus sont produits pour conserver leur intérêt pendant de nombreuses années.
+
+Les technologies, les formats de fichiers et les méthodes retenus doivent favoriser :
+
+- la conservation des informations ;
+- leur évolution ;
+- leur réutilisation ;
+- leur transmission.
+
+Les choix dictés par des effets de mode ou par des solutions temporaires sont évités.
+
+---
+
+## 8.5 Évolutivité
+
+Le site est conçu pour s'enrichir progressivement.
+
+Son architecture doit permettre cette croissance sans nécessiter de restructuration majeure.
+
+Les évolutions doivent renforcer la qualité documentaire sans remettre en cause les principes fondateurs.
+
+---
+
+## 8.6 Maintenabilité
+
+Le site doit pouvoir être maintenu simplement dans la durée.
+
+Chaque décision doit contribuer à réduire les opérations répétitives, à limiter les risques d'erreur et à faciliter les évolutions futures.
+
+Une organisation claire est préférable à une organisation complexe, même si cette dernière paraît plus performante à court terme.
+
+---
+
+# 9. Gouvernance documentaire
+
+La présente charte constitue le document fondateur du projet.
+
+Tous les autres documents de conception en découlent.
+
+Ils précisent les règles d'organisation, les conventions de rédaction, les choix techniques et les méthodes de travail permettant d'appliquer les principes définis ici.
+
+En cas de divergence entre plusieurs documents, la présente charte fait référence.
+
+Toute évolution importante du projet doit rester conforme à ses principes.
+
+---
+
+# 10. Évolution de la charte
+
+La présente charte peut être complétée ou révisée afin d'accompagner le développement du site.
+
+Toute modification doit cependant répondre à un besoin clairement identifié.
+
+Une évolution n'est justifiée que si elle améliore durablement :
+
+- la cohérence documentaire ;
+- la qualité des contenus ;
+- la facilité de maintenance ;
+- la compréhension du lecteur ;
+- la transmission des connaissances.
+
+Les modifications motivées uniquement par des considérations techniques ponctuelles ou par des préférences personnelles doivent être évitées.
+
+La stabilité des principes constitue l'un des fondements de la pérennité du projet.
+
+---
+
+# 11. Disposition finale
+
+Le site F6CYK est conçu comme un fonds documentaire technique consacré au radioamateurisme.
+
+Sa valeur repose sur la qualité des informations qu'il rassemble, sur la cohérence de leur organisation et sur leur capacité à être comprises, enrichies et transmises dans la durée.
+
+Chaque décision éditoriale, documentaire ou technique doit contribuer à renforcer ces trois objectifs.
+
+La présente charte constitue le cadre de référence permanent de l'ensemble du projet.
 
