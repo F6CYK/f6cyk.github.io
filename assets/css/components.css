@@ -130,12 +130,13 @@ th{
     min-width: 220px;
 
     margin: 0;
-    padding: 0;
+    padding: 4px 0;
 
     list-style: none;
 
     background: #ffffff;
-    border: 1px solid #ccc;
+    border: 1px solid #c8c8c8;
+    box-shadow: 0 3px 10px rgba(0,0,0,.15);
 
     flex-direction: column;
     align-items: stretch;
@@ -145,33 +146,37 @@ th{
 }
 
 .sous-menu li {
+    position: relative;
     width: 100%;
 }
 
 .sous-menu li a {
     display: block;
     width: 100%;
-    padding: 0.5em 1em;
+
+    padding: .55em 1.2em;
+
     color: #003366;
     text-decoration: none;
     white-space: nowrap;
 }
 
 .sous-menu li a:hover {
-    background-color: #e6e6e6;
+    background: #eef4fb;
 }
 
-/* Affichage au survol du parent */
+/* Ouverture du niveau courant */
 .menu-deroulant:hover > .sous-menu,
 .menu-deroulant:focus-within > .sous-menu {
     display: flex;
 }
 
-/* Sous-menus des niveaux suivants */
+/* Positionnement des niveaux suivants */
 .sous-menu .sous-menu {
-    top: -1px;
-    left: calc(100% + 8px);
+    top: -5px;
+    left: calc(100% + 12px);
 }
+
 
 
 
