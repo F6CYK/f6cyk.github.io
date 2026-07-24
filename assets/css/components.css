@@ -176,7 +176,7 @@ th{
     position: static;
     display: block;
     margin: 0;
-    padding-left: .8rem;
+    padding-left: 0;
     box-shadow: none;
     border: 0;
     background: transparent;
@@ -207,3 +207,9 @@ th{
 
 
 
+
+
+/* Niveau 2 : léger retrait des liens */
+.sous-menu .sous-menu > li > a{
+    padding-left: 1.2rem;
+}
