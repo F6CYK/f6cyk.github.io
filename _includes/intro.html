@@ -1,6 +1,8 @@
-<div class="accueil-introduction">
+{% assign prefix = include.prefix | default: "accueil" %}
 
-<div class="accueil-texte">
+<div class="{{ prefix }}-introduction">
+
+<div class="{{ prefix }}-texte">
 {{ include.content | markdownify }}
 </div>
 
@@ -8,7 +10,7 @@
    src=include.src
    alt=include.alt
    caption=include.caption
-   class="accueil-photo"
+   class=prefix | append: "-photo"
 %}
 
 </div>
