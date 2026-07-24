@@ -175,41 +175,35 @@ th{
 .sous-menu .sous-menu {
     position: static;
     display: block;
-    margin: 0;
-    padding-left: 0;
-    box-shadow: none;
-    border: 0;
-    background: transparent;
+    margin: .35rem 0;
+    padding: .25rem 0;
+    background:#fff;
+    border:1px solid #c8c8c8;
+    box-shadow:0 3px 10px rgba(0,0,0,.15);
 }
 
 /* Niveau 3 */
 .sous-menu .sous-menu .sous-menu {
     position: static;
     display: block;
-    margin: 0;
-    padding-left: 0;
-    box-shadow: none;
-    border: 0;
-    background: transparent;
+    margin: .35rem 0 .35rem 1rem;
+    padding: .25rem 0;
+    background:#fff;
+    border:1px solid #c8c8c8;
+    box-shadow:0 3px 10px rgba(0,0,0,.15);
 }
 
 /* Niveau 4 */
 .sous-menu .sous-menu .sous-menu .sous-menu {
     position: static;
     display: block;
-    margin: 0;
-    padding-left: 0;
-    box-shadow: none;
-    border: 0;
-    background: transparent;
+    margin: .35rem 0 .35rem 1rem;
+    padding: .25rem 0;
+    background:#fff;
+    border:1px solid #c8c8c8;
+    box-shadow:0 3px 10px rgba(0,0,0,.15);
 }
 
 
 
 
-
-
-/* Niveau 2 : léger retrait des liens */
-.sous-menu .sous-menu > li > a{
-    padding-left: 1.2rem;
-}
