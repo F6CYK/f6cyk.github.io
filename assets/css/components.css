@@ -181,12 +181,13 @@ th{
 
     background: #fff;
     border: 1px solid #c8c8c8;
-    box-shadow: 0 3px 10px rgba(0,0,0,.15);
+
+    /* Ombre renforcée pour hiérarchie visuelle */
+    box-shadow: 0 4px 12px rgba(0,0,0,.20);
 
     /* Décalage visuel du niveau 2 */
     padding-left: 1.2rem;
 }
-
 
 /* Niveau 3 */
 .sous-menu .sous-menu .sous-menu {
