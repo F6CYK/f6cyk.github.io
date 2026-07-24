@@ -120,17 +120,13 @@ th{
    Sous-menu : apparence + comportement
    ========================================================== */
 
+/* Niveau 1 — verticalisation */
 .sous-menu {
-    display: none;
-    position: absolute;
+    display: block;
+    position: static;
 
-    top: 100%;
-    left: 0;
-
-    min-width: 220px;
-
-    margin: 0;
-    padding: 4px 0;
+    margin: .35rem 0;
+    padding: .25rem 0;
 
     list-style: none;
 
@@ -145,41 +141,15 @@ th{
     z-index: 1000;
 }
 
-.sous-menu li {
-    position: relative;
-    width: 100%;
-}
-
-.sous-menu li a {
-    display: block;
-    width: 100%;
-
-    padding: .55em 1.2em;
-
-    color: #003366;
-    text-decoration: none;
-    white-space: nowrap;
-}
-
-.sous-menu li a:hover {
-    background: #eef4fb;
-}
-
-/* Ouverture du niveau courant */
-.menu-deroulant:hover > .sous-menu,
-.menu-deroulant:focus-within > .sous-menu {
-    display: block;
-}
-
 /* Niveau 2 */
 .sous-menu .sous-menu {
     position: static;
     display: block;
     margin: .35rem 0;
     padding: .25rem 0;
-    background:#fff;
-    border:1px solid #c8c8c8;
-    box-shadow:0 3px 10px rgba(0,0,0,.15);
+    background: #fff;
+    border: 1px solid #c8c8c8;
+    box-shadow: 0 3px 10px rgba(0,0,0,.15);
 }
 
 /* Niveau 3 */
@@ -188,9 +158,9 @@ th{
     display: block;
     margin: .35rem 0 .35rem 1rem;
     padding: .25rem 0;
-    background:#fff;
-    border:1px solid #c8c8c8;
-    box-shadow:0 3px 10px rgba(0,0,0,.15);
+    background: #fff;
+    border: 1px solid #c8c8c8;
+    box-shadow: 0 3px 10px rgba(0,0,0,.15);
 }
 
 /* Niveau 4 */
@@ -199,10 +169,11 @@ th{
     display: block;
     margin: .35rem 0 .35rem 1rem;
     padding: .25rem 0;
-    background:#fff;
-    border:1px solid #c8c8c8;
-    box-shadow:0 3px 10px rgba(0,0,0,.15);
+    background: #fff;
+    border: 1px solid #c8c8c8;
+    box-shadow: 0 3px 10px rgba(0,0,0,.15);
 }
+
 
 
 
