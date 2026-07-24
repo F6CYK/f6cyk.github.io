@@ -2,10 +2,10 @@
 layout: default
 title: Présentation
 permalink: /trafic/presentation/
-
 asset_path: /trafic/presentation
 ---
 
+{% assign image = page.asset_path | append: "/trafic_portable-1.jpg" %}
 {% capture introduction %}
 
 Le trafic radioamateur constitue l'aboutissement naturel de toute station d'amateur. Il permet de mettre en œuvre les équipements réalisés ou restaurés, d'améliorer les techniques d'exploitation et de participer à la vie de la communauté radioamateur.
@@ -17,7 +17,7 @@ Cette rubrique présente les différentes formes de trafic pratiquées à la sta
 {% include intro.html
    prefix="trafic"
    content=introduction
-   src=page.asset_path | append: "/trafic_portable-1.jpg"
+   src=image
    alt="Station portable F6CYK"
    caption="Activité portable de la station F6CYK."
 %}
