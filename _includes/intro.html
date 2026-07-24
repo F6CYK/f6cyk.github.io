@@ -1,4 +1,5 @@
 {% assign prefix = include.prefix | default: "accueil" %}
+{% assign photo_class = prefix | append: "-photo" %}
 
 <div class="{{ prefix }}-introduction">
 
@@ -10,7 +11,7 @@
    src=include.src
    alt=include.alt
    caption=include.caption
-   class=prefix | append: "-photo"
+   class=photo_class
 %}
 
 </div>
