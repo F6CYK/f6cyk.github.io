@@ -37,11 +37,22 @@
                href="{{ '/galerie.html' | relative_url }}">Galerie</a>
         </li>
 
-        <!-- Trafic -->
+<!-- Trafic -->
+<li class="menu-deroulant">
+    <a href="#"
+       tabindex="0"
+       {% if page.url contains '/trafic/' %}class="actif"{% endif %}>
+        Trafic
+    </a>
+
+    <ul class="sous-menu">
         <li>
-            <a{% if page.url == '/trafic.html' %} class="actif"{% endif %}
-               href="{{ '/trafic.html' | relative_url }}">Trafic</a>
+            <a href="{{ '/trafic/presentation/' | relative_url }}">
+                Présentation
+            </a>
         </li>
+    </ul>
+</li>
 
 <!-- Documentation -->
 <li class="menu-deroulant">
