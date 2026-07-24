@@ -1,1 +1,26 @@
+- titre: Présentation
+  url: /trafic/presentation/
 
+- titre: Propagation
+  enfants: []
+
+- titre: Télégraphie
+  enfants: []
+
+- titre: Modes numériques
+  enfants: []
+
+- titre: QRP
+  enfants: []
+
+- titre: Trafic portable
+  enfants: []
+
+- titre: Trafic
+  enfants: []
+
+- titre: Journaux
+  enfants: []
+
+- titre: Ressources
+  enfants: []
