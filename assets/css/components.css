@@ -195,12 +195,11 @@ nav.menu-general {
 .sous-menu .menu-deroulant > .sous-menu {
     position: absolute;
 
-    top: 100%;
-    left: 0;
+    top: 0;
+    left: 100%;
+    margin-left: -1px;
 
-    margin-top: -1px;
-
-    border-top: 1px solid #c8c8c8;
+    border-left: 1px solid #c8c8c8;
     box-shadow: 0 4px 12px rgba(0,0,0,.20);
 }
 
