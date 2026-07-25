@@ -12,6 +12,86 @@
    - aucune règle concernant les autres composants du site.
    ========================================================== */
 
+/* ==========================================================
+   Menu déroulant : structure verticale récursive
+   ========================================================== */
+
+.menu-deroulant {
+    position: relative;
+}
+
+.menu-deroulant > a {
+    display: block;
+    padding: 0.5em 1em;
+}
+
+/* ==========================================================
+   Sous-menu : hors flux + vertical
+   ========================================================== */
+
+.sous-menu {
+    display: none;
+    position: absolute;   /* hors flux → n’agrandit jamais la bande grise */
+
+    top: 100%;
+    left: 0;
+
+    width: 220px;
+
+    margin: 0;
+    padding: 4px 0;
+
+    list-style: none;
+
+    background: #ffffff;
+    border: 1px solid #c8c8c8;
+    box-shadow: 0 3px 10px rgba(0,0,0,.15);
+
+    z-index: 1000;
+}
+
+.sous-menu li {
+    position: relative;
+    width: 100%;
+}
+
+.sous-menu li a {
+    display: block;
+    width: 100%;
+    padding: .55em 1.2em;
+    color: #003366;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.sous-menu li a:hover {
+    background: #eef4fb;
+}
+
+/* Ouverture du niveau courant */
+.menu-deroulant:hover > .sous-menu,
+.menu-deroulant:focus-within > .sous-menu {
+    display: block;
+}
+
+/* ==========================================================
+   Sous-menus internes : ouverture sous le parent
+   ========================================================== */
+
+.sous-menu .menu-deroulant {
+    position: relative;
+}
+
+.sous-menu .menu-deroulant > .sous-menu {
+    position: absolute;
+
+    top: 0;
+    left: 100%;
+    margin-left: -1px;
+
+    border-left: 1px solid #c8c8c8;
+    box-shadow: 0 4px 12px rgba(0,0,0,.20);
+}
 
 /* ==========================================================
    Panneaux de navigation
