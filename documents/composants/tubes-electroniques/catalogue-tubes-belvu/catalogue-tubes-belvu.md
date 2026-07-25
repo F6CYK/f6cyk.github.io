@@ -1,21 +1,21 @@
 ---
-layout: documentation
-title: "Catalogue Tubes Belvu"
-description: "Catalogue des tubes électroniques Belvu."
+layout: default
+title: Catalogue Tubes Belvu
 permalink: /documentation/composants/tubes-electroniques/catalogue-tubes-belvu/
-breadcrumb:
-  - Documentation
-  - Composants
-  - Tubes électroniques
+
+asset_path: /documents/composants/tubes-electroniques/catalogue-tubes-belvu
 ---
 
 # Catalogue Tubes Belvu
 
-Ce document présente le catalogue des tubes électroniques de la marque **Belvu**.
+Catalogue des tubes électroniques de la marque **Belvu**.
 
-Il est consultable directement ci-dessous grâce au lecteur intégré.
+---
+
+## Catalogue
 
 {% include flipbook.html
-    title="Catalogue Tubes Belvu"
-    pdf="/documents/composants/tubes-electroniques/catalogue-tubes-belvu/Belvu-Tubes-Electroniques-French-catalogue-12p.pdf"
+   file="Belvu-Tubes-Electroniques-French-catalogue-12p.pdf"
+   title="Catalogue Tubes Belvu"
+   scale=1.5
 %}
