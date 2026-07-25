@@ -109,12 +109,12 @@ th{
 
 nav.menu-general {
     position: relative;
-    display: flex;
-    align-items: center;
+
+    /* La clé : on revient à block, pas flex */
+    display: block;
 
     height: 48px;        /* hauteur FIXE */
-    min-height: 48px;    /* verrouillage */
-    line-height: 48px;   /* stabilisation typographique */
+    line-height: 48px;   /* verrouillage typographique */
 
     background: #e5e5e5;
 
@@ -127,7 +127,7 @@ nav.menu-general {
    ========================================================== */
 
 .menu-deroulant {
-    position: relative;   /* conteneur de positionnement */
+    position: relative;
 }
 
 .menu-deroulant > a {
@@ -143,7 +143,7 @@ nav.menu-general {
     display: none;
     position: absolute;   /* hors flux → n’agrandit jamais la bande grise */
 
-    top: 100%;            /* s’ouvre sous le parent */
+    top: 100%;
     left: 0;
 
     min-width: 220px;
@@ -192,13 +192,12 @@ nav.menu-general {
     position: relative;
 }
 
-/* Sous-menu interne : hors flux, mais vertical */
 .sous-menu .menu-deroulant > .sous-menu {
     position: absolute;
 
     top: 0;
-    left: 100%;           /* ouverture latérale contrôlée */
-    margin-left: -1px;    /* continuité du survol */
+    left: 100%;
+    margin-left: -1px;
 
     border-left: 1px solid #c8c8c8;
     box-shadow: 0 4px 12px rgba(0,0,0,.20);
@@ -207,4 +206,3 @@ nav.menu-general {
 /* ==========================================================
    Fin du fichier
    ========================================================== */
-
