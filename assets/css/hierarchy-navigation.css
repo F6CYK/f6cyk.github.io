@@ -15,7 +15,10 @@
    ---------------------------------------------------------- */
 
 nav {
-    position: relative; /* le seul repère de positionnement */
+    position: relative;
+    display: block;
+    min-height: 100vh;
+    z-index: 2000;
 }
 
 /* ----------------------------------------------------------
