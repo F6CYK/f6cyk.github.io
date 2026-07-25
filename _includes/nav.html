@@ -13,16 +13,28 @@
                href="{{ '/ma_station.html' | relative_url }}">Station</a>
         </li>
 
-        <!-- Matériel -->
+<!-- Matériel -->
 <li class="menu-deroulant">
-    <a href="#">Transmissions militaires</a>
+    <a href="#"
+       tabindex="0"
+       {% if page.url contains '/materiel/' %}class="actif"{% endif %}>
+        Matériel
+    </a>
 
     <ul class="sous-menu">
-        <li>
-            <a href="{{ '/materiel/transmissions-militaires/trc3600/' | relative_url }}">
-                THALES TRC 3600
-            </a>
+
+        <li class="menu-deroulant">
+            <a href="#">Transmissions militaires</a>
+
+            <ul class="sous-menu">
+                <li>
+                    <a href="{{ '/materiel/transmissions-militaires/trc3600/' | relative_url }}">
+                        THALES TRC 3600
+                    </a>
+                </li>
+            </ul>
         </li>
+
     </ul>
 </li>
 
