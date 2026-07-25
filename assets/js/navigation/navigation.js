@@ -43,7 +43,17 @@ items.forEach(li => {
 
     // Fermeture uniquement quand la souris quitte le panneau lui-même
     if (sousMenu) {
-        sousMenu.addEventListener("mouseleave", () => fermer(li));
+        sousMenu.addEventListener("mouseleave", (event) => {
+    const vers = event.relatedTarget;
+
+    // Si la souris va vers un descendant, on ne ferme pas
+    if (vers && li.contains(vers)) {
+        return;
+    }
+
+    fermer(li);
+});
+
     }
 
     // Fermeture au clavier
