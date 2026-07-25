@@ -83,7 +83,9 @@ nav > ul{
     display:flex;
     justify-content:center;
     align-items:center;
-    flex-wrap:wrap;
+
+    flex-wrap:nowrap;
+
     gap:.25rem;
     margin:0;
     padding:.35rem 0;
