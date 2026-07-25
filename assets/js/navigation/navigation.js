@@ -30,9 +30,8 @@ function ouvrir(li) {
    ---------------------------------------------------------- */
 
 function fermer(li) {
-    const sousMenu = li.querySelector(":scope > .sous-menu");
+    const sousMenu = li.querySelector(".sous-menu");
     if (!sousMenu) return;
-
     sousMenu.classList.remove("ouvert");
 }
 
@@ -41,24 +40,27 @@ function fermer(li) {
    ---------------------------------------------------------- */
 
 items.forEach(li => {
+    const sousMenu = li.querySelector(".sous-menu");
 
     li.addEventListener("mouseenter", () => ouvrir(li));
-    li.addEventListener("focusin", () => ouvrir(li);
+    li.addEventListener("focusin", () => ouvrir(li));
 
-});
+    // Fermeture uniquement quand la souris quitte le panneau lui-même
+    if (sousMenu) {
+        sousMenu.addEventListener("mouseleave", (event) => {
+            const vers = event.relatedTarget;
 
-/* ----------------------------------------------------------
-   Fermeture globale
-   ---------------------------------------------------------- */
+            // Si la souris va vers un descendant, on ne ferme pas
+            if (vers && li.contains(vers)) {
+                return;
+            }
 
-const nav = document.querySelector("nav");
+            fermer(li);
+        });
+    }
 
-nav.addEventListener("mouseleave", () => {
-
-    document
-        .querySelectorAll(".sous-menu.ouvert")
-        .forEach(menu => menu.classList.remove("ouvert"));
-
+    // Fermeture au clavier
+    li.addEventListener("focusout", () => fermer(li));
 });
 
 /* ----------------------------------------------------------
@@ -66,15 +68,10 @@ nav.addEventListener("mouseleave", () => {
    ---------------------------------------------------------- */
 
 window.addEventListener("resize", () => {
-
     items.forEach(li => {
-
-        const sousMenu = li.querySelector(":scope > .sous-menu");
-
+        const sousMenu = li.querySelector(".sous-menu");
         if (sousMenu && sousMenu.classList.contains("ouvert")) {
             ouvrir(li);
         }
-
     });
-
 });
