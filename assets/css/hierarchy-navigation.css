@@ -1,29 +1,17 @@
 /* ==========================================================
-   HIERARCHY NAVIGATION
+   HIERARCHY NAVIGATION — Version de test
    ----------------------------------------------------------
-   Navigation hiérarchique du site
-
-   Cette feuille est exclusivement dédiée à la présentation
-   des panneaux de navigation.
-
-   Contraintes :
-   - aucun impact sur le HTML généré par Jekyll ;
-   - aucune dépendance au contenu des rubriques ;
-   - aucune règle concernant les autres composants du site.
-   ========================================================== */
-
-/* ==========================================================
-   Paramètres globaux de géométrie
+   Objectif : vérifier si le cumul des left locaux est la cause
+   de la disparition du niveau 4.
    ========================================================== */
 
 :root {
     --nav-largeur-panneau: 220px;
-    --nav-colonne-x: 0px;
 }
 
-/* ==========================================================
-   Menu déroulant : structure verticale récursive
-   ========================================================== */
+/* ----------------------------------------------------------
+   Conteneur
+   ---------------------------------------------------------- */
 
 .menu-deroulant {
     position: relative;
@@ -34,16 +22,16 @@
     padding: 0.5em 1em;
 }
 
-/* ==========================================================
-   Sous-menu : hors flux + vertical
-   ========================================================== */
+/* ----------------------------------------------------------
+   Sous-menu : repère local + ouverture synchronisée
+   ---------------------------------------------------------- */
 
 .sous-menu {
     display: none;
     position: absolute;
 
     top: 100%;
-    left: var(--nav-colonne-x);
+    left: 100%; /* repère local, non cumulatif */
 
     width: var(--nav-largeur-panneau);
 
@@ -58,6 +46,34 @@
 
     z-index: 1000;
 }
+
+.menu-deroulant:hover > .sous-menu,
+.menu-deroulant:focus-within > .sous-menu {
+    display: block;
+}
+
+/* ----------------------------------------------------------
+   Profondeurs : uniquement des translations
+   ---------------------------------------------------------- */
+
+/* Niveau 2 */
+.sous-menu .menu-deroulant > .sous-menu {
+    transform: translateX(0);
+}
+
+/* Niveau 3 */
+.sous-menu .menu-deroulant .menu-deroulant > .sous-menu {
+    transform: translateX(var(--nav-largeur-panneau));
+}
+
+/* Niveau 4 */
+.sous-menu .menu-deroulant .menu-deroulant .menu-deroulant > .sous-menu {
+    transform: translateX(calc(2 * var(--nav-largeur-panneau)));
+}
+
+/* ----------------------------------------------------------
+   Liens
+   ---------------------------------------------------------- */
 
 .sous-menu li {
     position: relative;
@@ -76,72 +92,3 @@
 .sous-menu li a:hover {
     background: #eef4fb;
 }
-
-/* Ouverture du niveau courant */
-.menu-deroulant:hover > .sous-menu,
-.menu-deroulant:focus-within > .sous-menu {
-    display: block;
-}
-
-/* ==========================================================
-   Sous-menus internes : hiérarchie verticale synchronisée
-   ========================================================== */
-
-/* Niveau 2 : colonne suivante, alignée sous l’élément du niveau 1 */
-.sous-menu .menu-deroulant > .sous-menu {
-    position: absolute;
-    top: 100%;
-    left: calc(var(--nav-colonne-x) + var(--nav-largeur-panneau));
-    width: var(--nav-largeur-panneau);
-    border-left: 1px solid #c8c8c8;
-    box-shadow: 0 4px 12px rgba(0,0,0,.20);
-}
-
-/* Niveau 3 : colonne suivante, alignée sous l’élément du niveau 2 */
-.sous-menu .menu-deroulant .menu-deroulant > .sous-menu {
-    position: absolute;
-    top: 100%;
-    left: calc(var(--nav-colonne-x) + 2 * var(--nav-largeur-panneau));
-    width: var(--nav-largeur-panneau);
-    border-left: 1px solid #c8c8c8;
-    box-shadow: 0 4px 12px rgba(0,0,0,.20);
-}
-
-/* Niveau 4 : colonne suivante, alignée sous l’élément du niveau 3 */
-.sous-menu .menu-deroulant .menu-deroulant .menu-deroulant > .sous-menu {
-    position: absolute;
-    top: 100%;
-    left: calc(var(--nav-colonne-x) + 3 * var(--nav-largeur-panneau));
-    width: var(--nav-largeur-panneau);
-    border-left: 1px solid #c8c8c8;
-    box-shadow: 0 4px 12px rgba(0,0,0,.20);
-}
-
-/* ==========================================================
-   Panneaux de navigation
-   ========================================================== */
-
-
-/* ==========================================================
-   Visibilité
-   ========================================================== */
-
-
-/* ==========================================================
-   Positionnement
-   ========================================================== */
-
-
-/* ==========================================================
-   Hiérarchie
-   ========================================================== */
-
-
-/* ==========================================================
-   États (hover, actif...)
-   ========================================================== */
-
-
-/* ==========================================================
-   Animations
-   ========================================================== */
