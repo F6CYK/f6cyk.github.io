@@ -1,9 +1,9 @@
 /* ==========================================================
-   HIERARCHY NAVIGATION — Test repère global
+   HIERARCHY NAVIGATION — Architecture cohérente
    ----------------------------------------------------------
-   Objectif : rattacher tous les sous-menus au conteneur
-   global du premier niveau pour éliminer le cumul des repères.
-   Strictement CSS, sans modification du HTML.
+   Objectif : un repère global unique (<nav>) pour permettre
+   au JavaScript de calculer des coordonnées absolues.
+   Le CSS ne gère plus que l'apparence.
    ========================================================== */
 
 :root {
@@ -11,12 +11,16 @@
 }
 
 /* ----------------------------------------------------------
-   Conteneur global : repère unique
+   Repère global unique
    ---------------------------------------------------------- */
 
-.menu-deroulant {
-    position: relative; /* repère global */
+nav {
+    position: relative; /* le seul repère de positionnement */
 }
+
+/* ----------------------------------------------------------
+   Items du menu principal
+   ---------------------------------------------------------- */
 
 .menu-deroulant > a {
     display: block;
@@ -24,18 +28,12 @@
 }
 
 /* ----------------------------------------------------------
-   Sous-menu : tous ancrés au même repère
+   Sous-menus : tous dans le repère du <nav>
    ---------------------------------------------------------- */
 
-.menu-deroulant .sous-menu {
-    display: none;
-    position: absolute;
-
-    /* verticale synchronisée */
-    top: 100%;
-
-    /* horizontale : colonne 1 */
-    left: 0;
+.sous-menu {
+    position: absolute; /* repère global */
+    display: none;      /* fermé par défaut */
 
     width: var(--nav-largeur-panneau);
 
@@ -48,40 +46,20 @@
     border: 1px solid #c8c8c8;
     box-shadow: 0 3px 10px rgba(0,0,0,.15);
 
-    z-index: 1000;
+    z-index: 1000; /* suffisant puisque les panneaux ne se chevauchent plus */
 }
 
-/* Ouverture */
-.menu-deroulant:hover > .sous-menu,
-.menu-deroulant:focus-within > .sous-menu {
+/* Ouverture contrôlée exclusivement par JavaScript */
+.sous-menu.ouvert {
     display: block;
 }
 
 /* ----------------------------------------------------------
-   Profondeurs : calculées dans le repère global
-   ---------------------------------------------------------- */
-
-/* Niveau 2 */
-.menu-deroulant .sous-menu .menu-deroulant > .sous-menu {
-    left: var(--nav-largeur-panneau);
-}
-
-/* Niveau 3 */
-.menu-deroulant .sous-menu .menu-deroulant .menu-deroulant > .sous-menu {
-    left: calc(2 * var(--nav-largeur-panneau));
-}
-
-/* Niveau 4 */
-.menu-deroulant .sous-menu .menu-deroulant .menu-deroulant .menu-deroulant > .sous-menu {
-    left: calc(3 * var(--nav-largeur-panneau));
-}
-
-/* ----------------------------------------------------------
-   Liens
+   Liens internes des sous-menus
    ---------------------------------------------------------- */
 
 .sous-menu li {
-    position: relative;
+    /* aucun positionnement local */
     width: 100%;
 }
 
