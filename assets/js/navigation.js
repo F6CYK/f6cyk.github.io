@@ -1,74 +1,61 @@
-document.addEventListener("DOMContentLoaded", () => {
+/* ==========================================================
+   NAVIGATION — Ouverture, fermeture, événements
+   ========================================================== */
 
-    /* ---------------------------------------------------------
-       Paramètres géométriques
-       --------------------------------------------------------- */
+import { calculerPosition } from "./geometry.js";
 
-    const LARGEUR_COLONNE = 220;   // largeur d'une colonne
-    const MARGE_GAUCHE    = 0;     // décalage horizontal global (optionnel)
+/* ----------------------------------------------------------
+   Sélection des items
+   ---------------------------------------------------------- */
 
-    const nav = document.querySelector("nav"); // repère global unique
+const items = document.querySelectorAll(".menu-deroulant");
 
+/* ----------------------------------------------------------
+   Ouverture d’un panneau
+   ---------------------------------------------------------- */
 
-    /* ---------------------------------------------------------
-       Calcul de la profondeur d'un <li class="menu-deroulant">
-       --------------------------------------------------------- */
+function ouvrir(li) {
+    const pos = calculerPosition(li);
+    if (!pos) return;
 
-    function profondeur(li) {
-        let niveau = 0;
-        let courant = li.parentElement;
+    const { top, left, sousMenu } = pos;
 
-        while (courant && courant.classList) {
-            if (courant.classList.contains("sous-menu")) {
-                niveau++;
-            }
-            courant = courant.parentElement;
-        }
+    sousMenu.style.top  = `${top}px`;
+    sousMenu.style.left = `${left}px`;
+    sousMenu.classList.add("ouvert");
+}
 
-        return niveau; // 0 = colonne 1, 1 = colonne 2, etc.
-    }
+/* ----------------------------------------------------------
+   Fermeture d’un panneau
+   ---------------------------------------------------------- */
 
+function fermer(li) {
+    const sousMenu = li.querySelector(".sous-menu");
+    if (!sousMenu) return;
+    sousMenu.classList.remove("ouvert");
+}
 
-    /* ---------------------------------------------------------
-       Positionnement géométrique exact d'un sous-menu
-       --------------------------------------------------------- */
+/* ----------------------------------------------------------
+   Gestion des événements
+   ---------------------------------------------------------- */
 
-    function positionnerSousMenu(li) {
-        const sousMenu = li.querySelector(".sous-menu");
-        if (!sousMenu) return;
+items.forEach(li => {
+    li.addEventListener("mouseenter", () => ouvrir(li));
+    li.addEventListener("mouseleave", () => fermer(li));
 
-        const rectLi  = li.getBoundingClientRect();
-        const rectNav = nav.getBoundingClientRect();
+    li.addEventListener("focusin",  () => ouvrir(li));
+    li.addEventListener("focusout", () => fermer(li));
+});
 
-        const niveau = profondeur(li);
+/* ----------------------------------------------------------
+   Recalcul sur redimensionnement
+   ---------------------------------------------------------- */
 
-        /* Calculs géométriques exacts */
-        const top  = rectLi.top - rectNav.top + rectLi.height;
-        const left = MARGE_GAUCHE + niveau * LARGEUR_COLONNE;
-
-        sousMenu.style.top  = `${top}px`;
-        sousMenu.style.left = `${left}px`;
-    }
-
-
-    /* ---------------------------------------------------------
-       Activation : survol et focus
-       --------------------------------------------------------- */
-
-    const items = document.querySelectorAll(".menu-deroulant");
-
+window.addEventListener("resize", () => {
     items.forEach(li => {
-        li.addEventListener("mouseenter", () => positionnerSousMenu(li));
-        li.addEventListener("focusin",    () => positionnerSousMenu(li));
+        const sousMenu = li.querySelector(".sous-menu");
+        if (sousMenu && sousMenu.classList.contains("ouvert")) {
+            ouvrir(li);
+        }
     });
-
-
-    /* ---------------------------------------------------------
-       Recalcul en cas de redimensionnement
-       --------------------------------------------------------- */
-
-    window.addEventListener("resize", () => {
-        items.forEach(li => positionnerSousMenu(li));
-    });
-
 });
