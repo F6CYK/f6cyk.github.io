@@ -163,6 +163,7 @@ nav.menu-general {
 }
 */
 
+/*
 .sous-menu li {
     position: relative;
     width: 100%;
@@ -180,6 +181,7 @@ nav.menu-general {
 .sous-menu li a:hover {
     background: #eef4fb;
 }
+*/
 
 /* Ouverture du niveau courant */
 .menu-deroulant:hover > .sous-menu,
