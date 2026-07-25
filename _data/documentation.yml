@@ -10,7 +10,7 @@
         - titre: NE555
           url: /documentation/composants/circuits-integres/ne555/
           
-    - titre: Tubes électroniques
-      enfants:
-        - title: Catalogue Tubes Belvu
-          url: /documentation/composants/tubes-electroniques/catalogue-tubes-belvu/
+- titre: Tubes électroniques
+  enfants:
+    - titre: Catalogue Tubes Belvu
+      url: /documentation/composants/tubes-electroniques/catalogue-tubes-belvu/
