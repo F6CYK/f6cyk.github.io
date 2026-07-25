@@ -42,38 +42,22 @@ function fermer(li) {
 
 items.forEach(li => {
 
-    const sousMenu = li.querySelector(":scope > .sous-menu");
-
     li.addEventListener("mouseenter", () => ouvrir(li));
-    li.addEventListener("focusin", () => ouvrir(li));
+    li.addEventListener("focusin", () => ouvrir(li);
 
-    if (sousMenu) {
+});
 
-        sousMenu.addEventListener("mouseleave", (event) => {
+/* ----------------------------------------------------------
+   Fermeture globale
+   ---------------------------------------------------------- */
 
-            const vers = event.relatedTarget;
+const nav = document.querySelector("nav");
 
-            // La souris reste dans cette branche
-            if (vers && li.contains(vers)) {
-                return;
-            }
+nav.addEventListener("mouseleave", () => {
 
-            fermer(li);
-        });
-
-    }
-
-    li.addEventListener("focusout", (event) => {
-
-        const vers = event.relatedTarget;
-
-        // Le focus reste dans cette branche
-        if (vers && li.contains(vers)) {
-            return;
-        }
-
-        fermer(li);
-    });
+    document
+        .querySelectorAll(".sous-menu.ouvert")
+        .forEach(menu => menu.classList.remove("ouvert"));
 
 });
 
