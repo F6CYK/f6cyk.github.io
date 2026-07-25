@@ -49,7 +49,8 @@ nav {
     border: 1px solid #c8c8c8;
     box-shadow: 0 3px 10px rgba(0,0,0,.15);
 
-    z-index: 1000; /* suffisant puisque les panneaux ne se chevauchent plus */
+    /* IMPORTANT : au-dessus de tout */
+    z-index: 9999;
 }
 
 /* Ouverture contrôlée exclusivement par JavaScript */
@@ -62,7 +63,6 @@ nav {
    ---------------------------------------------------------- */
 
 .sous-menu li {
-    /* aucun positionnement local */
     width: 100%;
 }
 
@@ -77,4 +77,13 @@ nav {
 
 .sous-menu li a:hover {
     background: #eef4fb;
+}
+
+/* ----------------------------------------------------------
+   Correction structurelle : empêcher <main> de recouvrir
+   ---------------------------------------------------------- */
+
+main {
+    position: relative;
+    z-index: 1;
 }
