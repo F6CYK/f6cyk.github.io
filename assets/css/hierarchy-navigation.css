@@ -84,10 +84,10 @@
 }
 
 /* ==========================================================
-   Sous-menus internes : hiérarchie verticale globale
+   Sous-menus internes : hiérarchie verticale synchronisée
    ========================================================== */
 
-/* Niveau 2 */
+/* Niveau 2 : colonne suivante, alignée sous l’élément du niveau 1 */
 .sous-menu .menu-deroulant > .sous-menu {
     position: absolute;
     top: 100%;
@@ -97,7 +97,7 @@
     box-shadow: 0 4px 12px rgba(0,0,0,.20);
 }
 
-/* Niveau 3 */
+/* Niveau 3 : colonne suivante, alignée sous l’élément du niveau 2 */
 .sous-menu .menu-deroulant .menu-deroulant > .sous-menu {
     position: absolute;
     top: 100%;
@@ -107,7 +107,7 @@
     box-shadow: 0 4px 12px rgba(0,0,0,.20);
 }
 
-/* Niveau 4 */
+/* Niveau 4 : colonne suivante, alignée sous l’élément du niveau 3 */
 .sous-menu .menu-deroulant .menu-deroulant .menu-deroulant > .sous-menu {
     position: absolute;
     top: 100%;
@@ -118,5 +118,30 @@
 }
 
 /* ==========================================================
-   Fin du fichier
+   Panneaux de navigation
+   ========================================================== */
+
+
+/* ==========================================================
+   Visibilité
+   ========================================================== */
+
+
+/* ==========================================================
+   Positionnement
+   ========================================================== */
+
+
+/* ==========================================================
+   Hiérarchie
+   ========================================================== */
+
+
+/* ==========================================================
+   États (hover, actif...)
+   ========================================================== */
+
+
+/* ==========================================================
+   Animations
    ========================================================== */
