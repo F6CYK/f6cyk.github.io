@@ -13,6 +13,15 @@
    ========================================================== */
 
 /* ==========================================================
+   Paramètres globaux de géométrie
+   ========================================================== */
+
+:root {
+    --nav-largeur-panneau: 220px;
+    --nav-colonne-x: 0px;
+}
+
+/* ==========================================================
    Menu déroulant : structure verticale récursive
    ========================================================== */
 
@@ -31,12 +40,12 @@
 
 .sous-menu {
     display: none;
-    position: absolute;   /* hors flux → n’agrandit jamais la bande grise */
+    position: absolute;
 
     top: 100%;
-    left: 0;
+    left: var(--nav-colonne-x);
 
-    width: 220px;
+    width: var(--nav-largeur-panneau);
 
     margin: 0;
     padding: 4px 0;
@@ -75,61 +84,37 @@
 }
 
 /* ==========================================================
-   Sous-menus internes : ouverture sous le parent
+   Sous-menus internes : hiérarchie verticale globale
    ========================================================== */
 
-.sous-menu .menu-deroulant {
-    position: relative;
-}
-
+/* Niveau 2 */
 .sous-menu .menu-deroulant > .sous-menu {
     position: absolute;
-
-    top: 0;
-    left: 100%;
-    margin-left: -1px;
-
+    top: 100%;
+    left: calc(var(--nav-colonne-x) + var(--nav-largeur-panneau));
+    width: var(--nav-largeur-panneau);
     border-left: 1px solid #c8c8c8;
     box-shadow: 0 4px 12px rgba(0,0,0,.20);
 }
 
-/* ==========================================================
-   Géométrie globale verticale par transformation
-   ----------------------------------------------------------
-   Le positionnement absolu reste local et fonctionnel.
-   La transformation déplace le panneau dans un repère global.
-   ========================================================== */
-
-:root {
-    --largeur-panneau: 220px;
-}
-
-/* Niveau 1 : colonne principale */
-.menu-deroulant > .sous-menu {
-    --offset-global: 0px;
-    transform: translateX(var(--offset-global));
-    transform-origin: top left;
-}
-
-/* Niveau 2 : alignement dans la même colonne */
-.sous-menu .menu-deroulant > .sous-menu {
-    --offset-global: calc(-1 * var(--largeur-panneau));
-    transform: translateX(var(--offset-global));
-    transform-origin: top left;
-}
-
-/* Niveau 3 : même principe, récursif */
+/* Niveau 3 */
 .sous-menu .menu-deroulant .menu-deroulant > .sous-menu {
-    --offset-global: calc(-2 * var(--largeur-panneau));
-    transform: translateX(var(--offset-global));
-    transform-origin: top left;
+    position: absolute;
+    top: 100%;
+    left: calc(var(--nav-colonne-x) + 2 * var(--nav-largeur-panneau));
+    width: var(--nav-largeur-panneau);
+    border-left: 1px solid #c8c8c8;
+    box-shadow: 0 4px 12px rgba(0,0,0,.20);
 }
 
-/* Niveau 4 : extension naturelle */
+/* Niveau 4 */
 .sous-menu .menu-deroulant .menu-deroulant .menu-deroulant > .sous-menu {
-    --offset-global: calc(-3 * var(--largeur-panneau));
-    transform: translateX(var(--offset-global));
-    transform-origin: top left;
+    position: absolute;
+    top: 100%;
+    left: calc(var(--nav-colonne-x) + 3 * var(--nav-largeur-panneau));
+    width: var(--nav-largeur-panneau);
+    border-left: 1px solid #c8c8c8;
+    box-shadow: 0 4px 12px rgba(0,0,0,.20);
 }
 
 /* ==========================================================
