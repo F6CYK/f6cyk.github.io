@@ -1,8 +1,9 @@
 /* ==========================================================
-   HIERARCHY NAVIGATION — Version de test
+   HIERARCHY NAVIGATION — Test repère global
    ----------------------------------------------------------
-   Objectif : vérifier si le cumul des left locaux est la cause
-   de la disparition du niveau 4.
+   Objectif : rattacher tous les sous-menus au conteneur
+   global du premier niveau pour éliminer le cumul des repères.
+   Strictement CSS, sans modification du HTML.
    ========================================================== */
 
 :root {
@@ -10,11 +11,11 @@
 }
 
 /* ----------------------------------------------------------
-   Conteneur
+   Conteneur global : repère unique
    ---------------------------------------------------------- */
 
 .menu-deroulant {
-    position: relative;
+    position: relative; /* repère global */
 }
 
 .menu-deroulant > a {
@@ -23,15 +24,18 @@
 }
 
 /* ----------------------------------------------------------
-   Sous-menu : repère local + ouverture synchronisée
+   Sous-menu : tous ancrés au même repère
    ---------------------------------------------------------- */
 
-.sous-menu {
+.menu-deroulant .sous-menu {
     display: none;
     position: absolute;
 
+    /* verticale synchronisée */
     top: 100%;
-    left: 100%; /* repère local, non cumulatif */
+
+    /* horizontale : colonne 1 */
+    left: 0;
 
     width: var(--nav-largeur-panneau);
 
@@ -47,28 +51,29 @@
     z-index: 1000;
 }
 
+/* Ouverture */
 .menu-deroulant:hover > .sous-menu,
 .menu-deroulant:focus-within > .sous-menu {
     display: block;
 }
 
 /* ----------------------------------------------------------
-   Profondeurs : uniquement des translations
+   Profondeurs : calculées dans le repère global
    ---------------------------------------------------------- */
 
 /* Niveau 2 */
-.sous-menu .menu-deroulant > .sous-menu {
-    transform: translateX(0);
+.menu-deroulant .sous-menu .menu-deroulant > .sous-menu {
+    left: var(--nav-largeur-panneau);
 }
 
 /* Niveau 3 */
-.sous-menu .menu-deroulant .menu-deroulant > .sous-menu {
-    transform: translateX(var(--nav-largeur-panneau));
+.menu-deroulant .sous-menu .menu-deroulant .menu-deroulant > .sous-menu {
+    left: calc(2 * var(--nav-largeur-panneau));
 }
 
 /* Niveau 4 */
-.sous-menu .menu-deroulant .menu-deroulant .menu-deroulant > .sous-menu {
-    transform: translateX(calc(2 * var(--nav-largeur-panneau)));
+.menu-deroulant .sous-menu .menu-deroulant .menu-deroulant .menu-deroulant > .sous-menu {
+    left: calc(3 * var(--nav-largeur-panneau));
 }
 
 /* ----------------------------------------------------------
