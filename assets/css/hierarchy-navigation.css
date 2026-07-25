@@ -94,30 +94,44 @@
 }
 
 /* ==========================================================
-   Panneaux de navigation
+   Géométrie globale verticale par transformation
+   ----------------------------------------------------------
+   Le positionnement absolu reste local et fonctionnel.
+   La transformation déplace le panneau dans un repère global.
    ========================================================== */
 
+:root {
+    --largeur-panneau: 220px;
+}
+
+/* Niveau 1 : colonne principale */
+.menu-deroulant > .sous-menu {
+    --offset-global: 0px;
+    transform: translateX(var(--offset-global));
+    transform-origin: top left;
+}
+
+/* Niveau 2 : alignement dans la même colonne */
+.sous-menu .menu-deroulant > .sous-menu {
+    --offset-global: calc(-1 * var(--largeur-panneau));
+    transform: translateX(var(--offset-global));
+    transform-origin: top left;
+}
+
+/* Niveau 3 : même principe, récursif */
+.sous-menu .menu-deroulant .menu-deroulant > .sous-menu {
+    --offset-global: calc(-2 * var(--largeur-panneau));
+    transform: translateX(var(--offset-global));
+    transform-origin: top left;
+}
+
+/* Niveau 4 : extension naturelle */
+.sous-menu .menu-deroulant .menu-deroulant .menu-deroulant > .sous-menu {
+    --offset-global: calc(-3 * var(--largeur-panneau));
+    transform: translateX(var(--offset-global));
+    transform-origin: top left;
+}
 
 /* ==========================================================
-   Visibilité
-   ========================================================== */
-
-
-/* ==========================================================
-   Positionnement
-   ========================================================== */
-
-
-/* ==========================================================
-   Hiérarchie
-   ========================================================== */
-
-
-/* ==========================================================
-   États (hover, actif...)
-   ========================================================== */
-
-
-/* ==========================================================
-   Animations
+   Fin du fichier
    ========================================================== */
