@@ -35,17 +35,21 @@ function fermer(li) {
     sousMenu.classList.remove("ouvert");
 }
 
-/* ----------------------------------------------------------
-   Gestion des événements
-   ---------------------------------------------------------- */
-
 items.forEach(li => {
-    li.addEventListener("mouseenter", () => ouvrir(li));
-    li.addEventListener("mouseleave", () => fermer(li));
+    const sousMenu = li.querySelector(".sous-menu");
 
-    li.addEventListener("focusin",  () => ouvrir(li));
+    li.addEventListener("mouseenter", () => ouvrir(li));
+    li.addEventListener("focusin",    () => ouvrir(li));
+
+    // Fermeture uniquement quand la souris quitte le panneau lui-même
+    if (sousMenu) {
+        sousMenu.addEventListener("mouseleave", () => fermer(li));
+    }
+
+    // Fermeture au clavier
     li.addEventListener("focusout", () => fermer(li));
 });
+
 
 /* ----------------------------------------------------------
    Recalcul sur redimensionnement
