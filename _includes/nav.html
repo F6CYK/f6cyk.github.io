@@ -22,19 +22,7 @@
     </a>
 
     <ul class="sous-menu">
-
-        <li class="menu-deroulant">
-            <a href="#">Transmissions militaires</a>
-
-            <ul class="sous-menu">
-                <li>
-                    <a href="{{ '/materiel/transmissions-militaires/trc3600/' | relative_url }}">
-                        THALES TRC 3600
-                    </a>
-                </li>
-            </ul>
-        </li>
-
+        {% include recursive-menu.html noeuds=site.data.materiel %}
     </ul>
 </li>
 
