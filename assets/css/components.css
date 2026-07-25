@@ -183,6 +183,7 @@ nav.menu-general {
 }
 */
 
+/*
 /* Ouverture du niveau courant */
 .menu-deroulant:hover > .sous-menu,
 .menu-deroulant:focus-within > .sous-menu {
@@ -207,7 +208,7 @@ nav.menu-general {
     border-left: 1px solid #c8c8c8;
     box-shadow: 0 4px 12px rgba(0,0,0,.20);
 }
-
+*/
 /* ==========================================================
    Fin du fichier
    ========================================================== */
