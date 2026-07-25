@@ -104,6 +104,20 @@ th{
 }
 
 /* ==========================================================
+   Bande grise du menu général
+   ========================================================== */
+
+nav.menu-general {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background: #e5e5e5;
+    height: 48px;          /* Hauteur FIXE */
+    overflow: visible;     /* Les sous-menus ne modifient pas la hauteur */
+    z-index: 500;
+}
+
+/* ==========================================================
    Menu déroulant : structure verticale récursive
    ========================================================== */
 
@@ -116,10 +130,13 @@ th{
     padding: 0.5em 1em;
 }
 
-/* Sous-menu : apparence et comportement */
+/* ==========================================================
+   Sous-menu : apparence et comportement
+   ========================================================== */
+
 .sous-menu {
     display: none;
-    position: static; /* vertical, pas absolu */
+    position: static;      /* Vertical, pas absolu */
     margin: .35rem 0 0 0;
     padding: .25rem 0;
     list-style: none;
@@ -142,7 +159,7 @@ th{
 .sous-menu .menu-deroulant > .sous-menu {
     position: static;
     margin-top: .25rem;
-    margin-left: 1.2rem; /* indentation visuelle */
+    margin-left: 1.2rem;   /* Indentation visuelle */
     border-left: 2px solid #e0e0e0;
 }
 
@@ -158,5 +175,4 @@ th{
 .sous-menu li a:hover {
     background: #eef4fb;
 }
-
 
