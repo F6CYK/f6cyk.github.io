@@ -30,46 +30,67 @@ function ouvrir(li) {
    ---------------------------------------------------------- */
 
 function fermer(li) {
-    const sousMenu = li.querySelector(".sous-menu");
+    const sousMenu = li.querySelector(":scope > .sous-menu");
     if (!sousMenu) return;
+
     sousMenu.classList.remove("ouvert");
 }
 
+/* ----------------------------------------------------------
+   Événements
+   ---------------------------------------------------------- */
+
 items.forEach(li => {
-    const sousMenu = li.querySelector(".sous-menu");
+
+    const sousMenu = li.querySelector(":scope > .sous-menu");
 
     li.addEventListener("mouseenter", () => ouvrir(li));
-    li.addEventListener("focusin",    () => ouvrir(li));
+    li.addEventListener("focusin", () => ouvrir(li));
 
-    // Fermeture uniquement quand la souris quitte le panneau lui-même
     if (sousMenu) {
+
         sousMenu.addEventListener("mouseleave", (event) => {
-    const vers = event.relatedTarget;
 
-    // Si la souris va vers un descendant, on ne ferme pas
-    if (vers && li.contains(vers)) {
-        return;
+            const vers = event.relatedTarget;
+
+            // La souris reste dans cette branche
+            if (vers && li.contains(vers)) {
+                return;
+            }
+
+            fermer(li);
+        });
+
     }
 
-    fermer(li);
+    li.addEventListener("focusout", (event) => {
+
+        const vers = event.relatedTarget;
+
+        // Le focus reste dans cette branche
+        if (vers && li.contains(vers)) {
+            return;
+        }
+
+        fermer(li);
+    });
+
 });
-
-    }
-
-    // Fermeture au clavier
-    li.addEventListener("focusout", () => fermer(li));
-});
-
 
 /* ----------------------------------------------------------
    Recalcul sur redimensionnement
    ---------------------------------------------------------- */
 
 window.addEventListener("resize", () => {
+
     items.forEach(li => {
-        const sousMenu = li.querySelector(".sous-menu");
+
+        const sousMenu = li.querySelector(":scope > .sous-menu");
+
         if (sousMenu && sousMenu.classList.contains("ouvert")) {
             ouvrir(li);
         }
+
     });
+
 });
