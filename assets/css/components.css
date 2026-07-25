@@ -122,6 +122,7 @@ nav.menu-general {
     z-index: 500;
 }
 
+/*
 /* ==========================================================
    Menu déroulant : structure verticale récursive
    ========================================================== */
@@ -134,6 +135,7 @@ nav.menu-general {
     display: block;
     padding: 0.5em 1em;
 }
+*/
 
 /* ==========================================================
    Sous-menu : hors flux + vertical
