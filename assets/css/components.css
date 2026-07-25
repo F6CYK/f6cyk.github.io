@@ -140,7 +140,7 @@ nav.menu-general {
 /* ==========================================================
    Sous-menu : hors flux + vertical
    ========================================================== */
-
+/*
 .sous-menu {
     display: none;
     position: absolute;   /* hors flux → n’agrandit jamais la bande grise */
@@ -161,6 +161,7 @@ nav.menu-general {
 
     z-index: 1000;
 }
+*/
 
 .sous-menu li {
     position: relative;
