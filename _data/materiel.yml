@@ -1,1 +1,4 @@
-
+- titre: Transmissions militaires
+  enfants:
+    - titre: THALES TRC 3600
+      url: /materiel/transmissions-militaires/trc3600/
