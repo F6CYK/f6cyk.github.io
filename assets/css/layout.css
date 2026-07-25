@@ -78,7 +78,7 @@ nav{
     border-bottom:0;
 }
 
-nav ul{
+nav > ul{
     list-style:none;
     display:flex;
     justify-content:center;
