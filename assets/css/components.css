@@ -104,16 +104,21 @@ th{
 }
 
 /* ==========================================================
-   Bande grise du menu général
+   Bande grise du menu général — HAUTEUR FIXE
    ========================================================== */
 
 nav.menu-general {
     position: relative;
     display: flex;
     align-items: center;
+
+    height: 48px;        /* hauteur FIXE */
+    min-height: 48px;    /* verrouillage */
+    line-height: 48px;   /* stabilisation typographique */
+
     background: #e5e5e5;
-    height: 48px;          /* Hauteur FIXE */
-    overflow: visible;     /* Les sous-menus ne modifient pas la hauteur */
+
+    overflow: visible;   /* les sous-menus ne l’agrandissent jamais */
     z-index: 500;
 }
 
@@ -122,7 +127,7 @@ nav.menu-general {
    ========================================================== */
 
 .menu-deroulant {
-    position: relative;
+    position: relative;   /* conteneur de positionnement */
 }
 
 .menu-deroulant > a {
@@ -131,41 +136,38 @@ nav.menu-general {
 }
 
 /* ==========================================================
-   Sous-menu : apparence et comportement
+   Sous-menu : hors flux + vertical
    ========================================================== */
 
 .sous-menu {
     display: none;
-    position: static;      /* Vertical, pas absolu */
-    margin: .35rem 0 0 0;
-    padding: .25rem 0;
+    position: absolute;   /* hors flux → n’agrandit jamais la bande grise */
+
+    top: 100%;            /* s’ouvre sous le parent */
+    left: 0;
+
+    min-width: 220px;
+
+    margin: 0;
+    padding: 4px 0;
+
     list-style: none;
-    background: #fff;
+
+    background: #ffffff;
     border: 1px solid #c8c8c8;
     box-shadow: 0 3px 10px rgba(0,0,0,.15);
+
+    z-index: 1000;
 }
 
-/* Ouverture du niveau courant */
-.menu-deroulant:hover > .sous-menu,
-.menu-deroulant:focus-within > .sous-menu {
-    display: block;
-}
-
-/* Sous-menus internes : indentation verticale */
-.sous-menu .menu-deroulant {
+.sous-menu li {
     position: relative;
+    width: 100%;
 }
 
-.sous-menu .menu-deroulant > .sous-menu {
-    position: static;
-    margin-top: .25rem;
-    margin-left: 1.2rem;   /* Indentation visuelle */
-    border-left: 2px solid #e0e0e0;
-}
-
-/* Liens internes */
 .sous-menu li a {
     display: block;
+    width: 100%;
     padding: .55em 1.2em;
     color: #003366;
     text-decoration: none;
@@ -175,4 +177,34 @@ nav.menu-general {
 .sous-menu li a:hover {
     background: #eef4fb;
 }
+
+/* Ouverture du niveau courant */
+.menu-deroulant:hover > .sous-menu,
+.menu-deroulant:focus-within > .sous-menu {
+    display: block;
+}
+
+/* ==========================================================
+   Sous-menus internes : ouverture verticale récursive
+   ========================================================== */
+
+.sous-menu .menu-deroulant {
+    position: relative;
+}
+
+/* Sous-menu interne : hors flux, mais vertical */
+.sous-menu .menu-deroulant > .sous-menu {
+    position: absolute;
+
+    top: 0;
+    left: 100%;           /* ouverture latérale contrôlée */
+    margin-left: -1px;    /* continuité du survol */
+
+    border-left: 1px solid #c8c8c8;
+    box-shadow: 0 4px 12px rgba(0,0,0,.20);
+}
+
+/* ==========================================================
+   Fin du fichier
+   ========================================================== */
 
