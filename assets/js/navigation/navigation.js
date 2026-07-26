@@ -115,8 +115,10 @@ items.forEach(li => {
         });
     }
 
-    li.addEventListener("focusout", () => fermer(li);
-    );
+    li.addEventListener("focusout", () => {
+        fermer(li);
+    });
+
 });
 
 /* ----------------------------------------------------------
