@@ -1,9 +1,21 @@
 /* ==========================================================
    OVERLAY
    ----------------------------------------------------------
-   Gestion de la couche d'affichage et des colonnes.
-   Chaque colonne est positionnée relativement au menu
-   principal auquel elle appartient.
+   Couche d'affichage indépendante.
+
+   Les sous-menus d'origine ne sont jamais déplacés.
+
+   Chaque colonne contient uniquement une copie temporaire
+   du panneau à afficher.
+
+   Responsabilités :
+     - création de l'overlay
+     - création des colonnes
+     - affichage
+     - masquage
+     - destruction des clones
+
+   Aucun calcul de géométrie n'est effectué ici.
    ========================================================== */
 
 import {
@@ -12,25 +24,34 @@ import {
 } from "./config.js";
 
 const nav = lireRepereGlobal();
-const largeurPanneau = lireLargeurColonne();
+const largeurColonne = lireLargeurColonne();
+
+/* ==========================================================
+   Overlay
+   ========================================================== */
 
 let overlay = nav.querySelector("#nav-overlay");
 
 if (!overlay) {
 
     overlay = document.createElement("div");
+
     overlay.id = "nav-overlay";
 
     nav.appendChild(overlay);
 }
 
+/* ==========================================================
+   Colonnes
+   ========================================================== */
+
 const colonnes = [];
 
 /* ----------------------------------------------------------
-   Retourne la colonne correspondant au niveau demandé.
+   Retourne la colonne correspondant à un niveau.
    ---------------------------------------------------------- */
 
-export function obtenirColonne(niveau, leftOrigine = 0) {
+export function obtenirColonne(niveau, origineX) {
 
     let colonne = colonnes[niveau];
 
@@ -47,14 +68,14 @@ export function obtenirColonne(niveau, leftOrigine = 0) {
     }
 
     colonne.style.left =
-        `${leftOrigine + (niveau * largeurPanneau)}px`;
+        `${origineX + (niveau * largeurColonne)}px`;
 
     return colonne;
 }
 
-/* ----------------------------------------------------------
-   Vide toutes les colonnes à partir d'un niveau.
-   ---------------------------------------------------------- */
+/* ==========================================================
+   Nettoyage
+   ========================================================== */
 
 export function viderColonnes(depuis = 0) {
 
@@ -67,30 +88,65 @@ export function viderColonnes(depuis = 0) {
         }
 
         colonne.replaceChildren();
+
         colonne.style.display = "none";
     }
 }
 
-/* ----------------------------------------------------------
-   Affiche une colonne.
-   ---------------------------------------------------------- */
+/* ==========================================================
+   Affichage
+   ========================================================== */
 
-export function afficherColonne(colonne, top) {
-
-    colonne.style.top = `${top}px`;
-    colonne.style.display = "block";
-}
-
-/* ----------------------------------------------------------
-   Masque une colonne.
-   ---------------------------------------------------------- */
-
-export function masquerColonne(colonne) {
-
-    if (!colonne) {
-        return;
-    }
+export function afficherPanneau(colonne, panneau, top) {
 
     colonne.replaceChildren();
-    colonne.style.display = "none";
+
+    /*
+     * IMPORTANT
+     *
+     * Le DOM logique reste intact.
+     *
+     * On affiche uniquement un clone.
+     */
+
+    const copie = panneau.cloneNode(true);
+
+    copie.classList.add("ouvert");
+
+    colonne.appendChild(copie);
+
+    colonne.style.top = `${top}px`;
+
+    colonne.style.display = "block";
+
+    return copie;
+}
+
+/* ==========================================================
+   Masquage
+   ========================================================== */
+
+export function masquerDepuis(niveau = 0) {
+
+    for (let i = niveau; i < colonnes.length; i++) {
+
+        const colonne = colonnes[i];
+
+        if (!colonne) {
+            continue;
+        }
+
+        colonne.replaceChildren();
+
+        colonne.style.display = "none";
+    }
+}
+
+/* ==========================================================
+   Destruction complète
+   ========================================================== */
+
+export function fermerOverlay() {
+
+    masquerDepuis(0);
 }
