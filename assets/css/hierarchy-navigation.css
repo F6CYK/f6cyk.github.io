@@ -32,12 +32,11 @@ nav {
 /* ----------------------------------------------------------
    Sous-menus : tous dans le repère du <nav>
    ---------------------------------------------------------- */
-
 .sous-menu {
-    position: absolute;          /* repère global */
-    display: none;               /* fermé par défaut */
+    position: static;
+    display: none;
 
-    width: var(--nav-largeur-panneau);
+    width: 100%;
     box-sizing: border-box;
 
     margin: 0;
@@ -48,9 +47,6 @@ nav {
     background: #ffffff;
     border: 1px solid #c8c8c8;
     box-shadow: 0 3px 10px rgba(0, 0, 0, .15);
-
-    /* IMPORTANT : au-dessus de tout */
-    z-index: 9999;
 }
 
 /* Ouverture contrôlée exclusivement par JavaScript */
