@@ -1,41 +1,76 @@
 @charset "UTF-8";
 
-/* ==========================================================
-   Barre de navigation
-   ========================================================== */
+/* ===========================
+   Barre principale
+   =========================== */
 
-nav.menu-general {
-    position: relative;
-    z-index: 1000;
+nav.menu-general{
+    position:relative;
+    z-index:1000;
 }
 
-nav.menu-general ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
+nav.menu-general ul{
+    margin:0;
+    padding:0;
+    list-style:none;
 }
 
-nav.menu-general > ul {
-    display: flex;
-    align-items: center;
+nav.menu-general > ul{
+    display:flex;
+    align-items:center;
 }
 
-nav.menu-general li {
-    position: relative;
+nav.menu-general li{
+    position:relative;
 }
 
-/* ==========================================================
-   Liens
-   ========================================================== */
-
-nav.menu-general a {
-    display: block;
-    padding: .75rem 1rem;
-    text-decoration: none;
-    color: #003366;
-    white-space: nowrap;
+nav.menu-general a{
+    display:block;
+    padding:12px 18px;
+    text-decoration:none;
+    color:#003366;
+    white-space:nowrap;
 }
 
-nav.menu-general a:hover {
-    background: #eef4fb;
+nav.menu-general a:hover{
+    background:#eef4fb;
+}
+
+/* ===========================
+   Sous-menus
+   =========================== */
+
+.sous-menu{
+    display:none;
+
+    position:absolute;
+
+    top:100%;
+    left:0;
+
+    min-width:260px;
+
+    background:#ffffff;
+    border:1px solid #cfcfcf;
+
+    box-shadow:0 4px 12px rgba(0,0,0,.15);
+
+    z-index:2000;
+}
+
+/* Affichage au survol */
+
+.menu-deroulant:hover > .sous-menu,
+.menu-deroulant:focus-within > .sous-menu{
+    display:block;
+}
+
+/* Contenu vertical */
+
+.sous-menu li{
+    display:block;
+}
+
+.sous-menu a{
+    padding:10px 16px;
 }
