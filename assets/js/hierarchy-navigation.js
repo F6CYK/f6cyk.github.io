@@ -53,16 +53,15 @@ document.addEventListener("DOMContentLoaded", () => {
             item.classList.add("ouvert");
 
             requestAnimationFrame(() => {
-                requestAnimationFrame(() => {
-                    positionMenu(submenu);
-                });
+                positionMenu(submenu);
             });
 
         });
 
         item.addEventListener("mouseleave", (event) => {
 
-            if (item.contains(event.relatedTarget)) {
+            /* Si la souris entre dans un descendant, on ne ferme pas */
+            if (event.relatedTarget && item.contains(event.relatedTarget)) {
                 return;
             }
 
