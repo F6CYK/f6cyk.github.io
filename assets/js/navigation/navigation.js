@@ -45,11 +45,17 @@ function ouvrir(li) {
 
 function fermer(li) {
 
-    const sousMenu = li.querySelector(".sous-menu");
+    const pos = calculerPosition(li);
 
-    if (!sousMenu) return;
+    if (!pos) {
+        return;
+    }
+
+    const { niveau, sousMenu } = pos;
 
     sousMenu.classList.remove("ouvert");
+
+    viderColonnes(niveau);
 }
 
 /* ----------------------------------------------------------
