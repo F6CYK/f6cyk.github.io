@@ -17,40 +17,6 @@ import {
 
 const items = document.querySelectorAll(".menu-deroulant");
 
-const colonnes = [];
-
-/* ----------------------------------------------------------
-   Gestion des colonnes
-   ---------------------------------------------------------- */
-
-function obtenirColonne(niveau) {
-
-    if (colonnes[niveau]) {
-        return colonnes[niveau];
-    }
-
-    const colonne = document.createElement("div");
-
-    colonne.className = "nav-colonne";
-    colonne.dataset.level = niveau;
-
-    overlay.appendChild(colonne);
-
-    colonnes[niveau] = colonne;
-
-    return colonne;
-}
-
-function viderColonnes(depuis) {
-
-    for (let i = depuis; i < colonnes.length; i++) {
-
-        if (colonnes[i]) {
-            colonnes[i].replaceChildren();
-        }
-    }
-}
-
 /* ----------------------------------------------------------
    Ouverture d’un panneau
    ---------------------------------------------------------- */
