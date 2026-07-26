@@ -43,7 +43,7 @@ nav.menu-general a:hover{
 .sous-menu{
     position:absolute;
 
-    /* Premier niveau : ouverture verticale */
+    /* Premier niveau */
     top:100%;
     left:0;
 
@@ -60,9 +60,7 @@ nav.menu-general a:hover{
     pointer-events:none;
 }
 
-/* ===========================
-   Affichage
-   =========================== */
+/* Affichage */
 
 .menu-deroulant.ouvert > .sous-menu{
     opacity:1;
@@ -70,9 +68,7 @@ nav.menu-general a:hover{
     pointer-events:auto;
 }
 
-/* ===========================
-   Contenu
-   =========================== */
+/* Contenu */
 
 .sous-menu li{
     display:block;
@@ -82,40 +78,18 @@ nav.menu-general a:hover{
     padding:10px 16px;
 }
 
-/* =====================================
-   Sous-menus imbriqués (niveau ≥ 2)
-   ===================================== */
+/* ===========================
+   Sous-menus imbriqués
+   =========================== */
 
 .sous-menu .menu-deroulant > .sous-menu{
-
     top:10px;
 
-    /* Position neutre */
-    left:auto;
-    right:auto;
-}
-
-/* =====================================
-   Sens d'ouverture
-   ===================================== */
-
-/* Ouverture vers la droite */
-
-.sous-menu .menu-deroulant > .sous-menu.ouvre-droite{
-    left:calc(100% - 8px);
-    right:auto;
-}
-
-/* Ouverture vers la gauche */
-
-.sous-menu .menu-deroulant > .sous-menu.ouvre-gauche{
     left:auto;
     right:calc(100% - 8px);
 }
 
-/* =====================================
-   Flèche
-   ===================================== */
+/* Flèche */
 
 .sous-menu .menu-deroulant > a::after{
     content:"▶";
