@@ -15,7 +15,6 @@ import {
    ---------------------------------------------------------- */
 
 const nav = document.querySelector("nav");
-
 const items = nav.querySelectorAll(".menu-deroulant");
 
 /* ----------------------------------------------------------
@@ -37,31 +36,31 @@ function ouvrir(li) {
 
     const { panneau, niveau, x, y } = position;
 
+    // On ne modifie l’état ouvert que si un panneau existe réellement.
+    if (!panneau) {
+        return;
+    }
+
     viderColonnes(niveau);
 
     const colonne = obtenirColonne(niveau);
+
+    // Position horizontale
     colonne.style.left = `${x}px`;
 
-    afficherColonne(
-        colonne,
-        panneau,
-        y
-    );
+    // Affichage du panneau (copie gérée dans overlay.js)
+    afficherColonne(colonne, panneau, y);
 
     itemOuvert = li;
 }
-
 
 /* ----------------------------------------------------------
    Fermeture globale
    ---------------------------------------------------------- */
 
 function fermerTout() {
-
     itemOuvert = null;
-
     viderColonnes(0);
-
 }
 
 /* ----------------------------------------------------------
@@ -71,15 +70,11 @@ function fermerTout() {
 items.forEach(li => {
 
     li.addEventListener("mouseenter", () => {
-
         ouvrir(li);
-
     });
 
     li.addEventListener("focusin", () => {
-
         ouvrir(li);
-
     });
 
 });
@@ -94,12 +89,12 @@ if (nav) {
 
         const destination = event.relatedTarget;
 
+        // Si la souris reste dans nav, on ne ferme pas.
         if (destination && nav.contains(destination)) {
             return;
         }
 
         fermerTout();
-
     });
 
 }
@@ -114,6 +109,8 @@ window.addEventListener("resize", () => {
         return;
     }
 
+    // Recalcule la position du panneau original
     ouvrir(itemOuvert);
 
 });
+
