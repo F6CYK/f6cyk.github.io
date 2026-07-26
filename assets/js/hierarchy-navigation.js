@@ -1,8 +1,12 @@
 document.addEventListener("DOMContentLoaded", () => {
 
+    console.log("hierarchy-navigation chargé");
+
     const items = document.querySelectorAll(".menu-deroulant");
+    console.log("Menus trouvés :", items.length);
 
     function closeBranch(item) {
+
         item.classList.remove("ouvert");
 
         item.querySelectorAll(".menu-deroulant").forEach(el => {
@@ -18,25 +22,35 @@ document.addEventListener("DOMContentLoaded", () => {
 
         submenu.classList.remove("ouvre-gauche");
 
-        // première mesure
         let r = submenu.getBoundingClientRect();
+
+        console.log("Avant :", r.left, r.right);
 
         if (r.right > window.innerWidth - 8) {
 
+            console.log("→ ouverture à gauche");
+
             submenu.classList.add("ouvre-gauche");
 
-            // seconde mesure après changement de côté
             r = submenu.getBoundingClientRect();
-        }
 
+            console.log("Après :", r.left, r.right);
+        }
     }
 
     items.forEach(item => {
 
         const submenu = item.querySelector(":scope > .sous-menu");
-        if (!submenu) return;
+
+        if (!submenu)
+            return;
 
         item.addEventListener("mouseenter", () => {
+
+            console.log(
+                "Ouverture :",
+                item.querySelector(":scope > a")?.textContent.trim()
+            );
 
             item.classList.add("ouvert");
 
@@ -49,6 +63,12 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
         item.addEventListener("mouseleave", () => {
+
+            console.log(
+                "Fermeture :",
+                item.querySelector(":scope > a")?.textContent.trim()
+            );
+
             closeBranch(item);
         });
 
