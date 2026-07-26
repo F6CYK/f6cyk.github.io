@@ -38,6 +38,7 @@ nav {
     display: none;      /* fermé par défaut */
 
     width: var(--nav-largeur-panneau);
+    box-sizing: border-box;
 
     margin: 0;
     padding: 4px 0;
