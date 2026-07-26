@@ -4,7 +4,13 @@
    Gestion de la couche d'affichage et des colonnes.
    ========================================================== */
 
-import { nav, largeurPanneau } from "./config.js";
+import {
+    lireLargeurColonne,
+    lireRepereGlobal
+} from "./config.js";
+
+const nav = lireRepereGlobal();
+const largeurPanneau = lireLargeurColonne();
 
 let overlay = nav.querySelector("#nav-overlay");
 
