@@ -11,21 +11,28 @@ import {
 } from "./overlay.js";
 
 /* ----------------------------------------------------------
-   Sélection des items
+   Sélection des éléments
    ---------------------------------------------------------- */
 
 const nav = document.querySelector("nav");
-const items = document.querySelectorAll(".menu-deroulant");
+
+const items = nav.querySelectorAll(".menu-deroulant");
 
 /* ----------------------------------------------------------
-   Ouverture d’un panneau
+   Etat de la navigation
+   ---------------------------------------------------------- */
+
+let itemOuvert = null;
+
+/* ----------------------------------------------------------
+   Ouverture d'un panneau
    ---------------------------------------------------------- */
 
 function ouvrir(li) {
 
-    const pos = calculerPosition(li);
+    const position = calculerPosition(li);
 
-    if (!pos) {
+    if (!position) {
         return;
     }
 
@@ -34,7 +41,7 @@ function ouvrir(li) {
         top,
         leftOrigine,
         sousMenu
-    } = pos;
+    } = position;
 
     viderColonnes(niveau);
 
@@ -43,12 +50,22 @@ function ouvrir(li) {
         leftOrigine
     );
 
-    colonne.replaceChildren();
-    colonne.appendChild(sousMenu);
+    /*
+     * IMPORTANT
+     *
+     * On ne déplace jamais le menu original.
+     */
 
-    afficherColonne(colonne, top);
+    const copie = sousMenu.cloneNode(true);
 
-    sousMenu.classList.add("ouvert");
+    afficherColonne(
+        colonne,
+        copie,
+        top
+    );
+
+    itemOuvert = li;
+
 }
 
 /* ----------------------------------------------------------
@@ -57,42 +74,43 @@ function ouvrir(li) {
 
 function fermerTout() {
 
-    document
-        .querySelectorAll(".sous-menu.ouvert")
-        .forEach(menu => {
-            menu.classList.remove("ouvert");
-        });
+    itemOuvert = null;
 
     viderColonnes(0);
+
 }
 
 /* ----------------------------------------------------------
-   Événements
+   Ouverture
    ---------------------------------------------------------- */
 
 items.forEach(li => {
 
     li.addEventListener("mouseenter", () => {
+
         ouvrir(li);
+
     });
 
     li.addEventListener("focusin", () => {
+
         ouvrir(li);
+
     });
 
 });
 
 /* ----------------------------------------------------------
-   Fermeture uniquement en quittant la navigation
+   Fermeture en quittant la navigation
    ---------------------------------------------------------- */
 
 if (nav) {
 
     nav.addEventListener("mouseleave", event => {
 
-        const vers = event.relatedTarget;
+        const destination = event.relatedTarget;
 
-        if (vers && nav.contains(vers)) {
+        if (destination && nav.contains(destination)) {
             return;
         }
 
@@ -103,21 +121,15 @@ if (nav) {
 }
 
 /* ----------------------------------------------------------
-   Recalcul sur redimensionnement
+   Recalcul après redimensionnement
    ---------------------------------------------------------- */
 
 window.addEventListener("resize", () => {
 
-    const ouvert = document.querySelector(".sous-menu.ouvert");
-
-    if (!ouvert) {
+    if (!itemOuvert) {
         return;
     }
 
-    const li = ouvert.closest(".menu-deroulant");
-
-    if (li) {
-        ouvrir(li);
-    }
+    ouvrir(itemOuvert);
 
 });
