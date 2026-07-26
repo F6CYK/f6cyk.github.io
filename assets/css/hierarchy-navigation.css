@@ -99,8 +99,7 @@ nav.menu-general a:hover{
    Retour vers la gauche
    =========================== */
 
-.sous-menu.ouvre-gauche{
-    right:auto !important;
-    left:-260px !important;
-    transform:none !important;
+.sous-menu .menu-deroulant > .sous-menu{
+    top:10px;
+    left:calc(100% - 8px);
 }
