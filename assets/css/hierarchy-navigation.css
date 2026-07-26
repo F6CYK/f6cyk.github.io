@@ -41,8 +41,6 @@ nav.menu-general a:hover{
    =========================== */
 
 .sous-menu{
-    display:none;
-
     position:absolute;
 
     top:100%;
@@ -56,13 +54,18 @@ nav.menu-general a:hover{
     box-shadow:0 4px 12px rgba(0,0,0,.15);
 
     z-index:2000;
+
+    opacity:0;
+    visibility:hidden;
+    pointer-events:none;
 }
 
 /* Affichage au survol */
 
-.menu-deroulant:hover > .sous-menu,
-.menu-deroulant:focus-within > .sous-menu{
-    display:block;
+.menu-deroulant.ouvert > .sous-menu{
+    opacity:1;
+    visibility:visible;
+    pointer-events:auto;
 }
 
 /* Contenu vertical */
