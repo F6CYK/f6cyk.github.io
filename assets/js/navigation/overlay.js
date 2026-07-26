@@ -37,14 +37,11 @@ export function obtenirColonne(niveau) {
 /* ----------------------------------------------------------
    Affichage
    ---------------------------------------------------------- */
-
 export function afficherColonne(colonne, panneau, top) {
 
-    // On clone le panneau pour ne pas le retirer de sa structure d’origine.
     const copie = panneau.cloneNode(true);
 
-    // On force l’affichage du panneau cloné, indépendamment des règles CSS
-    // qui cachent .sous-menu par défaut.
+    // Correction essentielle : le CSS ne peut plus afficher la copie.
     copie.style.display = "block";
 
     colonne.replaceChildren();
@@ -53,6 +50,8 @@ export function afficherColonne(colonne, panneau, top) {
     colonne.style.top = `${top}px`;
     colonne.style.display = "block";
 }
+
+
 
 /* ----------------------------------------------------------
    Fermeture
