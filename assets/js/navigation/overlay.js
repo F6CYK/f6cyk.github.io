@@ -5,13 +5,9 @@
 let overlay = document.getElementById("nav-overlay");
 
 if (!overlay) {
-
     overlay = document.createElement("div");
-
     overlay.id = "nav-overlay";
-
     document.body.appendChild(overlay);
-
 }
 
 const colonnes = [];
@@ -29,41 +25,30 @@ export function obtenirColonne(niveau) {
     }
 
     colonne = document.createElement("div");
-
     colonne.className = "nav-colonne";
-
     colonne.dataset.level = niveau;
 
     overlay.appendChild(colonne);
-
     colonnes[niveau] = colonne;
 
     return colonne;
-
 }
 
 /* ----------------------------------------------------------
    Affichage
    ---------------------------------------------------------- */
 
-export function afficherColonne(
+export function afficherColonne(colonne, panneau, top) {
 
-    colonne,
-
-    panneau,
-
-    top
-
-) {
+    // Le panneau original reste dans le DOM du menu.
+    // On affiche une copie pour préserver la structure CSS.
+    const copie = panneau.cloneNode(true);
 
     colonne.replaceChildren();
-
-    colonne.appendChild(panneau);
+    colonne.appendChild(copie);
 
     colonne.style.top = `${top}px`;
-
     colonne.style.display = "block";
-
 }
 
 /* ----------------------------------------------------------
@@ -72,15 +57,7 @@ export function afficherColonne(
 
 export function viderColonnes(depuis = 0) {
 
-    for (
-
-        let niveau = depuis;
-
-        niveau < colonnes.length;
-
-        niveau++
-
-    ) {
+    for (let niveau = depuis; niveau < colonnes.length; niveau++) {
 
         const colonne = colonnes[niveau];
 
@@ -89,9 +66,6 @@ export function viderColonnes(depuis = 0) {
         }
 
         colonne.replaceChildren();
-
         colonne.style.display = "none";
-
     }
-
 }
