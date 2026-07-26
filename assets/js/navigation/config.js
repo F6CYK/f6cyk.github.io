@@ -1,18 +1,35 @@
 /* ==========================================================
-   CONFIG — Lecture des variables CSS
+   CONFIG
+   ----------------------------------------------------------
+   Point d'accès unique aux paramètres de navigation.
+   Aucune logique métier.
+   Aucune manipulation du DOM.
    ========================================================== */
 
+/* ----------------------------------------------------------
+   Largeur d'une colonne
+   ---------------------------------------------------------- */
+
 export function lireLargeurColonne() {
-    return parseFloat(
-        getComputedStyle(document.documentElement)
-            .getPropertyValue("--nav-largeur-panneau")
-    );
+
+    const valeur = getComputedStyle(document.documentElement)
+        .getPropertyValue("--nav-largeur-panneau")
+        .trim();
+
+    return Number.parseFloat(valeur);
 }
 
+/* ----------------------------------------------------------
+   Élément <nav> principal
+   ---------------------------------------------------------- */
+
 export function lireRepereGlobal() {
+
     const nav = document.querySelector("nav");
+
     if (!nav) {
-        console.error("Erreur : aucun <nav> trouvé dans le DOM.");
+        throw new Error("Navigation introuvable.");
     }
+
     return nav;
 }
