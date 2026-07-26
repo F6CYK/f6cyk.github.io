@@ -27,6 +27,7 @@ let itemOuvert = null;
 /* ----------------------------------------------------------
    Ouverture d'un panneau
    ---------------------------------------------------------- */
+
 function ouvrir(li) {
 
     const position = calculerPosition(li);
@@ -35,24 +36,35 @@ function ouvrir(li) {
         return;
     }
 
-    viderColonnes(position.niveau);
+    const {
+        niveau,
+        top,
+        leftOrigine,
+        sousMenu
+    } = position;
 
-    const colonne = obtenirColonne(position.niveau);
+    viderColonnes(niveau);
 
-    colonne.style.left = `${position.x}px`;
+    const colonne = obtenirColonne(niveau);
 
-    const copie = position.panneau.cloneNode(true);
+    /* Position horizontale */
+    colonne.style.left = `${leftOrigine}px`;
+
+    /* IMPORTANT :
+       On affiche une copie du panneau.
+    */
+
+    const copie = sousMenu.cloneNode(true);
 
     afficherColonne(
         colonne,
         copie,
-        position.y
+        top
     );
 
     itemOuvert = li;
 
 }
-
 
 /* ----------------------------------------------------------
    Fermeture globale
