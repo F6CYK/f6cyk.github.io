@@ -60,7 +60,7 @@ nav.menu-general a:hover{
     pointer-events:none;
 }
 
-/* Affichage au survol */
+/* Affichage */
 
 .menu-deroulant.ouvert > .sous-menu{
     opacity:1;
@@ -68,7 +68,7 @@ nav.menu-general a:hover{
     pointer-events:auto;
 }
 
-/* Contenu vertical */
+/* Contenu */
 
 .sous-menu li{
     display:block;
@@ -78,18 +78,15 @@ nav.menu-general a:hover{
     padding:10px 16px;
 }
 
-/* =====================================
-   Sous-menus imbriqués
-   ===================================== */
+/* Sous-menus imbriqués */
 
 .sous-menu .menu-deroulant > .sous-menu{
     top:10px;
-
-    /* TEST : décale le sous-menu d'une largeur vers la gauche */
-    left:calc(100% - 260px - 8px);
+    left:calc(100% - 8px);
+    transform:none;
 }
 
-/* Indication visuelle */
+/* Flèche */
 
 .sous-menu .menu-deroulant > a::after{
     content:"▶";
@@ -98,10 +95,16 @@ nav.menu-general a:hover{
     font-size:.75em;
 }
 
-/* Ouverture vers la gauche */
+/* ===========================
+   Retour vers la gauche
+   =========================== */
 
 .sous-menu.ouvre-gauche{
-    left:auto !important;
-    right:calc(100% - 8px);
-    margin-right:0;
+
+    /* on garde le même point d'ancrage */
+    left:calc(100% - 8px) !important;
+    right:auto !important;
+
+    /* puis on décale d'environ deux panneaux */
+    transform:translateX(-520px);
 }
