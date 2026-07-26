@@ -98,4 +98,6 @@ nav.menu-general a:hover{
 .sous-menu.ouvre-gauche{
     left:auto;
     right:100%;
+    margin-right:-6px;
 }
+
