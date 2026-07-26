@@ -2,6 +2,8 @@
    OVERLAY
    ----------------------------------------------------------
    Gestion de la couche d'affichage et des colonnes.
+   Chaque colonne est positionnée relativement au menu
+   principal auquel elle appartient.
    ========================================================== */
 
 import {
@@ -28,22 +30,24 @@ const colonnes = [];
    Retourne la colonne correspondant au niveau demandé.
    ---------------------------------------------------------- */
 
-export function obtenirColonne(niveau) {
+export function obtenirColonne(niveau, leftOrigine = 0) {
 
-    if (colonnes[niveau]) {
-        return colonnes[niveau];
+    let colonne = colonnes[niveau];
+
+    if (!colonne) {
+
+        colonne = document.createElement("div");
+
+        colonne.className = "nav-colonne";
+        colonne.dataset.level = niveau;
+
+        overlay.appendChild(colonne);
+
+        colonnes[niveau] = colonne;
     }
 
-    const colonne = document.createElement("div");
-
-    colonne.className = "nav-colonne";
-    colonne.dataset.level = niveau;
-
-    colonne.style.left = `${niveau * largeurPanneau}px`;
-
-    overlay.appendChild(colonne);
-
-    colonnes[niveau] = colonne;
+    colonne.style.left =
+        `${leftOrigine + (niveau * largeurPanneau)}px`;
 
     return colonne;
 }
@@ -56,12 +60,14 @@ export function viderColonnes(depuis = 0) {
 
     for (let i = depuis; i < colonnes.length; i++) {
 
-        if (!colonnes[i]) {
+        const colonne = colonnes[i];
+
+        if (!colonne) {
             continue;
         }
 
-        colonnes[i].replaceChildren();
-        colonnes[i].style.display = "none";
+        colonne.replaceChildren();
+        colonne.style.display = "none";
     }
 }
 
@@ -80,6 +86,10 @@ export function afficherColonne(colonne, top) {
    ---------------------------------------------------------- */
 
 export function masquerColonne(colonne) {
+
+    if (!colonne) {
+        return;
+    }
 
     colonne.replaceChildren();
     colonne.style.display = "none";
