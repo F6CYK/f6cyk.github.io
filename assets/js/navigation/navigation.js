@@ -1,5 +1,5 @@
 /* ==========================================================
-   NAVIGATION — Logique d'ouverture, fermeture et accessibilité
+   NAVIGATION — Version stabilisée et robuste
    ========================================================== */
 
 import { calculerPosition } from "./geometry.js";
@@ -10,10 +10,6 @@ import {
     getOverlay
 } from "./overlay.js";
 
-/* ----------------------------------------------------------
-   Sélection du conteneur de navigation
-   ---------------------------------------------------------- */
-
 const nav = document.querySelector("nav");
 
 if (!nav) {
@@ -21,17 +17,15 @@ if (!nav) {
 } else {
 
     const overlay = getOverlay();
+
+    if (!overlay) {
+        console.warn("Overlay introuvable. Module désactivé.");
+        return;
+    }
+
     const items = nav.querySelectorAll(".menu-deroulant");
 
-    /* ------------------------------------------------------
-       État logique : le <li> actif
-       ------------------------------------------------------ */
-
     let itemActuel = null;
-
-    /* ------------------------------------------------------
-       Ouverture d'un panneau
-       ------------------------------------------------------ */
 
     function ouvrir(li) {
 
@@ -51,18 +45,10 @@ if (!nav) {
         afficherDansOverlay(panneau, x, y);
     }
 
-    /* ------------------------------------------------------
-       Fermeture globale
-       ------------------------------------------------------ */
-
     function fermerTout() {
         itemActuel = null;
         fermerPanneauActuel();
     }
-
-    /* ------------------------------------------------------
-       Zone interactive : nav + overlay
-       ------------------------------------------------------ */
 
     function zoneInteractiveContient(node) {
         if (!node) {
@@ -71,18 +57,10 @@ if (!nav) {
         return nav.contains(node) || overlay.contains(node);
     }
 
-    /* ------------------------------------------------------
-       Événements d'ouverture
-       ------------------------------------------------------ */
-
     items.forEach(li => {
         li.addEventListener("mouseenter", () => ouvrir(li));
         li.addEventListener("focusin", () => ouvrir(li));
     });
-
-    /* ------------------------------------------------------
-       Fermeture en quittant nav OU overlay (souris)
-       ------------------------------------------------------ */
 
     function gererMouseleave(event) {
         const destination = event.relatedTarget;
@@ -95,10 +73,6 @@ if (!nav) {
     nav.addEventListener("mouseleave", gererMouseleave);
     overlay.addEventListener("mouseleave", gererMouseleave);
 
-    /* ------------------------------------------------------
-       Fermeture en quittant nav OU overlay (clavier)
-       ------------------------------------------------------ */
-
     function gererFocusout(event) {
         const destination = event.relatedTarget;
         if (zoneInteractiveContient(destination)) {
@@ -109,10 +83,6 @@ if (!nav) {
 
     nav.addEventListener("focusout", gererFocusout);
     overlay.addEventListener("focusout", gererFocusout);
-
-    /* ------------------------------------------------------
-       Recalcul après redimensionnement (optimisé)
-       ------------------------------------------------------ */
 
     let resizeEnCours = false;
 
@@ -125,11 +95,12 @@ if (!nav) {
         resizeEnCours = true;
 
         requestAnimationFrame(() => {
-
-            resizeEnCours = false;
-
-            if (itemActuel) {
-                ouvrir(itemActuel);
+            try {
+                if (itemActuel) {
+                    ouvrir(itemActuel);
+                }
+            } finally {
+                resizeEnCours = false;
             }
         });
     });
