@@ -80,9 +80,8 @@ nav.menu-general a:hover{
    ===================================== */
 
 .sous-menu .menu-deroulant > .sous-menu{
-    top:0;
-    left:100%;
-    margin-left:-1px;
+    top:10px;
+    left:calc(100% - 8px);
 }
 
 /* Indication visuelle */
