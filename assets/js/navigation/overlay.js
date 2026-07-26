@@ -1,21 +1,13 @@
 /* ==========================================================
    OVERLAY
    ----------------------------------------------------------
-   Couche d'affichage indépendante.
+   Couche de rendu.
 
-   Les sous-menus d'origine ne sont jamais déplacés.
+   Le DOM logique n'est jamais modifié.
 
-   Chaque colonne contient uniquement une copie temporaire
-   du panneau à afficher.
+   Les colonnes affichent uniquement une COPIE du sous-menu.
 
-   Responsabilités :
-     - création de l'overlay
-     - création des colonnes
-     - affichage
-     - masquage
-     - destruction des clones
-
-   Aucun calcul de géométrie n'est effectué ici.
+   Aucune géométrie n'est calculée ici.
    ========================================================== */
 
 import {
@@ -24,6 +16,7 @@ import {
 } from "./config.js";
 
 const nav = lireRepereGlobal();
+
 const largeurColonne = lireLargeurColonne();
 
 /* ==========================================================
@@ -39,6 +32,7 @@ if (!overlay) {
     overlay.id = "nav-overlay";
 
     nav.appendChild(overlay);
+
 }
 
 /* ==========================================================
@@ -48,10 +42,10 @@ if (!overlay) {
 const colonnes = [];
 
 /* ----------------------------------------------------------
-   Retourne la colonne correspondant à un niveau.
+   Retourne la colonne correspondant au niveau demandé.
    ---------------------------------------------------------- */
 
-export function obtenirColonne(niveau, origineX) {
+export function obtenirColonne(niveau, origineX = 0) {
 
     let colonne = colonnes[niveau];
 
@@ -60,22 +54,25 @@ export function obtenirColonne(niveau, origineX) {
         colonne = document.createElement("div");
 
         colonne.className = "nav-colonne";
+
         colonne.dataset.level = niveau;
 
         overlay.appendChild(colonne);
 
         colonnes[niveau] = colonne;
+
     }
 
     colonne.style.left =
-        `${origineX + (niveau * largeurColonne)}px`;
+        `${origineX + niveau * largeurColonne}px`;
 
     return colonne;
+
 }
 
-/* ==========================================================
-   Nettoyage
-   ========================================================== */
+/* ----------------------------------------------------------
+   Vide toutes les colonnes à partir d'un niveau.
+   ---------------------------------------------------------- */
 
 export function viderColonnes(depuis = 0) {
 
@@ -90,24 +87,44 @@ export function viderColonnes(depuis = 0) {
         colonne.replaceChildren();
 
         colonne.style.display = "none";
+
     }
+
 }
 
-/* ==========================================================
-   Affichage
-   ========================================================== */
+/* ----------------------------------------------------------
+   Affiche un panneau.
 
-export function afficherPanneau(colonne, panneau, top) {
+   IMPORTANT
+
+   panneau est toujours le menu ORIGINAL.
+
+   Celui-ci n'est jamais déplacé.
+
+   On affiche uniquement un clone.
+   ---------------------------------------------------------- */
+
+export function afficherPanneau({
+
+    niveau,
+
+    top,
+
+    origineX,
+
+    panneau
+
+}) {
+
+    const colonne = obtenirColonne(
+
+        niveau,
+
+        origineX
+
+    );
 
     colonne.replaceChildren();
-
-    /*
-     * IMPORTANT
-     *
-     * Le DOM logique reste intact.
-     *
-     * On affiche uniquement un clone.
-     */
 
     const copie = panneau.cloneNode(true);
 
@@ -120,33 +137,33 @@ export function afficherPanneau(colonne, panneau, top) {
     colonne.style.display = "block";
 
     return copie;
+
 }
 
-/* ==========================================================
-   Masquage
-   ========================================================== */
+/* ----------------------------------------------------------
+   Masque une colonne.
+   ---------------------------------------------------------- */
 
-export function masquerDepuis(niveau = 0) {
+export function masquerColonne(niveau) {
 
-    for (let i = niveau; i < colonnes.length; i++) {
+    const colonne = colonnes[niveau];
 
-        const colonne = colonnes[i];
-
-        if (!colonne) {
-            continue;
-        }
-
-        colonne.replaceChildren();
-
-        colonne.style.display = "none";
+    if (!colonne) {
+        return;
     }
+
+    colonne.replaceChildren();
+
+    colonne.style.display = "none";
+
 }
 
-/* ==========================================================
-   Destruction complète
-   ========================================================== */
+/* ----------------------------------------------------------
+   Masque toutes les colonnes.
+   ---------------------------------------------------------- */
 
 export function fermerOverlay() {
 
-    masquerDepuis(0);
+    viderColonnes(0);
+
 }
