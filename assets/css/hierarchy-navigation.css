@@ -1,2 +1,41 @@
-/* Navigation hiérarchique
-   Nouveau système en cours de reconstruction */
+@charset "UTF-8";
+
+/* ==========================================================
+   Barre de navigation
+   ========================================================== */
+
+nav.menu-general {
+    position: relative;
+    z-index: 1000;
+}
+
+nav.menu-general ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav.menu-general > ul {
+    display: flex;
+    align-items: center;
+}
+
+nav.menu-general li {
+    position: relative;
+}
+
+/* ==========================================================
+   Liens
+   ========================================================== */
+
+nav.menu-general a {
+    display: block;
+    padding: .75rem 1rem;
+    text-decoration: none;
+    color: #003366;
+    white-space: nowrap;
+}
+
+nav.menu-general a:hover {
+    background: #eef4fb;
+}
