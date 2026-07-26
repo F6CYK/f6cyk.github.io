@@ -87,3 +87,63 @@ main {
     position: relative;
     z-index: 1;
 }
+
+/* ==========================================================
+   Couche d'affichage des sous-menus
+   ========================================================== */
+
+nav {
+    position: relative;
+}
+
+/* Conteneur général */
+
+#nav-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    z-index: 5000;
+}
+
+/* Colonnes */
+
+.nav-colonne {
+
+    position: absolute;
+
+    width: var(--nav-largeur-panneau);
+
+    pointer-events: auto;
+
+    box-sizing: border-box;
+}
+
+/* Position des colonnes */
+
+.nav-colonne[data-level="0"] {
+    left: 0;
+}
+
+.nav-colonne[data-level="1"] {
+    left: calc(var(--nav-largeur-panneau) * 1);
+}
+
+.nav-colonne[data-level="2"] {
+    left: calc(var(--nav-largeur-panneau) * 2);
+}
+
+.nav-colonne[data-level="3"] {
+    left: calc(var(--nav-largeur-panneau) * 3);
+}
+
+.nav-colonne[data-level="4"] {
+    left: calc(var(--nav-largeur-panneau) * 4);
+}
+
+.nav-colonne[data-level="5"] {
+    left: calc(var(--nav-largeur-panneau) * 5);
+}
