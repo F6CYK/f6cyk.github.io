@@ -1,116 +1,136 @@
 /* ==========================================================
-   NAVIGATION — Ouverture, fermeture, événements
+   NAVIGATION — Logique d'ouverture, fermeture et accessibilité
    ========================================================== */
 
 import { calculerPosition } from "./geometry.js";
-
 import {
-    obtenirColonne,
-    viderColonnes,
-    afficherColonne
+    afficherDansOverlay,
+    fermerPanneauActuel,
+    getPanneauActuel,
+    getOverlay
 } from "./overlay.js";
 
 /* ----------------------------------------------------------
-   Sélection des éléments
+   Sélection du conteneur de navigation
    ---------------------------------------------------------- */
 
 const nav = document.querySelector("nav");
-const items = nav.querySelectorAll(".menu-deroulant");
 
-/* ----------------------------------------------------------
-   Etat de la navigation
-   ---------------------------------------------------------- */
+if (!nav) {
+    console.warn("Navigation introuvable. Module désactivé.");
+} else {
 
-let itemOuvert = null;
+    const overlay = getOverlay();
+    const items = nav.querySelectorAll(".menu-deroulant");
 
-/* ----------------------------------------------------------
-   Ouverture d'un panneau
-   ---------------------------------------------------------- */
+    /* ------------------------------------------------------
+       État logique : le <li> actif
+       ------------------------------------------------------ */
 
-function ouvrir(li) {
+    let itemActuel = null;
 
-    const position = calculerPosition(li);
-    if (!position) {
-        return;
-    }
+    /* ------------------------------------------------------
+       Ouverture d'un panneau
+       ------------------------------------------------------ */
 
-    const { panneau, niveau, x, y } = position;
+    function ouvrir(li) {
 
-    // On ne modifie l’état ouvert que si un panneau existe réellement.
-    if (!panneau) {
-        return;
-    }
-
-    viderColonnes(niveau);
-
-    const colonne = obtenirColonne(niveau);
-
-    // Position horizontale
-    colonne.style.left = `${x}px`;
-
-    // Affichage du panneau (copie gérée dans overlay.js)
-    afficherColonne(colonne, panneau, y);
-
-    itemOuvert = li;
-}
-
-/* ----------------------------------------------------------
-   Fermeture globale
-   ---------------------------------------------------------- */
-
-function fermerTout() {
-    itemOuvert = null;
-    viderColonnes(0);
-}
-
-/* ----------------------------------------------------------
-   Ouverture
-   ---------------------------------------------------------- */
-
-items.forEach(li => {
-
-    li.addEventListener("mouseenter", () => {
-        ouvrir(li);
-    });
-
-    li.addEventListener("focusin", () => {
-        ouvrir(li);
-    });
-
-});
-
-/* ----------------------------------------------------------
-   Fermeture en quittant la navigation
-   ---------------------------------------------------------- */
-
-if (nav) {
-
-    nav.addEventListener("mouseleave", event => {
-
-        const destination = event.relatedTarget;
-
-        // Si la souris reste dans nav, on ne ferme pas.
-        if (destination && nav.contains(destination)) {
+        const position = calculerPosition(li);
+        if (!position) {
             return;
         }
 
-        fermerTout();
-    });
+        const { panneau, x, y } = position;
 
-}
+        if (getPanneauActuel() === panneau) {
+            return;
+        }
 
-/* ----------------------------------------------------------
-   Recalcul après redimensionnement
-   ---------------------------------------------------------- */
+        itemActuel = li;
 
-window.addEventListener("resize", () => {
-
-    if (!itemOuvert) {
-        return;
+        afficherDansOverlay(panneau, x, y);
     }
 
-    // Recalcule la position du panneau original
-    ouvrir(itemOuvert);
+    /* ------------------------------------------------------
+       Fermeture globale
+       ------------------------------------------------------ */
 
-});
+    function fermerTout() {
+        itemActuel = null;
+        fermerPanneauActuel();
+    }
 
+    /* ------------------------------------------------------
+       Zone interactive : nav + overlay
+       ------------------------------------------------------ */
+
+    function zoneInteractiveContient(node) {
+        if (!node) {
+            return false;
+        }
+        return nav.contains(node) || overlay.contains(node);
+    }
+
+    /* ------------------------------------------------------
+       Événements d'ouverture
+       ------------------------------------------------------ */
+
+    items.forEach(li => {
+        li.addEventListener("mouseenter", () => ouvrir(li));
+        li.addEventListener("focusin", () => ouvrir(li));
+    });
+
+    /* ------------------------------------------------------
+       Fermeture en quittant nav OU overlay (souris)
+       ------------------------------------------------------ */
+
+    function gererMouseleave(event) {
+        const destination = event.relatedTarget;
+        if (zoneInteractiveContient(destination)) {
+            return;
+        }
+        fermerTout();
+    }
+
+    nav.addEventListener("mouseleave", gererMouseleave);
+    overlay.addEventListener("mouseleave", gererMouseleave);
+
+    /* ------------------------------------------------------
+       Fermeture en quittant nav OU overlay (clavier)
+       ------------------------------------------------------ */
+
+    function gererFocusout(event) {
+        const destination = event.relatedTarget;
+        if (zoneInteractiveContient(destination)) {
+            return;
+        }
+        fermerTout();
+    }
+
+    nav.addEventListener("focusout", gererFocusout);
+    overlay.addEventListener("focusout", gererFocusout);
+
+    /* ------------------------------------------------------
+       Recalcul après redimensionnement (optimisé)
+       ------------------------------------------------------ */
+
+    let resizeEnCours = false;
+
+    window.addEventListener("resize", () => {
+
+        if (!itemActuel || resizeEnCours) {
+            return;
+        }
+
+        resizeEnCours = true;
+
+        requestAnimationFrame(() => {
+
+            resizeEnCours = false;
+
+            if (itemActuel) {
+                ouvrir(itemActuel);
+            }
+        });
+    });
+}
