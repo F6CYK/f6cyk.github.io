@@ -92,3 +92,10 @@ nav.menu-general a:hover{
     margin-left:12px;
     font-size:.75em;
 }
+
+/* Ouverture vers la gauche */
+
+.sous-menu.ouvre-gauche{
+    left:auto;
+    right:100%;
+}
