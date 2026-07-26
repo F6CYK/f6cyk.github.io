@@ -10,25 +10,23 @@ const colonnes = [];
    Retourne une colonne
    ---------------------------------------------------------- */
 
-export function obtenirColonne(niveau, left) {
+export function obtenirColonne(niveau) {
 
     let colonne = colonnes[niveau];
 
-    if (!colonne) {
-
-        colonne = document.createElement("div");
-
-        colonne.className = "nav-colonne";
-
-        colonne.dataset.level = niveau;
-
-        overlay.appendChild(colonne);
-
-        colonnes[niveau] = colonne;
-
+    if (colonne) {
+        return colonne;
     }
 
-    colonne.style.left = `${left}px`;
+    colonne = document.createElement("div");
+
+    colonne.className = "nav-colonne";
+
+    colonne.dataset.level = niveau;
+
+    overlay.appendChild(colonne);
+
+    colonnes[niveau] = colonne;
 
     return colonne;
 
