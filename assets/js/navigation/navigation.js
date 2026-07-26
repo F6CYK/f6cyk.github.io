@@ -29,6 +29,7 @@ let itemOuvert = null;
    ---------------------------------------------------------- */
 
 function ouvrir(li) {
+   console.log("ouvrir()", li);
 
     const position = calculerPosition(li);
 
