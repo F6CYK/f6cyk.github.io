@@ -29,41 +29,28 @@ let itemOuvert = null;
    ---------------------------------------------------------- */
 
 function ouvrir(li) {
-   console.log("ouvrir()", li);
 
     const position = calculerPosition(li);
-
     if (!position) {
         return;
     }
 
-    const {
-        panneau,
-        niveau,
-        x,
-        y
-    } = position;
+    const { panneau, niveau, x, y } = position;
 
     viderColonnes(niveau);
 
     const colonne = obtenirColonne(niveau);
-
-    /* Position horizontale */
     colonne.style.left = `${x}px`;
-
-    /* Copie du panneau */
-
-    const copie = panneau.cloneNode(true);
 
     afficherColonne(
         colonne,
-        copie,
+        panneau,
         y
     );
 
     itemOuvert = li;
-
 }
+
 
 /* ----------------------------------------------------------
    Fermeture globale
