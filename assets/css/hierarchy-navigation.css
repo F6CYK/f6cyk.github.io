@@ -76,7 +76,7 @@ nav.menu-general a:hover{
 }
 
 .sous-menu a{
-    padding:10px 12px;
+    padding:10px 14px;
 }
 
 /* ===========================
@@ -92,10 +92,10 @@ nav.menu-general a:hover{
 /* Flèche */
 
 .sous-menu .menu-deroulant > a::before{
-    content:"◀";
     display:inline-block;
-    margin-right:8px;
-    font-size:.75em;
+    width:16px;
+    margin-right:6px;
+    content:"◀";
 }
 
 .sous-menu .menu-deroulant > a::after{
