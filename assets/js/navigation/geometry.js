@@ -27,27 +27,36 @@ export function profondeur(li) {
 /* ----------------------------------------------------------
    Calcul des coordonnées globales dans le repère <nav>
    ---------------------------------------------------------- */
-
 export function calculerPosition(li) {
 
     const sousMenu = li.querySelector(":scope > .sous-menu");
     if (!sousMenu) return null;
 
-    const rectLi  = li.getBoundingClientRect();
     const rectNav = nav.getBoundingClientRect();
+    const rectLi  = li.getBoundingClientRect();
 
-    const niveau = profondeur(li);
+    const parentMenu = li.parentElement.closest(".sous-menu");
 
-    /* Largeur réelle du panneau */
-    const largeur = sousMenu.offsetWidth;
+    let top;
+    let left;
 
-    /* Premier niveau sous le menu principal,
-       niveaux suivants alignés sur l'item parent */
-    const top = (niveau === 0)
-        ? rectLi.bottom - rectNav.top
-        : rectLi.top - rectNav.top;
+    if (!parentMenu) {
 
-    const left = niveau * largeur;
+        /* premier panneau */
+
+        top  = rectLi.bottom - rectNav.top;
+        left = rectLi.left - rectNav.left;
+
+    } else {
+
+        const rectParent = parentMenu.getBoundingClientRect();
+
+        top  = rectLi.top - rectNav.top;
+
+        /* panneau collé au précédent */
+
+        left = rectParent.right - rectNav.left - 1;
+    }
 
     return {
         top,
