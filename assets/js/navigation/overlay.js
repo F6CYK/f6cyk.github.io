@@ -40,9 +40,12 @@ export function obtenirColonne(niveau) {
 
 export function afficherColonne(colonne, panneau, top) {
 
-    // Le panneau original reste dans le DOM du menu.
-    // On affiche une copie pour préserver la structure CSS.
+    // On clone le panneau pour ne pas le retirer de sa structure d’origine.
     const copie = panneau.cloneNode(true);
+
+    // On force l’affichage du panneau cloné, indépendamment des règles CSS
+    // qui cachent .sous-menu par défaut.
+    copie.style.display = "block";
 
     colonne.replaceChildren();
     colonne.appendChild(copie);
@@ -69,3 +72,4 @@ export function viderColonnes(depuis = 0) {
         colonne.style.display = "none";
     }
 }
+
