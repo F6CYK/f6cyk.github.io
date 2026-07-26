@@ -84,7 +84,9 @@ nav.menu-general a:hover{
 
 .sous-menu .menu-deroulant > .sous-menu{
     top:10px;
-    left:calc(100% - 8px);
+
+    /* TEST : décale le sous-menu d'une largeur vers la gauche */
+    left:calc(100% - 260px - 8px);
 }
 
 /* Indication visuelle */
@@ -103,4 +105,3 @@ nav.menu-general a:hover{
     right:calc(100% - 8px);
     margin-right:0;
 }
-
