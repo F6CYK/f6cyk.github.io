@@ -74,3 +74,22 @@ nav.menu-general a:hover{
 .sous-menu a{
     padding:10px 16px;
 }
+
+/* =====================================
+   Sous-menus imbriqués
+   ===================================== */
+
+.sous-menu .menu-deroulant > .sous-menu{
+    top:0;
+    left:100%;
+    margin-left:-1px;
+}
+
+/* Indication visuelle */
+
+.sous-menu .menu-deroulant > a::after{
+    content:"▶";
+    float:right;
+    margin-left:12px;
+    font-size:.75em;
+}
