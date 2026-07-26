@@ -30,7 +30,8 @@ export function profondeur(li) {
    ---------------------------------------------------------- */
 
 export function calculerPosition(li) {
-    const sousMenu = li.querySelector(".sous-menu");
+
+    const sousMenu = li.querySelector(":scope > .sous-menu");
     if (!sousMenu) return null;
 
     const rectLi  = li.getBoundingClientRect();
@@ -38,7 +39,10 @@ export function calculerPosition(li) {
 
     const niveau = profondeur(li);
 
-    const top  = rectLi.top - rectNav.top + rectLi.height;
+    const top = (niveau === 0)
+        ? rectLi.top - rectNav.top + rectLi.height
+        : rectLi.top - rectNav.top;
+
     const left = niveau * LARGEUR_COLONNE;
 
     return { top, left, sousMenu };
