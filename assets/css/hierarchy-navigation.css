@@ -60,7 +60,9 @@ nav.menu-general a:hover{
     pointer-events:none;
 }
 
-/* Affichage */
+/* ===========================
+   Affichage
+   =========================== */
 
 .menu-deroulant.ouvert > .sous-menu{
     opacity:1;
@@ -68,7 +70,9 @@ nav.menu-general a:hover{
     pointer-events:auto;
 }
 
-/* Contenu */
+/* ===========================
+   Contenu
+   =========================== */
 
 .sous-menu li{
     display:block;
@@ -78,15 +82,22 @@ nav.menu-general a:hover{
     padding:10px 16px;
 }
 
-/* Sous-menus imbriqués */
+/* =====================================
+   Sous-menus imbriqués
+   ===================================== */
 
 .sous-menu .menu-deroulant > .sous-menu{
+
     top:10px;
-    left:calc(100% - 8px);
-    transform:none;
+
+    /* Position neutre */
+    left:auto;
+    right:auto;
 }
 
-/* Flèche */
+/* =====================================
+   Flèche
+   ===================================== */
 
 .sous-menu .menu-deroulant > a::after{
     content:"▶";
@@ -95,13 +106,19 @@ nav.menu-general a:hover{
     font-size:.75em;
 }
 
-/* ouverture normale */
-.menu-deroulant > .sous-menu{
+/* =====================================
+   Sens d'ouverture
+   ===================================== */
+
+/* Ouverture vers la droite */
+
+.menu-deroulant > .sous-menu.ouvre-droite{
     left:calc(100% - 8px);
     right:auto;
 }
 
-/* ouverture vers la gauche */
+/* Ouverture vers la gauche */
+
 .menu-deroulant > .sous-menu.ouvre-gauche{
     left:auto;
     right:calc(100% - 8px);
