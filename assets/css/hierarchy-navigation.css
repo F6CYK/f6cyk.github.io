@@ -43,12 +43,11 @@ nav.menu-general a:hover{
 .sous-menu{
     position:absolute;
 
-    /* Premier niveau */
     top:100%;
     left:0;
 
+    display:inline-block;
     width:max-content;
-    min-width:180px;
     max-width:320px;
 
     background:#fff;
