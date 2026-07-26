@@ -100,11 +100,7 @@ nav.menu-general a:hover{
    =========================== */
 
 .sous-menu.ouvre-gauche{
-
-    /* on garde le même point d'ancrage */
-    left:calc(100% - 8px) !important;
     right:auto !important;
-
-    /* puis on décale d'environ deux panneaux */
-    transform:translateX(-520px);
+    left:-260px !important;
+    transform:none !important;
 }
