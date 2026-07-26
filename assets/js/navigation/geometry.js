@@ -1,5 +1,10 @@
 /* ==========================================================
-   GEOMETRY — Niveau hiérarchique et position verticale
+   GEOMETRY — Niveau hiérarchique et géométrie des panneaux
+   ----------------------------------------------------------
+   Calcule :
+     - le niveau hiérarchique
+     - la position verticale
+     - l'origine horizontale du menu racine
    ========================================================== */
 
 import { lireRepereGlobal } from "./config.js";
@@ -28,7 +33,34 @@ export function profondeur(li) {
 }
 
 /* ----------------------------------------------------------
-   Position verticale du panneau
+   Retrouve le <li> du menu principal auquel appartient
+   un élément, quel que soit son niveau.
+   ---------------------------------------------------------- */
+
+function menuRacine(li) {
+
+    let courant = li;
+
+    while (courant) {
+
+        const parent = courant.parentElement;
+
+        if (!parent) {
+            break;
+        }
+
+        if (parent.parentElement === nav) {
+            return courant;
+        }
+
+        courant = parent.closest("li");
+    }
+
+    return li;
+}
+
+/* ----------------------------------------------------------
+   Position complète d'un panneau
    ---------------------------------------------------------- */
 
 export function calculerPosition(li) {
@@ -40,7 +72,7 @@ export function calculerPosition(li) {
     }
 
     const rectNav = nav.getBoundingClientRect();
-    const rectLi  = li.getBoundingClientRect();
+    const rectLi = li.getBoundingClientRect();
 
     const niveau = profondeur(li);
 
@@ -48,9 +80,18 @@ export function calculerPosition(li) {
         ? rectLi.bottom - rectNav.top
         : rectLi.top - rectNav.top;
 
+    const racine = (niveau === 0)
+        ? li
+        : menuRacine(li);
+
+    const rectRacine = racine.getBoundingClientRect();
+
+    const leftOrigine = rectRacine.left - rectNav.left;
+
     return {
         niveau,
         top,
+        leftOrigine,
         sousMenu
     };
 }
