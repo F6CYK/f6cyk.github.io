@@ -32,6 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
         if (r.right > window.innerWidth - 8) {
+            console.log("OUVERTURE À GAUCHE");
             submenu.classList.add("ouvre-gauche");
         }
     }
