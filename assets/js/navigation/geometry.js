@@ -68,7 +68,7 @@ function menuRacine(li) {
 }
 
 /* ----------------------------------------------------------
-   Calcul géométrique
+   Calcul complet
    ---------------------------------------------------------- */
 
 export function calculerPosition(li) {
@@ -80,19 +80,10 @@ export function calculerPosition(li) {
         return null;
     }
 
-    const rectNav =
-        nav.getBoundingClientRect();
+    const rectNav = nav.getBoundingClientRect();
+    const rectLi = li.getBoundingClientRect();
 
-    const rectLi =
-        li.getBoundingClientRect();
-
-    const niveau =
-        profondeur(li);
-
-    const top =
-        niveau === 0
-            ? rectLi.bottom - rectNav.top
-            : rectLi.top - rectNav.top;
+    const niveau = profondeur(li);
 
     const racine =
         niveau === 0
@@ -104,14 +95,17 @@ export function calculerPosition(li) {
 
     return {
 
+        panneau,
+
         niveau,
 
-        top,
-
-        leftOrigine:
+        x:
             rectRacine.left - rectNav.left,
 
-        panneau
+        y:
+            niveau === 0
+                ? rectLi.bottom - rectNav.top
+                : rectLi.top - rectNav.top
 
     };
 
