@@ -1,10 +1,14 @@
 /* ==========================================================
-   GEOMETRY — Niveau hiérarchique et géométrie des panneaux
+   GEOMETRY
    ----------------------------------------------------------
-   Calcule :
-     - le niveau hiérarchique
-     - la position verticale
-     - l'origine horizontale du menu racine
+   Calcule uniquement :
+
+      - la profondeur
+      - la position verticale
+      - l'origine horizontale
+
+   Aucun affichage.
+   Aucune manipulation du DOM.
    ========================================================== */
 
 import { lireRepereGlobal } from "./config.js";
@@ -12,29 +16,31 @@ import { lireRepereGlobal } from "./config.js";
 const nav = lireRepereGlobal();
 
 /* ----------------------------------------------------------
-   Profondeur d'un élément
+   Profondeur
    ---------------------------------------------------------- */
 
 export function profondeur(li) {
 
     let niveau = 0;
+
     let courant = li.parentElement;
 
-    while (courant && courant.classList) {
+    while (courant) {
 
-        if (courant.classList.contains("sous-menu")) {
+        if (courant.classList?.contains("sous-menu")) {
             niveau++;
         }
 
         courant = courant.parentElement;
+
     }
 
     return niveau;
+
 }
 
 /* ----------------------------------------------------------
-   Retrouve le <li> du menu principal auquel appartient
-   un élément, quel que soit son niveau.
+   Menu racine
    ---------------------------------------------------------- */
 
 function menuRacine(li) {
@@ -54,44 +60,59 @@ function menuRacine(li) {
         }
 
         courant = parent.closest("li");
+
     }
 
     return li;
+
 }
 
 /* ----------------------------------------------------------
-   Position complète d'un panneau
+   Calcul géométrique
    ---------------------------------------------------------- */
 
 export function calculerPosition(li) {
 
-    const sousMenu = li.querySelector(":scope > .sous-menu");
+    const panneau =
+        li.querySelector(":scope > .sous-menu");
 
-    if (!sousMenu) {
+    if (!panneau) {
         return null;
     }
 
-    const rectNav = nav.getBoundingClientRect();
-    const rectLi = li.getBoundingClientRect();
+    const rectNav =
+        nav.getBoundingClientRect();
 
-    const niveau = profondeur(li);
+    const rectLi =
+        li.getBoundingClientRect();
 
-    const top = (niveau === 0)
-        ? rectLi.bottom - rectNav.top
-        : rectLi.top - rectNav.top;
+    const niveau =
+        profondeur(li);
 
-    const racine = (niveau === 0)
-        ? li
-        : menuRacine(li);
+    const top =
+        niveau === 0
+            ? rectLi.bottom - rectNav.top
+            : rectLi.top - rectNav.top;
 
-    const rectRacine = racine.getBoundingClientRect();
+    const racine =
+        niveau === 0
+            ? li
+            : menuRacine(li);
 
-    const leftOrigine = rectRacine.left - rectNav.left;
+    const rectRacine =
+        racine.getBoundingClientRect();
 
     return {
+
         niveau,
+
         top,
-        leftOrigine,
-        sousMenu
+
+        leftOrigine:
+            rectRacine.left - rectNav.left,
+
+        panneau
+
     };
+
 }
