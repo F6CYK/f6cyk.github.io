@@ -7,14 +7,14 @@ import { calculerPosition } from "./geometry.js";
 import {
     obtenirColonne,
     viderColonnes,
-    afficherColonne,
-    masquerColonne
+    afficherColonne
 } from "./overlay.js";
 
 /* ----------------------------------------------------------
    Sélection des items
    ---------------------------------------------------------- */
 
+const nav = document.querySelector("nav");
 const items = document.querySelectorAll(".menu-deroulant");
 
 /* ----------------------------------------------------------
@@ -36,12 +36,12 @@ function ouvrir(li) {
         sousMenu
     } = pos;
 
+    viderColonnes(niveau);
+
     const colonne = obtenirColonne(
         niveau,
         leftOrigine
     );
-
-    viderColonnes(niveau + 1);
 
     colonne.replaceChildren();
     colonne.appendChild(sousMenu);
@@ -52,25 +52,18 @@ function ouvrir(li) {
 }
 
 /* ----------------------------------------------------------
-   Fermeture d’un panneau
+   Fermeture globale
    ---------------------------------------------------------- */
 
-function fermer(li) {
+function fermerTout() {
 
-    const pos = calculerPosition(li);
+    document
+        .querySelectorAll(".sous-menu.ouvert")
+        .forEach(menu => {
+            menu.classList.remove("ouvert");
+        });
 
-    if (!pos) {
-        return;
-    }
-
-    const {
-        niveau,
-        sousMenu
-    } = pos;
-
-    sousMenu.classList.remove("ouvert");
-
-    viderColonnes(niveau);
+    viderColonnes(0);
 }
 
 /* ----------------------------------------------------------
@@ -78,8 +71,6 @@ function fermer(li) {
    ---------------------------------------------------------- */
 
 items.forEach(li => {
-
-    const sousMenu = li.querySelector(":scope > .sous-menu");
 
     li.addEventListener("mouseenter", () => {
         ouvrir(li);
@@ -89,33 +80,27 @@ items.forEach(li => {
         ouvrir(li);
     });
 
-    if (sousMenu) {
+});
 
-        sousMenu.addEventListener("mouseleave", event => {
+/* ----------------------------------------------------------
+   Fermeture uniquement en quittant la navigation
+   ---------------------------------------------------------- */
 
-            const vers = event.relatedTarget;
+if (nav) {
 
-            if (vers && li.contains(vers)) {
-                return;
-            }
-
-            fermer(li);
-        });
-
-    }
-
-    li.addEventListener("focusout", event => {
+    nav.addEventListener("mouseleave", event => {
 
         const vers = event.relatedTarget;
 
-        if (vers && li.contains(vers)) {
+        if (vers && nav.contains(vers)) {
             return;
         }
 
-        fermer(li);
+        fermerTout();
+
     });
 
-});
+}
 
 /* ----------------------------------------------------------
    Recalcul sur redimensionnement
@@ -123,14 +108,16 @@ items.forEach(li => {
 
 window.addEventListener("resize", () => {
 
-    items.forEach(li => {
+    const ouvert = document.querySelector(".sous-menu.ouvert");
 
-        const sousMenu = li.querySelector(":scope > .sous-menu");
+    if (!ouvert) {
+        return;
+    }
 
-        if (sousMenu && sousMenu.classList.contains("ouvert")) {
-            ouvrir(li);
-        }
+    const li = ouvert.closest(".menu-deroulant");
 
-    });
+    if (li) {
+        ouvrir(li);
+    }
 
 });
