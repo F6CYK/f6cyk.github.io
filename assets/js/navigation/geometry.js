@@ -2,10 +2,9 @@
    GEOMETRY — Profondeur + coordonnées globales
    ========================================================== */
 
-import { lireLargeurColonne, lireRepereGlobal } from "./config.js";
+import { lireRepereGlobal } from "./config.js";
 
 const nav = lireRepereGlobal();
-const LARGEUR_COLONNE = lireLargeurColonne();
 
 /* ----------------------------------------------------------
    Calcul de la profondeur d’un <li class="menu-deroulant">
@@ -39,11 +38,20 @@ export function calculerPosition(li) {
 
     const niveau = profondeur(li);
 
+    /* Largeur réelle du panneau */
+    const largeur = sousMenu.offsetWidth;
+
+    /* Premier niveau sous le menu principal,
+       niveaux suivants alignés sur l'item parent */
     const top = (niveau === 0)
-        ? rectLi.top - rectNav.top + rectLi.height
+        ? rectLi.bottom - rectNav.top
         : rectLi.top - rectNav.top;
 
-    const left = niveau * LARGEUR_COLONNE;
+    const left = niveau * largeur;
 
-    return { top, left, sousMenu };
+    return {
+        top,
+        left,
+        sousMenu
+    };
 }
