@@ -1,5 +1,5 @@
 /* ==========================================================
-   OVERLAY
+   OVERLAY — Déplacement robuste du panneau original
    ========================================================== */
 
 let overlay = document.getElementById("nav-overlay");
@@ -7,68 +7,113 @@ let overlay = document.getElementById("nav-overlay");
 if (!overlay) {
     overlay = document.createElement("div");
     overlay.id = "nav-overlay";
+    overlay.hidden = true;
     document.body.appendChild(overlay);
 }
 
-const colonnes = [];
-
 /* ----------------------------------------------------------
-   Retourne une colonne
+   État interne unique
    ---------------------------------------------------------- */
 
-export function obtenirColonne(niveau) {
+let etat = null;
 
-    let colonne = colonnes[niveau];
+/* ----------------------------------------------------------
+   Déplacement du panneau dans l'overlay
+   ---------------------------------------------------------- */
 
-    if (colonne) {
-        return colonne;
+export function afficherDansOverlay(panneau, x, y) {
+
+    // Vérification préalable : ne rien fermer si le panneau est invalide
+    if (!panneau?.isConnected) {
+        console.warn("Panneau introuvable ou déjà supprimé.");
+        return;
     }
 
-    colonne = document.createElement("div");
-    colonne.className = "nav-colonne";
-    colonne.dataset.level = niveau;
+    // Fermeture du panneau précédent
+    fermerPanneauActuel();
 
-    overlay.appendChild(colonne);
-    colonnes[niveau] = colonne;
+    // Mémorisation de l'état d'origine
+    etat = {
+        panneau,
+        parentOrigine: panneau.parentElement,
+        nextSiblingOrigine: panneau.nextSibling,
+        styleOrigine: {
+            position: panneau.style.position,
+            left: panneau.style.left,
+            top: panneau.style.top,
+            display: panneau.style.display,
+            pointerEvents: panneau.style.pointerEvents
+        }
+    };
 
-    return colonne;
+    // Positionnement dans l'overlay
+    panneau.style.position = "absolute";
+    panneau.style.left = `${x}px`;
+    panneau.style.top = `${y}px`;
+    panneau.style.display = "block";
+    panneau.style.pointerEvents = "auto";
+
+    overlay.appendChild(panneau);
+    overlay.hidden = false;
 }
 
 /* ----------------------------------------------------------
-   Affichage
-   ---------------------------------------------------------- */
-export function afficherColonne(colonne, panneau, top) {
-
-    const copie = panneau.cloneNode(true);
-
-    // Correction essentielle : le CSS ne peut plus afficher la copie.
-    copie.style.display = "block";
-
-    colonne.replaceChildren();
-    colonne.appendChild(copie);
-
-    colonne.style.top = `${top}px`;
-    colonne.style.display = "block";
-}
-
-
-
-/* ----------------------------------------------------------
-   Fermeture
+   Restitution du panneau à son emplacement d'origine
    ---------------------------------------------------------- */
 
-export function viderColonnes(depuis = 0) {
+export function fermerPanneauActuel() {
 
-    for (let niveau = depuis; niveau < colonnes.length; niveau++) {
+    if (!etat) {
+        return;
+    }
 
-        const colonne = colonnes[niveau];
+    const {
+        panneau,
+        parentOrigine,
+        nextSiblingOrigine,
+        styleOrigine
+    } = etat;
 
-        if (!colonne) {
-            continue;
+    // Restauration des styles d'origine
+    panneau.style.position = styleOrigine.position;
+    panneau.style.left = styleOrigine.left;
+    panneau.style.top = styleOrigine.top;
+    panneau.style.display = styleOrigine.display;
+    panneau.style.pointerEvents = styleOrigine.pointerEvents;
+
+    // Restauration dans le DOM
+    if (parentOrigine?.isConnected) {
+
+        if (
+            nextSiblingOrigine &&
+            nextSiblingOrigine.parentNode === parentOrigine
+        ) {
+            parentOrigine.insertBefore(panneau, nextSiblingOrigine);
+        } else {
+            parentOrigine.appendChild(panneau);
         }
 
-        colonne.replaceChildren();
-        colonne.style.display = "none";
+    } else {
+        console.warn("Parent d'origine introuvable. Panneau non réinséré.");
     }
+
+    // Nettoyage de l'overlay
+    overlay.replaceChildren();
+    overlay.hidden = true;
+    overlay.scrollTop = 0;
+    overlay.scrollLeft = 0;
+
+    etat = null;
 }
 
+/* ----------------------------------------------------------
+   Accès à l'état interne
+   ---------------------------------------------------------- */
+
+export function panneauOuvert() {
+    return etat !== null;
+}
+
+export function getPanneauActuel() {
+    return etat?.panneau ?? null;
+}
