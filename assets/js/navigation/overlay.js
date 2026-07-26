@@ -2,7 +2,17 @@
    OVERLAY
    ========================================================== */
 
-const overlay = document.getElementById("nav-overlay");
+let overlay = document.getElementById("nav-overlay");
+
+if (!overlay) {
+
+    overlay = document.createElement("div");
+
+    overlay.id = "nav-overlay";
+
+    document.body.appendChild(overlay);
+
+}
 
 const colonnes = [];
 
@@ -85,4 +95,3 @@ export function viderColonnes(depuis = 0) {
     }
 
 }
-
