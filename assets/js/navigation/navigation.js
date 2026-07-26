@@ -4,27 +4,18 @@
 
 import { calculerPosition } from "./geometry.js";
 
+import {
+    obtenirColonne,
+    viderColonnes,
+    afficherColonne,
+    masquerColonne
+} from "./overlay.js";
+
 /* ----------------------------------------------------------
    Sélection des items
    ---------------------------------------------------------- */
 
 const items = document.querySelectorAll(".menu-deroulant");
-
-/* ----------------------------------------------------------
-   Préparation de la couche d'affichage
-   ---------------------------------------------------------- */
-
-const nav = document.querySelector("nav");
-
-let overlay = nav.querySelector("#nav-overlay");
-
-if (!overlay) {
-
-    overlay = document.createElement("div");
-    overlay.id = "nav-overlay";
-
-    nav.appendChild(overlay);
-}
 
 const colonnes = [];
 
