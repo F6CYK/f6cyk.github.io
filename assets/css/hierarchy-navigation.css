@@ -91,9 +91,13 @@ nav.menu-general a:hover{
 
 /* Flèche */
 
-.sous-menu .menu-deroulant > a::after{
-    content:"▶";
-    float:right;
-    margin-left:12px;
+.sous-menu .menu-deroulant > a::before{
+    content:"◀";
+    display:inline-block;
+    margin-right:8px;
     font-size:.75em;
+}
+
+.sous-menu .menu-deroulant > a::after{
+    content:none;
 }
