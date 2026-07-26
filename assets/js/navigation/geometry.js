@@ -22,7 +22,6 @@ const nav = lireRepereGlobal();
 export function profondeur(li) {
 
     let niveau = 0;
-
     let courant = li.parentElement;
 
     while (courant) {
@@ -32,11 +31,9 @@ export function profondeur(li) {
         }
 
         courant = courant.parentElement;
-
     }
 
     return niveau;
-
 }
 
 /* ----------------------------------------------------------
@@ -50,21 +47,19 @@ function menuRacine(li) {
     while (courant) {
 
         const parent = courant.parentElement;
-
         if (!parent) {
             break;
         }
 
+        // Le menu racine est le <li> dont le parent direct est <nav>
         if (parent.parentElement === nav) {
             return courant;
         }
 
         courant = parent.closest("li");
-
     }
 
     return li;
-
 }
 
 /* ----------------------------------------------------------
@@ -73,9 +68,7 @@ function menuRacine(li) {
 
 export function calculerPosition(li) {
 
-    const panneau =
-        li.querySelector(":scope > .sous-menu");
-
+    const panneau = li.querySelector(":scope > .sous-menu");
     if (!panneau) {
         return null;
     }
@@ -85,13 +78,11 @@ export function calculerPosition(li) {
 
     const niveau = profondeur(li);
 
-    const racine =
-        niveau === 0
-            ? li
-            : menuRacine(li);
+    const racine = niveau === 0
+        ? li
+        : menuRacine(li);
 
-    const rectRacine =
-        racine.getBoundingClientRect();
+    const rectRacine = racine.getBoundingClientRect();
 
     return {
 
@@ -99,14 +90,13 @@ export function calculerPosition(li) {
 
         niveau,
 
-        x:
-            rectRacine.left - rectNav.left,
+        // Origine horizontale : alignement sur la racine
+        x: rectRacine.left - rectNav.left,
 
-        y:
-            niveau === 0
-                ? rectLi.bottom - rectNav.top
-                : rectLi.top - rectNav.top
-
+        // Origine verticale : bas du LI au niveau 0, haut du LI sinon
+        y: niveau === 0
+            ? rectLi.bottom - rectNav.top
+            : rectLi.top - rectNav.top
     };
-
 }
+
