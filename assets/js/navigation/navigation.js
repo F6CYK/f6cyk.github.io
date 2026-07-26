@@ -24,14 +24,26 @@ const items = document.querySelectorAll(".menu-deroulant");
 function ouvrir(li) {
 
     const pos = calculerPosition(li);
-    if (!pos) return;
 
-    const { niveau, top, sousMenu } = pos;
+    if (!pos) {
+        return;
+    }
 
-    const colonne = obtenirColonne(niveau);
+    const {
+        niveau,
+        top,
+        leftOrigine,
+        sousMenu
+    } = pos;
+
+    const colonne = obtenirColonne(
+        niveau,
+        leftOrigine
+    );
 
     viderColonnes(niveau + 1);
 
+    colonne.replaceChildren();
     colonne.appendChild(sousMenu);
 
     afficherColonne(colonne, top);
@@ -51,7 +63,10 @@ function fermer(li) {
         return;
     }
 
-    const { niveau, sousMenu } = pos;
+    const {
+        niveau,
+        sousMenu
+    } = pos;
 
     sousMenu.classList.remove("ouvert");
 
@@ -64,10 +79,15 @@ function fermer(li) {
 
 items.forEach(li => {
 
-    const sousMenu = li.querySelector(".sous-menu");
+    const sousMenu = li.querySelector(":scope > .sous-menu");
 
-    li.addEventListener("mouseenter", () => ouvrir(li));
-    li.addEventListener("focusin", () => ouvrir(li));
+    li.addEventListener("mouseenter", () => {
+        ouvrir(li);
+    });
+
+    li.addEventListener("focusin", () => {
+        ouvrir(li);
+    });
 
     if (sousMenu) {
 
@@ -81,9 +101,17 @@ items.forEach(li => {
 
             fermer(li);
         });
+
     }
 
-    li.addEventListener("focusout", () => {
+    li.addEventListener("focusout", event => {
+
+        const vers = event.relatedTarget;
+
+        if (vers && li.contains(vers)) {
+            return;
+        }
+
         fermer(li);
     });
 
@@ -97,10 +125,12 @@ window.addEventListener("resize", () => {
 
     items.forEach(li => {
 
-        const sousMenu = li.querySelector(".sous-menu");
+        const sousMenu = li.querySelector(":scope > .sous-menu");
 
         if (sousMenu && sousMenu.classList.contains("ouvert")) {
             ouvrir(li);
         }
+
     });
+
 });
