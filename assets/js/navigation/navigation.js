@@ -37,10 +37,10 @@ function ouvrir(li) {
     }
 
     const {
+        panneau,
         niveau,
-        top,
-        leftOrigine,
-        sousMenu
+        x,
+        y
     } = position;
 
     viderColonnes(niveau);
@@ -48,18 +48,16 @@ function ouvrir(li) {
     const colonne = obtenirColonne(niveau);
 
     /* Position horizontale */
-    colonne.style.left = `${leftOrigine}px`;
+    colonne.style.left = `${x}px`;
 
-    /* IMPORTANT :
-       On affiche une copie du panneau.
-    */
+    /* Copie du panneau */
 
-    const copie = sousMenu.cloneNode(true);
+    const copie = panneau.cloneNode(true);
 
     afficherColonne(
         colonne,
         copie,
-        top
+        y
     );
 
     itemOuvert = li;
