@@ -95,11 +95,14 @@ nav.menu-general a:hover{
     font-size:.75em;
 }
 
-/* ===========================
-   Retour vers la gauche
-   =========================== */
-
-.sous-menu .menu-deroulant > .sous-menu{
-    top:10px;
+/* ouverture normale */
+.menu-deroulant > .sous-menu{
     left:calc(100% - 8px);
+    right:auto;
+}
+
+/* ouverture vers la gauche */
+.menu-deroulant > .sous-menu.ouvre-gauche{
+    left:auto;
+    right:calc(100% - 8px);
 }
