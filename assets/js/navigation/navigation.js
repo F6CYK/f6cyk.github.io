@@ -26,10 +26,15 @@ function ouvrir(li) {
     const pos = calculerPosition(li);
     if (!pos) return;
 
-    const { top, left, sousMenu } = pos;
+    const { niveau, top, sousMenu } = pos;
 
-    sousMenu.style.top = `${top}px`;
-    sousMenu.style.left = `${left}px`;
+    const colonne = obtenirColonne(niveau);
+
+    viderColonnes(niveau + 1);
+
+    colonne.appendChild(sousMenu);
+
+    afficherColonne(colonne, top);
 
     sousMenu.classList.add("ouvert");
 }
