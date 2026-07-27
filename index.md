@@ -7,6 +7,8 @@
 
 # F6CYK
 
+<div style="text-align:center;">
+
 {% include image.html
    file="station_f6cyk-1.png"
    width="900"
@@ -14,6 +16,8 @@
 %}
 
 *La station F6CYK, où sont réalisés la plupart des travaux présentés sur ce site.*
+
+</div>
 
 ---
 
