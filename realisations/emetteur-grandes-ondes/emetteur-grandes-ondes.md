@@ -1,23 +1,42 @@
 ---
 layout: default
-title: Excitateur à XR2206
-parent: Émetteur Grandes Ondes
-permalink: /realisations/emetteur-grandes-ondes/excitateur-xr2206/
+title: Émetteur Grandes Ondes
+permalink: /realisations/emetteur-grandes-ondes/
+description: Réalisation d'un émetteur AM pour les Grandes Ondes utilisant un module XR2206 modifié.
 ---
 
-# Excitateur à XR2206
+# Émetteur Grandes Ondes
 
 ## Présentation
+
+Cet émetteur AM pour les Grandes Ondes est construit autour d'un module générateur de fonctions à **XR2206**, modifié afin d'être utilisé comme excitateur RF.
+
+Le montage est complété par un modulateur, un amplificateur RF et un circuit d'accord permettant d'obtenir un émetteur performant, stable et simple à réaliser.
+
+Cette page rassemble les informations pratiques relatives à la réalisation ainsi que la documentation complète présentée sous forme de flipbook.
+
+---
+
+## Documentation
+
+{% include flipbook.html
+    title="Documentation complète"
+    pdf="/realisations/emetteur-grandes-ondes/article.pdf"
+%}
+
+---
+
+## Réalisation
+
+### Le kit XR2206
 
 Le kit générateur de fonctions à XR2206 disponible sur les sites de vente en ligne constitue une excellente base pour réaliser l'excitateur d'un émetteur AM Grandes Ondes.
 
 Quelques modifications simples permettent de l'adapter à cette utilisation tout en conservant la quasi-totalité des composants d'origine.
 
-Cette page décrit la procédure de montage et les essais permettant de vérifier le bon fonctionnement de l'excitateur avant de réaliser le modulateur.
+Cette procédure décrit le montage et les essais permettant de vérifier le bon fonctionnement de l'excitateur avant la réalisation du modulateur.
 
----
-
-## Préparation
+### Préparation
 
 Avant toute opération :
 
@@ -28,9 +47,7 @@ Avant toute opération :
 
 > Cette procédure doit être suivie dans l'ordre afin d'éviter toute erreur de câblage.
 
----
-
-## Modification du support du XR2206
+### Modification du support du XR2206
 
 La broche **1** du XR2206 ne doit **pas** être reliée à la masse.
 
@@ -42,9 +59,7 @@ Pour cela :
 
 Un petit morceau d'isolant de transistor de puissance ou un ruban adhésif d'électricien convient parfaitement.
 
----
-
-## Montage des composants
+### Montage des composants
 
 Effectuer toutes les soudures côté cuivre.
 
@@ -67,9 +82,7 @@ Monter ensuite les composants dans l'ordre suivant :
 15. condensateur **C8 (100 pF)** ;
 16. shunt de liaison de **NC1** vers **C8**.
 
----
-
-## Premier essai
+### Premier essai
 
 Avant la mise sous tension :
 
@@ -77,9 +90,7 @@ Avant la mise sous tension :
 - raccorder un potentiomètre de **100 kΩ** sur l'entrée de commande de fréquence ;
 - alimenter le montage sous **15 V** (fonctionnement possible sous **12 V**).
 
----
-
-## Vérification
+### Vérification
 
 À l'oscilloscope :
 
@@ -94,9 +105,7 @@ En l'absence d'oscilloscope :
 - raccorder environ un mètre de fil sur la sortie ;
 - vérifier la présence de la porteuse sur un récepteur GO situé à proximité.
 
----
-
-## Fin des essais
+### Fin des essais
 
 Lorsque le fonctionnement est validé :
 
@@ -104,9 +113,7 @@ Lorsque le fonctionnement est validé :
 
 Le montage est alors prêt à recevoir le modulateur.
 
----
-
-## Remarques
+### Remarques
 
 À l'issue du montage, les composants suivants ne sont pas utilisés :
 
@@ -120,7 +127,11 @@ La résistance **R8** pourra être utilisée provisoirement lors des essais de c
 
 ---
 
-## Documents
+## Documents associés
 
-- Photographie annotée du circuit imprimé.
-- Schéma du kit XR2206.
+Les documents suivants complètent cette réalisation :
+
+- photographie annotée du circuit imprimé ;
+- schéma du module XR2206 ;
+- schéma général de l'émetteur ;
+- photographies de la réalisation.
