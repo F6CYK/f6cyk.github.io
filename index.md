@@ -17,13 +17,11 @@
 
 ---
 
-Ce site est le carnet de travaux techniques d'un radioamateur expérimentateur.
+Ce site constitue le carnet de travaux techniques d’un radioamateur expérimentateur.
 
-Il s'inscrit dans la vocation du **service amateur**, qui a pour objet l'instruction individuelle, l'intercommunication et les études techniques.
+Il rassemble des réalisations, des restaurations de matériels, des études d’antennes, des expérimentations HF et des méthodes de mesure appliquées à des équipements réels.
 
-Les dossiers rassemblés ici sont consacrés à la radio, à l'électronique et aux techniques de mesure. Ils présentent des réalisations, des restaurations de matériels, des études d'antennes, des expérimentations HF, des développements spécifiques ainsi que des méthodes de mesure appliquées à des équipements réels.
-
-Chaque dossier privilégie une démarche expérimentale fondée sur l'observation, la conception, la réalisation et la vérification par la mesure. Schémas, photographies, relevés et résultats d'essais sont réunis afin de constituer une documentation technique claire, durable et directement exploitable.
+Chaque dossier privilégie une démarche fondée sur l’observation, la conception, la réalisation et la vérification par la mesure, illustrée par des schémas, des photographies, des relevés et des résultats d’essais.
 
 ---
 
