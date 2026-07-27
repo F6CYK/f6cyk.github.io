@@ -1,19 +1,21 @@
 ---
 layout: default
 title: Émetteur Grandes Ondes
+description: Réalisation d'un émetteur AM Grandes Ondes utilisant un module XR2206 modifié.
 permalink: /realisations/emetteur-grandes-ondes/
-description: Réalisation d'un émetteur AM pour les Grandes Ondes utilisant un module XR2206 modifié.
 ---
 
 # Émetteur Grandes Ondes
 
 ## Présentation
 
-Cet émetteur AM pour les Grandes Ondes est construit autour d'un module générateur de fonctions à **XR2206**, modifié afin d'être utilisé comme excitateur RF.
+Cet émetteur AM pour les Grandes Ondes est construit autour d'un module générateur de fonctions à **XR2206** modifié afin d'être utilisé comme excitateur RF.
 
-Le montage est complété par un modulateur, un amplificateur RF et un circuit d'accord permettant d'obtenir un émetteur performant, stable et simple à réaliser.
+Le montage est complété par un modulateur à **BF245**, un amplificateur RF et un circuit d'accord adaptés à la bande des Grandes Ondes.
 
-Cette page rassemble les informations pratiques relatives à la réalisation ainsi que la documentation complète présentée sous forme de flipbook.
+Cette page présente la réalisation ainsi que les principales étapes de sa mise en œuvre. La documentation complète est disponible sous forme de flipbook.
+
+![Vue générale de l'émetteur](photo-emetteur.jpg)
 
 ---
 
@@ -21,22 +23,24 @@ Cette page rassemble les informations pratiques relatives à la réalisation ain
 
 {% include flipbook.html
     title="Documentation complète"
-    pdf="/realisations/emetteur-grandes-ondes/article.pdf"
+    pdf="article.pdf"
 %}
 
 ---
 
-## Réalisation
+# Réalisation
 
-### Le kit XR2206
+## Module XR2206
 
 Le kit générateur de fonctions à XR2206 disponible sur les sites de vente en ligne constitue une excellente base pour réaliser l'excitateur d'un émetteur AM Grandes Ondes.
 
 Quelques modifications simples permettent de l'adapter à cette utilisation tout en conservant la quasi-totalité des composants d'origine.
 
-Cette procédure décrit le montage et les essais permettant de vérifier le bon fonctionnement de l'excitateur avant la réalisation du modulateur.
+Cette procédure décrit le montage et les essais permettant de vérifier le bon fonctionnement de l'excitateur avant de réaliser le modulateur.
 
-### Préparation
+![Module XR2206](xr2206-module.png)
+
+## Préparation
 
 Avant toute opération :
 
@@ -47,7 +51,7 @@ Avant toute opération :
 
 > Cette procédure doit être suivie dans l'ordre afin d'éviter toute erreur de câblage.
 
-### Modification du support du XR2206
+## Modification du support du XR2206
 
 La broche **1** du XR2206 ne doit **pas** être reliée à la masse.
 
@@ -59,7 +63,9 @@ Pour cela :
 
 Un petit morceau d'isolant de transistor de puissance ou un ruban adhésif d'électricien convient parfaitement.
 
-### Montage des composants
+![Modification du module XR2206](xr2206-schema.png)
+
+## Montage des composants
 
 Effectuer toutes les soudures côté cuivre.
 
@@ -82,15 +88,15 @@ Monter ensuite les composants dans l'ordre suivant :
 15. condensateur **C8 (100 pF)** ;
 16. shunt de liaison de **NC1** vers **C8**.
 
-### Premier essai
+## Premier essai
 
 Avant la mise sous tension :
 
-- relier provisoirement la broche 1 du XR2206 à la masse avec un fil fin ;
+- relier provisoirement la broche **1** du XR2206 à la masse avec un fil fin ;
 - raccorder un potentiomètre de **100 kΩ** sur l'entrée de commande de fréquence ;
 - alimenter le montage sous **15 V** (fonctionnement possible sous **12 V**).
 
-### Vérification
+## Vérification
 
 À l'oscilloscope :
 
@@ -105,15 +111,25 @@ En l'absence d'oscilloscope :
 - raccorder environ un mètre de fil sur la sortie ;
 - vérifier la présence de la porteuse sur un récepteur GO situé à proximité.
 
-### Fin des essais
+## Fin des essais
 
 Lorsque le fonctionnement est validé :
 
-- retirer impérativement la liaison provisoire entre la broche 1 et la masse.
+- retirer impérativement la liaison provisoire entre la broche **1** et la masse.
 
 Le montage est alors prêt à recevoir le modulateur.
 
-### Remarques
+---
+
+## Modulateur
+
+Le modulateur est réalisé autour d'un **BF245**. Son implantation est présentée ci-dessous.
+
+![Implantation du modulateur BF245](modulateur-bf245.png)
+
+---
+
+## Remarques
 
 À l'issue du montage, les composants suivants ne sont pas utilisés :
 
@@ -127,11 +143,12 @@ La résistance **R8** pourra être utilisée provisoirement lors des essais de c
 
 ---
 
-## Documents associés
+## Documents complémentaires
 
-Les documents suivants complètent cette réalisation :
+La réalisation est complétée par :
 
-- photographie annotée du circuit imprimé ;
-- schéma du module XR2206 ;
-- schéma général de l'émetteur ;
-- photographies de la réalisation.
+- l'article complet présenté dans le flipbook ;
+- le schéma du module XR2206 ;
+- la photographie annotée du circuit imprimé ;
+- l'implantation du modulateur BF245 ;
+- les photographies de la réalisation.
