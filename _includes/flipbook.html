@@ -166,7 +166,7 @@ const pageFlip =
         {
             width: pageWidth,
             height: pageHeight,
-            showCover: true,
+            showCover: {{ include.showCover | default: true }},
             size: "stretch",
             maxShadowOpacity: 0.3,
             cornerSize: 40
