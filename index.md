@@ -12,7 +12,8 @@ permalink: /index.html
 
 Bienvenue sur le site de la station radioamateur F6CYK.
 
-Ce site rassemble la description de la station, du matériel utilisé, des antennes, des réalisations techniques ainsi qu'une documentation issue de plusieurs années d'expérimentations.
+Ce site présente l’environnement technique de la station, les équipements utilisés, les antennes, les réalisations et une documentation issue de plusieurs années d’expérimentations.  
+Il constitue un espace de travail et de référence, organisé autour de pratiques concrètes : observer, mesurer, comprendre et transmettre.
 
 </div>
 
@@ -24,14 +25,15 @@ Ce site rassemble la description de la station, du matériel utilisé, des anten
 <figcaption>
 Station F6CYK.
 </figcaption>
-
 </figure>
 
 </div>
 
-## Le contenu du site
+## Organisation du site
 
-- **Station** — présentation générale de la station.
+Le site est structuré en plusieurs rubriques, chacune correspondant à un domaine de pratique radioamateur :
+
+- **Station** — présentation générale et environnement technique.
 - **Matériel** — émetteurs, récepteurs, alimentations, instruments de mesure et accessoires.
 - **Antennes** — descriptions, réalisations, essais et mesures.
 - **Réalisations** — montages, adaptations, expérimentations et projets.
