@@ -15,7 +15,7 @@
    alt="Station radioamateur F6CYK"
 %}
 
-*La station F6CYK, où sont réalisés la plupart des travaux présentés sur ce site.*
+caption="La station F6CYK, où sont réalisés la plupart des travaux présentés sur ce site."
 
 </div>
 
