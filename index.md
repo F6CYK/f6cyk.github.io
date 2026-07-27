@@ -19,8 +19,7 @@ Chaque dossier privilégie une démarche fondée sur l'observation, la conceptio
 
 {% assign image = page.asset_path | append: "/station_f6cyk-1.png" %}
 
-{% include intro.html
-   content=introduction
+{% include figure.html
    src=image
    alt="Station radioamateur F6CYK"
    caption="La station F6CYK, où sont réalisés la plupart des travaux présentés sur ce site."
