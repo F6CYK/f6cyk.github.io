@@ -7,16 +7,14 @@
 
 # F6CYK
 
-<div style="text-align:center;">
+{% assign image = page.asset_path | append: "/station_f6cyk-1.png" %}
 
-{% include image.html
-   file="station_f6cyk-1.png"
+{% include intro.html
+   src=image
    width="900"
    alt="Station radioamateur F6CYK"
    caption="La station F6CYK, où sont réalisés la plupart des travaux présentés sur ce site."
 %}
-
-</div>
 
 ---
 
