@@ -13,9 +13,8 @@
    file="station_f6cyk-1.png"
    width="900"
    alt="Station radioamateur F6CYK"
+   caption="La station F6CYK, où sont réalisés la plupart des travaux présentés sur ce site."
 %}
-
-caption="La station F6CYK, où sont réalisés la plupart des travaux présentés sur ce site."
 
 </div>
 
