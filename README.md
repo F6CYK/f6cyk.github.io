@@ -1,77 +1,106 @@
 # F6CYK
 
-Site personnel de la station radioamateur **F6CYK**.
+Le dépôt **F6CYK** contient l'ensemble des sources du site web de la station radioamateur **F6CYK**, développé avec **Jekyll** et publié automatiquement par **GitHub Pages**.
 
-Ce dépôt contient l'ensemble des sources du site web publié avec **GitHub Pages**. Il est développé avec **Jekyll** et privilégie une rédaction en **Markdown**, complétée ponctuellement par du HTML lorsque celui-ci est plus adapté.
+Au-delà d'un simple site personnel, ce projet constitue une base documentaire consacrée au radioamateurisme. Il rassemble des réalisations techniques, des expérimentations, des documentations d'équipements, des photographies et divers documents destinés à être consultés, partagés et conservés dans le temps.
+
+Le développement repose sur quelques principes simples :
+
+- privilégier les technologies ouvertes et pérennes ;
+- séparer le contenu, la présentation et la logique du site ;
+- limiter le recours au JavaScript aux fonctionnalités réellement utiles ;
+- favoriser une architecture simple, cohérente et évolutive ;
+- documenter le projet lui-même.
+
+## Objectifs du projet
+
+Le site poursuit plusieurs objectifs complémentaires :
+
+- présenter la station radioamateur **F6CYK** ;
+- partager des réalisations et des expérimentations ;
+- constituer une base documentaire technique ;
+- centraliser des notices, schémas et ressources ;
+- conserver des connaissances dans un format pérenne.
 
 ## Contenu du site
 
-Le site présente notamment :
+Le site couvre notamment :
 
 - la station radioamateur ;
 - les activités de trafic ;
-- les équipements et accessoires ;
+- les matériels et accessoires ;
 - les antennes ;
-- les réalisations et expérimentations ;
+- les réalisations personnelles ;
+- les composants électroniques ;
 - la documentation technique ;
-- les photographies et illustrations.
+- les photographies et illustrations ;
+- les documents téléchargeables.
+
+## Organisation des contenus
+
+Les contenus sont organisés sous forme d'articles autonomes.
+
+Chaque sujet dispose de son propre répertoire regroupant le document Markdown principal ainsi que les illustrations, schémas et documents qui lui sont associés.
+
+Cette organisation facilite la maintenance, limite les liens rompus et garantit la cohérence entre le texte et ses ressources.
 
 ## Organisation du dépôt
 
 ```text
 .
-├── _config.yml                 Configuration Jekyll
-├── _data/                      Données du site
-├── _includes/                  Éléments communs (head, header, navigation, footer)
+├── _config.yml                 Configuration générale de Jekyll
+├── _data/                      Données structurées
+├── _documentation/             Documentation interne du projet
+├── _includes/                  Composants HTML réutilisables
 ├── _layouts/                   Modèles de pages
-├── _posts/                     Réservé aux publications Jekyll
+├── _posts/                     Publications Jekyll (réservé)
 ├── assets/
 │   ├── css/                    Feuilles de style
 │   ├── fonts/                  Polices
 │   ├── images/                 Illustrations et photographies
-│   └── js/                     Scripts éventuels
+│   └── js/                     Scripts JavaScript
 ├── documents/                  Documents téléchargeables
-│   ├── notices/
-│   ├── pdf/
-│   └── schemas/
 ├── pages/                      Pages du site
 └── README.md
 ```
 
-## Organisation des feuilles de style
+## Architecture
 
-Les styles sont répartis par fonction afin de faciliter leur maintenance :
+Le site repose sur les mécanismes standards de Jekyll.
 
-- **base.css** : styles fondamentaux du document ;
-- **layout.css** : structure générale du site (bandeau, navigation, contenu, pied de page, responsive) ;
-- **components.css** : composants réutilisables (cartes, boutons, tableaux, figures, encadrés, etc.) ;
-- **content.css** : styles propres aux différentes pages ;
-- **print.css** : présentation pour l'impression ;
-- **style.css** : feuille d'agrégation important les différentes feuilles de style.
+- Les contenus sont rédigés principalement en Markdown.
+- Les modèles de pages sont définis dans `_layouts`.
+- Les composants réutilisables sont regroupés dans `_includes`.
+- Les données communes sont centralisées dans `_data`.
+- Les ressources statiques sont stockées dans `assets`.
 
-## Répertoires d'images
+Cette séparation facilite les évolutions tout en limitant les duplications.
 
-Les illustrations sont classées par thème :
+## Présentation graphique
 
-- `antennes/`
-- `bandeau/`
-- `construction/`
-- `galerie/`
-- `materiel/`
-- `realisations/`
-- `station/`
-- `test/`
-- `trafic/`
+Les feuilles de style sont réparties par fonction :
+
+| Feuille | Rôle |
+|---------|------|
+| `base.css` | Styles fondamentaux |
+| `layout.css` | Structure générale et responsive |
+| `components.css` | Composants réutilisables |
+| `content.css` | Styles éditoriaux |
+| `print.css` | Impression |
+| `style.css` | Agrégation des feuilles de style |
+
+## JavaScript
+
+Le JavaScript est utilisé uniquement lorsqu'il apporte une fonctionnalité réellement nécessaire, notamment pour la navigation dynamique, certains composants interactifs et le lecteur PDF.
 
 ## Technologies
 
 - Jekyll
+- GitHub Pages
 - Markdown
 - HTML5
 - CSS3
-- GitHub Pages
-
-Le JavaScript n'est utilisé que lorsqu'il apporte une fonctionnalité réellement nécessaire.
+- YAML
 
 ## Publication
 
@@ -80,6 +109,10 @@ Le site est publié automatiquement par **GitHub Pages** à chaque mise à jour 
 Adresse du site :
 
 <https://f6cyk.github.io>
+
+## Documentation
+
+Le répertoire `_documentation` regroupe la documentation technique du projet : architecture, conventions de rédaction, organisation des contenus et choix techniques.
 
 ## Licence
 
