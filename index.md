@@ -2,7 +2,7 @@
  layout: default
  title: Accueil
  permalink: /
-+asset_path: /assets/images/station
+ asset_path: /assets/images/station
 ---
 
 # F6CYK
