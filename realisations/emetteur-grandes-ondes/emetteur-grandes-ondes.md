@@ -32,6 +32,7 @@ La présente page constitue le complément de l'article technique présenté ci-
 {% include flipbook.html
    file="article_emetteur_go_xr2206.pdf"
    title="Documentation complète"
+   showCover=false
    scale=1.5
 %}
 
