@@ -25,6 +25,8 @@ Chaque dossier privilégie une démarche fondée sur l'observation, la conceptio
    caption="La station F6CYK, où sont réalisés la plupart des travaux présentés sur ce site."
 %}
 
+{{ introduction | markdownify }}
+
 ## Rubriques
 
 ### Station
