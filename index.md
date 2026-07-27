@@ -7,6 +7,14 @@
 
 # F6CYK
 
+{% include image.html
+   file="station_f6cyk-1.jpg"
+   width="900"
+   alt="Station radioamateur F6CYK"
+%}
+
+*La station F6CYK, où sont réalisés la plupart des travaux présentés sur ce site.*
+
 ---
 
 Ce site est le carnet de travaux techniques d'un radioamateur expérimentateur.
@@ -16,18 +24,6 @@ Il s'inscrit dans la vocation du **service amateur**, qui a pour objet l'instruc
 Les dossiers rassemblés ici sont consacrés à la radio, à l'électronique et aux techniques de mesure. Ils présentent des réalisations, des restaurations de matériels, des études d'antennes, des expérimentations HF, des développements spécifiques ainsi que des méthodes de mesure appliquées à des équipements réels.
 
 Chaque dossier privilégie une démarche expérimentale fondée sur l'observation, la conception, la réalisation et la vérification par la mesure. Schémas, photographies, relevés et résultats d'essais sont réunis afin de constituer une documentation technique claire, durable et directement exploitable.
-
----
-
-## La station
-
-{% include image.html
-   file="station_f6cyk-1.jpg"
-   width="900"
-   alt="Station radioamateur F6CYK"
-%}
-
-*La station F6CYK, où sont réalisés les travaux présentés sur ce site.*
 
 ---
 
