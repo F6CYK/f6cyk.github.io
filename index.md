@@ -9,7 +9,7 @@
 
 {% assign image = page.asset_path | append: "/station_f6cyk-1.png" %}
 
-{% include intro.html
+{% include image.html
    src=image
    width="900"
    alt="Station radioamateur F6CYK"
