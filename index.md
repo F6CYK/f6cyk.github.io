@@ -8,7 +8,7 @@
 # F6CYK
 
 {% include image.html
-   file="station_f6cyk-1.jpg"
+   file="station_f6cyk-1.png"
    width="900"
    alt="Station radioamateur F6CYK"
 %}
