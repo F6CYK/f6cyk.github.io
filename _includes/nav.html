@@ -33,10 +33,17 @@
         </li>
 
         <!-- Réalisations -->
-        <li>
-            <a{% if page.url == '/en_travaux.html' %} class="actif"{% endif %}
-               href="{{ '/en_travaux.html' | relative_url }}">Réalisations</a>
-        </li>
+        <li class="menu-deroulant">
+            <a href="#"
+            tabindex="0"
+       {% if page.url contains '/realisations/' %}class="actif"{% endif %}>
+        Réalisations
+    </a>
+
+    <ul class="sous-menu">
+        {% include recursive-menu.html noeuds=site.data.realisations %}
+    </ul>
+</li>
 
         <!-- Galerie -->
         <li>
