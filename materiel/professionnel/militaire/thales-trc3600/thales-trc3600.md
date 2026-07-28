@@ -17,6 +17,16 @@ Le TRC 3600 constitue la version portable de 20 W d'une gamme complète de stati
 
 {% endcapture %}
 
+{% assign image = page.asset_path | append: "/trc3600.jpg" %}
+
+{% include intro.html
+   layout="texte-image"
+   content=introduction
+   src=image
+   alt="Station radio tactique THALES TRC 3600"
+   caption="THALES TRC 3600 – station radio HF tactique numérique de la famille SYSTEM 3000."
+%}
+
 Contrairement à un émetteur-récepteur HF classique limité aux communications en téléphonie BLU, le TRC 3600 est conçu comme une véritable plateforme de communications numériques. Il intègre des fonctions de téléphonie numérique sécurisée, de transmission de données, de chiffrement, d'établissement automatique des liaisons (ALE), de saut de fréquence, ainsi que des mécanismes d'adaptation automatique aux conditions de propagation ionosphérique.
 
 Deux modes de fonctionnement caractérisent particulièrement cette famille de stations. Le mode **SKYMASTER** automatise l'établissement des liaisons HF en sélectionnant la fréquence, la puissance d'émission et le débit les mieux adaptés aux conditions de propagation. Le mode **SKYHOPPER® 2** met en œuvre un saut de fréquence intelligent permettant d'améliorer la robustesse des communications face aux brouillages et aux perturbations radioélectriques.
@@ -30,18 +40,6 @@ L'équipement intègre plusieurs modems numériques adaptés aux différents bes
 Compatible avec plusieurs normes de l'OTAN, notamment **STANAG 4203**, **STANAG 4285**, **STANAG 4481** et, selon les versions, **MIL-STD-188-141A**, le TRC 3600 illustre l'évolution des réseaux HF militaires vers des systèmes numériques interopérables capables d'assurer simultanément les communications vocales, les échanges de données et l'intégration dans des architectures de commandement modernes.
 
 Cette rubrique a pour objectif de présenter le système TRC 3600 sous un angle essentiellement technique et documentaire. Les différentes pages décriront progressivement son architecture, ses modes de fonctionnement, ses accessoires, ses terminaux associés, sa documentation technique, ainsi que les essais et expérimentations réalisés autour de cette famille de stations.
-
-
-
-{% assign image = page.asset_path | append: "/trc3600.jpg" %}
-
-{% include intro.html
-   layout="texte-image"
-   content=introduction
-   src=image
-   alt="Station radio tactique THALES TRC 3600"
-   caption="THALES TRC 3600 – station radio HF tactique numérique de la famille SYSTEM 3000."
-%}
 
 {% include flipbook.html
    file="Thales_TRC3600_HF_Combat_Radio_Datasheet.pdf"
