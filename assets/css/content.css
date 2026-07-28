@@ -8,30 +8,26 @@ article section{
     margin-bottom:2.5rem;
 }
 
-/* ==========================================================
-   Page d'accueil
-   ========================================================== */
-
-.accueil-introduction{
+.media{
     display:flex;
     align-items:flex-start;
-    gap:2rem;      /* 1.2rem auparavant */
+    gap:2rem;
 }
 
-.accueil-texte{
+.media-texte{
     flex:1;
 }
 
-.accueil-texte p{
+.media-texte p{
     margin-bottom:1rem;
 }
 
-.accueil-photo{
+.media-photo{
     flex:0 0 400px;
     margin:-0.35rem 0 0;
 }
 
-.accueil-photo img{
+.media-photo img{
     display:block;
     width:100%;
     height:auto;
@@ -39,19 +35,27 @@ article section{
     box-shadow:0 2px 8px rgba(0,0,0,.15);
 }
 
+.media--texte-image{
+    flex-direction:row;
+}
+
+.media--image-texte{
+    flex-direction:row-reverse;
+}
+
 @media (max-width:800px){
 
-    .accueil-introduction{
+    .media{
         flex-direction:column;
     }
 
-    .accueil-photo{
+    .media-photo{
         flex:none;
         width:100%;
         margin:0;
     }
 
-    .accueil-photo img{
+    .media-photo img{
         max-width:550px;
         margin:0 auto;
     }
