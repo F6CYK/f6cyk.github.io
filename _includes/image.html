@@ -1,6 +1,12 @@
-<a href="{{ page.asset_path }}/{{ include.file }}" target="_blank">
-    <img
-        src="{{ page.asset_path }}/{{ include.file }}"
-        width="{{ include.width }}"
-        alt="{{ include.alt | default: include.file }}">
+{% if include.src %}
+  {% assign image = include.src %}
+{% else %}
+  {% assign image = page.asset_path | append: "/" | append: include.file %}
+{% endif %}
+
+<a href="{{ image | relative_url }}" target="_blank">
+  <img
+    src="{{ image | relative_url }}"
+    width="{{ include.width | default: 350 }}"
+    alt="{{ include.alt | default: include.file }}">
 </a>
