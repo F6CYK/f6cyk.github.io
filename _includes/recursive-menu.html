@@ -3,9 +3,19 @@
 <li{% if noeud.enfants %} class="menu-deroulant"{% endif %}>
 
     {% if noeud.url %}
-        <a href="{{ noeud.url | relative_url }}">
-            {{ noeud.titre }}
-        </a>
+
+        {% assign cible = site.pages | where: "url", noeud.url | first %}
+
+        {% if cible %}
+            <a href="{{ noeud.url | relative_url }}">
+                {{ noeud.titre }}
+            </a>
+        {% else %}
+            <a href="{{ '/pages/en_travaux/' | relative_url }}">
+                {{ noeud.titre }}
+            </a>
+        {% endif %}
+
     {% else %}
         <a href="#" tabindex="0">
             {{ noeud.titre }}
