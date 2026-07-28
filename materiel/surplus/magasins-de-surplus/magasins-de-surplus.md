@@ -83,7 +83,7 @@ Comme beaucoup d'autres négociants de cette époque, son activité dépend esse
 
 {% include intro.html
    prefix="RAM"
-   content=article_RAM
+   content=RAM
    src=image
    alt="Radio - Appareils de Mesures"
    caption="Publicité de la société R.A.M. 131 boulevard Diderot, Paris 12 (1969)"
@@ -105,7 +105,7 @@ Ces quelques noms ne représentent cependant qu'une partie des négociants actif
 
 {% include intro.html
    prefix="SAR"
-   content=article_SAR
+   content=SAR
    src=image
    alt="Sud Avenir Radio"
    caption="Publicité de la société Sud Avenir Radio, 22 bld de l'Indépendance, Marseille 12 (1969)"
