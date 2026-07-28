@@ -15,6 +15,8 @@ Le **THALES TRC 3600** est une station radio tactique HF numérique développée
 
 Le TRC 3600 constitue la version portable de 20 W d'une gamme complète de stations HF comprenant également les modèles **TRC 3610** (20 W véhiculaire), **TRC 3630** (125 W) et **TRC 3640** (400 W). Cette architecture modulaire sera ensuite prolongée par la série **TRC 3700**, qui reprend les mêmes principes de fonctionnement et de nombreux éléments matériels et logiciels.
 
+{% endcapture %}
+
 Contrairement à un émetteur-récepteur HF classique limité aux communications en téléphonie BLU, le TRC 3600 est conçu comme une véritable plateforme de communications numériques. Il intègre des fonctions de téléphonie numérique sécurisée, de transmission de données, de chiffrement, d'établissement automatique des liaisons (ALE), de saut de fréquence, ainsi que des mécanismes d'adaptation automatique aux conditions de propagation ionosphérique.
 
 Deux modes de fonctionnement caractérisent particulièrement cette famille de stations. Le mode **SKYMASTER** automatise l'établissement des liaisons HF en sélectionnant la fréquence, la puissance d'émission et le débit les mieux adaptés aux conditions de propagation. Le mode **SKYHOPPER® 2** met en œuvre un saut de fréquence intelligent permettant d'améliorer la robustesse des communications face aux brouillages et aux perturbations radioélectriques.
@@ -29,7 +31,7 @@ Compatible avec plusieurs normes de l'OTAN, notamment **STANAG 4203**, **STANAG 
 
 Cette rubrique a pour objectif de présenter le système TRC 3600 sous un angle essentiellement technique et documentaire. Les différentes pages décriront progressivement son architecture, ses modes de fonctionnement, ses accessoires, ses terminaux associés, sa documentation technique, ainsi que les essais et expérimentations réalisés autour de cette famille de stations.
 
-{% endcapture %}
+
 
 {% assign image = page.asset_path | append: "/trc3600.jpg" %}
 
