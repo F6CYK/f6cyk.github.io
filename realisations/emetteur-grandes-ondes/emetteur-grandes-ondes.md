@@ -22,7 +22,6 @@ La présente page constitue le complément de l'article technique présenté ci-
 {% assign image = page.asset_path | append: "/module-xr2206.png" %}
 
 {% include intro.html
-   prefix="realisations"
    content=introduction
    src=image
    alt="Module XR2206"
@@ -81,10 +80,6 @@ Pour cela :
 
 Un petit morceau d'isolant de transistor de puissance ou un ruban adhésif d'électricien convient parfaitement.
 
-{% assign image = page.asset_path | append: "/schema-module-xr2206.png" %}
-
-![Modification du module XR2206]({{ image }})
-
 Cette modification constitue l'unique intervention réellement importante sur le module d'origine. Elle permettra, lors de l'installation du modulateur, d'agir sur le fonctionnement du XR2206 conformément au principe décrit dans l'article.
 
 Il est recommandé de contrôler cette isolation à l'ohmmètre avant de poursuivre le montage. Toute liaison accidentelle entre la broche 1 et le plan de masse devra être supprimée avant la première mise sous tension.
@@ -116,10 +111,6 @@ Monter ensuite les composants dans l'ordre suivant :
 16. shunt de liaison de **NC1** vers **C8**.
 
 L'illustration ci-dessous permet de localiser les différents composants et les quelques modifications apportées au module d'origine.
-
-{% assign image = page.asset_path | append: "/module-xr2206.png" %}
-
-![Implantation du module XR2206]({{ image }})
 
 Le montage ne présente pas de difficulté particulière. Comme pour tout kit électronique, il est recommandé de commencer par les composants les moins épais afin de faciliter les opérations de soudage.
 
@@ -181,10 +172,6 @@ Le montage est alors prêt à recevoir le modulateur.
 
 Le premier essai permet de vérifier le bon fonctionnement de l'excitateur avant l'installation du modulateur.
 
-{% assign image = page.asset_path | append: "/module-xr2206.png" %}
-
-![Module XR2206 terminé]({{ image }})
-
 À l'oscilloscope :
 
 - raccorder la sonde entre **Terre** et **Sinus** ;
@@ -212,10 +199,6 @@ La modulation d'amplitude est obtenue au moyen d'un modulateur construit autour 
 
 Le circuit imprimé est présenté ci-dessous.
 
-{% assign image = page.asset_path | append: "/ci_modulateur_agrandissement.png" %}
-
-![Circuit imprimé du modulateur BF245]({{ image }})
-
 Le modulateur est raccordé au module XR2206 après validation complète de celui-ci.
 
 L'ensemble des détails de fonctionnement est présenté dans la documentation complète accessible au début de cette page.
@@ -225,10 +208,6 @@ L'ensemble des détails de fonctionnement est présenté dans la documentation c
 # Modification du module XR2206
 
 La seule modification importante apportée au module concerne la **broche 1** du XR2206.
-
-{% assign image = page.asset_path | append: "/schema-module-xr2206.png" %}
-
-![Modification du module XR2206]({{ image }})
 
 La broche **1** du XR2206 ne doit **pas** être reliée à la masse.
 
