@@ -2,7 +2,7 @@
 layout: default
 title: Présentation
 permalink: /materiel/surplus/presentation/
-asset_path: /materiel/surplus/presentation
+asset_path: /materiel/surplus/presentation/
 ---
 
 # Présentation
