@@ -3,4 +3,15 @@
     - titre: Militaire
       enfants:
         - titre: THALES TRC 3600
-          url: /materiel/professionnel/militaire/thales-trc3600
+          url: /materiel/professionnel/militaire/thales-trc3600/
+
+- titre: Surplus
+  enfants:
+    - titre: Présentation
+      url: /materiel/surplus/presentation/
+
+    - titre: Magasins
+      url: /materiel/surplus/magasins/
+
+    - titre: Matériels
+      url: /materiel/surplus/materiels/
