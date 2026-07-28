@@ -71,7 +71,7 @@ Ses catalogues connaissent une large diffusion et constituent pour beaucoup de r
 
 ### RAM
 
-{% capture introduction %}
+{% capture RAM %}
 La société **RAM** apparaît régulièrement dans les publicités publiées par la presse radioamateur.
 
 Elle distribue des matériels militaires, des récepteurs, des appareils de mesure, des tubes électroniques et de nombreux accessoires professionnels provenant des surplus français ou étrangers.
