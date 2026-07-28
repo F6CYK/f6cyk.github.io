@@ -21,7 +21,7 @@ La présente page constitue le complément de l'article technique présenté ci-
 
 {% assign image = page.asset_path | append: "/module-xr2206.png" %}
 
-{% include intro.html
+{% include media.html
    content=introduction
    src=image
    alt="Module XR2206"
