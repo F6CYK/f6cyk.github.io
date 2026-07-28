@@ -270,3 +270,4 @@ Chaque magasin sera présenté dans son contexte historique, avec ses spécialit
 L'objectif n'est pas de dresser une liste exhaustive de tous les négociants en surplus ayant existé en France, mais de conserver la mémoire de ceux qui ont joué un rôle significatif dans la diffusion du matériel professionnel auprès des radioamateurs.
 
 À travers leur histoire, c'est également toute une manière d'aborder la technique qui se dessine : observer avant de modifier, comprendre avant de restaurer et mesurer avant de conclure. Une démarche qui demeure, aujourd'hui encore, au cœur de l'expérimentation radioamateur.
+
