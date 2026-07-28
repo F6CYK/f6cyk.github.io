@@ -7,6 +7,8 @@
 <a href="{{ image | relative_url }}" target="_blank">
   <img
     src="{{ image | relative_url }}"
-    width="{{ include.width | default: 350 }}"
+    {% if include.width %}
+      width="{{ include.width }}"
+    {% endif %}
     alt="{{ include.alt | default: include.file }}">
 </a>
