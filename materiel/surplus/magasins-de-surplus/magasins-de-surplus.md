@@ -81,7 +81,7 @@ Comme beaucoup d'autres négociants de cette époque, son activité dépend esse
 
 {% assign image = page.asset_path | append: "/19690417-hp-ram.png" %}
 
-{% include intro.html
+{% include media.html
    content=introduction
    src=image
    alt="Radio - Appareils de Mesures"
@@ -102,7 +102,7 @@ Ces quelques noms ne représentent cependant qu'une partie des négociants actif
 
 {% assign image = page.asset_path | append: "/19690417-hp-sar.png" %}
 
-{% include intro.html
+{% include media.html
    content=introduction
    src=image
    alt="Sud Avenir Radio"
