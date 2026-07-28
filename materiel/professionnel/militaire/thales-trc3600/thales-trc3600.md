@@ -19,7 +19,6 @@ Le **THALES TRC 3600** est une station radio tactique HF numérique développée
 
 {% include intro.html
    layout="texte-image"
-   content=introduction
    src=image
    alt="Station radio tactique THALES TRC 3600"
    caption="THALES TRC 3600 – station radio HF tactique numérique de la famille SYSTEM 3000."
