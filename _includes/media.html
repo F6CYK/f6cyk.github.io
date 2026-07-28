@@ -1,0 +1,35 @@
+{% assign layout = include.layout | default: "texte-image" %}
+
+<div class="media media--{{ layout }}">
+
+{% if layout == "image-texte" %}
+
+{% include figure.html
+   src=include.src
+   alt=include.alt
+   caption=include.caption
+   class="media-photo"
+   width="350"
+%}
+
+<div class="media-texte">
+{{ include.content | markdownify }}
+</div>
+
+{% else %}
+
+<div class="media-texte">
+{{ include.content | markdownify }}
+</div>
+
+{% include figure.html
+   src=include.src
+   alt=include.alt
+   caption=include.caption
+   class="media-photo"
+   width="350"
+%}
+
+{% endif %}
+
+</div>
