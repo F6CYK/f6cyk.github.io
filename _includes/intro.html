@@ -1,9 +1,24 @@
-{% assign prefix = include.prefix | default: "accueil" %}
-{% assign photo_class = prefix | append: "-photo" %}
+{% assign layout = include.layout | default: "texte-image" %}
 
-<div class="{{ prefix }}-introduction">
+<div class="media media--{{ layout }}">
 
-<div class="{{ prefix }}-texte">
+{% if layout == "image-texte" %}
+
+{% include figure.html
+   src=include.src
+   alt=include.alt
+   caption=include.caption
+   class="media-photo"
+   width="350"
+%}
+
+<div class="media-texte">
+{{ include.content | markdownify }}
+</div>
+
+{% else %}
+
+<div class="media-texte">
 {{ include.content | markdownify }}
 </div>
 
@@ -11,8 +26,10 @@
    src=include.src
    alt=include.alt
    caption=include.caption
-   class=photo_class
+   class="media-photo"
    width="350"
 %}
+
+{% endif %}
 
 </div>
