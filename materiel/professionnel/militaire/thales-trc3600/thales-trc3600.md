@@ -1,8 +1,8 @@
 ---
 layout: default
 title: THALES TRC 3600
-permalink: /materiel/transmissions-militaires/trc3600/
-asset_path: /materiel/transmissions-militaires/trc3600
+permalink: /materiel/professionnel/militaire/thales-trc3600
+asset_path: /materiel/professionnel/militaire/thales-trc3600
 ---
 
 # THALES TRC 3600
