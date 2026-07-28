@@ -3,7 +3,7 @@
     - titre: Militaire
       enfants:
         - titre: THALES TRC 3600
-          url: /materiel/professionnel/militaire/thales-trc3600/
+          url: /materiel/professionnel/militaire/thales-trc3600
 
 - titre: Surplus
   enfants:
