@@ -89,6 +89,7 @@ Comme beaucoup d'autres négociants de cette époque, son activité dépend esse
    caption="Publicité de la société R.A.M. 131 boulevard Diderot, Paris 12 (1969)"
 %}
 
+{% capture SAR %}
 ### Sud Avenir Radio
 
 Implantée dans le sud de la France, **Sud Avenir Radio** devient rapidement l'une des principales enseignes spécialisées dans le surplus.
@@ -98,6 +99,18 @@ Ses catalogues proposent aussi bien des matériels militaires que des composants
 Pour les radioamateurs éloignés de la région parisienne, elle constitue pendant de nombreuses années une source d'approvisionnement particulièrement importante.
 
 Ces quelques noms ne représentent cependant qu'une partie des négociants actifs durant cette période. De nombreuses entreprises régionales ont également participé à la diffusion de matériels de surplus, parfois pendant plusieurs décennies, sans laisser beaucoup d'archives.
+
+{% endcapture %}
+
+{% assign image = page.asset_path | append: "/19690417-hp-sar.png" %}
+
+{% include intro.html
+   prefix="SAR"
+   content=introduction
+   src=image
+   alt="Sud Avenir Radio"
+   caption="Publicité de la société Sud Avenir Radio, 22 bld de l'Indépendance, Marseille 12 (1969)"
+%}
 
 ## Les matériels proposés
 
