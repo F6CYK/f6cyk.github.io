@@ -1,4 +1,6 @@
-- titre: Transmissions militaires
+- titre: Professionnel
   enfants:
-    - titre: THALES TRC 3600
-      url: /materiel/professionnel/militaire/thales-trc3600
+    - titre: Militaire
+      enfants:
+        - titre: THALES TRC 3600
+          url: /materiel/professionnel/militaire/thales-trc3600
