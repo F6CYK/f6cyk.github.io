@@ -19,7 +19,6 @@ Cette rubrique rassemble des notes techniques, des retours d'expérience et quel
 {% endcapture %}
 
 {% include intro.html
-   prefix="trafic"
    content=introduction
    src=image
    alt="Station portable F6CYK"
