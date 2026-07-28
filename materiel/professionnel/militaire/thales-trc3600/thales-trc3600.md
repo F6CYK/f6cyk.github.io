@@ -13,8 +13,6 @@ asset_path: /materiel/professionnel/militaire/thales-trc3600
 
 Le **THALES TRC 3600** est une station radio tactique HF numérique développée par **Thales Communications** dans le cadre de la famille **SYSTEM 3000**, également connue sous le nom **HF 3000 Skyf@st**. Destinée aux forces terrestres, cette famille d'équipements a été conçue pour assurer des communications à longue distance dans des environnements opérationnels particulièrement contraints, où les moyens satellitaires ou les infrastructures de télécommunications ne sont pas disponibles.
 
-Le TRC 3600 constitue la version portable de 20 W d'une gamme complète de stations HF comprenant également les modèles **TRC 3610** (20 W véhiculaire), **TRC 3630** (125 W) et **TRC 3640** (400 W). Cette architecture modulaire sera ensuite prolongée par la série **TRC 3700**, qui reprend les mêmes principes de fonctionnement et de nombreux éléments matériels et logiciels.
-
 {% endcapture %}
 
 {% assign image = page.asset_path | append: "/trc3600.jpg" %}
@@ -26,6 +24,8 @@ Le TRC 3600 constitue la version portable de 20 W d'une gamme complète de stati
    alt="Station radio tactique THALES TRC 3600"
    caption="THALES TRC 3600 – station radio HF tactique numérique de la famille SYSTEM 3000."
 %}
+
+Le TRC 3600 constitue la version portable de 20 W d'une gamme complète de stations HF comprenant également les modèles **TRC 3610** (20 W véhiculaire), **TRC 3630** (125 W) et **TRC 3640** (400 W). Cette architecture modulaire sera ensuite prolongée par la série **TRC 3700**, qui reprend les mêmes principes de fonctionnement et de nombreux éléments matériels et logiciels.
 
 Contrairement à un émetteur-récepteur HF classique limité aux communications en téléphonie BLU, le TRC 3600 est conçu comme une véritable plateforme de communications numériques. Il intègre des fonctions de téléphonie numérique sécurisée, de transmission de données, de chiffrement, d'établissement automatique des liaisons (ALE), de saut de fréquence, ainsi que des mécanismes d'adaptation automatique aux conditions de propagation ionosphérique.
 
