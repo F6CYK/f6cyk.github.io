@@ -71,11 +71,23 @@ Ses catalogues connaissent une large diffusion et constituent pour beaucoup de r
 
 ### RAM
 
+{% capture introduction %}
 La société **RAM** apparaît régulièrement dans les publicités publiées par la presse radioamateur.
 
 Elle distribue des matériels militaires, des récepteurs, des appareils de mesure, des tubes électroniques et de nombreux accessoires professionnels provenant des surplus français ou étrangers.
 
 Comme beaucoup d'autres négociants de cette époque, son activité dépend essentiellement des opportunités d'approvisionnement.
+{% endcapture %}
+
+{% assign image = page.asset_path | append: "/19690417-hp-ram.png" %}
+
+{% include intro.html
+   prefix="RAM"
+   content=introduction
+   src=image
+   alt="Radio - Appareils de Mesures"
+   caption="Publicité de la société R.A.M. 131 boulevard Diderot, Paris 12 (1969)"
+%}
 
 ### Sud Avenir Radio
 
