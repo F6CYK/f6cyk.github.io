@@ -34,7 +34,7 @@ Cette rubrique a pour objectif de présenter le système TRC 3600 sous un angle 
 {% assign image = page.asset_path | append: "/trc3600.jpg" %}
 
 {% include intro.html
-   prefix="materiel"
+   layout="texte-image"
    content=introduction
    src=image
    alt="Station radio tactique THALES TRC 3600"
