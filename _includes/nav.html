@@ -13,36 +13,44 @@
                href="{{ '/ma_station.html' | relative_url }}">Station</a>
         </li>
 
-<!-- Matériel -->
-<li class="menu-deroulant">
-    <a href="#"
-       tabindex="0"
-       {% if page.url contains '/materiel/' %}class="actif"{% endif %}>
-        Matériel
-    </a>
+        <!-- Matériel -->
+        <li class="menu-deroulant">
+            <a href="#"
+               tabindex="0"
+               {% if page.url contains '/materiel/' %}class="actif"{% endif %}>
+                Matériel
+            </a>
 
-    <ul class="sous-menu">
-        {% include recursive-menu.html noeuds=site.data.materiel %}
-    </ul>
-</li>
+            <ul class="sous-menu">
+                {% include recursive-menu.html noeuds=site.data.materiel %}
+            </ul>
+        </li>
 
-<!-- Antennes -->
-<li class="menu-deroulant">
-    <a href="#"
-       tabindex="0"
-       {% if page.url contains '/antennes/' %}class="actif"{% endif %}>
-        Antennes
-    </a>
+        <!-- Antennes -->
+        <li class="menu-deroulant">
+            <a href="#"
+               tabindex="0"
+               {% if page.url contains '/antennes/' %}class="actif"{% endif %}>
+                Antennes
+            </a>
 
-    <ul class="sous-menu">
-        {% include recursive-menu.html noeuds=site.data.antennes %}
-    </ul>
-</li>
+            <ul class="sous-menu">
+                {% include recursive-menu.html noeuds=site.data.antennes %}
+            </ul>
+        </li>
 
-    <ul class="sous-menu">
-        {% include recursive-menu.html noeuds=site.data.realisations %}
-    </ul>
-</li>
+        <!-- Réalisations -->
+        <li class="menu-deroulant">
+            <a href="#"
+               tabindex="0"
+               {% if page.url contains '/realisations/' %}class="actif"{% endif %}>
+                Réalisations
+            </a>
+
+            <ul class="sous-menu">
+                {% include recursive-menu.html noeuds=site.data.realisations %}
+            </ul>
+        </li>
 
         <!-- Galerie -->
         <li>
@@ -50,33 +58,36 @@
                href="{{ '/en_travaux.html' | relative_url }}">Galerie</a>
         </li>
 
-<!-- Trafic -->
-<li class="menu-deroulant">
-    <a href="#"
-       tabindex="0"
-       {% if page.url contains '/trafic/' %}class="actif"{% endif %}>
-        Trafic
-    </a>
-
-    <ul class="sous-menu">
-        <li>
-            <a href="{{ '/trafic/presentation/' | relative_url }}">
-                Présentation
+        <!-- Trafic -->
+        <li class="menu-deroulant">
+            <a href="#"
+               tabindex="0"
+               {% if page.url contains '/trafic/' %}class="actif"{% endif %}>
+                Trafic
             </a>
+
+            <ul class="sous-menu">
+                <li>
+                    <a href="{{ '/trafic/presentation/' | relative_url }}">
+                        Présentation
+                    </a>
+                </li>
+            </ul>
         </li>
-    </ul>
-</li>
 
-<!-- Documentation -->
-<li class="menu-deroulant">
-    <a href="#" tabindex="0"{% if page.url contains '/documents/' %} class="actif"{% endif %}>
-        Documentation
-    </a>
+        <!-- Documentation -->
+        <li class="menu-deroulant">
+            <a href="#"
+               tabindex="0"
+               {% if page.url contains '/documents/' %}class="actif"{% endif %}>
+                Documentation
+            </a>
 
-<ul class="sous-menu">
-    {% include recursive-menu.html noeuds=site.data.documentation %}
-</ul>
-</li>    
+            <ul class="sous-menu">
+                {% include recursive-menu.html noeuds=site.data.documentation %}
+            </ul>
+        </li>
+
         <!-- Contact -->
         <li>
             <a{% if page.url == '/contact.html' %} class="actif"{% endif %}
