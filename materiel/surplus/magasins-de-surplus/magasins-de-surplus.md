@@ -104,6 +104,14 @@ Ces quelques noms ne représentent cependant qu'une partie des négociants actif
    caption="Publicité de la société Sud Avenir Radio, 22 bld de l'Indépendance, Marseille 12 (1969)"
 %}
 
+### Albert Herenstein, F9FA
+
+Albert Herenstein, F9FA, fut l'une des figures marquantes du commerce de surplus radioélectrique en France. Installé au 91 quai Pierre-Scize à Lyon (5ᵉ arrondissement), il développa à partir des années 1970 une activité spécialisée dans la vente de matériels militaires et industriels de surplus, destinée aux radioamateurs, électroniciens, laboratoires et établissements d'enseignement.
+
+Ses annonces, publiées régulièrement dans *Radio-Plans*, *Radio-REF* et *Mégahertz Magazine*, mettent en avant des arrivages de plusieurs centaines de tonnes de matériels : émetteurs, récepteurs, appareils de mesure, composants, relais, moteurs, galvanomètres, ventilateurs, coffrets métalliques, quartz, lampes électroniques et accessoires issus de fonds de stocks, parfois encore sous emballage d'origine américain.
+
+Herenstein insistait sur des prix pouvant atteindre le centième du coût d'origine, avec vente à l'unité ou par lots, expédition dans toute la France et publication d'un tarif descriptif sur demande. Au début des années 1980, son offre s'élargit encore avec des pièces Signal Corps, des racks 19 pouces, des selfs, transformateurs, commutateurs HF et de nombreux composants devenus difficiles à trouver, faisant de son établissement une adresse de référence pour les amateurs de matériel professionnel et de surplus.
+
 ## Les matériels proposés
 
 La diversité des équipements disponibles constitue sans doute l'une des principales richesses des magasins de surplus.
