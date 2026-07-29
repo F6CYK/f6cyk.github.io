@@ -63,11 +63,10 @@ Au-delà de son activité commerciale, Cirque Radio devient également un lieu d
 
 ### BERIC
 
-Dans les années 1970 et 1980, **BERIC** occupe une place particulière.
+ERIC (Bureau d'Études et de Recherches Industrielles et Commerciales) fut l'un des plus célèbres distributeurs français de composants électroniques et de matériel radio pour amateurs et professionnels. Installée au 43 rue Victor-Hugo à Malakoff, l'entreprise acquit une solide réputation à partir des années 1970 grâce à son imposant « Catalogue Vert », qui référençait plus d'un millier de composants, kits électroniques, appareils de mesure, matériel de radiocommunication et équipements de surplus militaire ou industriel. Sa devise, « Chez BERIC... tout est chic ! », est restée célèbre auprès de plusieurs générations d'électroniciens.
 
-L'entreprise associe la vente de surplus militaires à une importante activité de distribution de composants électroniques, d'appareils de mesure et d'accessoires destinés aux constructeurs amateurs.
-
-Ses catalogues connaissent une large diffusion et constituent pour beaucoup de radioamateurs une documentation technique presque aussi précieuse que les ouvrages spécialisés.
+BERIC commercialisait aussi bien des composants courants que des récepteurs et émetteurs professionnels, des appareils militaires américains (BC-603, BC-620, BC-1000, SCR-300, etc.), des modules VHF/UHF, des quartz et des instruments de mesure. 
+Très active dans la vente par correspondance, l'entreprise publia pendant plus de vingt ans des publicités dans Radio-Plans, Le Haut-Parleur, Radio-REF, Mégahertz Magazine et Électronique Pratique. Au début des années 1990, BERIC évolua progressivement vers Électronique Diffusion, poursuivant son activité sous cette nouvelle enseigne avant de disparaître au milieu des années 1990.
 
 ### RAM
 
