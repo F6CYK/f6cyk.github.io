@@ -1,14 +1,10 @@
-{% assign page_en_travaux = "/en_travaux.html" | relative_url %}
-
 {% for noeud in include.noeuds %}
 
 <li{% if noeud.enfants %} class="menu-deroulant"{% endif %}>
 
     {% if noeud.url %}
 
-        {% assign cible = site.pages | where: "url", noeud.url | first %}
-
-        <a href="{% if cible %}{{ noeud.url | relative_url }}{% else %}{{ page_en_travaux }}{% endif %}">
+        <a href="{{ noeud.url | relative_url }}">
             {{ noeud.titre }}
         </a>
 
