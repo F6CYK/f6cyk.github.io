@@ -23,49 +23,27 @@ document.addEventListener("DOMContentLoaded", () => {
 
             item.classList.remove("ouvre-gauche", "ouvre-droite");
 
-            // Largeur réelle du sous-menu
-   const largeurSousMenu = submenu.offsetWidth || 320;
+            const largeurSousMenu = submenu.offsetWidth || 320;
 
-   const placeDroite = window.innerWidth - rect.right;
-   const placeGauche = rect.left;
-
-   item.classList.remove("ouvre-gauche", "ouvre-droite");
-
-   if (placeDroite >= largeurSousMenu || placeDroite >= placeGauche) {
-       item.classList.add("ouvre-droite");
-   } else {
-       item.classList.add("ouvre-gauche");
-   }         
+            if (window.innerWidth - rect.right >= largeurSousMenu) {
+                item.classList.add("ouvre-droite");
+            } else {
+                item.classList.add("ouvre-gauche");
+            }
 
             item.classList.add("ouvert");
 
         });
 
-item.addEventListener("mouseenter", () => {
+        item.addEventListener("mouseleave", (event) => {
 
-    const parentMenu = item.parentElement.closest(".menu-deroulant");
+            if (event.relatedTarget && item.contains(event.relatedTarget))
+                return;
 
-    item.classList.remove("ouvre-gauche", "ouvre-droite");
+            closeBranch(item);
 
-    // Si le parent ouvre à gauche, tous les descendants ouvrent à gauche.
-    if (parentMenu && parentMenu.classList.contains("ouvre-gauche")) {
+        });
 
-        item.classList.add("ouvre-gauche");
-
-    } else {
-
-        const rect = item.getBoundingClientRect();
-        const largeurSousMenu = submenu.offsetWidth || 320;
-
-        if (window.innerWidth - rect.right >= largeurSousMenu) {
-            item.classList.add("ouvre-droite");
-        } else {
-            item.classList.add("ouvre-gauche");
-        }
-
-    }
-
-    item.classList.add("ouvert");
+    });
 
 });
-        
