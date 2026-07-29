@@ -456,12 +456,20 @@ Comprendre ces principes permet non seulement de choisir l'antenne la mieux adap
 
 ## Références et sources complémentaires
 
-Le présent article s'appuie sur les principes fondamentaux de la théorie des antennes ainsi que sur la documentation technique publiée par plusieurs auteurs et organismes de référence dans le domaine des antennes alimentées en extrémité. Les lecteurs souhaitant approfondir certains aspects, notamment le fonctionnement des transformateurs d'impédance, les courants de mode commun ou la réalisation pratique des chokes, pourront consulter les ressources suivantes :
+Le présent article s'appuie sur les principes généraux de la théorie des antennes ainsi que sur la documentation technique publiée par plusieurs auteurs spécialisés dans les antennes alimentées en extrémité.
 
-- **HamAnalyst** – *Antenne End-Fed et adaptation d'impédance : principes et fabrication DIY*  
-  https://hamanalyst.org/antenne-end-fed-et-adaptation-dimpedance-principes-et-fabrication-diy/
+### HamAnalyst
 
-- **Palomar Engineers** – Documentation technique sur les antennes End-Fed, les ferrites, les transformateurs UnUn et les dispositifs de suppression des courants de mode commun.  
-  https://palomar-engineers.com/
+**Antenne End-Fed et adaptation d'impédance**
 
-Ces deux sources présentent des approches complémentaires. La première propose une synthèse pédagogique illustrée, particulièrement accessible aux radioamateurs souhaitant comprendre les principes de fonctionnement des antennes End-Fed. La seconde rassemble une importante documentation technique fondée sur des mesures expérimentales et une longue expérience de terrain, notamment en ce qui concerne les ferrites, les chokes et la maîtrise des courants de mode commun.
+Principes et fabrication DIY
+
+https://hamanalyst.org/antenne-end-fed-et-adaptation-dimpedance-principes-et-fabrication-diy/
+
+### Palomar Engineers
+
+Documentation technique consacrée aux antennes End-Fed, aux transformateurs UnUn, aux ferrites et aux dispositifs de suppression des courants de mode commun.
+
+https://palomar-engineers.com/
+
+Ces deux ressources sont complémentaires. La première présente une synthèse pédagogique particulièrement accessible des principes de fonctionnement des antennes End-Fed. La seconde rassemble une importante documentation technique fondée sur des mesures expérimentales et une longue expérience de terrain concernant les transformateurs d'impédance, les ferrites et la maîtrise des courants de mode commun.
