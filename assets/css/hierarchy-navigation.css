@@ -42,7 +42,6 @@ nav.menu-general a:hover{
 
 .sous-menu{
     position:absolute;
-
     top:100%;
     left:0;
 
@@ -61,15 +60,11 @@ nav.menu-general a:hover{
     pointer-events:none;
 }
 
-/* Affichage */
-
 .menu-deroulant.ouvert > .sous-menu{
     opacity:1;
     visibility:visible;
     pointer-events:auto;
 }
-
-/* Contenu */
 
 .sous-menu li{
     display:block;
@@ -83,27 +78,32 @@ nav.menu-general a:hover{
    Sous-menus imbriqués
    =========================== */
 
-/* Ouverture vers la gauche */
 .sous-menu .menu-deroulant.ouvre-gauche > .sous-menu{
     top:10px;
     left:auto;
     right:calc(100% - 8px);
 }
 
-/* Ouverture vers la droite */
 .sous-menu .menu-deroulant.ouvre-droite > .sous-menu{
     top:10px;
     left:calc(100% - 8px);
     right:auto;
 }
 
-/* Flèche */
+/* Flèches */
 
 .sous-menu .menu-deroulant > a::before{
     display:inline-block;
     width:16px;
     margin-right:6px;
+}
+
+.sous-menu .menu-deroulant.ouvre-gauche > a::before{
     content:"◀";
+}
+
+.sous-menu .menu-deroulant.ouvre-droite > a::before{
+    content:"▶";
 }
 
 .sous-menu .menu-deroulant > a::after{
