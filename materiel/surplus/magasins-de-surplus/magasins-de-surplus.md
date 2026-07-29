@@ -89,11 +89,11 @@ L'entreprise commercialisait aussi bien des récepteurs et émetteurs profession
 {% capture introduction %}
 ### Sud Avenir Radio
 
-Implantée dans le sud de la France, **Sud Avenir Radio** devient rapidement l'une des principales enseignes spécialisées dans le surplus.
+À l'instar de RAM à Paris, Sud Avenir Radio (SAR) a marqué le paysage radioamateur français, mais dans le sud de la France. Implantée au 22 boulevard de l'Indépendance à Marseille, l'entreprise s'est spécialisée dès les années 1960 dans la vente de matériel de radiocommunication, d'appareils de mesure, de composants électroniques et surtout de surplus militaires et professionnels.
 
-Ses catalogues proposent aussi bien des matériels militaires que des composants électroniques, des quartz, des tubes, des transformateurs ou des appareils de mesure.
+Ses publicités, publiées dans Le Haut-Parleur, Radio-REF puis Mégahertz Magazine, témoignent d'une offre très variée comprenant récepteurs SADIR, matériels militaires américains (BC-620, BC-1000, SCR-300, ARC-3, etc.), instruments de mesure, quartz, composants et équipements VHF/UHF.
 
-Pour les radioamateurs éloignés de la région parisienne, elle constitue pendant de nombreuses années une source d'approvisionnement particulièrement importante.
+À partir des années 1980, Sud Avenir Radio devient également un distributeur des grandes marques de radiocommunication (Yaesu, Kenwood, AOR, Diamond, Ameritron, MFJ, Lowe, entre autres), tout en conservant une activité importante autour du matériel professionnel reconditionné et des surplus électroniques. L'entreprise a cessé son activité en 2006, mais reste une référence pour les collectionneurs et les radioamateurs ayant fréquenté cette adresse emblématique de Marseille.
 
 Ces quelques noms ne représentent cependant qu'une partie des négociants actifs durant cette période. De nombreuses entreprises régionales ont également participé à la diffusion de matériels de surplus, parfois pendant plusieurs décennies, sans laisser beaucoup d'archives.
 {% endcapture %}
