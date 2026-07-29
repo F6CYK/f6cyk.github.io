@@ -20,14 +20,21 @@ document.addEventListener("DOMContentLoaded", () => {
             item.classList.add("ouvert");
         });
 
-        item.addEventListener("mouseleave", (event) => {
+item.addEventListener("mouseenter", () => {
 
-            if (event.relatedTarget && item.contains(event.relatedTarget))
-                return;
+    const rect = item.getBoundingClientRect();
+    const largeurSousMenu = 320;
 
-            closeBranch(item);
+    item.classList.remove("ouvre-gauche", "ouvre-droite");
 
-        });
+    if (window.innerWidth - rect.right > largeurSousMenu) {
+        item.classList.add("ouvre-droite");
+    } else {
+        item.classList.add("ouvre-gauche");
+    }
+
+    item.classList.add("ouvert");
+});
 
     });
 
