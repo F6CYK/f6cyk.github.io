@@ -72,11 +72,9 @@ Ses catalogues connaissent une large diffusion et constituent pour beaucoup de r
 ### RAM
 
 {% capture introduction %}
-La société **RAM** apparaît régulièrement dans les publicités publiées par la presse radioamateur.
+R.A.M. (Radio Appareils de Mesures) est une enseigne française historique spécialisée dans la distribution de matériel radioélectrique, de composants électroniques et d'appareils de mesure. Installée depuis les années 1960 au 131 boulevard Diderot à Paris, à proximité de la place de la Nation, elle est rapidement devenue une adresse incontournable pour les radioamateurs, les professionnels de l'électronique et les laboratoires.
 
-Elle distribue des matériels militaires, des récepteurs, des appareils de mesure, des tubes électroniques et de nombreux accessoires professionnels provenant des surplus français ou étrangers.
-
-Comme beaucoup d'autres négociants de cette époque, son activité dépend essentiellement des opportunités d'approvisionnement.
+L'entreprise commercialisait aussi bien des récepteurs et émetteurs professionnels (notamment de marque SADIR), des appareils de mesure Métrix, des quartz, des tubes électroniques, que du matériel de surplus militaire soigneusement sélectionné. Ses publicités, régulièrement publiées dans les revues *Le Haut-Parleur*, *Radio-REF* et *Électronique Pratique*, ont largement contribué à sa notoriété. Aujourd'hui, l'enseigne R.A.M., exploitée par la société VERDIER, poursuit son activité à la même adresse en proposant un vaste catalogue de composants électroniques, d'instruments de mesure, d'outillage et d'accessoires destinés aux amateurs comme aux professionnels.
 {% endcapture %}
 
 {% assign image = page.asset_path | append: "/19690417-hp-ram.png" %}
