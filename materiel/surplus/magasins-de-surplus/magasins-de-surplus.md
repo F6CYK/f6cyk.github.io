@@ -45,13 +45,13 @@ Certaines deviennent rapidement des adresses incontournables pour les radioamate
 
 ### Marguerite
 
-La maison **Marguerite** figure parmi les enseignes les plus emblématiques du surplus militaire français.
+Radio Marguerite fut l'une des enseignes françaises les plus réputées dans le domaine du surplus radioélectrique et du matériel professionnel. D'abord implantée à Paris, elle transféra en 1974 son magasin principal à Saint-Thibault-des-Vignes (Seine-et-Marne), tout en conservant une importante activité de vente par correspondance.
 
-Pendant plusieurs décennies, elle commercialise un grand nombre de récepteurs, d'émetteurs, de groupes électrogènes, d'alimentations, de composants et de pièces détachées issus principalement des armées françaises et américaines.
+L'entreprise s'adressait aux radioamateurs, aux dépanneurs et aux collectionneurs en proposant un vaste choix de matériels de surplus militaires américains et français (BC-312, BC-342, BC-348, BC-620, BC-659, ARC-5, R-390, etc.), d'appareils de mesure, de tubes électroniques, de composants, d'antennes, de connecteurs et d'accessoires radio.
 
-Son catalogue fait découvrir à de nombreux radioamateurs des équipements devenus aujourd'hui des classiques de la restauration, tels que les BC-348, BC-312, ARC-5, GRC-9 ou différents matériels de transmissions français.
+Ses annonces, très présentes dans Le Haut-Parleur, Radio-REF et Radio-Plans, mettaient en avant des arrivages réguliers de fonds de stocks militaires et industriels, souvent introuvables ailleurs. Le déménagement de 1974 est lui-même annoncé dans Le Haut-Parleur, où Radio Marguerite précise la fermeture définitive de son magasin parisien et l'ouverture de ses nouveaux locaux à Saint-Thibault-des-Vignes.
 
-La qualité des renseignements techniques fournis avec certains matériels contribue largement à sa réputation.
+L'enseigne est restée active pendant plusieurs décennies et demeure aujourd'hui une référence dans les souvenirs des radioamateurs français, notamment pour la richesse de son stock de surplus et la qualité de son service de vente par correspondance.
 
 ### Cirque Radio
 
