@@ -23,7 +23,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
             item.classList.remove("ouvre-gauche", "ouvre-droite");
 
-            if (window.innerWidth - rect.right >= 320) {
+            // Largeur réelle du sous-menu
+            const largeurSousMenu = submenu.offsetWidth || 320;
+
+            if (window.innerWidth - rect.right >= largeurSousMenu) {
                 item.classList.add("ouvre-droite");
             } else {
                 item.classList.add("ouvre-gauche");
@@ -45,4 +48,3 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 });
-
