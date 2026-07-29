@@ -19,16 +19,25 @@ document.addEventListener("DOMContentLoaded", () => {
 
         item.addEventListener("mouseenter", () => {
 
-            const rect = item.getBoundingClientRect();
-
             item.classList.remove("ouvre-gauche", "ouvre-droite");
 
-            const largeurSousMenu = submenu.offsetWidth || 320;
+            // Si le menu appartient à Documentation,
+            // toute la branche ouvre vers la gauche.
+            if (item.closest(".menu-gauche")) {
 
-            if (window.innerWidth - rect.right >= largeurSousMenu) {
-                item.classList.add("ouvre-droite");
-            } else {
                 item.classList.add("ouvre-gauche");
+
+            } else {
+
+                const rect = item.getBoundingClientRect();
+                const largeurSousMenu = submenu.offsetWidth || 320;
+
+                if (window.innerWidth - rect.right >= largeurSousMenu) {
+                    item.classList.add("ouvre-droite");
+                } else {
+                    item.classList.add("ouvre-gauche");
+                }
+
             }
 
             item.classList.add("ouvert");
