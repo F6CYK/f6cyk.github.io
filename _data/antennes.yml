@@ -1,0 +1,35 @@
+- titre: Antennes
+  enfants:
+
+    - titre: Antennes alimentées en extrémité
+      enfants:
+
+        - titre: EFHW ou Random Wire ?
+          url: /antennes/efhw-vs-random-wire/
+
+        - titre: Transformateur UnUn 49:1
+          url: /antennes/transformateur-unun-49-1/
+
+        - titre: Transformateur UnUn 9:1
+          url: /antennes/transformateur-unun-9-1/
+
+        - titre: Chokes HF
+          url: /antennes/chokes-hf/
+
+        - titre: Contrepoids et radiales
+          url: /antennes/contrepoids-et-radiales/
+
+    - titre: Dipôles
+      enfants:
+
+    - titre: Boucles (Loops)
+      enfants:
+
+    - titre: Verticales
+      enfants:
+
+    - titre: Antennes filaires
+      enfants:
+
+    - titre: Antennes VHF et UHF
+      enfants:
