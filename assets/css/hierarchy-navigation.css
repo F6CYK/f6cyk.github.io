@@ -116,21 +116,56 @@ nav.menu-general a:hover{
 
 @media (max-width:768px){
 
+    /* Barre principale */
+
     nav.menu-general > ul{
-        display:flex;
-        flex-wrap:wrap;
-        justify-content:center;
-        align-items:center;
-        gap:.25rem .5rem;
-        padding:.4rem;
+        display:block;
+        width:100%;
+        padding:0;
     }
 
     nav.menu-general > ul > li{
-        flex:0 0 auto;
+        display:block;
+        width:100%;
     }
 
     nav.menu-general a{
-        padding:.45rem .75rem;
+        display:block;
+        padding:.70rem 1rem;
     }
 
+    /* Sous-menus */
+
+    .sous-menu{
+
+        position:static;
+
+        display:none;
+
+        width:100%;
+        max-width:none;
+
+        margin:0;
+        padding-left:1rem;
+
+        border:none;
+        box-shadow:none;
+
+        opacity:1;
+        visibility:visible;
+        pointer-events:auto;
+    }
+    .menu-deroulant.ouvert > .sous-menu{
+        display:block;
+    }
+    /* Désactive complètement le positionnement gauche/droite */
+
+    .sous-menu .menu-deroulant.ouvre-gauche > .sous-menu,
+    .sous-menu .menu-deroulant.ouvre-droite > .sous-menu{
+
+        position:static;
+        left:auto;
+        right:auto;
+        top:auto;
+    }
 }
