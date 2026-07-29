@@ -17,7 +17,7 @@ Chaque dossier privilégie une démarche fondée sur l'observation, la conceptio
 
 {% endcapture %}
 
-{% assign image = page.asset_path | append: "/station_f6cyk-1.png" %}
+{% assign image = page.asset_path | append: "/station_f6cyk-1.webp" %}
 
 {% include figure.html
    src=image
