@@ -1,14 +1,22 @@
 @charset "UTF-8";
 
+/* ==========================================================
+   Navigation mobile
+   ========================================================== */
+
 /* Caché sur ordinateur */
 
 .menu-mobile-toggle{
     display:none;
 }
 
-/* Version mobile */
+/* ==========================================================
+   Version mobile
+   ========================================================== */
 
 @media (max-width:768px){
+
+    /* Bouton hamburger */
 
     .menu-mobile-toggle{
 
@@ -22,14 +30,26 @@
 
         background:#003366;
 
-        color:white;
+        color:#fff;
 
         font-size:1.1rem;
 
         text-align:left;
 
         cursor:pointer;
+
+    }
+
+    /* Le menu est masqué par défaut */
+
+    nav.menu-general{
+        display:none;
+    }
+
+    /* Le menu apparaît lorsque le JavaScript ajoute cette classe */
+
+    nav.menu-general.menu-ouvert{
+        display:block;
     }
 
 }
-
