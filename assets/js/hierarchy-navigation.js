@@ -45,3 +45,39 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 });
+
+/* Ouverture vers la gauche */
+
+.sous-menu .menu-deroulant.ouvre-gauche > .sous-menu{
+    top:10px;
+    left:auto;
+    right:calc(100% - 8px);
+}
+
+/* Ouverture vers la droite */
+
+.sous-menu .menu-deroulant.ouvre-droite > .sous-menu{
+    top:10px;
+    left:calc(100% - 8px);
+    right:auto;
+}
+
+/* Flèches */
+
+.sous-menu .menu-deroulant.ouvre-gauche > a::before{
+    display:inline-block;
+    width:16px;
+    margin-right:6px;
+    content:"◀";
+}
+
+.sous-menu .menu-deroulant.ouvre-droite > a::before{
+    display:inline-block;
+    width:16px;
+    margin-right:6px;
+    content:"▶";
+}
+
+.sous-menu .menu-deroulant > a::after{
+    content:none;
+}
