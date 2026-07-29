@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
 
+    const nav = document.querySelector(".menu-general");
     const items = document.querySelectorAll(".menu-deroulant");
 
     function closeBranch(item) {
@@ -10,29 +11,34 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
+    function closeAll() {
+        items.forEach(closeBranch);
+    }
+
     items.forEach(item => {
 
-        if (!item.querySelector(":scope > .sous-menu"))
-            return;
+        const submenu = item.querySelector(":scope > .sous-menu");
+        if (!submenu) return;
 
         item.addEventListener("mouseenter", () => {
 
-            // Ferme toutes les autres branches
-            document.querySelectorAll(".menu-deroulant.ouvert").forEach(menu => {
+            // Ferme les menus qui ne sont pas dans la branche courante
+            items.forEach(menu => {
 
                 if (menu === item) return;
-                if (menu.contains(item)) return;      // ancêtre
-                if (item.contains(menu)) return;      // descendant
+                if (menu.contains(item)) return;
+                if (item.contains(menu)) return;
 
                 closeBranch(menu);
             });
 
-            const rect = item.getBoundingClientRect();
-            const largeurSousMenu = 320;
-
+            // Choix du sens d'ouverture
             item.classList.remove("ouvre-gauche", "ouvre-droite");
 
-            if (window.innerWidth - rect.right > largeurSousMenu) {
+            const rect = item.getBoundingClientRect();
+            const largeur = submenu.offsetWidth || 320;
+
+            if (window.innerWidth - rect.right > largeur) {
                 item.classList.add("ouvre-droite");
             } else {
                 item.classList.add("ouvre-gauche");
@@ -43,13 +49,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     });
 
-    // Fermeture lorsque la souris quitte complètement la barre de menus
-    const nav = document.querySelector(".menu-principal");
-
     if (nav) {
-        nav.addEventListener("mouseleave", () => {
-            document.querySelectorAll(".menu-deroulant.ouvert").forEach(closeBranch);
-        });
+        nav.addEventListener("mouseleave", closeAll);
     }
 
 });
