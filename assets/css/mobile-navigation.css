@@ -51,5 +51,26 @@
     nav.menu-general.menu-ouvert{
         display:block;
     }
+}
+
+@media (max-width:768px){
+
+    .mobile-submenu-toggle{
+
+        float:right;
+
+        border:none;
+
+        background:none;
+
+        color:#003366;
+
+        font-size:1rem;
+
+        cursor:pointer;
+
+        padding:.5rem;
+
+    }
 
 }
