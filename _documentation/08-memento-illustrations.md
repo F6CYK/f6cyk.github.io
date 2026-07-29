@@ -177,16 +177,18 @@ Exemple :
 
 # Vérifications avant publication
 
-  Vérification                            État
-  --------------------------------------- ------
-  Dimensions adaptées                     □
-  Format approprié                        □
-  Poids raisonnable                       □
-  Texte alternatif présent                □
-  Attributs `width` et `height`           □
-  `loading="lazy"` correctement utilisé   □
-  Affichage sur mobile                    □
-  Score Lighthouse satisfaisant           □
+| Point à contrôler | ✓ |
+|-------------------|:-:|
+| Format adapté à la nature de l'image | □ |
+| Dimensions adaptées à l'affichage | □ |
+| Poids du fichier raisonnable | □ |
+| Texte alternatif (`alt`) renseigné | □ |
+| Attributs `width` et `height` présents | □ |
+| `loading="lazy"` correctement utilisé | □ |
+| Métadonnées supprimées si inutiles | □ |
+| Affichage correct sur ordinateur | □ |
+| Affichage correct sur mobile | □ |
+| Contrôle Lighthouse effectué | □ |
 
 ------------------------------------------------------------------------
 
@@ -225,47 +227,38 @@ Exemple :
                        animé**                                    
   ----------------------------------------------------------------------------------
 
-------------------------------------------------------------------------
+---
 
-# Aide-mémoire
+# Tableau récapitulatif
 
-  -----------------------------------------------------------------------
-  Question                                Réponse
-  --------------------------------------- -------------------------------
-  L'image est une photographie ?          **WebP**
+| Nature de l'illustration | Format | Largeur recommandée | Compression | Remarques |
+|---------------------------|--------|--------------------:|-------------|-----------|
+| Photographie | **WebP** | 1200 à 1600 px | Qualité 80 à 85 % | Cas général |
+| Photo de couverture | **WebP** | 1600 à 1920 px | Qualité 80 à 85 % | Image principale |
+| Illustration d'article | **WebP** | 1000 à 1200 px | Qualité 80 à 85 % | Optimisée pour le Web |
+| Miniature | **WebP** | 300 à 600 px | Qualité 75 à 80 % | Chargement rapide |
+| Capture d'écran | **PNG** | Taille réelle | Sans perte | Texte parfaitement net |
+| Schéma électronique | **PNG** | Taille réelle | Sans perte | Aucune perte de détails |
+| Dessin technique | **PNG** | Taille réelle | Sans perte | Traits parfaitement nets |
+| Logo | **SVG** | Vectoriel | — | Format à privilégier |
+| Icône | **SVG** | Vectoriel | — | Très léger |
+| Animation | **WebP animé** | Selon besoin | — | Préférable au GIF |
 
-  L'image contient principalement du      **PNG**
-  texte ?                                 
+---
 
-  L'image est un schéma ?                 **PNG**
+# Règles essentielles
 
-  L'image est un logo ?                   **SVG**
+| Règle | Valeur |
+|--------|--------|
+| Publier l'image originale | **Jamais** |
+| Conserver l'original | **Toujours** |
+| Renseigner `alt` | **Obligatoire** |
+| Renseigner `width` et `height` | **Obligatoire** |
+| Utiliser `loading="lazy"` | Oui, sauf image principale |
+| Utiliser `decoding="async"` | Oui |
+| Supprimer les métadonnées EXIF si inutiles | Oui |
+| Vérifier le résultat avec Lighthouse | Oui |
 
-  L'image est une icône ?                 **SVG**
-
-  Dois-je publier l'image originale ?     **Non**
-
-  Dois-je conserver l'original ?          **Oui, dans les archives**
-
-  Dois-je renseigner `width` et `height`  **Toujours**
-  ?                                       
-
-  Dois-je utiliser `loading="lazy"` ?     **Oui, sauf pour l'image
-                                          principale**
-  -----------------------------------------------------------------------
-
-------------------------------------------------------------------------
-
-# Résumé
-
-  Si l'image est...        Utiliser...
-  ------------------------ -------------
-  Une photographie         **WebP**
-  Une capture d'écran      **PNG**
-  Un schéma électronique   **PNG**
-  Un dessin technique      **PNG**
-  Un logo                  **SVG**
-  Une icône                **SVG**
 
 Le respect de cette procédure permet de réduire significativement le
 poids des pages, d'améliorer les performances du site et d'obtenir de
