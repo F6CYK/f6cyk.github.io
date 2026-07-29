@@ -451,3 +451,17 @@ La **Random Wire** est, au contraire, une antenne volontairement non résonante.
 Dans les deux cas, la qualité du transformateur, la présence d'un choke efficace, le soin apporté au contrepoids et les conditions d'installation influencent directement les performances obtenues.
 
 Comprendre ces principes permet non seulement de choisir l'antenne la mieux adaptée à ses besoins, mais également d'éviter certaines confusions encore largement répandues dans la littérature radioamateur.
+
+---
+
+## Références et sources complémentaires
+
+Le présent article s'appuie sur les principes fondamentaux de la théorie des antennes ainsi que sur la documentation technique publiée par plusieurs auteurs et organismes de référence dans le domaine des antennes alimentées en extrémité. Les lecteurs souhaitant approfondir certains aspects, notamment le fonctionnement des transformateurs d'impédance, les courants de mode commun ou la réalisation pratique des chokes, pourront consulter les ressources suivantes :
+
+- **HamAnalyst** – *Antenne End-Fed et adaptation d'impédance : principes et fabrication DIY*  
+  https://hamanalyst.org/antenne-end-fed-et-adaptation-dimpedance-principes-et-fabrication-diy/
+
+- **Palomar Engineers** – Documentation technique sur les antennes End-Fed, les ferrites, les transformateurs UnUn et les dispositifs de suppression des courants de mode commun.  
+  https://palomar-engineers.com/
+
+Ces deux sources présentent des approches complémentaires. La première propose une synthèse pédagogique illustrée, particulièrement accessible aux radioamateurs souhaitant comprendre les principes de fonctionnement des antennes End-Fed. La seconde rassemble une importante documentation technique fondée sur des mesures expérimentales et une longue expérience de terrain, notamment en ce qui concerne les ferrites, les chokes et la maîtrise des courants de mode commun.
