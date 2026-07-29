@@ -90,11 +90,11 @@ Sa longueur dépend naturellement de la bande considérée.
 À titre indicatif :
 
 | Bande | Longueur approximative |
-|--------|-----------------------:|
-| 80 m | 40 m |
-| 40 m | 20 m |
-| 20 m | 10 m |
-| 10 m | 5 m |
+| ----- | ---------------------: |
+| 80 m  |                   40 m |
+| 40 m  |                   20 m |
+| 20 m  |                   10 m |
+| 10 m  |                    5 m |
 
 Ces valeurs constituent un point de départ. La longueur définitive dépend toujours de la hauteur d'installation, du diamètre du conducteur, de son environnement immédiat et du facteur de vélocité du fil utilisé.
 
@@ -220,7 +220,7 @@ Le mot **Balun** est la contraction de *Balanced to Unbalanced* (*symétrique ve
 
 Il est destiné à raccorder une antenne symétrique, comme un dipôle ou une boucle fermée (*loop*), à une ligne coaxiale qui, elle, est asymétrique.
 
-Selon sa conception, un balun peut également limiter les courants de mode commun qui circulent sur la surface extérieure du blindage du câble coaxial.
+Selon sa conception, un balun peut également limiter les courants de gaîne qui circulent sur la surface extérieure du blindage du câble coaxial.
 
 Le **UnUn** (*Unbalanced to Unbalanced*) relie au contraire deux circuits asymétriques.
 
@@ -232,7 +232,7 @@ Enfin, le **choke**, également appelé *balun de courant* ou *common mode choke
 
 Il ne transforme pas l'impédance.
 
-Son rôle consiste uniquement à empêcher les courants de mode commun de circuler sur le blindage extérieur du câble coaxial.
+Son rôle consiste uniquement à empêcher les courants de gaîne de circuler sur le blindage extérieur du câble coaxial.
 
 Cette distinction est importante.
 
@@ -244,7 +244,7 @@ Ces deux dispositifs sont complémentaires et non concurrents.
 
 ---
 
-## Les courants de mode commun
+## Les courants de gaîne
 
 Toute antenne doit former un circuit fermé.
 
@@ -260,7 +260,7 @@ Lorsqu'aucun contrepoids n'est prévu ou lorsque celui-ci est insuffisant, une p
 
 Le câble devient alors un élément rayonnant de l'antenne.
 
-Ce phénomène est connu sous le nom de **courant de mode commun**.
+Ce phénomène est connu sous le nom de **courants de gaîne**.
 
 Ses conséquences peuvent être nombreuses.
 
@@ -329,7 +329,7 @@ En réalité, celui-ci existe toujours, mais il est parfois constitué d'éléme
 
 Dans une Random Wire, les courants mis en jeu sont généralement plus importants.
 
-L'installation d'un véritable contrepoids améliore alors sensiblement le rendement, facilite l'accord et réduit les courants de mode commun.
+L'installation d'un véritable contrepoids améliore alors sensiblement le rendement, facilite l'accord et réduit les courants de gaîne.
 
 Plusieurs solutions peuvent être utilisées :
 
@@ -370,17 +370,17 @@ Le choix entre ces deux solutions dépend donc davantage du contexte d'utilisati
 
 ## Comparaison des principales caractéristiques
 
-| Caractéristique | EFHW | Random Wire |
-|-----------------|------|-------------|
-| Principe | Antenne résonante | Antenne non résonante |
-| Longueur | Demi-onde | Longueur optimisée, non harmonique |
-| Transformateur | UnUn 49:1 (ou 64:1) | UnUn 9:1 |
-| Coupleur | Généralement facultatif | Presque toujours indispensable |
-| Impédance | Relativement stable | Très variable |
-| Bandes couvertes | Bande fondamentale et harmoniques | Ensemble des bandes HF avec ATU |
-| Rendement | Très élevé sur les bandes prévues | Variable selon l'accord |
-| Contrepoids | Recommandé | Fortement recommandé |
-| Courants de mode commun | Limités avec un choke | Plus sensibles en l'absence de contrepoids |
+| Caractéristique   | EFHW                              | Random Wire                                |
+| ----------------- | --------------------------------- | ------------------------------------------ |
+| Principe          | Antenne résonante                 | Antenne non résonante                      |
+| Longueur          | Demi-onde                         | Longueur optimisée, non harmonique         |
+| Transformateur    | UnUn 49:1 (ou 64:1)               | UnUn 9:1                                   |
+| Coupleur          | Généralement facultatif           | Presque toujours indispensable             |
+| Impédance         | Relativement stable               | Très variable                              |
+| Bandes couvertes  | Bande fondamentale et harmoniques | Ensemble des bandes HF avec ATU            |
+| Rendement         | Très élevé sur les bandes prévues | Variable selon l'accord                    |
+| Contrepoids       | Recommandé                        | Fortement recommandé                       |
+| courants de gaîne | Limités avec un choke             | Plus sensibles en l'absence de contrepoids |
 
 Ce tableau illustre une différence fondamentale entre les deux familles d'antennes.
 
@@ -468,8 +468,8 @@ https://hamanalyst.org/antenne-end-fed-et-adaptation-dimpedance-principes-et-fab
 
 ### Palomar Engineers
 
-Documentation technique consacrée aux antennes End-Fed, aux transformateurs UnUn, aux ferrites et aux dispositifs de suppression des courants de mode commun.
+Documentation technique consacrée aux antennes End-Fed, aux transformateurs UnUn, aux ferrites et aux dispositifs de suppression des courants de gaîne.
 
 https://palomar-engineers.com/
 
-Ces deux ressources sont complémentaires. La première présente une synthèse pédagogique particulièrement accessible des principes de fonctionnement des antennes End-Fed. La seconde rassemble une importante documentation technique fondée sur des mesures expérimentales et une longue expérience de terrain concernant les transformateurs d'impédance, les ferrites et la maîtrise des courants de mode commun.
+Ces deux ressources sont complémentaires. La première présente une synthèse pédagogique particulièrement accessible des principes de fonctionnement des antennes End-Fed. La seconde rassemble une importante documentation technique fondée sur des mesures expérimentales et une longue expérience de terrain concernant les transformateurs d'impédance, les ferrites et la maîtrise des courants de gaîne.
