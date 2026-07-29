@@ -24,13 +24,18 @@ document.addEventListener("DOMContentLoaded", () => {
             item.classList.remove("ouvre-gauche", "ouvre-droite");
 
             // Largeur réelle du sous-menu
-            const largeurSousMenu = submenu.offsetWidth || 320;
+   const largeurSousMenu = submenu.offsetWidth || 320;
 
-            if (window.innerWidth - rect.right >= largeurSousMenu) {
-                item.classList.add("ouvre-droite");
-            } else {
-                item.classList.add("ouvre-gauche");
-            }
+   const placeDroite = window.innerWidth - rect.right;
+   const placeGauche = rect.left;
+
+   item.classList.remove("ouvre-gauche", "ouvre-droite");
+
+   if (placeDroite >= largeurSousMenu || placeDroite >= placeGauche) {
+       item.classList.add("ouvre-droite");
+   } else {
+       item.classList.add("ouvre-gauche");
+   }         
 
             item.classList.add("ouvert");
 
