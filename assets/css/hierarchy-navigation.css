@@ -101,3 +101,28 @@ nav.menu-general a:hover{
 .sous-menu .menu-deroulant > a::after{
     content:none;
 }
+
+/* ==========================================================
+   Navigation mobile
+   ========================================================== */
+
+@media (max-width:768px){
+
+    nav.menu-general > ul{
+        display:flex;
+        flex-wrap:wrap;
+        justify-content:center;
+        align-items:center;
+        gap:.25rem .5rem;
+        padding:.4rem;
+    }
+
+    nav.menu-general > ul > li{
+        flex:0 0 auto;
+    }
+
+    nav.menu-general a{
+        padding:.45rem .75rem;
+    }
+
+}
