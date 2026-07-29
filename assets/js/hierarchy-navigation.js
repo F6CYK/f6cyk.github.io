@@ -19,18 +19,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
         item.addEventListener("mouseenter", () => {
 
+            const rect = item.getBoundingClientRect();
+
             item.classList.remove("ouvre-gauche", "ouvre-droite");
 
-            const rect = item.getBoundingClientRect();
-            const largeur = submenu.offsetWidth || 320;
-
-            if (window.innerWidth - rect.right >= largeur) {
+            if (window.innerWidth - rect.right >= 320) {
                 item.classList.add("ouvre-droite");
             } else {
                 item.classList.add("ouvre-gauche");
             }
 
             item.classList.add("ouvert");
+
         });
 
         item.addEventListener("mouseleave", (event) => {
