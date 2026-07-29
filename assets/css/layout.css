@@ -178,7 +178,6 @@ footer a:hover{
 /* ==========================================================
    Responsive
    ========================================================== */
-
 @media (max-width:768px){
 
     .bandeau h1{
@@ -188,11 +187,6 @@ footer a:hover{
     main{
         margin:1rem;
         padding:1.25rem;
-    }
-
-    nav ul{
-        flex-direction:column;
-        gap:.15rem;
     }
 
 }
