@@ -26,16 +26,18 @@
     </ul>
 </li>
 
-<a{% if page.url contains '/antennes/' %} class="actif"{% endif %}
-   href="{{ '/antennes/' | relative_url }}">Antennes</a>
-
-        <!-- Réalisations -->
-        <li class="menu-deroulant">
-            <a href="#"
-            tabindex="0"
-       {% if page.url contains '/realisations/' %}class="actif"{% endif %}>
-        Réalisations
+<!-- Antennes -->
+<li class="menu-deroulant">
+    <a href="#"
+       tabindex="0"
+       {% if page.url contains '/antennes/' %}class="actif"{% endif %}>
+        Antennes
     </a>
+
+    <ul class="sous-menu">
+        {% include recursive-menu.html noeuds=site.data.antennes %}
+    </ul>
+</li>
 
     <ul class="sous-menu">
         {% include recursive-menu.html noeuds=site.data.realisations %}
