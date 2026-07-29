@@ -2,22 +2,14 @@
 
 <li{% if noeud.enfants %} class="menu-deroulant"{% endif %}>
 
-<a href="{{ item.url | relative_url }}">{{ item.title }}</a>
-
-{% if item.children %}
-<button class="mobile-submenu-toggle"
-        type="button"
-        aria-label="Développer le sous-menu">
-    ▶
-</button>
-{% endif %}
-
+    {% if noeud.url %}
+        <a href="{{ noeud.url | relative_url }}">
+            {{ noeud.titre }}
+        </a>
     {% else %}
-
         <a href="#" tabindex="0">
             {{ noeud.titre }}
         </a>
-
     {% endif %}
 
     {% if noeud.enfants %}
