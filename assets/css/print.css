@@ -4,45 +4,233 @@
    Impression
    ========================================================== */
 
-@media print {
+@page{
+    size:A4;
+    margin:18mm;
+}
 
-    body{
-        background:#fff;
-        color:#000;
+@media print{
+
+    /* ------------------------------------------------------
+       Réglages généraux
+       ------------------------------------------------------ */
+
+    *{
+        -webkit-print-color-adjust:exact;
+        print-color-adjust:exact;
+        box-shadow:none !important;
+        text-shadow:none !important;
     }
+
+    html,
+    body{
+        background:#fff !important;
+        color:#000 !important;
+        font-family:serif;
+        font-size:11pt;
+        line-height:1.45;
+        margin:0;
+        padding:0;
+    }
+
+    /* ------------------------------------------------------
+       Éléments inutiles à l'impression
+       ------------------------------------------------------ */
 
     header,
     nav,
-    footer{
-        display:none;
+    footer,
+    aside,
+    .sidebar,
+    .navigation,
+    .breadcrumb,
+    .breadcrumbs,
+    .pagination,
+    .toc,
+    .table-of-contents,
+    .back-to-top,
+    .search,
+    .menu,
+    .site-nav,
+    .site-footer,
+    .site-header,
+    .btn,
+    .buttons{
+        display:none !important;
     }
 
-    main{
-        max-width:100%;
+    /* ------------------------------------------------------
+       Contenu principal
+       ------------------------------------------------------ */
+
+    main,
+    article{
+        width:100%;
+        max-width:none;
         margin:0;
         padding:0;
-        box-shadow:none;
         border:none;
+        background:none;
     }
 
-    a{
+    article section{
+        margin-bottom:1.2em;
+        break-inside:avoid;
+    }
+
+    /* ------------------------------------------------------
+       Titres
+       ------------------------------------------------------ */
+
+    h1{
+        page-break-before:auto;
+        page-break-after:avoid;
+    }
+
+    h2{
+        page-break-before:always;
+        page-break-after:avoid;
+    }
+
+    h2:first-of-type{
+        page-break-before:auto;
+    }
+
+    h3,
+    h4,
+    h5,
+    h6{
+        page-break-after:avoid;
+    }
+
+    p,
+    ul,
+    ol,
+    dl{
+        orphans:3;
+        widows:3;
+    }
+
+    /* ------------------------------------------------------
+       Liens
+       ------------------------------------------------------ */
+
+    a,
+    a:visited{
         color:#000;
         text-decoration:none;
     }
 
+    a[href^="http"]::after{
+        content:" (" attr(href) ")";
+        font-size:85%;
+        word-break:break-all;
+    }
+
+    /* ------------------------------------------------------
+       Images
+       ------------------------------------------------------ */
+
     img{
         max-width:100%;
         height:auto;
+        display:block;
+        margin:0.8em auto;
+        break-inside:avoid;
         page-break-inside:avoid;
     }
 
-    h2,
-    h3{
-        page-break-after:avoid;
+    figure{
+        break-inside:avoid;
+        page-break-inside:avoid;
+        margin:1em 0;
     }
+
+    figcaption{
+        font-size:90%;
+        text-align:center;
+        margin-top:0.4em;
+    }
+
+    /* ------------------------------------------------------
+       Tableaux
+       ------------------------------------------------------ */
 
     table{
+        width:100%;
+        border-collapse:collapse;
+        margin:1em 0;
+        break-inside:avoid;
         page-break-inside:avoid;
     }
 
+    thead{
+        display:table-header-group;
+    }
+
+    tr{
+        page-break-inside:avoid;
+    }
+
+    th,
+    td{
+        border:1px solid #000;
+        padding:4px 6px;
+        vertical-align:top;
+    }
+
+    /* ------------------------------------------------------
+       Blocs de code
+       ------------------------------------------------------ */
+
+    pre{
+        white-space:pre-wrap;
+        overflow:visible;
+        border:1px solid #999;
+        padding:0.6em;
+        break-inside:avoid;
+        page-break-inside:avoid;
+        background:#f8f8f8;
+    }
+
+    code{
+        font-family:Consolas, Monaco, monospace;
+        font-size:90%;
+    }
+
+    /* ------------------------------------------------------
+       Citations
+       ------------------------------------------------------ */
+
+    blockquote{
+        border-left:3px solid #666;
+        margin:1em 0;
+        padding-left:1em;
+        font-style:italic;
+        break-inside:avoid;
+        page-break-inside:avoid;
+    }
+
+    /* ------------------------------------------------------
+       Listes
+       ------------------------------------------------------ */
+
+    ul,
+    ol{
+        break-inside:avoid;
+    }
+
+    li{
+        margin-bottom:0.2em;
+    }
+
+    /* ------------------------------------------------------
+       Éléments horizontaux
+       ------------------------------------------------------ */
+
+    hr{
+        border:none;
+        border-top:1px solid #666;
+        margin:1.5em 0;
+    }
 }
