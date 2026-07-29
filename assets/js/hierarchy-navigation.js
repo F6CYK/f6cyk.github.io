@@ -41,15 +41,31 @@ document.addEventListener("DOMContentLoaded", () => {
 
         });
 
-        item.addEventListener("mouseleave", (event) => {
+item.addEventListener("mouseenter", () => {
 
-            if (event.relatedTarget && item.contains(event.relatedTarget))
-                return;
+    const parentMenu = item.parentElement.closest(".menu-deroulant");
 
-            closeBranch(item);
+    item.classList.remove("ouvre-gauche", "ouvre-droite");
 
-        });
+    // Si le parent ouvre à gauche, tous les descendants ouvrent à gauche.
+    if (parentMenu && parentMenu.classList.contains("ouvre-gauche")) {
 
-    });
+        item.classList.add("ouvre-gauche");
+
+    } else {
+
+        const rect = item.getBoundingClientRect();
+        const largeurSousMenu = submenu.offsetWidth || 320;
+
+        if (window.innerWidth - rect.right >= largeurSousMenu) {
+            item.classList.add("ouvre-droite");
+        } else {
+            item.classList.add("ouvre-gauche");
+        }
+
+    }
+
+    item.classList.add("ouvert");
 
 });
+        
