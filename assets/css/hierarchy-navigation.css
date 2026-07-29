@@ -83,10 +83,18 @@ nav.menu-general a:hover{
    Sous-menus imbriqués
    =========================== */
 
-.sous-menu .menu-deroulant > .sous-menu{
+/* Ouverture vers la gauche */
+.sous-menu .menu-deroulant.ouvre-gauche > .sous-menu{
     top:10px;
     left:auto;
     right:calc(100% - 8px);
+}
+
+/* Ouverture vers la droite */
+.sous-menu .menu-deroulant.ouvre-droite > .sous-menu{
+    top:10px;
+    left:calc(100% - 8px);
+    right:auto;
 }
 
 /* Flèche */
