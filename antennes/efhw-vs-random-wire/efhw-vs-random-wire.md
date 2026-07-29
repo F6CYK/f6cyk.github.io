@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Antennes End-Fed : EFHW ou Random Wire ?
+title: "Antennes End-Fed : EFHW ou Random Wire ?"
 permalink: /antennes/efhw-vs-random-wire/
 asset_path: /antennes/efhw-vs-random-wire
 ---
