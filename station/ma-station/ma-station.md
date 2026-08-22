@@ -11,6 +11,7 @@ Ma station reste volontairement simple. J'apprécie autant le matériel ancien q
 
 {% endcapture %}
 
+{{ introduction }}
 
 <div class="station-grid">
 
