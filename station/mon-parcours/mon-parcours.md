@@ -5,6 +5,11 @@ permalink: /station/mon-parcours
 asset_path: /station/mon-parcours
 ---
 
+{% capture introduction %}
+
+
+{% endcapture %}
+
 # Mon parcours d'OM
 
 J'avais douze ans lorsque je découvris la radio grâce à un simple poste à galène construit par un copain. Je fabriquai aussitôt le mien et ce fut une véritable révélation. Le simple fait de capter des émissions sans alimentation électrique me paraissait presque magique. J'ignorais alors que cette découverte allait m'accompagner toute ma vie.
