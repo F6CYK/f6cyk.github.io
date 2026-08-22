@@ -18,9 +18,9 @@ Peu à peu, je me passionnai pour la technique grâce à un ouvrage que je dévo
 
 Un autre copain, le futur F6BQR, qui habitait à côté de chez moi, avait construit un récepteur 144 MHz à super-réaction. Le soir, après l'école, nous écoutions les OM du Havre discuter entre eux. C'est alors que nous eûmes l'idée de rendre visite aux radioamateurs « oubliés », ceux que nous n'entendions plus ni en HF ni en VHF.
 
-[SWL REF 24300](/hampages/f6cyk/F1BUM_Station_1.jpg)
+![SWL REF 24300](/assets/images/station/REF-24300-1971.webp)
 
-*SWL REF 24300 (Le Havre, 1970)*
+*SWL REF 24300 (Le Havre, 1971)*
 
 C'est ainsi que je fis la connaissance de Jean, F9HA, qui habitait à côté du lycée que je fréquentais alors. À cette époque, au début des années 1970, il vivait dans un tout petit appartement très sombre de la rue Anatole-France, au Havre.
 
@@ -48,7 +48,7 @@ C'est F9HA qui m'a initié à la CW. Ce fut un peu mon troisième grand-père…
 
 Par ailleurs, j'étais à l'époque un fan du QRP sur décamétrique : j'avais un HW-7 Heathkit et un doublet dans le jardin de mes parents, place Jenner, au Havre. Nous n'étions que quelques « happy few » et nous passions pour des originaux auprès des vieux OM d'alors…
 
-[Station F6CYK à Étretat](/hampages/f6cyk/F6CYK_Etretat.jpg)
+![Station F6CYK à Étretat (2014–2023)](/assets/images/station/F6CYK-2014-2023.webp)
 
 *Station F6CYK à Étretat (2014–2023)*
 
@@ -66,9 +66,13 @@ J'avais également retrouvé, quelques années auparavant, un compagnon de route
 
 Tout cela me conduisit à me rééquiper, d'abord d'un Baofeng UV-3R, puis d'un FT-817, appareil mythique dont je rêvais depuis mes jeunes années d'OM.
 
-[F6CYK/P](/hampages/f6cyk/IMG_20260716_134144.jpg)
+![F6CYK en 2026 – 1](/assets/images/station/F6CYK-2026-1.webp)
 
-*F6CYK/P près de Fontaine-la-Mallet (juillet 2026)*
+![F6CYK en 2026 – 2](/assets/images/station/F6CYK-2026-2.webp)
+
+![F6CYK en 2026 – 3](/assets/images/station/F6CYK-2026-3.webp)
+
+*F6CYK/P en 2026*
 
 Un FT-857ND suivit bientôt, accompagné quelque temps après par un Xiegu G90.
 
@@ -86,4 +90,4 @@ Au fond, ce qui m'anime n'a guère changé depuis mon premier poste à galène :
 
 Les appareils évoluent, les modes aussi. Mais ce sont les femmes et les hommes rencontrés grâce à la radio qui lui donnent tout son sens.
 
-Plus de cinquante ans après mes premières écoutes, ce sont toujours eux qui me donnent envie d'allumer un récepteur… ou un émetteur.
+Plus de cinquante ans après mes premières écoutes, ce sont toujours eux qui me donnent envie d'allumer un récepteur… ou un émetteur.``````
