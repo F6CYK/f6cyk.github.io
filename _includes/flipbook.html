@@ -8,6 +8,10 @@
 {% endif %}
 
 <div class="flipbook-book"></div>
+    <div class="flipbook-loader" aria-label="Chargement du document">
+    <div class="spinner"></div>
+    <span>Chargement du document…</span>
+</div>
 
 <div class="flipbook-toolbar">
     <button class="flipbook-first" type="button" title="Première page">|◀</button>
@@ -52,6 +56,31 @@
     width:100%;
     min-height:300px;
     visibility:hidden;
+}
+
+.flipbook-loader{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    gap:12px;
+    min-height:300px;
+    visibility:visible;
+}
+
+.spinner{
+    width:36px;
+    height:36px;
+    border:4px solid #ddd;
+    border-top-color:#555;
+    border-radius:50%;
+    animation:spin .8s linear infinite;
+}
+
+@keyframes spin{
+    to{
+        transform:rotate(360deg);
+    }
 }
 
 .flipbook-toolbar{
@@ -101,6 +130,9 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     const container =
         wrapper.querySelector(".flipbook-book");
+
+    const loader =
+        wrapper.querySelector(".flipbook-loader");    
 
     const fullscreenButton =
         wrapper.querySelector(".flipbook-fullscreen");
@@ -175,7 +207,11 @@ const pageFlip =
     );
 
     pageFlip.loadFromHTML(pages);
-    container.style.visibility = "visible";
+    
+    requestAnimationFrame(() => {
+        container.style.visibility = "visible";
+        loader.style.display = "none";
+    });
 
     btnFirst.addEventListener("click", () => pageFlip.turnToPage(0));
     btnPrev.addEventListener("click", () => pageFlip.flipPrev());
