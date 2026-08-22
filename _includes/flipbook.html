@@ -7,14 +7,12 @@
 </div>
 {% endif %}
 
-<div class="flipbook-book">
-
-    <div class="flipbook-loader" aria-label="Chargement du document">
-        <div class="spinner"></div>
-        <span>Chargement du document…</span>
-    </div>
-
+<div class="flipbook-loader" aria-label="Chargement du document">
+    <div class="spinner"></div>
+    <span>Chargement du document…</span>
 </div>
+
+<div class="flipbook-book"></div>
 
 <div class="flipbook-toolbar">
     <button class="flipbook-first" type="button" title="Première page">|◀</button>
@@ -58,6 +56,7 @@
     align-items:center;
     width:100%;
     min-height:300px;
+    visibility:hidden;
 }
 
 /* Indicateur de chargement */
@@ -140,12 +139,20 @@ document.addEventListener("DOMContentLoaded", async () => {
     const fullscreenButton =
         wrapper.querySelector(".flipbook-fullscreen");
 
-    const btnFirst = wrapper.querySelector(".flipbook-first");
-    const btnPrev  = wrapper.querySelector(".flipbook-prev");
-    const btnNext  = wrapper.querySelector(".flipbook-next");
-    const btnLast  = wrapper.querySelector(".flipbook-last");
+    const btnFirst =
+        wrapper.querySelector(".flipbook-first");
 
-    const pdfUrl = "{{ page.asset_path }}/{{ include.file }}";
+    const btnPrev =
+        wrapper.querySelector(".flipbook-prev");
+
+    const btnNext =
+        wrapper.querySelector(".flipbook-next");
+
+    const btnLast =
+        wrapper.querySelector(".flipbook-last");
+
+    const pdfUrl =
+        "{{ page.asset_path }}/{{ include.file }}";
 
     const loadingTask =
         window.pdfjsLib.getDocument({ url: pdfUrl });
@@ -243,10 +250,13 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     /*
      * Le flipbook est maintenant initialisé.
-     * On retire l'indicateur de chargement.
+     * On affiche le flipbook et on retire la roue.
      */
     requestAnimationFrame(() => {
+
+        container.style.visibility = "visible";
         loader.style.display = "none";
+
     });
 
     btnFirst.addEventListener(
@@ -287,14 +297,18 @@ document.addEventListener("DOMContentLoaded", async () => {
                     } else {
 
                         await wrapper.requestFullscreen();
+
                     }
 
                 } catch (error) {
 
                     console.error(error);
+
                 }
+
             }
         );
+
     }
 
     document.addEventListener(
@@ -314,6 +328,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                 pageFlip.updateOrientation();
 
             });
+
         }
     );
 
