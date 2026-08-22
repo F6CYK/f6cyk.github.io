@@ -15,10 +15,17 @@
         </li>
 
         <!-- Station -->
-        <li>
-            <a{% if page.url == '/ma_station.html' %} class="actif"{% endif %}
-               href="{{ '/ma_station.html' | relative_url }}">Ma station</a>
-        </li>
+        <li class="menu-deroulant">
+            <a href="#"
+               tabindex="0"
+               {% if page.url contains '/station/' %}class="actif"{% endif %}>
+                Ma station
+            </a>
+
+    <ul class="sous-menu">
+        {% include recursive-menu.html noeuds=site.data.ma-station %}
+    </ul>
+</li>
 
         <!-- Matériel -->
         <li class="menu-deroulant">
