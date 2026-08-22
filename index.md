@@ -35,7 +35,7 @@ caption="La station F6CYK, lieu de pratique, d’expérimentation et de recherch
 
 {{ introduction | markdownify }}
 
-## Explorer le site
+## Les domaines abordés
 
 ### Station
 
