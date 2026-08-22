@@ -1,4 +1,9 @@
-
+---
+layout: default
+title: MON PARCOURS D'OM
+permalink: /station/mon-parcours
+asset_path: /station/mon-parcours
+---
 
 # Mon parcours d'OM
 
