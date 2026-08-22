@@ -1,8 +1,8 @@
 ---
 layout: default
-title: MON PARCOURS D'OM
-permalink: /station/mon-parcours
-asset_path: /station/mon-parcours
+title: MA STATION
+permalink: /station/ma-station
+asset_path: /assets/images/station
 ---
 
 {% capture introduction %}
