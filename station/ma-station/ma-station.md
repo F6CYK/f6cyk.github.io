@@ -11,6 +11,11 @@ Ma station reste volontairement simple. J'apprécie autant le matériel ancien q
 
 {% endcapture %}
 
+<figure>
+    <img src="/assets/images/station/F6CYK-2014-2023.webp" alt="Station F6CYK à Étretat (2014–2023)">
+    <figcaption>Station F6CYK à Étretat (2014–2023)</figcaption>
+</figure>
+
 {{ introduction }}
 
 <div class="station-grid">
