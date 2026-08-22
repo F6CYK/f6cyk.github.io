@@ -2,7 +2,7 @@
 layout: default
 title: MA STATION
 permalink: /station/ma-station
-asset_path: /station/ma-station
+asset_path: /assets/images/station
 ---
 
 {% capture introduction %}
