@@ -51,6 +51,7 @@
     align-items:center;
     width:100%;
     min-height:300px;
+    visibility:hidden;
 }
 
 .flipbook-toolbar{
@@ -174,6 +175,7 @@ const pageFlip =
     );
 
     pageFlip.loadFromHTML(pages);
+    container.style.visibility = "visible";
 
     btnFirst.addEventListener("click", () => pageFlip.turnToPage(0));
     btnPrev.addEventListener("click", () => pageFlip.flipPrev());
