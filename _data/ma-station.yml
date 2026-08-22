@@ -1,1 +1,8 @@
+- titre: Ma station
+  enfants:
 
+    - titre: Ma station
+      url: /station/ma-station
+
+    - titre: Mon parcours
+      url: /station/mon-parcours
