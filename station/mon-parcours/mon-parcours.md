@@ -1,7 +1,7 @@
 ---
 layout: default
-title: MA STATION
-permalink: /station/ma-station
+title: MON PARCOURS D'OM
+permalink: /station/mon-parcours
 asset_path: /assets/images/station
 ---
 
