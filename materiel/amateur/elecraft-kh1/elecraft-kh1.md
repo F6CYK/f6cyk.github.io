@@ -5,10 +5,6 @@ permalink: /materiel/amateur/elecraft-kh1
 asset_path: /materiel/amateur/elecraft-kh1
 ---
 
-# ELECRAFT KH1
-
-## Présentation
-
 {% capture introduction %}
 
 
