@@ -32,7 +32,7 @@ Je me souviens encore de l'installation du doublet (!) dans son grenier, par une
 
 Plus de quarante ans après, je me souviens encore de son enthousiasme :
 
-> « Ah, l'Ten, mon vieux !!! »
+« Ah, l'Ten, mon vieux !!! »
 
 Il disait « mon ieu »…
 
@@ -68,11 +68,15 @@ Tout cela me conduisit à me rééquiper, d'abord d'un Baofeng UV-3R, puis d'un 
 
 ![F6CYK en 2026 – 1](/assets/images/station/F6CYK-2026-1.webp)
 
+*F6CYK au Havre, en 2026*
+
 ![F6CYK en 2026 – 2](/assets/images/station/F6CYK-2026-2.webp)
+
+*F6CYK/P sur son balcon au Havre, en 2026*
 
 ![F6CYK en 2026 – 3](/assets/images/station/F6CYK-2026-3.webp)
 
-*F6CYK/P en 2026*
+*F6CYK/P près du Havre en 2026*
 
 Un FT-857ND suivit bientôt, accompagné quelque temps après par un Xiegu G90.
 
