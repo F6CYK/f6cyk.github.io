@@ -5,6 +5,13 @@
         - titre: THALES TRC 3600
           url: /materiel/professionnel/militaire/thales-trc3600
 
+- titre: Amateur
+  enfants:
+    - titre: Elecraft KH1
+      enfants:
+        - titre: Elecraft KH1
+          url: /materiel/amateur/elecraft-kh1
+
 - titre: Surplus
   enfants:
     - titre: Présentation
