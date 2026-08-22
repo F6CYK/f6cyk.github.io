@@ -17,7 +17,7 @@ Mon intérêt pour la radio est né à la fin des années 1960, avec la récepti
 
 **Comprendre • Construire • Communiquer**
 
-F6CYK réunit ainsi des contenus de nature différente : réflexions sur le radioamateurisme, recherches historiques, biographies, études techniques, restaurations, réalisations, expérimentations et comptes rendus d’essais.
+Ce site réunit ainsi des contenus de nature différente : réflexions sur le radioamateurisme, recherches historiques, biographies, études techniques, restaurations, réalisations, expérimentations et comptes rendus d’essais.
 
 Chaque sujet est traité selon sa nature : une réalisation peut être accompagnée de ses schémas, de ses mesures et des éléments nécessaires à sa compréhension et à sa reproduction ; une expérimentation présente la démarche suivie et les résultats obtenus ; une recherche historique replace un matériel, un événement ou une personne dans son contexte.
 
@@ -39,11 +39,11 @@ caption="La station F6CYK, lieu de pratique, d’expérimentation et de recherch
 
 ### Station
 
-Environnement de la station F6CYK, équipements, instruments de mesure et méthodes de travail.
+Environnement et évolution de la station F6CYK, équipements, instruments de mesure et méthodes de travail.
 
 ### Matériel
 
-Émetteurs-récepteurs, récepteurs, instruments, accessoires et matériels étudiés, utilisés, restaurés ou modifiés.
+Émetteurs, récepteurs, instruments, accessoires et matériels étudiés, utilisés, restaurés ou modifiés.
 
 ### Antennes
 
@@ -55,7 +55,7 @@ Montages, constructions, restaurations, modifications et développements réalis
 
 ### Trafic
 
-Modes de communication, pratiques de trafic, expériences et activités associées.
+Modes de communication, pratiques de trafic, procédures, expériences et activités associées.
 
 ### Documentation
 
