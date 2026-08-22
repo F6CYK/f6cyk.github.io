@@ -6,7 +6,7 @@ asset_path: /station/ma-station
 ---
 
 {% capture introduction %}
-
+Ma station reste volontairement simple. J'apprécie autant le matériel ancien que les équipements récents selon le type d'expérimentation que je souhaite mener. Je privilégie les équipements fiables, facilement transportables et offrant de bonnes possibilités d'expérimentation aussi bien en HF qu'en VHF/UHF ou en numérique.
 
 {% endcapture %}
 
