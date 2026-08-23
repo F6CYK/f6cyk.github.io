@@ -1,7 +1,7 @@
 - titre: Ma station
   enfants:
 
-    - titre: Ma station
+    - titre: Mon équipement
       url: /station/ma-station
 
     - titre: Mon parcours d'OM
