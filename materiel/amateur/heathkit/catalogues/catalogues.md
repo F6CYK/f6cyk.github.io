@@ -2,7 +2,7 @@
 layout: default
 title: CATALOGUES HEATHKIT
 permalink: /materiel/amateur/heathkit/catalogues
-asset_path: /pdf
+asset_path: /assets/pdf
 ---
 
 {% capture introduction %}
