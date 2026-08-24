@@ -18,7 +18,7 @@ asset_path: /assets/pdf
 %}
 
 {% include flipbook.html
-   file="Heathkit_catalog_March_1972.pdf"
+   file="Heathkit_catalog_March_1972_comp.pdf"
    title="Catalogue général Heathkit (1972)"
    scale=1.5
 %}
