@@ -16,3 +16,10 @@ asset_path: /assets/pdf
    title="Catalogue radioamateur Heathkit (français-1969)"
    scale=1.5
 %}
+
+
+{% include flipbook.html
+   file="Heathkit-1977-817-Fall.pdf"
+   title="Catalogue complet Heathkit (1977)"
+   scale=1.5
+%}
