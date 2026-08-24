@@ -19,7 +19,7 @@ asset_path: /assets/pdf
 
 
 {% include flipbook.html
-   file="heathkit-summer-1969.pdf"
-   title="Catalogue complet Heathkit (1969)"
+   file="heathkit-catalog-1956.pdf"
+   title="Catalogue complet Heathkit (1956)"
    scale=1.5
 %}
