@@ -1,0 +1,13 @@
+.fournisseurs-outils{display:grid;grid-template-columns:2fr 1fr 1fr;gap:1rem;margin:1.5rem 0;padding:1rem;background:#f8f8f8;border:1px solid #d8d8d8;border-radius:4px}
+.fournisseurs-outils label{font-weight:600;color:#163b67}
+.fournisseurs-outils input,.fournisseurs-outils select{width:100%;box-sizing:border-box;padding:.65rem;border:1px solid #bbb;border-radius:3px;background:#fff}
+.fournisseurs-compteur{color:#666}
+.fournisseurs-pays{margin:2rem 0}
+.fournisseurs-pays h2{color:#163b67;border-bottom:1px solid #d8d8d8;padding-bottom:.35rem}
+.fournisseur-card{margin:1rem 0;padding:1rem 1.25rem;background:#fafafa;border:1px solid #d8d8d8;border-radius:4px}
+.fournisseur-card h3{margin:0 0 .6rem;color:#163b67}
+.fournisseur-meta{margin:.35rem 0}
+.fournisseur-specialites{margin:.7rem 0 0;color:#555}
+.fournisseur-site{margin-top:.8rem}
+.fournisseur-site a{color:#163b67;font-weight:600}
+@media(max-width:800px){.fournisseurs-outils{grid-template-columns:1fr}}
