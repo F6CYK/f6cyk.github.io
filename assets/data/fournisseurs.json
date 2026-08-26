@@ -1,7 +1,6 @@
 {
   "version": 1,
-  "generated_at": "2026-08-26",
-  "verified_only": true,
+  "count": 57,
   "suppliers": [
     {
       "id": 30,
@@ -17,11 +16,7 @@
         "Radioamateur généraliste",
         "SDR"
       ],
-      "products": [],
-      "groups": [
-        "Radioamateur",
-        "SDR et réception"
-      ]
+      "products": []
     },
     {
       "id": 47,
@@ -39,12 +34,7 @@
         "Radioamateur généraliste",
         "RF / hyperfréquences"
       ],
-      "products": [],
-      "groups": [
-        "Radioamateur",
-        "CB",
-        "Mesure et instrumentation RF"
-      ]
+      "products": []
     },
     {
       "id": 35,
@@ -59,10 +49,7 @@
       "specialties": [
         "Radioamateur généraliste"
       ],
-      "products": [],
-      "groups": [
-        "Radioamateur"
-      ]
+      "products": []
     },
     {
       "id": 44,
@@ -80,13 +67,7 @@
         "Radioamateur généraliste",
         "RF / hyperfréquences"
       ],
-      "products": [],
-      "groups": [
-        "Radioamateur",
-        "Antennes radioamateur",
-        "Mesure et instrumentation RF",
-        "Accessoires et connectique RF"
-      ]
+      "products": []
     },
     {
       "id": 31,
@@ -101,11 +82,7 @@
         "PMR / radiocommunication",
         "Radioamateur généraliste"
       ],
-      "products": [],
-      "groups": [
-        "Radioamateur",
-        "CB"
-      ]
+      "products": []
     },
     {
       "id": 26,
@@ -118,10 +95,7 @@
       "specialties": [
         "Radioamateur généraliste"
       ],
-      "products": [],
-      "groups": [
-        "Radioamateur"
-      ]
+      "products": []
     },
     {
       "id": 3,
@@ -136,10 +110,7 @@
       "specialties": [
         "Radioamateur généraliste"
       ],
-      "products": [],
-      "groups": [
-        "Radioamateur"
-      ]
+      "products": []
     },
     {
       "id": 36,
@@ -154,10 +125,7 @@
       "specialties": [
         "Radioamateur généraliste"
       ],
-      "products": [],
-      "groups": [
-        "Radioamateur"
-      ]
+      "products": []
     },
     {
       "id": 38,
@@ -173,10 +141,7 @@
         "Kits / QRP",
         "Radioamateur généraliste"
       ],
-      "products": [],
-      "groups": [
-        "Radioamateur"
-      ]
+      "products": []
     },
     {
       "id": 33,
@@ -190,11 +155,7 @@
         "CB 27 MHz",
         "Radioamateur généraliste"
       ],
-      "products": [],
-      "groups": [
-        "Radioamateur",
-        "CB"
-      ]
+      "products": []
     },
     {
       "id": 42,
@@ -210,11 +171,7 @@
         "Antennes radioamateur",
         "Radioamateur généraliste"
       ],
-      "products": [],
-      "groups": [
-        "Radioamateur",
-        "Antennes radioamateur"
-      ]
+      "products": []
     },
     {
       "id": 2,
@@ -235,10 +192,6 @@
           "name": "Antennes HF",
           "description": "Antennes pour stations HF"
         }
-      ],
-      "groups": [
-        "Radioamateur",
-        "Antennes radioamateur"
       ]
     },
     {
@@ -254,10 +207,7 @@
         "HF / décamétrique",
         "Radioamateur généraliste"
       ],
-      "products": [],
-      "groups": [
-        "Radioamateur"
-      ]
+      "products": []
     },
     {
       "id": 14,
@@ -272,10 +222,7 @@
       "specialties": [
         "Radioamateur généraliste"
       ],
-      "products": [],
-      "groups": [
-        "Radioamateur"
-      ]
+      "products": []
     },
     {
       "id": 10,
@@ -292,11 +239,7 @@
         "Radioamateur généraliste",
         "VHF / UHF"
       ],
-      "products": [],
-      "groups": [
-        "Radioamateur",
-        "Antennes radioamateur"
-      ]
+      "products": []
     },
     {
       "id": 118,
@@ -311,11 +254,7 @@
         "Antennes radioamateur",
         "Radioamateur généraliste"
       ],
-      "products": [],
-      "groups": [
-        "Radioamateur",
-        "Antennes radioamateur"
-      ]
+      "products": []
     },
     {
       "id": 106,
@@ -328,10 +267,7 @@
       "specialties": [
         "Radioamateur généraliste"
       ],
-      "products": [],
-      "groups": [
-        "Radioamateur"
-      ]
+      "products": []
     },
     {
       "id": 15,
@@ -347,11 +283,7 @@
         "Antennes radioamateur",
         "Radioamateur généraliste"
       ],
-      "products": [],
-      "groups": [
-        "Radioamateur",
-        "Antennes radioamateur"
-      ]
+      "products": []
     },
     {
       "id": 107,
@@ -366,10 +298,7 @@
       "specialties": [
         "Radioamateur généraliste"
       ],
-      "products": [],
-      "groups": [
-        "Radioamateur"
-      ]
+      "products": []
     },
     {
       "id": 12,
@@ -385,11 +314,7 @@
         "Antennes radioamateur",
         "Radioamateur généraliste"
       ],
-      "products": [],
-      "groups": [
-        "Radioamateur",
-        "Antennes radioamateur"
-      ]
+      "products": []
     },
     {
       "id": 147,
@@ -404,9 +329,6 @@
           "name": "Kits radioamateur",
           "description": "Kits QRP analogiques, transceivers SSB/CW, émetteurs et récepteurs"
         }
-      ],
-      "groups": [
-        "Kits radioamateur"
       ]
     },
     {
@@ -420,10 +342,7 @@
       "specialties": [
         "Radioamateur généraliste"
       ],
-      "products": [],
-      "groups": [
-        "Radioamateur"
-      ]
+      "products": []
     },
     {
       "id": 109,
@@ -437,10 +356,7 @@
       "specialties": [
         "Radioamateur généraliste"
       ],
-      "products": [],
-      "groups": [
-        "Radioamateur"
-      ]
+      "products": []
     },
     {
       "id": 110,
@@ -455,10 +371,7 @@
       "specialties": [
         "Radioamateur généraliste"
       ],
-      "products": [],
-      "groups": [
-        "Radioamateur"
-      ]
+      "products": []
     },
     {
       "id": 128,
@@ -474,11 +387,7 @@
         "Radioamateur",
         "Radiocommunication"
       ],
-      "products": [],
-      "groups": [
-        "Radioamateur",
-        "CB"
-      ]
+      "products": []
     },
     {
       "id": 123,
@@ -494,10 +403,7 @@
         "Composants électroniques",
         "Électronique généraliste"
       ],
-      "products": [],
-      "groups": [
-        "Composants électroniques"
-      ]
+      "products": []
     },
     {
       "id": 126,
@@ -512,10 +418,7 @@
         "Composants obsolètes",
         "Composants électroniques"
       ],
-      "products": [],
-      "groups": [
-        "Composants électroniques"
-      ]
+      "products": []
     },
     {
       "id": 20,
@@ -530,11 +433,7 @@
         "Radioamateur généraliste",
         "RF / hyperfréquences"
       ],
-      "products": [],
-      "groups": [
-        "Radioamateur",
-        "Mesure et instrumentation RF"
-      ]
+      "products": []
     },
     {
       "id": 134,
@@ -550,10 +449,7 @@
         "Radioamateur",
         "Radiocommunication"
       ],
-      "products": [],
-      "groups": [
-        "Radioamateur"
-      ]
+      "products": []
     },
     {
       "id": 125,
@@ -569,10 +465,7 @@
         "Composants électroniques",
         "Électronique généraliste"
       ],
-      "products": [],
-      "groups": [
-        "Composants électroniques"
-      ]
+      "products": []
     },
     {
       "id": 1,
@@ -593,19 +486,13 @@
       ],
       "products": [
         {
-          "name": "Récepteur SDR",
-          "description": "Récepteur SDR et accessoires RF"
-        },
-        {
           "name": "Transceiver DMR",
           "description": "Matériel DMR radioamateur"
+        },
+        {
+          "name": "Récepteur SDR",
+          "description": "Récepteur SDR et accessoires RF"
         }
-      ],
-      "groups": [
-        "Radioamateur",
-        "Antennes radioamateur",
-        "SDR et réception",
-        "Mesure et instrumentation RF"
       ]
     },
     {
@@ -623,12 +510,7 @@
         "CB",
         "Radioamateur"
       ],
-      "products": [],
-      "groups": [
-        "Radioamateur",
-        "CB",
-        "Antennes radioamateur"
-      ]
+      "products": []
     },
     {
       "id": 142,
@@ -643,9 +525,6 @@
           "name": "Kits radioamateur",
           "description": "Kits de récepteurs radioamateur, marine et ondes courtes; récepteur aviation"
         }
-      ],
-      "groups": [
-        "Kits radioamateur"
       ]
     },
     {
@@ -661,10 +540,7 @@
         "Composants électroniques",
         "Électronique radio"
       ],
-      "products": [],
-      "groups": [
-        "Composants électroniques"
-      ]
+      "products": []
     },
     {
       "id": 129,
@@ -681,12 +557,7 @@
         "Radioamateur",
         "Réparation radio"
       ],
-      "products": [],
-      "groups": [
-        "Radioamateur",
-        "CB",
-        "Réparation et maintenance"
-      ]
+      "products": []
     },
     {
       "id": 130,
@@ -703,12 +574,7 @@
         "CB",
         "Radioamateur"
       ],
-      "products": [],
-      "groups": [
-        "Radioamateur",
-        "CB",
-        "Antennes radioamateur"
-      ]
+      "products": []
     },
     {
       "id": 124,
@@ -725,12 +591,7 @@
         "Radioamateur généraliste",
         "TSF / matériel ancien"
       ],
-      "products": [],
-      "groups": [
-        "Radioamateur",
-        "Composants électroniques",
-        "SDR et réception"
-      ]
+      "products": []
     },
     {
       "id": 122,
@@ -742,10 +603,7 @@
         "Composants électroniques",
         "Électronique généraliste"
       ],
-      "products": [],
-      "groups": [
-        "Composants électroniques"
-      ]
+      "products": []
     },
     {
       "id": 6,
@@ -765,9 +623,6 @@
           "name": "Transceivers radioamateur",
           "description": "Postes radioamateurs"
         }
-      ],
-      "groups": [
-        "Radioamateur"
       ]
     },
     {
@@ -783,11 +638,7 @@
         "Radioamateur généraliste",
         "RF / hyperfréquences"
       ],
-      "products": [],
-      "groups": [
-        "Radioamateur",
-        "Mesure et instrumentation RF"
-      ]
+      "products": []
     },
     {
       "id": 48,
@@ -801,10 +652,7 @@
       "specialties": [
         "Radioamateur généraliste"
       ],
-      "products": [],
-      "groups": [
-        "Radioamateur"
-      ]
+      "products": []
     },
     {
       "id": 117,
@@ -818,10 +666,7 @@
       "specialties": [
         "Radioamateur généraliste"
       ],
-      "products": [],
-      "groups": [
-        "Radioamateur"
-      ]
+      "products": []
     },
     {
       "id": 7,
@@ -834,10 +679,7 @@
       "specialties": [
         "Radioamateur généraliste"
       ],
-      "products": [],
-      "groups": [
-        "Radioamateur"
-      ]
+      "products": []
     },
     {
       "id": 13,
@@ -851,11 +693,7 @@
         "Antennes radioamateur",
         "Radioamateur généraliste"
       ],
-      "products": [],
-      "groups": [
-        "Radioamateur",
-        "Antennes radioamateur"
-      ]
+      "products": []
     },
     {
       "id": 11,
@@ -870,10 +708,7 @@
       "specialties": [
         "Radioamateur généraliste"
       ],
-      "products": [],
-      "groups": [
-        "Radioamateur"
-      ]
+      "products": []
     },
     {
       "id": 146,
@@ -888,9 +723,6 @@
           "name": "Kits radioamateur",
           "description": "Kits d amplificateurs linéaires LDMOS et filtres RF pour radioamateur"
         }
-      ],
-      "groups": [
-        "Kits radioamateur"
       ]
     },
     {
@@ -906,9 +738,6 @@
           "name": "Kits radioamateur",
           "description": "Kits QRP, transceivers CW, récepteurs, instruments et kits pédagogiques"
         }
-      ],
-      "groups": [
-        "Kits radioamateur"
       ]
     },
     {
@@ -930,9 +759,6 @@
           "brand": "Yaesu/Icom/Kenwood",
           "description": "Postes radioamateurs"
         }
-      ],
-      "groups": [
-        "Radioamateur"
       ]
     },
     {
@@ -948,10 +774,7 @@
       "specialties": [
         "Radioamateur généraliste"
       ],
-      "products": [],
-      "groups": [
-        "Radioamateur"
-      ]
+      "products": []
     },
     {
       "id": 145,
@@ -966,9 +789,6 @@
           "name": "Kits radioamateur",
           "description": "Transceivers QRP Explorer et autres kits radioamateur"
         }
-      ],
-      "groups": [
-        "Kits radioamateur"
       ]
     },
     {
@@ -984,10 +804,7 @@
       "specialties": [
         "Radioamateur généraliste"
       ],
-      "products": [],
-      "groups": [
-        "Radioamateur"
-      ]
+      "products": []
     },
     {
       "id": 116,
@@ -1001,10 +818,7 @@
       "specialties": [
         "Radioamateur généraliste"
       ],
-      "products": [],
-      "groups": [
-        "Radioamateur"
-      ]
+      "products": []
     },
     {
       "id": 114,
@@ -1019,11 +833,7 @@
         "Radioamateur généraliste",
         "RF / hyperfréquences"
       ],
-      "products": [],
-      "groups": [
-        "Radioamateur",
-        "Mesure et instrumentation RF"
-      ]
+      "products": []
     },
     {
       "id": 113,
@@ -1037,10 +847,7 @@
       "specialties": [
         "Radioamateur généraliste"
       ],
-      "products": [],
-      "groups": [
-        "Radioamateur"
-      ]
+      "products": []
     },
     {
       "id": 9,
@@ -1059,10 +866,6 @@
           "name": "Antennes HF/VHF/UHF",
           "description": "Antennes radioamateur"
         }
-      ],
-      "groups": [
-        "Radioamateur",
-        "Antennes radioamateur"
       ]
     },
     {
@@ -1078,10 +881,7 @@
       "specialties": [
         "Radioamateur généraliste"
       ],
-      "products": [],
-      "groups": [
-        "Radioamateur"
-      ]
+      "products": []
     },
     {
       "id": 144,
@@ -1096,9 +896,6 @@
           "name": "Kits radioamateur",
           "description": "Kits QRP: QMX, QDX, QCX, WSPR/QRSS, amplificateurs, filtres et modules"
         }
-      ],
-      "groups": [
-        "Kits radioamateur"
       ]
     }
   ]
