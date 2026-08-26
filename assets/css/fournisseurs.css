@@ -23,6 +23,9 @@
 
 .fournisseurs-outils > .fournisseurs-champ {
     min-width: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
 }
 
 .fournisseurs-outils label {
