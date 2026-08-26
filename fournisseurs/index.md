@@ -10,7 +10,7 @@ permalink: /fournisseurs/
 
     <h1>Annuaire fournisseurs</h1>
 
-    <p class="fournisseurs-intro">
+    <p>
         Fournisseurs européens de matériel radioamateur et CB.
     </p>
 
@@ -54,14 +54,12 @@ permalink: /fournisseurs/
     <p
         id="fournisseurs-compteur"
         class="fournisseurs-compteur"
-    >Chargement...</p>
+    ></p>
 
     <div
         id="fournisseurs-resultats"
         class="fournisseurs-liste"
     ></div>
-
-</section>
 
 </section>
 
