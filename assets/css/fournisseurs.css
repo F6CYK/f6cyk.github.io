@@ -10,17 +10,21 @@
   align-items: end;
 }
 
-/* CORRECTION ESSENTIELLE : empêche les div internes de casser la grille */
+/* Correction essentielle : empêche les div internes d’occuper toute la grille */
 .fournisseurs-outils > div {
   grid-column: auto !important;
   width: 100%;
 }
 
+/* Labels */
 .fournisseurs-outils label {
   font-weight: 600;
   color: #163b67;
+  display: block;
+  margin-bottom: 0.3rem;
 }
 
+/* Champs */
 .fournisseurs-outils input,
 .fournisseurs-outils select {
   width: 100%;
@@ -31,10 +35,12 @@
   background: #fff;
 }
 
+/* Compteur */
 .fournisseurs-compteur {
   color: #666;
 }
 
+/* Section pays */
 .fournisseurs-pays {
   margin: 2rem 0;
 }
@@ -45,6 +51,7 @@
   padding-bottom: .35rem;
 }
 
+/* Cartes fournisseurs */
 .fournisseur-card {
   margin: 1rem 0;
   padding: 1rem 1.25rem;
@@ -76,7 +83,7 @@
   font-weight: 600;
 }
 
-/* Affichage mobile */
+/* Responsive Jekyll */
 @media(max-width:800px) {
   .fournisseurs-outils {
     grid-template-columns: 1fr;
