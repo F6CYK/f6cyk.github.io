@@ -15,9 +15,7 @@ permalink: /fournisseurs/
   <div class="fournisseurs-outils">
 
     <div class="fournisseurs-champ">
-      <label for="fournisseurs-recherche">
-        Recherche
-      </label>
+      <label for="fournisseurs-recherche">Recherche</label>
 
       <input
         id="fournisseurs-recherche"
@@ -28,26 +26,18 @@ permalink: /fournisseurs/
     </div>
 
     <div class="fournisseurs-champ">
-      <label for="fournisseurs-pays">
-        Pays
-      </label>
+      <label for="fournisseurs-pays">Pays</label>
 
       <select id="fournisseurs-pays">
-        <option value="">
-          Tous les pays
-        </option>
+        <option value="">Tous les pays</option>
       </select>
     </div>
 
     <div class="fournisseurs-champ">
-      <label for="fournisseurs-specialite">
-        Spécialité
-      </label>
+      <label for="fournisseurs-specialite">Spécialité</label>
 
       <select id="fournisseurs-specialite">
-        <option value="">
-          Toutes les spécialités
-        </option>
+        <option value="">Toutes les spécialités</option>
       </select>
     </div>
 
