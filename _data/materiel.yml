@@ -16,10 +16,10 @@
       enfants:
         - titre: Catalogues
           url: /materiel/amateur/heathkit/catalogues
-
+          
         - titre: Histoire
           url: /en_travaux.html
-
+          
 - titre: Surplus
   enfants:
     - titre: Présentation
