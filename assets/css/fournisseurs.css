@@ -1,13 +1,13 @@
 .fournisseurs-outils {
   display: grid;
-  grid-template-columns: 1.5fr 1fr 1fr;
+  grid-template-columns: 2fr 1fr 1fr;
   gap: 16px;
 
   margin: 24px 0;
   padding: 16px;
 
   background: #f8f8f8;
-  border: 1px solid #d0d0d0;
+  border: 1px solid #d8d8d8;
   border-radius: 4px;
 }
 
@@ -20,7 +20,6 @@
 
 .fournisseurs-champ label {
   display: block;
-
   margin: 0;
 
   color: #163b67;
@@ -44,14 +43,14 @@
 
   background: #ffffff;
 
+  color: #222222;
   font-family: inherit;
   font-size: 14px;
-  color: #222;
 }
 
 .fournisseurs-compteur {
   margin: 24px 0;
-  color: #666;
+  color: #666666;
 }
 
 .fournisseurs-pays {
@@ -61,10 +60,11 @@
 .fournisseurs-pays h2 {
   margin: 0 0 12px;
 
+  padding-bottom: 6px;
+
   color: #163b67;
 
-  border-bottom: 1px solid #d0d0d0;
-  padding-bottom: 6px;
+  border-bottom: 1px solid #d8d8d8;
 }
 
 .fournisseur-card {
@@ -88,7 +88,7 @@
 
 .fournisseur-specialites {
   margin: 12px 0 0;
-  color: #555;
+  color: #555555;
 }
 
 .fournisseur-site {
@@ -101,7 +101,9 @@
 }
 
 @media (max-width: 800px) {
+
   .fournisseurs-outils {
     grid-template-columns: 1fr;
   }
+
 }
