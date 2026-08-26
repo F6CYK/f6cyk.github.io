@@ -19,12 +19,10 @@ permalink: /fournisseurs/
 
 .fournisseurs-filtres {
   display: grid;
-  grid-template-columns: minmax(0, 2fr) minmax(0, 1fr) minmax(0, 1fr);
+  grid-template-columns: 2fr 1fr 1fr;
   gap: 1rem;
-
   margin: 1.5rem 0 1.75rem;
   padding: 1rem;
-
   border: 1px solid #d0d0d0;
   background: #f7f7f7;
   border-radius: 4px;
@@ -36,8 +34,7 @@ permalink: /fournisseurs/
 
 .fournisseurs-champ label {
   display: block;
-  margin: 0 0 .45rem;
-
+  margin-bottom: .45rem;
   color: #163b67;
   font-weight: 600;
 }
@@ -45,48 +42,20 @@ permalink: /fournisseurs/
 .fournisseurs-champ input,
 .fournisseurs-champ select {
   display: block;
-
   width: 100%;
   min-height: 40px;
-
   box-sizing: border-box;
-
   padding: .5rem .65rem;
-
   border: 1px solid #bcbcbc;
   border-radius: 3px;
-
   background: #fff;
   color: #222;
-
   font: inherit;
 }
 
 .fournisseurs-compteur {
   margin: 0 0 1.5rem;
   color: #555;
-}
-
-.fournisseurs-groupe {
-  margin: 2rem 0 2.5rem;
-}
-
-.fournisseurs-groupe > h2 {
-  margin: 0 0 1rem;
-  padding-bottom: .45rem;
-
-  border-bottom: 1px solid #d4d4d4;
-
-  color: #163b67;
-}
-
-.fournisseurs-pays {
-  margin: 1.5rem 0;
-}
-
-.fournisseurs-pays > h3 {
-  margin: 0 0 .8rem;
-  color: #333;
 }
 
 .fournisseurs-liste {
@@ -96,18 +65,15 @@ permalink: /fournisseurs/
 
 .fournisseur-carte {
   padding: 1rem 1.15rem;
-
   border: 1px solid #d8d8d8;
   border-radius: 4px;
-
   background: #fff;
 }
 
-.fournisseur-carte h4 {
+.fournisseur-carte h2 {
   margin: 0 0 .7rem;
-
   color: #163b67;
-  font-size: 1.05rem;
+  font-size: 1.15rem;
 }
 
 .fournisseur-meta {
@@ -117,10 +83,6 @@ permalink: /fournisseurs/
 .fournisseur-specialites {
   margin: .7rem 0;
   color: #555;
-}
-
-.fournisseur-produits {
-  margin: .5rem 0 .7rem 1.2rem;
 }
 
 .fournisseur-actions {
@@ -145,8 +107,8 @@ permalink: /fournisseurs/
 </style>
 
 <div
-  class="fournisseurs-page"
   id="fournisseurs-page"
+  class="fournisseurs-page"
   data-fournisseurs-url="{{ '/assets/data/fournisseurs.json' | relative_url }}"
 >
 
@@ -200,89 +162,98 @@ permalink: /fournisseurs/
   <p
     id="fournisseurs-compteur"
     class="fournisseurs-compteur"
-  ></p>
+  >
+    Chargement...
+  </p>
 
-  <div id="fournisseurs-resultats"></div>
+  <div
+    id="fournisseurs-resultats"
+    class="fournisseurs-liste"
+  ></div>
 
 </div>
 
 <script>
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener("DOMContentLoaded", function () {
 
-  const page = document.getElementById('fournisseurs-page');
-  const resultats = document.getElementById('fournisseurs-resultats');
-  const compteur = document.getElementById('fournisseurs-compteur');
+  var page = document.getElementById("fournisseurs-page");
+  var compteur = document.getElementById("fournisseurs-compteur");
+  var resultats = document.getElementById("fournisseurs-resultats");
+  var recherche = document.getElementById("fournisseurs-recherche");
+  var pays = document.getElementById("fournisseurs-pays");
+  var specialite = document.getElementById("fournisseurs-specialite");
 
-  const recherche = document.getElementById(
-    'fournisseurs-recherche'
-  );
-
-  const pays = document.getElementById(
-    'fournisseurs-pays'
-  );
-
-  const specialite = document.getElementById(
-    'fournisseurs-specialite'
-  );
-
-  function normaliser(value) {
-    return String(value || '')
-      .normalize('NFD')
-      .replace(/[\u0300-\u036f]/g, '')
-      .toLowerCase()
-      .trim();
+  function texte(value) {
+    return String(value || "")
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .toLowerCase();
   }
 
-  function echapper(value) {
-    return String(value || '')
-      .replace(/&/g, '&amp;')
-      .replace(/</g, '&lt;')
-      .replace(/>/g, '&gt;')
-      .replace(/"/g, '&quot;')
-      .replace(/'/g, '&#039;');
+  function securiser(value) {
+    return String(value || "")
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;")
+      .replace(/'/g, "&#039;");
   }
 
-  function ajouterOptions(select, valeurs) {
+  function afficherOptions(select, valeurs) {
 
-    valeurs
-      .filter(Boolean)
-      .sort(function (a, b) {
-        return a.localeCompare(
-          b,
-          'fr',
-          {
-            sensitivity: 'base'
-          }
-        );
-      })
-      .forEach(function (valeur) {
+    valeurs.sort(function (a, b) {
+      return String(a).localeCompare(
+        String(b),
+        "fr",
+        {
+          sensitivity: "base"
+        }
+      );
+    });
 
-        const option =
-          document.createElement('option');
+    valeurs.forEach(function (valeur) {
 
-        option.value = valeur;
-        option.textContent = valeur;
+      var option =
+        document.createElement("option");
 
-        select.appendChild(option);
-      });
+      option.value = valeur;
+      option.textContent = valeur;
+
+      select.appendChild(option);
+    });
   }
 
-  function texteRecherche(fournisseur) {
+  function contenuRecherche(fournisseur) {
 
-    const produits =
+    var produits =
       Array.isArray(fournisseur.products)
         ? fournisseur.products
         : [];
 
-    const texteProduits =
-      produits
-        .map(function (produit) {
-          return Object.values(produit)
-            .join(' ');
-        })
-        .join(' ');
+    var texteProduits = produits
+      .map(function (produit) {
 
-    return normaliser([
+        if (
+          !produit ||
+          typeof produit !== "object"
+        ) {
+          return "";
+        }
+
+        return Object.keys(produit)
+          .map(function (cle) {
+            return produit[cle] || "";
+          })
+          .join(" ");
+      })
+      .join(" ");
+
+    var specialites =
+      Array.isArray(fournisseur.specialties)
+        ? fournisseur.specialties.join(" ")
+        : "";
+
+    return texte([
       fournisseur.trade_name,
       fournisseur.country,
       fournisseur.address,
@@ -291,182 +262,126 @@ document.addEventListener('DOMContentLoaded', function () {
       fournisseur.phone,
       fournisseur.email,
       fournisseur.website,
-
-      Array.isArray(fournisseur.specialties)
-        ? fournisseur.specialties.join(' ')
-        : '',
-
+      specialites,
       texteProduits
-
-    ].join(' '));
-  }
-
-  function afficherAdresse(fournisseur) {
-
-    const lignes = [];
-
-    if (fournisseur.address) {
-      lignes.push(
-        echapper(fournisseur.address)
-      );
-    }
-
-    const localite = [
-      fournisseur.postal_code,
-      fournisseur.city
-    ]
-      .filter(Boolean)
-      .join(' ');
-
-    if (localite) {
-      lignes.push(
-        echapper(localite)
-      );
-    }
-
-    return lignes.join('<br>');
+    ].join(" "));
   }
 
   function afficherFournisseur(fournisseur) {
 
-    let html =
+    var html =
       '<article class="fournisseur-carte">';
 
     html +=
-      '<h4>' +
-      echapper(
+      "<h2>" +
+      securiser(
         fournisseur.trade_name ||
-        'Fournisseur'
+        "Fournisseur"
       ) +
-      '</h4>';
+      "</h2>";
 
-    const adresse =
-      afficherAdresse(fournisseur);
-
-    if (adresse) {
+    if (fournisseur.country) {
       html +=
         '<p class="fournisseur-meta">' +
-        adresse +
-        '</p>';
+        "<strong>Pays :</strong> " +
+        securiser(fournisseur.country) +
+        "</p>";
+    }
+
+    var adresse = [];
+
+    if (fournisseur.address) {
+      adresse.push(
+        securiser(fournisseur.address)
+      );
+    }
+
+    var ville = [
+      fournisseur.postal_code,
+      fournisseur.city
+    ]
+      .filter(Boolean)
+      .join(" ");
+
+    if (ville) {
+      adresse.push(
+        securiser(ville)
+      );
+    }
+
+    if (adresse.length) {
+      html +=
+        '<p class="fournisseur-meta">' +
+        adresse.join("<br>") +
+        "</p>";
     }
 
     if (fournisseur.phone) {
       html +=
         '<p class="fournisseur-meta">' +
-        echapper(fournisseur.phone) +
-        '</p>';
+        "<strong>Téléphone :</strong> " +
+        securiser(fournisseur.phone) +
+        "</p>";
     }
 
     if (fournisseur.email) {
       html +=
         '<p class="fournisseur-meta">' +
         '<a href="mailto:' +
-        echapper(fournisseur.email) +
+        securiser(fournisseur.email) +
         '">' +
-        echapper(fournisseur.email) +
-        '</a>' +
-        '</p>';
+        securiser(fournisseur.email) +
+        "</a>" +
+        "</p>";
     }
 
-    const specialites =
-      Array.isArray(fournisseur.specialties)
-        ? fournisseur.specialties
-        : [];
-
-    if (specialites.length) {
+    if (
+      Array.isArray(fournisseur.specialties) &&
+      fournisseur.specialties.length
+    ) {
       html +=
         '<p class="fournisseur-specialites">' +
-        specialites
-          .map(function (specialite) {
-            return echapper(specialite);
+        fournisseur.specialties
+          .map(function (item) {
+            return securiser(item);
           })
-          .join(' · ') +
-        '</p>';
-    }
-
-    const produits =
-      Array.isArray(fournisseur.products)
-        ? fournisseur.products
-        : [];
-
-    const produitsValides =
-      produits.filter(function (produit) {
-        return (
-          produit &&
-          (
-            produit.name ||
-            produit.brand ||
-            produit.reference ||
-            produit.description
-          )
-        );
-      });
-
-    if (produitsValides.length) {
-
-      html +=
-        '<ul class="fournisseur-produits">';
-
-      produitsValides.forEach(
-        function (produit) {
-
-          const valeurs = [
-            produit.name,
-            produit.brand,
-            produit.reference,
-            produit.description
-          ]
-            .filter(Boolean);
-
-          html +=
-            '<li>' +
-            valeurs
-              .map(function (valeur) {
-                return echapper(valeur);
-              })
-              .join(' — ') +
-            '</li>';
-        }
-      );
-
-      html += '</ul>';
+          .join(" · ") +
+        "</p>";
     }
 
     if (fournisseur.website) {
       html +=
         '<p class="fournisseur-actions">' +
         '<a href="' +
-        echapper(fournisseur.website) +
+        securiser(fournisseur.website) +
         '" target="_blank" rel="noopener noreferrer">' +
-        'Site officiel' +
-        '</a>' +
-        '</p>';
+        "Site officiel" +
+        "</a>" +
+        "</p>";
     }
 
-    html += '</article>';
+    html += "</article>";
 
     return html;
   }
 
   function afficher(fournisseurs) {
 
-    const rechercheNormale =
-      normaliser(recherche.value);
+    var rechercheTexte =
+      texte(recherche.value);
 
-    const termes =
-      rechercheNormale
-        ? rechercheNormale
-            .split(/\s+/)
-            .filter(Boolean)
-        : [];
-
-    const paysChoisi =
+    var paysChoisi =
       pays.value;
 
-    const specialiteChoisie =
+    var specialiteChoisie =
       specialite.value;
 
-    const filtres =
+    var termes =
+      rechercheTexte
+        .split(/\s+/)
+        .filter(Boolean);
+
+    var filtres =
       fournisseurs.filter(
         function (fournisseur) {
 
@@ -477,30 +392,30 @@ document.addEventListener('DOMContentLoaded', function () {
             return false;
           }
 
-          const specialites =
-            Array.isArray(
-              fournisseur.specialties
-            )
-              ? fournisseur.specialties
-              : [];
-
           if (
             specialiteChoisie &&
-            !specialites.includes(
-              specialiteChoisie
+            (
+              !Array.isArray(
+                fournisseur.specialties
+              ) ||
+              fournisseur.specialties.indexOf(
+                specialiteChoisie
+              ) === -1
             )
           ) {
             return false;
           }
 
-          const texte =
-            texteRecherche(
+          var rechercheFournisseur =
+            contenuRecherche(
               fournisseur
             );
 
           return termes.every(
             function (terme) {
-              return texte.includes(terme);
+              return rechercheFournisseur.indexOf(
+                terme
+              ) !== -1;
             }
           );
         }
@@ -508,168 +423,67 @@ document.addEventListener('DOMContentLoaded', function () {
 
     compteur.textContent =
       filtres.length +
-      ' fournisseur' +
+      " fournisseur" +
       (
         filtres.length > 1
-          ? 's'
-          : ''
+          ? "s"
+          : ""
       );
 
     if (!filtres.length) {
 
       resultats.innerHTML =
         '<p class="fournisseurs-vide">' +
-        'Aucun fournisseur ne correspond aux critères.' +
-        '</p>';
+        "Aucun fournisseur ne correspond aux critères." +
+        "</p>";
 
       return;
     }
 
-    /*
-     * Construction automatique :
-     *
-     * Spécialité
-     *   Pays
-     *     Fournisseur
-     */
+    filtres.sort(function (a, b) {
 
-    const groupes = {};
+      return String(
+        a.trade_name || ""
+      ).localeCompare(
+        String(
+          b.trade_name || ""
+        ),
+        "fr",
+        {
+          sensitivity: "base"
+        }
+      );
+    });
+
+    var html = "";
 
     filtres.forEach(
       function (fournisseur) {
 
-        const specialites =
-          Array.isArray(
-            fournisseur.specialties
-          )
-            ? fournisseur.specialties
-            : [];
-
-        specialites.forEach(
-          function (nomSpecialite) {
-
-            if (!groupes[nomSpecialite]) {
-              groupes[nomSpecialite] = {};
-            }
-
-            const nomPays =
-              fournisseur.country ||
-              'Pays non précisé';
-
-            if (
-              !groupes[nomSpecialite][nomPays]
-            ) {
-              groupes[nomSpecialite][nomPays] = [];
-            }
-
-            groupes[nomSpecialite][nomPays]
-              .push(fournisseur);
-          }
-        );
+        html +=
+          afficherFournisseur(
+            fournisseur
+          );
       }
     );
-
-    let html = '';
-
-    Object.keys(groupes)
-      .sort(function (a, b) {
-        return a.localeCompare(
-          b,
-          'fr',
-          {
-            sensitivity: 'base'
-          }
-        );
-      })
-      .forEach(
-        function (nomSpecialite) {
-
-          html +=
-            '<section class="fournisseurs-groupe">';
-
-          html +=
-            '<h2>' +
-            echapper(nomSpecialite) +
-            '</h2>';
-
-          Object.keys(
-            groupes[nomSpecialite]
-          )
-            .sort(function (a, b) {
-              return a.localeCompare(
-                b,
-                'fr',
-                {
-                  sensitivity: 'base'
-                }
-              );
-            })
-            .forEach(
-              function (nomPays) {
-
-                html +=
-                  '<section class="fournisseurs-pays">';
-
-                html +=
-                  '<h3>' +
-                  echapper(nomPays) +
-                  '</h3>';
-
-                html +=
-                  '<div class="fournisseurs-liste">';
-
-                groupes[nomSpecialite][nomPays]
-                  .sort(function (a, b) {
-
-                    return String(
-                      a.trade_name || ''
-                    ).localeCompare(
-                      String(
-                        b.trade_name || ''
-                      ),
-                      'fr',
-                      {
-                        sensitivity: 'base'
-                      }
-                    );
-                  })
-                  .forEach(
-                    function (fournisseur) {
-
-                      html +=
-                        afficherFournisseur(
-                          fournisseur
-                        );
-                    }
-                  );
-
-                html +=
-                  '</div>';
-
-                html +=
-                  '</section>';
-              }
-            );
-
-          html +=
-            '</section>';
-        }
-      );
 
     resultats.innerHTML = html;
   }
 
-  fetch(
-    page.dataset.fournisseursUrl,
-    {
-      cache: 'no-cache'
-    }
-  )
+  var url =
+    page.getAttribute(
+      "data-fournisseurs-url"
+    );
+
+  fetch(url, {
+    cache: "no-cache"
+  })
     .then(function (response) {
 
       if (!response.ok) {
         throw new Error(
-          'HTTP ' + response.status
+          "HTTP " +
+          response.status
         );
       }
 
@@ -677,15 +491,14 @@ document.addEventListener('DOMContentLoaded', function () {
     })
     .then(function (donnees) {
 
-      const fournisseurs =
+      var fournisseurs =
         Array.isArray(
           donnees.suppliers
         )
           ? donnees.suppliers
           : [];
 
-      ajouterOptions(
-        pays,
+      var paysListe =
         Array.from(
           new Set(
             fournisseurs
@@ -694,11 +507,9 @@ document.addEventListener('DOMContentLoaded', function () {
               })
               .filter(Boolean)
           )
-        )
-      );
+        );
 
-      ajouterOptions(
-        specialite,
+      var specialitesListe =
         Array.from(
           new Set(
             fournisseurs.flatMap(
@@ -712,25 +523,34 @@ document.addEventListener('DOMContentLoaded', function () {
               }
             )
           )
-        )
+        );
+
+      afficherOptions(
+        pays,
+        paysListe
+      );
+
+      afficherOptions(
+        specialite,
+        specialitesListe
       );
 
       recherche.addEventListener(
-        'input',
+        "input",
         function () {
           afficher(fournisseurs);
         }
       );
 
       pays.addEventListener(
-        'change',
+        "change",
         function () {
           afficher(fournisseurs);
         }
       );
 
       specialite.addEventListener(
-        'change',
+        "change",
         function () {
           afficher(fournisseurs);
         }
@@ -741,16 +561,16 @@ document.addEventListener('DOMContentLoaded', function () {
     .catch(function (erreur) {
 
       console.error(
-        'Annuaire fournisseurs :',
+        "Annuaire fournisseurs :",
         erreur
       );
 
-      compteur.textContent = '';
+      compteur.textContent = "";
 
       resultats.innerHTML =
         '<p class="fournisseurs-vide">' +
-        "Impossible de charger l'annuaire." +
-        '</p>';
+        "Erreur lors du chargement des fournisseurs." +
+        "</p>";
     });
 
 });
