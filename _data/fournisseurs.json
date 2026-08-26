@@ -1,0 +1,852 @@
+[
+  {
+    "id": 30,
+    "trade_name": "Bonito",
+    "country": "Allemagne",
+    "address": "Gerichtsweg 3",
+    "postal_code": "29320",
+    "city": "Hermannsburg",
+    "phone": "+49 5052 6052",
+    "email": "anfragen@bonito.net",
+    "website": "https://bonito.net",
+    "specialties": [
+      "Radioamateur généraliste",
+      "SDR"
+    ]
+  },
+  {
+    "id": 47,
+    "trade_name": "Diesnerfunk",
+    "country": "Allemagne",
+    "address": "Friedhofsweg 4",
+    "postal_code": "35708",
+    "city": "Haiger",
+    "phone": "+49 2773 2958",
+    "email": "info@diesnerfunk.de",
+    "website": "https://diesnerfunk.de",
+    "specialties": [
+      "CB 27 MHz",
+      "PMR / radiocommunication",
+      "Radioamateur généraliste",
+      "RF / hyperfréquences"
+    ]
+  },
+  {
+    "id": 35,
+    "trade_name": "Difona Communication GmbH",
+    "country": "Allemagne",
+    "address": "Ottostraße 24",
+    "postal_code": "63150",
+    "city": "Heusenstamm",
+    "phone": "+49 69 846584",
+    "email": "difona@difona.de",
+    "website": "https://www.difona.de",
+    "specialties": [
+      "Radioamateur généraliste"
+    ]
+  },
+  {
+    "id": 44,
+    "trade_name": "DX-Wire",
+    "country": "Allemagne",
+    "address": "Tulpenstr. 10",
+    "postal_code": "95195",
+    "city": "Röslau",
+    "phone": "+49 9238 990845",
+    "email": "info@dx-wire.de",
+    "website": "https://www.dx-wire.de",
+    "specialties": [
+      "Antennes radioamateur",
+      "Câbles / coaxiaux / connectique RF",
+      "Radioamateur généraliste",
+      "RF / hyperfréquences"
+    ]
+  },
+  {
+    "id": 31,
+    "trade_name": "Funk24 – CJ-Elektronik",
+    "country": "Allemagne",
+    "address": "Seilgraben 33",
+    "postal_code": "52062",
+    "city": "Aachen",
+    "website": "https://shop.funk24.net",
+    "specialties": [
+      "CB 27 MHz",
+      "PMR / radiocommunication",
+      "Radioamateur généraliste"
+    ]
+  },
+  {
+    "id": 26,
+    "trade_name": "Funktechnik Bielefeld",
+    "country": "Allemagne",
+    "address": "Dammstr. 23",
+    "postal_code": "33824",
+    "city": "Werther",
+    "website": "https://www.funktechnik-bielefeld.de",
+    "specialties": [
+      "Radioamateur généraliste"
+    ]
+  },
+  {
+    "id": 3,
+    "trade_name": "Funktechnik Dathe",
+    "country": "Allemagne",
+    "address": "Gartenstraße 2c",
+    "postal_code": "04651",
+    "city": "Bad Lausick",
+    "phone": "+49 34345 25567",
+    "email": "email@funktechnik-dathe.de",
+    "website": "https://www.funktechnik-dathe.de",
+    "specialties": [
+      "Radioamateur généraliste"
+    ]
+  },
+  {
+    "id": 36,
+    "trade_name": "MAAS Funk-Elektronik",
+    "country": "Allemagne",
+    "address": "Heppendorfer Str. 23",
+    "postal_code": "50189",
+    "city": "Elsdorf",
+    "phone": "+49 2274 93870",
+    "email": "info@maas-elektronik.com",
+    "website": "https://www.maas-elektronik.de",
+    "specialties": [
+      "Radioamateur généraliste"
+    ]
+  },
+  {
+    "id": 38,
+    "trade_name": "QRPproject",
+    "country": "Allemagne",
+    "address": "Saarstr. 13",
+    "postal_code": "12161",
+    "city": "Berlin",
+    "phone": "+49 30 85961323",
+    "email": "sales@qrpproject.de",
+    "website": "https://www.qrpproject.de",
+    "specialties": [
+      "Kits / QRP",
+      "Radioamateur généraliste"
+    ]
+  },
+  {
+    "id": 33,
+    "trade_name": "Sarikaya-Funk",
+    "country": "Allemagne",
+    "address": "Hattinger Str. 57",
+    "postal_code": "44789",
+    "city": "Bochum",
+    "website": "https://www.sarikaya-funk.de",
+    "specialties": [
+      "CB 27 MHz",
+      "Radioamateur généraliste"
+    ]
+  },
+  {
+    "id": 42,
+    "trade_name": "Tecadi",
+    "country": "Allemagne",
+    "address": "Allerheiligengasse 6",
+    "postal_code": "99974",
+    "city": "Mühlhausen/Thür.",
+    "phone": "+49 3601 405505",
+    "email": "service@tecadi.de",
+    "website": "https://www.tecadi.de",
+    "specialties": [
+      "Antennes radioamateur",
+      "Radioamateur généraliste"
+    ]
+  },
+  {
+    "id": 2,
+    "trade_name": "WiMo Antennen und Elektronik GmbH",
+    "country": "Allemagne",
+    "address": "Am Gaexwald 14",
+    "postal_code": "76863",
+    "city": "Herxheim",
+    "phone": "+49 7276 96680",
+    "email": "info@wimo.com",
+    "website": "https://www.wimo.com",
+    "specialties": [
+      "Antennes radioamateur",
+      "Radioamateur généraliste"
+    ],
+    "products": [
+      {
+        "name": "Antennes HF",
+        "description": "Antennes pour stations HF"
+      }
+    ]
+  },
+  {
+    "id": 115,
+    "trade_name": "HF Communication Funk-Elektronik",
+    "country": "Autriche",
+    "address": "Grazerstrasse 11",
+    "postal_code": "8045",
+    "city": "Graz-Andritz",
+    "phone": "+43 316 67 29 68",
+    "website": "http://www.funkelektronik.at",
+    "specialties": [
+      "HF / décamétrique",
+      "Radioamateur généraliste"
+    ]
+  },
+  {
+    "id": 14,
+    "trade_name": "Point Electronic",
+    "country": "Autriche",
+    "address": "Stumpergasse 41-43",
+    "postal_code": "1060",
+    "city": "Wien",
+    "phone": "+43 1 5970 88 00",
+    "email": "mail@point.at",
+    "website": "https://www.point.at/",
+    "specialties": [
+      "Radioamateur généraliste"
+    ]
+  },
+  {
+    "id": 10,
+    "trade_name": "Rapace Telecom",
+    "country": "Belgique",
+    "address": "Rue du Ghête 20",
+    "postal_code": "1490",
+    "city": "Court-Saint-Étienne",
+    "phone": "+32 475 69 03 53",
+    "website": "https://www.rapacetelecom.com/",
+    "specialties": [
+      "Antennes radioamateur",
+      "HF / décamétrique",
+      "Radioamateur généraliste",
+      "VHF / UHF"
+    ]
+  },
+  {
+    "id": 118,
+    "trade_name": "Silcom International Trading Ltd",
+    "country": "Bulgarie",
+    "address": "G. Rakovski 145",
+    "postal_code": "1000",
+    "city": "Sofia",
+    "phone": "+30 211 7705150",
+    "website": "http://silcom-ant.gr/",
+    "specialties": [
+      "Antennes radioamateur",
+      "Radioamateur généraliste"
+    ]
+  },
+  {
+    "id": 106,
+    "trade_name": "BM Radio",
+    "country": "Danemark",
+    "address": "Fraugde-Kærby-Vej 205",
+    "postal_code": "5220",
+    "city": "Odense",
+    "website": "http://www.bmradio.dk",
+    "specialties": [
+      "Radioamateur généraliste"
+    ]
+  },
+  {
+    "id": 15,
+    "trade_name": "Høeg Teknik",
+    "country": "Danemark",
+    "address": "Fuglemosevej 24",
+    "postal_code": "8620",
+    "city": "Kjellerup",
+    "phone": "+45 32 227901",
+    "email": "info@hoegteknik.dk",
+    "website": "https://www.hoegteknik.dk/",
+    "specialties": [
+      "Antennes radioamateur",
+      "Radioamateur généraliste"
+    ]
+  },
+  {
+    "id": 107,
+    "trade_name": "M.W. Electronic",
+    "country": "Danemark",
+    "address": "Roshagevej 30",
+    "postal_code": "7730",
+    "city": "Hanstholm",
+    "phone": "+45 97 962 247",
+    "email": "oz6fh@mwe.dk",
+    "website": "https://www.mwe.dk",
+    "specialties": [
+      "Radioamateur généraliste"
+    ]
+  },
+  {
+    "id": 12,
+    "trade_name": "AstroRadio",
+    "country": "Espagne",
+    "address": "Roca i Roca 69",
+    "postal_code": "08226",
+    "city": "Terrassa, Barcelona",
+    "phone": "+34 93 735 3456",
+    "email": "info@astroradio.com",
+    "website": "https://www.astroradio.com/",
+    "specialties": [
+      "Antennes radioamateur",
+      "Radioamateur généraliste"
+    ]
+  },
+  {
+    "id": 147,
+    "trade_name": "QRP Ham Radio Kits",
+    "country": "Espagne",
+    "website": "https://www.qrphamradiokits.com/",
+    "specialties": [
+      "Kits radioamateur"
+    ],
+    "products": [
+      {
+        "name": "Kits radioamateur",
+        "description": "Kits QRP analogiques, transceivers SSB/CW, émetteurs et récepteurs"
+      }
+    ]
+  },
+  {
+    "id": 111,
+    "trade_name": "TehnoTurg-T Raadiosidekeskus OÜ",
+    "country": "Estonie",
+    "address": "Kadaka tee 72A",
+    "postal_code": "12618",
+    "city": "Tallinn",
+    "website": "http://www.tehnoturg.ee",
+    "specialties": [
+      "Radioamateur généraliste"
+    ]
+  },
+  {
+    "id": 109,
+    "trade_name": "RXTX-Tuote OY",
+    "country": "Finlande",
+    "address": "Kalevan Puistotie 13",
+    "postal_code": "33500",
+    "city": "Tampere",
+    "phone": "+358 3 255 3000",
+    "website": "http://rxtx-tuote.fi",
+    "specialties": [
+      "Radioamateur généraliste"
+    ]
+  },
+  {
+    "id": 110,
+    "trade_name": "UTEC Oy",
+    "country": "Finlande",
+    "address": "Alanurmontie 128",
+    "postal_code": "62100",
+    "city": "Lapua",
+    "phone": "+358 40 827 3811",
+    "email": "jyrki.nieminen@koneita.com",
+    "website": "https://www.koneita.com/erikoistuotteet",
+    "specialties": [
+      "Radioamateur généraliste"
+    ]
+  },
+  {
+    "id": 128,
+    "trade_name": "CB+ Radio-Communication",
+    "country": "France",
+    "address": "1586 rue de l'Alloeu",
+    "postal_code": "59193",
+    "city": "Erquinghem-Lys",
+    "phone": "03 20 77 13 79",
+    "website": "https://www.cbplus.com",
+    "specialties": [
+      "CB",
+      "Radioamateur",
+      "Radiocommunication"
+    ]
+  },
+  {
+    "id": 123,
+    "trade_name": "COMPOSANT-AVENUE",
+    "country": "France",
+    "address": "16 place de l’Alma",
+    "postal_code": "57600",
+    "city": "Forbach",
+    "phone": "0782229238",
+    "email": "fukluksau@hotmail.com",
+    "website": "https://www.ebay.fr/str/composantavenue",
+    "specialties": [
+      "Composants électroniques",
+      "Électronique généraliste"
+    ]
+  },
+  {
+    "id": 126,
+    "trade_name": "ELECTROBREIZH",
+    "country": "France",
+    "address": "5 Rue des Compagnons, Le Vau Ballier",
+    "postal_code": "22960",
+    "city": "Plédran",
+    "phone": "+33 2 96 78 69 48",
+    "website": "https://www.ebay.fr/str/electrobreizh",
+    "specialties": [
+      "Composants obsolètes",
+      "Composants électroniques"
+    ]
+  },
+  {
+    "id": 20,
+    "trade_name": "Euro Radio System SARL",
+    "country": "France",
+    "address": "7 Route de St. Genis",
+    "postal_code": "69610",
+    "city": "Sainte Foy L'Argentiere",
+    "phone": "+33 4 72 19 67 27",
+    "website": "http://www.ers.fr",
+    "specialties": [
+      "Radioamateur généraliste",
+      "RF / hyperfréquences"
+    ]
+  },
+  {
+    "id": 134,
+    "trade_name": "ICOM France",
+    "country": "France",
+    "address": "1 Rue Brindejonc des Moulinais",
+    "postal_code": "31500",
+    "city": "Toulouse",
+    "phone": "05 61 36 03 03",
+    "email": "icom@icom-france.com",
+    "website": "https://www.icomfrance.com/fr/",
+    "specialties": [
+      "Radioamateur",
+      "Radiocommunication"
+    ]
+  },
+  {
+    "id": 125,
+    "trade_name": "NetElectroShop",
+    "country": "France",
+    "address": "85 Chemin de Maubet",
+    "postal_code": "26600",
+    "city": "Chanos Curson",
+    "phone": "+33 6 08 11 21 40",
+    "email": "contact@netelectroshop.fr",
+    "website": "https://www.ebay.fr/str/netelectroshop",
+    "specialties": [
+      "Composants électroniques",
+      "Électronique généraliste"
+    ]
+  },
+  {
+    "id": 1,
+    "trade_name": "Passion Radio",
+    "country": "France",
+    "address": "4 ZA des Patureaux",
+    "postal_code": "36210",
+    "city": "Poulaines",
+    "phone": "+33 2 54 40 25 25",
+    "email": "contact@passion-radio.com",
+    "website": "https://www.passion-radio.com/",
+    "specialties": [
+      "Antennes radioamateur",
+      "DMR / numérique",
+      "Radioamateur généraliste",
+      "RF / hyperfréquences",
+      "SDR"
+    ],
+    "products": [
+      {
+        "name": "Récepteur SDR",
+        "description": "Récepteur SDR et accessoires RF"
+      },
+      {
+        "name": "Transceiver DMR",
+        "description": "Matériel DMR radioamateur"
+      }
+    ]
+  },
+  {
+    "id": 127,
+    "trade_name": "RADIO-MEDIA-SYSTEM",
+    "country": "France",
+    "address": "29 Rue Douce",
+    "postal_code": "76340",
+    "city": "Foucarmont",
+    "phone": "09 75 42 14 95",
+    "email": "radio.mediasystem@orange.fr",
+    "website": "https://radio-media-system.com",
+    "specialties": [
+      "Antennes",
+      "CB",
+      "Radioamateur"
+    ]
+  },
+  {
+    "id": 142,
+    "trade_name": "Radiokit",
+    "country": "France",
+    "website": "https://www.radiokit.fr/",
+    "specialties": [
+      "Kits radioamateur"
+    ],
+    "products": [
+      {
+        "name": "Kits radioamateur",
+        "description": "Kits de récepteurs radioamateur, marine et ondes courtes; récepteur aviation"
+      }
+    ]
+  },
+  {
+    "id": 131,
+    "trade_name": "Saint Quentin Radio",
+    "country": "France",
+    "address": "6 rue de Saint Quentin",
+    "postal_code": "75010",
+    "city": "Paris",
+    "phone": "01 40 37 70 74",
+    "website": "https://www.stquentin-radio.com",
+    "specialties": [
+      "Composants électroniques",
+      "Électronique radio"
+    ]
+  },
+  {
+    "id": 129,
+    "trade_name": "SAV-RADIO33",
+    "country": "France",
+    "address": "1 rue du 503 Régiment Du Train",
+    "postal_code": "33127",
+    "city": "Martignas-sur-Jalle",
+    "phone": "07 69 04 23 33",
+    "email": "contact@sav-radio33.fr",
+    "website": "https://www.sav-radio33.eu",
+    "specialties": [
+      "CB",
+      "Radioamateur",
+      "Réparation radio"
+    ]
+  },
+  {
+    "id": 130,
+    "trade_name": "Syracom Modélisme",
+    "country": "France",
+    "address": "Zone d'activité du Polen",
+    "postal_code": "76710",
+    "city": "Eslettes",
+    "phone": "02 35 76 16 86",
+    "email": "F5ETL@yahoo.fr",
+    "website": "https://www.syracom-modelisme.com",
+    "specialties": [
+      "Antennes",
+      "CB",
+      "Radioamateur"
+    ]
+  },
+  {
+    "id": 124,
+    "trade_name": "Tendance Vintage 80'S",
+    "country": "France",
+    "address": "6 rue des Pinsons",
+    "postal_code": "66680",
+    "city": "Canohès",
+    "phone": "0689314864",
+    "email": "jeanpierrecas@free.fr",
+    "website": "https://www.ebay.fr/str/tendancevintage80s",
+    "specialties": [
+      "Composants électroniques",
+      "Radioamateur généraliste",
+      "TSF / matériel ancien"
+    ]
+  },
+  {
+    "id": 122,
+    "trade_name": "zikadonf-france",
+    "country": "France",
+    "city": "Thun Saint Martin",
+    "website": "https://www.ebay.fr/str/zikadonffrance",
+    "specialties": [
+      "Composants électroniques",
+      "Électronique généraliste"
+    ]
+  },
+  {
+    "id": 6,
+    "trade_name": "HamRadioShop",
+    "country": "Italie",
+    "address": "Via Colle di Sora snc",
+    "postal_code": "03030",
+    "city": "Campoli Appennino",
+    "phone": "+39 0776 520129",
+    "email": "info@hamradioshop.it",
+    "website": "https://www.hamradioshop.it/",
+    "specialties": [
+      "Radioamateur généraliste"
+    ],
+    "products": [
+      {
+        "name": "Transceivers radioamateur",
+        "description": "Postes radioamateurs"
+      }
+    ]
+  },
+  {
+    "id": 50,
+    "trade_name": "RF Elettronica",
+    "country": "Italie",
+    "address": "Via per Canicattini 29",
+    "postal_code": "96100",
+    "city": "Siracusa",
+    "phone": "+39 09311757782",
+    "website": "http://www.rfelettronica.com",
+    "specialties": [
+      "Radioamateur généraliste",
+      "RF / hyperfréquences"
+    ]
+  },
+  {
+    "id": 48,
+    "trade_name": "RobertOne Radio Shop",
+    "country": "Italie",
+    "address": "Via Alessandro Brisse 19b",
+    "postal_code": "00149",
+    "city": "Roma",
+    "phone": "+39 3331519220",
+    "website": "http://www.robertoneroma.it",
+    "specialties": [
+      "Radioamateur généraliste"
+    ]
+  },
+  {
+    "id": 117,
+    "trade_name": "Christech AS",
+    "country": "Norvège",
+    "address": "Blomstervegen",
+    "postal_code": "2100",
+    "city": "Skarnes",
+    "phone": "+47 47 610 383",
+    "website": "http://www.christech.no/",
+    "specialties": [
+      "Radioamateur généraliste"
+    ]
+  },
+  {
+    "id": 7,
+    "trade_name": "K-PO",
+    "country": "Pays-Bas",
+    "address": "Argonstraat 6",
+    "postal_code": "6718 WT",
+    "city": "Ede",
+    "website": "https://www.k-po.com/",
+    "specialties": [
+      "Radioamateur généraliste"
+    ]
+  },
+  {
+    "id": 13,
+    "trade_name": "Konektor5000.pl",
+    "country": "Pologne",
+    "address": "Brukowa 16",
+    "postal_code": "91-341",
+    "city": "Lodz",
+    "website": "https://konektor5000.pl/",
+    "specialties": [
+      "Antennes radioamateur",
+      "Radioamateur généraliste"
+    ]
+  },
+  {
+    "id": 11,
+    "trade_name": "InforBatista",
+    "country": "Portugal",
+    "address": "Rua do Pinheiro lote 71, Bairro das Areias",
+    "postal_code": "2680-329",
+    "city": "Apelação",
+    "phone": "+351 211 550 875",
+    "email": "geral@inforbatista.pt",
+    "website": "https://shop.inforbatista.pt/",
+    "specialties": [
+      "Radioamateur généraliste"
+    ]
+  },
+  {
+    "id": 146,
+    "trade_name": "iRF Technology Ltd",
+    "country": "Royaume-Uni",
+    "website": "https://irf.technology/",
+    "specialties": [
+      "Kits radioamateur"
+    ],
+    "products": [
+      {
+        "name": "Kits radioamateur",
+        "description": "Kits d amplificateurs linéaires LDMOS et filtres RF pour radioamateur"
+      }
+    ]
+  },
+  {
+    "id": 143,
+    "trade_name": "Kanga Products",
+    "country": "Royaume-Uni",
+    "website": "https://www.kanga-products.co.uk/",
+    "specialties": [
+      "Kits radioamateur"
+    ],
+    "products": [
+      {
+        "name": "Kits radioamateur",
+        "description": "Kits QRP, transceivers CW, récepteurs, instruments et kits pédagogiques"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "trade_name": "Martin Lynch & Sons Ltd.",
+    "country": "Royaume-Uni",
+    "address": "Wessex House, Drake Ave.",
+    "postal_code": "TW18 2AP",
+    "city": "Staines",
+    "phone": "+44 1932 567 333",
+    "email": "sales@hamradio.co.uk",
+    "website": "https://www.hamradio.co.uk/",
+    "specialties": [
+      "Radioamateur généraliste"
+    ],
+    "products": [
+      {
+        "name": "Transceivers HF/VHF/UHF",
+        "brand": "Yaesu/Icom/Kenwood",
+        "description": "Postes radioamateurs"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "trade_name": "Moonraker",
+    "country": "Royaume-Uni",
+    "address": "Woburn Sands",
+    "postal_code": "MK17 8UR",
+    "city": "Borehamwood",
+    "phone": "01908 281705",
+    "email": "sales@moonraker.eu",
+    "website": "https://www.moonraker.eu/",
+    "specialties": [
+      "Radioamateur généraliste"
+    ]
+  },
+  {
+    "id": 145,
+    "trade_name": "Radio-Kits",
+    "country": "Royaume-Uni",
+    "website": "https://www.radio-kits.co.uk/",
+    "specialties": [
+      "Kits radioamateur"
+    ],
+    "products": [
+      {
+        "name": "Kits radioamateur",
+        "description": "Transceivers QRP Explorer et autres kits radioamateur"
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "trade_name": "DD AMTEK",
+    "country": "République tchèque",
+    "address": "Bubenská 14/242",
+    "postal_code": "17000",
+    "city": "Praha 7",
+    "phone": "+420 224 312 588",
+    "email": "info@ddamtek.cz",
+    "website": "https://www.ddamtek.cz/",
+    "specialties": [
+      "Radioamateur généraliste"
+    ]
+  },
+  {
+    "id": 116,
+    "trade_name": "Konekt Bojan Sep s.p.",
+    "country": "Slovénie",
+    "address": "Ul. Roberta Kukovca 45",
+    "postal_code": "2000",
+    "city": "Maribor",
+    "phone": "+38 641 689262",
+    "website": "http://www.konekt.si",
+    "specialties": [
+      "Radioamateur généraliste"
+    ]
+  },
+  {
+    "id": 114,
+    "trade_name": "Lutz-Electronics KLG",
+    "country": "Suisse",
+    "address": "Erschwilerstrasse 246",
+    "postal_code": "4247",
+    "city": "Grindel",
+    "phone": "+41 61 763 07 55",
+    "website": "http://www.lutz-electronics.ch",
+    "specialties": [
+      "Radioamateur généraliste",
+      "RF / hyperfréquences"
+    ]
+  },
+  {
+    "id": 113,
+    "trade_name": "radio-laden.ch",
+    "country": "Suisse",
+    "address": "Kreuzgasse 9",
+    "postal_code": "3860",
+    "city": "Meiringen",
+    "phone": "+41 33 971 40 10",
+    "website": "http://www.radio-laden.ch",
+    "specialties": [
+      "Radioamateur généraliste"
+    ]
+  },
+  {
+    "id": 9,
+    "trade_name": "SATONLINE GmbH",
+    "country": "Suisse",
+    "address": "Oberdorfstrasse 3",
+    "postal_code": "6340",
+    "city": "Baar",
+    "website": "https://www.sat-online.ch/",
+    "specialties": [
+      "Antennes radioamateur",
+      "Radioamateur généraliste"
+    ],
+    "products": [
+      {
+        "name": "Antennes HF/VHF/UHF",
+        "description": "Antennes radioamateur"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "trade_name": "Limmared Radio & Data AB",
+    "country": "Suède",
+    "address": "Fabriksgatan 3",
+    "postal_code": "514 42",
+    "city": "Limmared",
+    "phone": "+46 325 660 660",
+    "email": "info@limmared.nu",
+    "website": "http://www.limmared.nu",
+    "specialties": [
+      "Radioamateur généraliste"
+    ]
+  },
+  {
+    "id": 144,
+    "trade_name": "QRP Labs",
+    "country": "Turquie",
+    "website": "https://www.qrp-labs.com/",
+    "specialties": [
+      "Kits radioamateur"
+    ],
+    "products": [
+      {
+        "name": "Kits radioamateur",
+        "description": "Kits QRP: QMX, QDX, QCX, WSPR/QRSS, amplificateurs, filtres et modules"
+      }
+    ]
+  }
+]
