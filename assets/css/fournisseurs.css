@@ -1,98 +1,107 @@
 .fournisseurs-outils {
-    display: grid;
-    grid-template-columns: 1.5fr 1fr 1fr;
-    gap: 1rem;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 16px;
 
-    margin: 1.5rem 0;
-    padding: 1rem;
+  margin: 24px 0;
+  padding: 16px;
 
-    background: #f8f8f8;
-    border: 1px solid #d8d8d8;
-    border-radius: 4px;
+  background: #f8f8f8;
+  border: 1px solid #d0d0d0;
+  border-radius: 4px;
 }
 
 .fournisseurs-champ {
-    display: flex;
-    flex-direction: column;
-    gap: 0.45rem;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
 }
 
 .fournisseurs-champ label {
-    font-weight: 600;
-    color: #163b67;
+  display: block;
+
+  margin: 0;
+
+  color: #163b67;
+  font-weight: 600;
 }
 
 .fournisseurs-champ input,
 .fournisseurs-champ select {
-    width: 100%;
-    height: 40px;
+  display: block;
 
-    box-sizing: border-box;
+  width: 100%;
+  height: 40px;
 
-    padding: 0.55rem 0.7rem;
+  box-sizing: border-box;
 
-    border: 1px solid #bbb;
-    border-radius: 3px;
+  margin: 0;
+  padding: 8px 10px;
 
-    background: #fff;
+  border: 1px solid #bcbcbc;
+  border-radius: 3px;
 
-    font: inherit;
+  background: #ffffff;
+
+  font-family: inherit;
+  font-size: 14px;
+  color: #222;
 }
 
 .fournisseurs-compteur {
-    color: #666;
+  margin: 24px 0;
+  color: #666;
 }
 
 .fournisseurs-pays {
-    margin: 2rem 0;
+  margin: 32px 0 16px;
 }
 
 .fournisseurs-pays h2 {
-    color: #163b67;
+  margin: 0 0 12px;
 
-    border-bottom: 1px solid #d8d8d8;
+  color: #163b67;
 
-    padding-bottom: 0.35rem;
+  border-bottom: 1px solid #d0d0d0;
+  padding-bottom: 6px;
 }
 
 .fournisseur-card {
-    margin: 1rem 0;
-    padding: 1rem 1.25rem;
+  margin: 16px 0;
+  padding: 16px 20px;
 
-    background: #fafafa;
+  background: #fafafa;
 
-    border: 1px solid #d8d8d8;
-    border-radius: 4px;
+  border: 1px solid #d8d8d8;
+  border-radius: 4px;
 }
 
 .fournisseur-card h3 {
-    margin: 0 0 0.6rem;
-
-    color: #163b67;
+  margin: 0 0 10px;
+  color: #163b67;
 }
 
 .fournisseur-meta {
-    margin: 0.35rem 0;
+  margin: 6px 0;
 }
 
 .fournisseur-specialites {
-    margin: 0.7rem 0 0;
-
-    color: #555;
+  margin: 12px 0 0;
+  color: #555;
 }
 
 .fournisseur-site {
-    margin-top: 0.8rem;
+  margin-top: 12px;
 }
 
 .fournisseur-site a {
-    color: #163b67;
-
-    font-weight: 600;
+  color: #163b67;
+  font-weight: 600;
 }
 
 @media (max-width: 800px) {
-    .fournisseurs-outils {
-        grid-template-columns: 1fr;
-    }
+  .fournisseurs-outils {
+    grid-template-columns: 1fr;
+  }
 }
