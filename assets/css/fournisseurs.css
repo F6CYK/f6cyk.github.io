@@ -10,6 +10,12 @@
   align-items: end;
 }
 
+/* CORRECTION ESSENTIELLE : empêche les div internes de casser la grille */
+.fournisseurs-outils > div {
+  grid-column: auto !important;
+  width: 100%;
+}
+
 .fournisseurs-outils label {
   font-weight: 600;
   color: #163b67;
