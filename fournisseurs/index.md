@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Annuaire fournisseurs
+title: TEST Annuaire fournisseurs
 permalink: /fournisseurs/
 ---
 
