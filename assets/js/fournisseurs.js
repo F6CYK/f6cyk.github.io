@@ -30,7 +30,7 @@
             <div class="fournisseur-site"><a href="${esc(s.website)}" target="_blank" rel="noopener noreferrer">Site officiel</a></div></article>`).join('')}</section>`).join('') || '<p>Aucun fournisseur ne correspond aux critères.</p>';
     }
 
-    fetch('{{ "/assets/data/fournisseurs.json" | relative_url }}').then(r=>{if(!r.ok)throw new Error(r.status);return r.json()}).then(data=>{suppliers=data;fillSelects();render()}).catch(()=>{counter.textContent='';root.innerHTML='<p>Impossible de charger l’annuaire.</p>';});
+    fetch('/assets/data/fournisseurs.json').then(r=>{if(!r.ok)throw new Error(r.status);return r.json()}).then(data=>{suppliers=data;fillSelects();render()}).catch(()=>{counter.textContent='';root.innerHTML='<p>Impossible de charger l’annuaire.</p>';});
     [search,country,specialty].forEach(el=>el.addEventListener('input',render));
     [country,specialty].forEach(el=>el.addEventListener('change',render));
 })();
