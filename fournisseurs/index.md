@@ -109,7 +109,7 @@ permalink: /fournisseurs/
 <div
   id="fournisseurs-page"
   class="fournisseurs-page"
-  data-fournisseurs-url="{{ '/assets/data/fournisseurs.json' | relative_url }}"
+  data-fournisseurs-url="/assets/data/fournisseurs.json"
 >
 
   <h1>Annuaire fournisseurs</h1>
