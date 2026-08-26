@@ -19,10 +19,16 @@
     background: #f8f8f8;
     border: 1px solid #d8d8d8;
     border-radius: 4px;
+    align-items: end;
 }
 
 .fournisseurs-outils > .fournisseurs-champ {
     min-width: 0;
+}
+
+.fournisseurs-outils > div {
+    grid-column: auto !important;
+    width: 100%;
 }
 
 .fournisseurs-outils label {
@@ -102,4 +108,5 @@
     .fournisseurs-outils {
         grid-template-columns: 1fr;
     }
+}
 }
