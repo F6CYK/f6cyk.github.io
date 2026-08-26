@@ -11,9 +11,10 @@
 }
 
 .fournisseurs-outils {
-    display: grid;
-    grid-template-columns: minmax(0, 2fr) minmax(0, 1fr) minmax(0, 1fr);
+    display: flex;
+    align-items: flex-start;
     gap: 1rem;
+    width: 100%;
     margin: 1.5rem 0;
     padding: 1rem;
     background: #f8f8f8;
@@ -21,11 +22,22 @@
     border-radius: 4px;
 }
 
+/* Chaque bloc reste une seule unité : le label et son champ sont
+   empilés dans la même colonne. */
 .fournisseurs-outils > .fournisseurs-champ {
     min-width: 0;
     display: flex;
     flex-direction: column;
     align-items: stretch;
+}
+
+.fournisseurs-outils > .fournisseurs-champ:nth-child(1) {
+    flex: 2 1 0;
+}
+
+.fournisseurs-outils > .fournisseurs-champ:nth-child(2),
+.fournisseurs-outils > .fournisseurs-champ:nth-child(3) {
+    flex: 1 1 0;
 }
 
 .fournisseurs-outils label {
@@ -39,6 +51,7 @@
 .fournisseurs-outils select {
     display: block;
     width: 100%;
+    min-width: 0;
     min-height: 40px;
     box-sizing: border-box;
     padding: .65rem;
@@ -103,6 +116,11 @@
 
 @media (max-width: 800px) {
     .fournisseurs-outils {
-        grid-template-columns: 1fr;
+        flex-direction: column;
+    }
+
+    .fournisseurs-outils > .fournisseurs-champ {
+        width: 100%;
+        flex: none;
     }
 }

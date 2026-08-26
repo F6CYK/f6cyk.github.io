@@ -4,7 +4,7 @@ title: Annuaire fournisseurs
 permalink: /fournisseurs/
 ---
 
-<link rel="stylesheet" href="{{ '/assets/css/fournisseurs.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/css/fournisseurs.css' | relative_url }}?v=3">
 
 <section class="fournisseurs-page">
 
