@@ -20,7 +20,7 @@ permalink: /fournisseurs/
       <input
         id="fournisseurs-recherche"
         type="search"
-        placeholder="Fournisseur, pays, spécialité, marque, produit…"
+        placeholder="Fournisseur, pays, spécialité, marque, produit..."
         autocomplete="off"
       >
     </div>
