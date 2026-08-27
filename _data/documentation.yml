@@ -1,6 +1,7 @@
-- titre: Réflexions sur l'émission d'amateur
+- titre: Réflexions personnelles
+  classe: sous-menu-scroll
   enfants:
-    - titre: "Réflexion sur l’évolution du radioamateurisme"
+    - titre: Evolution du radioamateurisme
       url: /documentation/reflexions-emission-amateur/marche-radioamateur-occasion/
 
 - titre: Composants
