@@ -1,7 +1,6 @@
 (() => {
     const root = document.getElementById('fournisseurs-resultats');
     if (!root) return;
-    const search = document.getElementById('fournisseurs-recherche');
     const country = document.getElementById('fournisseurs-pays');
     const specialty = document.getElementById('fournisseurs-specialite');
     const counter = document.getElementById('fournisseurs-compteur');
@@ -16,8 +15,8 @@
     }
 
     function render(){
-        const q=search.value.trim().toLowerCase(); const co=country.value; const sp=specialty.value;
-        const filtered=suppliers.filter(s=>(!q||text(s).includes(q))&&(!co||s.country===co)&&(!sp||(s.specialties||[]).includes(sp)));
+        const co=country.value; const sp=specialty.value;
+        const filtered=suppliers.filter(s=>(!co||s.country===co)&&(!sp||(s.specialties||[]).includes(sp)));
         counter.textContent=`${filtered.length} fournisseur${filtered.length>1?'s':''}`;
         const groups={}; filtered.forEach(s=>(groups[s.country||'Pays non précisé']??=[]).push(s));
         root.innerHTML=Object.keys(groups).sort((a,b)=>a.localeCompare(b,'fr')).map(c=>`<section class="fournisseurs-pays"><h2>${esc(c)}</h2>${groups[c].map(s=>`
@@ -31,6 +30,5 @@
     }
 
     fetch('/assets/data/fournisseurs.json').then(r=>{if(!r.ok)throw new Error(r.status);return r.json()}).then(data=>{suppliers=data;fillSelects();render()}).catch(()=>{counter.textContent='';root.innerHTML='<p>Impossible de charger l’annuaire.</p>';});
-    [search,country,specialty].forEach(el=>el.addEventListener('input',render));
     [country,specialty].forEach(el=>el.addEventListener('change',render));
 })();
