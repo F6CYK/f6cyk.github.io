@@ -1,35 +1,37 @@
-tériels- titre: Professionnel
+- titre: Matériels
   enfants:
-    - titre: Militaire
+    - titre: Professionnel
       enfants:
-        - titre: THALES TRC 3600
-          url: /materiel/professionnel/militaire/thales-trc3600
+        - titre: Militaire
+          enfants:
+            - titre: THALES TRC 3600
+              url: /materiel/professionnel/militaire/thales-trc3600
 
-- titre: Amateur
-  enfants:
-    - titre: Elecraft
+    - titre: Amateur
       enfants:
-        - titre: Elecraft KH1
-          url: /materiel/amateur/elecraft-kh1
+        - titre: Elecraft
+          enfants:
+            - titre: Elecraft KH1
+              url: /materiel/amateur/elecraft-kh1
 
-    - titre: Heathkit
+        - titre: Heathkit
+          enfants:
+            - titre: Catalogues
+              url: /materiel/amateur/heathkit/catalogues
+
+            - titre: Histoire
+              url: /en_travaux.html
+
+    - titre: Surplus
       enfants:
-        - titre: Catalogues
-          url: /materiel/amateur/heathkit/catalogues
+        - titre: Présentation
+          url: /materiel/surplus/presentation/
 
-        - titre: Histoire
+        - titre: Magasins
+          url: /materiel/surplus/magasins-de-surplus/
+
+        - titre: Matériels
           url: /en_travaux.html
 
-- titre: Surplus
-  enfants:
-    - titre: Présentation
-      url: /materiel/surplus/presentation/
-
-    - titre: Magasins
-      url: /materiel/surplus/magasins-de-surplus/
-
-    - titre: Matériels
-      url: /en_travaux.html
-
-- titre: Annuaire fournisseurs de matériels radioamateurs
-  url: /fournisseurs/
+    - titre: Annuaire fournisseurs de matériels radioamateurs
+      url: /fournisseurs/
