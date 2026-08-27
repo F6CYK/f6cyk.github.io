@@ -12,8 +12,8 @@
 
 .fournisseurs-outils {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-    gap: 1rem;
+    grid-template-columns: 1fr;
+    gap: .9rem;
     margin: 1.5rem 0;
     padding: 1rem;
     background: #f8f8f8;
@@ -23,11 +23,16 @@
 
 .fournisseurs-outils > .fournisseurs-champ {
     min-width: 0;
+    display: grid;
+    grid-template-columns: 110px minmax(0, 1fr);
+    align-items: center;
+    gap: .9rem;
 }
+
 
 .fournisseurs-outils label {
     display: block;
-    margin: 0 0 .45rem;
+    margin: 0;
     font-weight: 600;
     color: #163b67;
 }
@@ -98,8 +103,9 @@
     font-weight: 600;
 }
 
-@media (max-width: 800px) {
-    .fournisseurs-outils {
+@media (max-width: 600px) {
+    .fournisseurs-outils > .fournisseurs-champ {
         grid-template-columns: 1fr;
+        gap: .4rem;
     }
 }

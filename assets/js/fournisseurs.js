@@ -30,5 +30,6 @@
     }
 
     fetch('/assets/data/fournisseurs.json').then(r=>{if(!r.ok)throw new Error(r.status);return r.json()}).then(data=>{suppliers=data;fillSelects();render()}).catch(()=>{counter.textContent='';root.innerHTML='<p>Impossible de charger l’annuaire.</p>';});
+    [country,specialty].forEach(el=>el.addEventListener('input',render));
     [country,specialty].forEach(el=>el.addEventListener('change',render));
 })();
