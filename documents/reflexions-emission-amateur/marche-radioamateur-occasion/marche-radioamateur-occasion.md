@@ -1,10 +1,10 @@
 ---
 layout: default
-title: Le seuil effacé : chronique d’un marché radioamateur qui change de nature
+title: Réflexion sur l’évolution du radioamateurisme
 permalink: /documentation/reflexions-emission-amateur/marche-radioamateur-occasion/
 ---
 
-# Le seuil effacé : chronique d’un marché radioamateur qui change de nature
+# Réflexion sur l’évolution du radioamateurisme
 
 ## Le geste qui ne trouve plus preneur
 
