@@ -1,4 +1,4 @@
-- titre: Professionnel
+tériels- titre: Professionnel
   enfants:
     - titre: Militaire
       enfants:
@@ -31,5 +31,5 @@
     - titre: Matériels
       url: /en_travaux.html
 
-- titre: Annuaire fournisseurs
+- titre: Annuaire fournisseurs de matériels radioamateurs
   url: /fournisseurs/
