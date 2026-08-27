@@ -1,31 +1,43 @@
 ---
 layout: default
-title: Annuaire fournisseurs
-permalink: /fournisseurs/
+title: F6CYK — Radioamateur, expérimentations et réalisations
+permalink: /index.html
 ---
 
-<section class="fournisseurs">
-    <h1>Annuaire fournisseurs</h1>
-    <p>Fournisseurs européens de matériel radioamateur et CB.</p>
+## Bienvenue
 
-    <div class="fournisseurs-outils">
-        <label for="fournisseurs-recherche">Recherche</label>
-        <input id="fournisseurs-recherche" type="search" placeholder="Fournisseur, pays, spécialité, marque, produit…" autocomplete="off">
+<div class="accueil-introduction">
 
-        <label for="fournisseurs-pays">Pays</label>
-        <select id="fournisseurs-pays">
-            <option value="">Tous les pays</option>
-        </select>
+<div class="accueil-texte">
 
-        <label for="fournisseurs-specialite">Spécialité</label>
-        <select id="fournisseurs-specialite">
-            <option value="">Toutes les spécialités</option>
-        </select>
-    </div>
+Bienvenue sur le site de la station radioamateur F6CYK.
 
-    <p id="fournisseurs-compteur" class="fournisseurs-compteur"></p>
-    <div id="fournisseurs-resultats"></div>
-</section>
+Ce site rassemble la description de la station, du matériel utilisé, des antennes, des réalisations techniques ainsi qu'une documentation issue de plusieurs années d'expérimentations.
 
-<link rel="stylesheet" href="{{ '/assets/css/fournisseurs.css' | relative_url }}">
-<script src="{{ '/assets/js/fournisseurs.js' | relative_url }}" defer></script>
+</div>
+
+<figure class="accueil-photo">
+<img
+    src="assets/images/station/station_f6cyk-1.jpg"
+    alt="Station F6CYK">
+
+<figcaption>
+Station F6CYK.
+</figcaption>
+
+</figure>
+
+</div>
+
+## Le contenu du site
+
+- **Station** — présentation générale de la station.
+- **Matériel** — émetteurs, récepteurs, alimentations, instruments de mesure et accessoires.
+- **Antennes** — descriptions, réalisations, essais et mesures.
+- **Réalisations** — montages, adaptations, expérimentations et projets.
+- **Documentation** — notes techniques, calculs, références et documents téléchargeables.
+- **Galerie** — photographies de la station et des réalisations.
+
+## Dernière mise à jour
+
+21 juillet 2026
