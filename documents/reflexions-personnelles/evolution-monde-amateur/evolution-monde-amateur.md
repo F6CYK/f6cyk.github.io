@@ -1,3 +1,8 @@
+---
+layout: default
+title: Réflexion sur l’évolution du radioamateurisme
+permalink: /documentation/reflexions-personnelles/evolution-monde-amateur/
+---
 # **Réflexion sur l’évolution du radioamateurisme**
 
 ## **Le geste qui ne trouve plus preneur**
