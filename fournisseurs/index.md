@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Annuaire fournisseurs
+title: Annuaire fournisseurs de matériels radioamateur
 permalink: /fournisseurs/
 ---
 
@@ -9,10 +9,6 @@ permalink: /fournisseurs/
 <section class="fournisseurs-page">
 
     <h1>Annuaire fournisseurs</h1>
-
-    <p>
-        Fournisseurs européens de matériel radioamateur et CB.
-    </p>
 
     <div class="fournisseurs-outils">
 
