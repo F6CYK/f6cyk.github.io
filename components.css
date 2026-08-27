@@ -147,6 +147,13 @@ th{
     z-index: 1000;
 }
 
+.sous-menu-scroll {
+    max-height: 70vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-width: auto;
+}
+
 .sous-menu li {
     position: relative;
     width: 100%;
