@@ -56,17 +56,3 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 });
-
-// Gestion générique des sous-menus défilants.
-// Le bandeau et son arborescence restent inchangés.
-document.addEventListener("wheel", function (event) {
-  const menu = event.target.closest(".sous-menu-scroll");
-  if (!menu) return;
-
-  const canScrollUp = menu.scrollTop > 0;
-  const canScrollDown = menu.scrollTop + menu.clientHeight < menu.scrollHeight - 1;
-
-  if ((event.deltaY < 0 && canScrollUp) || (event.deltaY > 0 && canScrollDown)) {
-    event.stopPropagation();
-  }
-}, { passive: true });
