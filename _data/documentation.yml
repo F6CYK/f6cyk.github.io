@@ -1,7 +1,7 @@
 - titre: Réflexions personnelles
   classe: sous-menu-scroll
   enfants:
-    - titre: Réflexion sur l’évolution du radioamateurisme
+    - titre: Evolution du radioamateurisme
       url: /documentation/reflexions-personnelles/evolution-monde-amateur/
 
 - titre: Composants
